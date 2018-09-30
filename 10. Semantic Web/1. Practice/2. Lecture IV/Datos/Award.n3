@@ -1,0 +1,10 @@
+# Default graph
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex4:  <http://example.org/award/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  	<http://xmlns.com/foaf/0.1/> .
+
+ex4:aw1 dc:title "Oscar 1997" .
+ex4:aw1 dc:date "1997-03-24"^^xsd:date .
+ex4:aw1 ex4:bestActor "Geoffrey Rush"@es .
+ex4:aw1 ex4:bestPicture "The English Patient" .

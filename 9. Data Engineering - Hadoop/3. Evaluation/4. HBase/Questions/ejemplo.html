@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejemplo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="ejemplo.html" class="active no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="comandos_avanzados.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="integracin_de_hbase_con_pig.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Ejemplo</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id222">
+<div class="iDevice emphasis0">
+<div id="ta222_85" class="block iDevice_content">
+<p>A continuación se describe un ejemplo de uso de HBase. Los objetivos del ejemplo son los siguientes: </p>
+<p><strong>1. Arrancar HBase y acceder a la consola de HBase</strong></p>
+<p>$ cd /home/bigdata/hbase</p>
+<p>$ bin/start-hbase.sh</p>
+<p>$ jps</p>
+<p>$ bin/hbase shell</p>
+<p></p>
+<p><span id="docs-internal-guid-485d6fa7-0c67-10e7-baeb-21ecf2828ae9"><span><img src="https://lh5.googleusercontent.com/fdK0PLiF5sJDfyk3h_hgVENuOu_-RdBtUDuAiElhYmgjJkeS8mw2cBlX9NdVuMRu0wIGU5OcA4C50AYrWBHfMl9cYD2DJPjdyBgdIGEekHS3XVTE-jvAFBRuVq206pW40A" width="624px;" height="256px;" /></span></span></p>
+<p><strong>2. Comprobar el estado de HBase</strong></p>
+<p>status</p>
+<p><span id="docs-internal-guid-485d6fa7-0c67-9efd-e454-d06491f18da3"><span><img src="https://lh5.googleusercontent.com/rPs_CiQSVtGgLVhgDZJcrE-VBF4x52T8A9y9E49xpQ1iswU5QXwrVrLz4vN5h06gzlNSslN_MPrBHEVfzd2pIc1bG1CSI--ik-wApfAEK28roqgrY4SDGDTA9399dCH-OQ" width="624px;" height="116px;" /></span></span></p>
+<p><strong>3. Crear un namespace llamado ejercicios</strong></p>
+<p>create_namespace 'ejercicios'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c69-1910-584d-103bd29bfa17"><span><img src="https://lh5.googleusercontent.com/jLl-b6uSOD-3n_kk_DHYw9Npm3XA1LZEJjm2pACpGcyj07eSvpDYEE2rZBPyk4nK9K0_xIjzDB7dRJ0OrW4QUjAqjSclrLnIwcJAPUPchFycsYVRqN5vORqf2Ivof2REVw" width="460px;" height="56px;" /></span></span></p>
+<p><strong>4. Crear una tabla llamada predicciones con las siguientes columnas: localidad, temperatura y cuota de nieve</strong></p>
+<p>create 'ejercicios:prediccion', 'localidad', 'temperatura', 'cuota_nieve'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c69-9ac3-2949-eb4988712b8e"><span><img src="https://lh4.googleusercontent.com/jI3sI8MAIMIfJFQyleH3V70UyGm8_XlN5-ZYu0eYLFC4yjRpcGAtuP_nRw8PxqCEo3cEXb8Eeay-9P4xxzR7396J34V7bT19FOW24TGdwrZCTLYVlBqqrhW012rXIE0J4A" width="624px;" height="92px;" /></span></span></p>
+<p><strong>5. Hacer un describe de la tabla</strong></p>
+<p>describe 'ejercicios:prediccion'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6a-a48a-300c-bcbdf4fc02f4"><span><img src="https://lh3.googleusercontent.com/rDKxFtKhhnl6dUXdgYb6AO7oi0mKXtyIOxfVvzvUBv-yI-kDXygoBrlH4Sd8D3KlaxDahAGnxUZ6foSiqach5nkyy0ktC6ht50I7MmV5SxDMNTBnfQujBrBD4Scnqzhnqg" width="624px;" height="259px;" /></span></span></p>
+<p><strong>6. Acceder a la página de la Aemet para obtener las predicciones de Madrid</strong></p>
+<p><a href="http://www.aemet.es/es/eltiempo/prediccion/municipios/madrid-id28079">http://www.aemet.es/es/eltiempo/prediccion/municipios/madrid-id28079</a></p>
+<p><span id="docs-internal-guid-485d6fa7-0c47-0b38-220e-b70554c563a5"><span><img src="https://lh4.googleusercontent.com/Rx2f-JtADxNe0PQOZqWr48mt6QtNVw2aKVmUBOxSvmCoWKnhzTnkKtJD01yZ2AVs-dvCaD4Jt6aQvEdgph6BoApjJ94j-C88pTYdx8hb2x6bzjzU2jPabwV9KXgjkgjjsw" width="624px;" height="359px;" /></span></span></p>
+<p><strong>7. Cargar los datos de las predicciones de la aemet de Madrid</strong>, empleando como clave la fecha del día y el id de la estación de la Aemet (28079). Tener en cuenta que habrá que insertar varios valores por cada registro y que en la columna de temperatura deberemos almacenar por separado la temperatura máxima y mínima</p>
+<p>put 'ejercicios:prediccion', '20150121#28079', 'temperatura:max', 6</p>
+<p>put 'ejercicios:prediccion', '20150121#28079', 'temperatura:min', -2</p>
+<p>put 'ejercicios:prediccion', '20150121#28079', 'cuota_nieve',800</p>
+<p>put 'ejercicios:prediccion', '20150122#28079', 'temperatura:max', 9</p>
+<p>put 'ejercicios:prediccion', '20150122#28079', 'temperatura:min', -2</p>
+<p>put 'ejercicios:prediccion', '20150123#28079', 'temperatura:max', 7</p>
+<p>put 'ejercicios:prediccion', '20150123#28079', 'temperatura:min', -3</p>
+<p>put 'ejercicios:prediccion', '20150124#28079', 'temperatura:max', 10</p>
+<p>put 'ejercicios:prediccion', '20150124#28079', 'temperatura:min', -2</p>
+<p>put 'ejercicios:prediccion', '20150125#28079', 'temperatura:max', 8</p>
+<p>put 'ejercicios:prediccion', '20150125#28079', 'temperatura:min', -2</p>
+<p>put 'ejercicios:prediccion', '20150126#28079', 'temperatura:max', 10</p>
+<p>put 'ejercicios:prediccion', '20150126#28079', 'temperatura:min', -2</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6b-42fb-6339-29deb88ac8e2"><span><img src="https://lh4.googleusercontent.com/RgVUBszGpQIcfLh8aHh_CO5fzkHGx4vBo5lAJuEaAEoMBzlGHWbSXWo0B69HA59iGbibGfAAwC6U2bKCuif1yXeSCFOMstzTFJHAqs93W7cuo86gtovtqjt9RTNYVuNtqw" width="624px;" height="341px;" /></span></span></p>
+<p><strong>8. Escanear la información de la tabla</strong></p>
+<p>scan 'ejercicios:prediccion'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6c-2900-ff73-7948403381ae"><span><img src="https://lh5.googleusercontent.com/1sEWVq_mf-UIQi9OhMOkpab9POguHYIUVuTQtSFYU9Ikpi84s0Qgfz-3qvfE7zG8njG3ghN0KV-eIAfLecpTK8YSauLLC5wC4SOHUlzycl7HHjnP_AAYnCfoKolurklUyg" width="624px;" height="259px;" /></span></span></p>
+<p><strong>9. Consultar la información del día 21/01/2015 del municipio 28079</strong></p>
+<p>get 'ejercicios:prediccion','20150121#28079'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6c-99e4-27a2-cd62ec0b2e38"><span><img src="https://lh5.googleusercontent.com/17K3uWU5ad2nNQ1wsycTHPMur56rU4oheYvreHcuq6joeTNhC_xqCi2_iBBVGSwldW-KaIPl9tDluY90L1nPBxozkqjJJky1HGqL4jcXAGl6xdiLyXDR-Ip60ht6O-Qibw" width="581px;" height="126px;" /></span></span></p>
+<p><strong>10. Consultar la información de la temperatura máxima del día 21/01/2015 del municipio 28079</strong></p>
+<p>get 'ejercicios:prediccion','20150121#28079', 'temperatura:max'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6c-ff30-8d37-b034e9571347"><span><img src="https://lh6.googleusercontent.com/0uP4DCYEAH6umTtFQzbY0s_pyrpnwIXxQIzX6KmE-LHrchpqWZHH-50JSZLTz7FbOKyB1S6_L9_kIxM6gwuzlZehzv4JvOguZq7ebDRNzbsJHxQ0RxNX6E8_VxPD5JGVGg" width="624px;" height="87px;" /></span></span></p>
+<p><strong>11. Consultar la información de la cuota de nieve del día 21/01/2015 del municipio 28079</strong></p>
+<p>get 'ejercicios:prediccion','20150121#28079', 'cuota_nieve'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6d-7a10-f75b-0a3f799fd788"><span><img src="https://lh5.googleusercontent.com/Hq1z2GZ3dCr6g4aeckw9NB_Iv8t7a778kHcv0m7OnXY6MGToGHA01yDf5nfyFikfA6ONvzASq7g5t0xOiUetp11deNWD3HCeDaVoKa7ncjlZcjOvb0vLywWc6USXoVjoOg" width="624px;" height="75px;" /></span></span></p>
+<p><strong>12. Eliminar la temperatura máxima del registro del día 23/01/2015 del municipio 28079</strong></p>
+<p>delete 'ejercicios:prediccion','20150123#28079','temperatura:max'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6e-74c5-346f-c2d4faacf201"><span><img src="https://lh3.googleusercontent.com/A0U92yj1slNUiqr8kHNJzV1vealxbc4ks7D8UNzIOJEwOg-KF1ftLFZHGFH6UC20fTUSAzXLuCFWM9_fhG-AJoI4YQ5R1-9UeYg-rEK4KX9YoTWF6uZYSlMpfesUnVTAQg" width="624px;" height="64px;" /></span></span></p>
+<p><strong>13. Consultar el registro del día 23/01/2015 del municipio 28079</strong></p>
+<p>get 'ejercicios:prediccion','20150123#28079'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6e-fd19-ed8b-6c34eeadef74"><span><img src="https://lh6.googleusercontent.com/aph5JlhzSl_HhkEANBqm4ZoyCThXQp-FnJch5bIEG_VYvdtJs9Z4eFd3DxOkPtwI-F7KtSV_IBUuHDPEJu2m7uSzCXBEB98H2oJzoPFXOL4DURhnli1mBfwmZmDn_iw7Ag" width="594px;" height="83px;" /></span></span></p>
+<p><strong>14. Eliminar un registro completo del día 26</strong></p>
+<p>deleteall 'ejercicios:prediccion','20150126#28079'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c6f-8148-fe15-1fed101aa51e"><span><img src="https://lh6.googleusercontent.com/W6YF0sMOuSTKyJXDxVLdcMmkUZfMx-Cv6mLmWCg1gj_Rn_EidhPCWBKWE4V13V_ENchEax6TR-htw4nsfzO8d4upNLo4YLAyoBSQfZN_ccNjWN7Ft1MGSV6kTMbUqy3plA" width="624px;" height="53px;" /></span></span></p>
+<p><strong>15. Deshabilitar tabla de prediccion</strong></p>
+<p>disable 'ejercicios:prediccion'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c70-8c27-d72c-bd022367c051"><span><img src="https://lh4.googleusercontent.com/AXXtZVq35Zo88i-kYVmUKyfVkw_UYfO9EhWkxEWwhdVuJ7SD6TmetFHnF8UqA8ksKGDVTSrZ3tOFws7tA9bpbznpybQdTkB-QG6hvorn_8oXYs__nYWYDNLMpcAqoPjngw" width="475px;" height="61px;" /></span></span></p>
+<p><strong>16. Borrar tabla de predicciones</strong></p>
+<p>drop 'ejercicios:prediccion'</p>
+<p><span id="docs-internal-guid-485d6fa7-0c71-0055-0cad-9adfba8b07c0"><span><img src="https://lh3.googleusercontent.com/dx1QKg5QJI904kpx0h6I1suHMwvcA2XOUzJcJwU-8VwqQmKbCvwxNb7nIlAuuwG2MG1Ehv2NbZi9pNHikh9NtVWsxO_CH3PAeV5QF-qrg1InHY8-v4XIXHJYK2zyr-lRjg" width="447px;" height="53px;" /></span></span></p>
+<p><strong>17. Listar tablas</strong></p>
+<p>list</p>
+<p><span id="docs-internal-guid-485d6fa7-0c71-a095-8aed-8ec4a99b0023"><span><img src="https://lh3.googleusercontent.com/KmZusRwo8lYlMi4T5fcTRs3gNCsFAOGNcyP7CpFum5Q1CheiBTwB7C_jC0A7onn5Z6xyIB0gaYpm3w51r4jNUG2KtauVqjxw0YbRJLA1_UXoQf_qscvCRN6aDji2laVrhQ" width="624px;" height="137px;" /></span></span></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="comandos_avanzados.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="integracin_de_hbase_con_pig.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

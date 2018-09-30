@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>CROSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li class="current-page-parent"><a href="introduccin_a_pig_latin.html" class="current-page-parent daddy">Introducción a Pig Latin</a>
+   <ul>
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li class="current-page-parent"><a href="operadores_relacionales.html" class="current-page-parent daddy">Operadores relacionales</a>
+      <ul>
+         <li id="active"><a href="cross.html" class="active no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="operadores_relacionales.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="distinct.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">CROSS</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id71">
+<div class="iDevice emphasis0">
+<div id="ta71_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-52d9-be5c-56ed-e63ffb3b650d" style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Permite hacer el producto cartesiano de dos o más relaciones.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo: </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Supónganse dos relaciones cross1 y cross2 que contienen la siguiente información: </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">cross1:</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">1 2 3</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">4 2 1 </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">cross2: </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">2 4 </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">8 9 </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">1 3</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;" id="docs-internal-guid-59b8b72b-8672-bc5e-892a-cd49302de794"><img src="https://lh5.googleusercontent.com/1y2Fl4Z6zOmj2WKJzaakVPC5q93TRcT6yUS8wUrEUNhM63o_acAg1tC4htcqUkvPqIp_nEJOu79LlnTbzbBfpDggd-JdCCzp7RdfonYB9a-0RhmqK51Qzm8jq0iAVcT_qg" height="41px;" width="454px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;" id="docs-internal-guid-59b8b72b-8673-660f-aec4-a110c9a7cad0"><img src="https://lh5.googleusercontent.com/I6CoQTluX6GcrEptnt0IRhNE2qc5k7IjbRh4VKiJiss3iwQsmhoCnzYSZ7M1jjZlm2NWvp9VwXxMw15eWFRhu9Wr1XYfcsvgcAFQ1y6Dg1GyTU4Sf9-MJdFAWDyp_2Y1Gw" height="108px;" width="508px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span id="docs-internal-guid-59b8b72b-8673-a97c-c673-fdfa9ec90ec3"><img src="https://lh3.googleusercontent.com/OWWgqHtTFa3lHPzzDLj_nZCrNI7WxkrbGapoaY_HcPdccefWTchsylSySET7o8c21w8RWc5AqbUt7YPAKy2B-iDt538FzkfEFTs-rEClxJMnHusM16Esq0enVWJz8R-mpQ" height="123px;" width="491px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;">Si se cargan en PIG con los alias cross1, cross2, el comando CROSS con el alias cartesiano y se ejecutan los dumps correspondientes, entonces se obtiene el producto cartesiano, tal y como se muestra en la siguiente Figura:</span></span></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;">cross1 = load 'ejemplo/cross1';</span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;">dump cross1;</span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;"><span style="font-size: small; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;">cross2 = load 'ejemplo/cross2';</span></span></span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;"><span style="font-size: small; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;"><span style="font-size: small; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;">dump cross2;</span></span></span></span></span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-family: courier new,courier;">cartesiano = CROSS cross1, cross2;<span style="font-size: small; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;"></span></span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; color: #000000; background-color: transparent; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;">dump cartesiano;</span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;" id="docs-internal-guid-59b8b72b-8678-e629-d85a-c84db27c7f63"><img src="https://lh4.googleusercontent.com/VUeQK0RW9apJgkGK3_Qvpt9aj42dgftNu6pwkSvKXNYGD2Qqh_kOwTgeUOPADgFxhvTkypDj6DJVgEm_cxFLtff9o2qjjz-dMuoJN693i3JvRKfEVEAE765o9O4OwGneMQ" height="328px;" width="389px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15; background-color: transparent;"> </span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="operadores_relacionales.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="distinct.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

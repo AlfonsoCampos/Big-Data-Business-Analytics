@@ -1,0 +1,710 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n#TFM\n###Alfonso Campos",
+      "dateUpdated": "Mar 6, 2016 6:44:32 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456307201380_1505658749",
+      "id": "20160224-094641_1779987791",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eTFM\u003c/h1\u003e\n\u003ch3\u003eAlfonso Campos\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Feb 24, 2016 9:46:41 AM",
+      "dateStarted": "Mar 6, 2016 6:44:32 PM",
+      "dateFinished": "Mar 6, 2016 6:44:32 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n##Environment Setup",
+      "dateUpdated": "Mar 7, 2016 10:50:05 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456700453412_376241598",
+      "id": "20160228-230053_572814652",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eEnvironment Setup\u003c/h2\u003e\n"
+      },
+      "dateCreated": "Feb 28, 2016 11:00:53 PM",
+      "dateStarted": "Mar 7, 2016 10:50:05 AM",
+      "dateFinished": "Mar 7, 2016 10:50:05 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Bash",
+      "text": "%sh\n\n# Constants\nLOCAL_FOLDER\u003d\"/home/zeppelin/tfm\"\nHDFS_FOLDER\u003d\"/user/zeppelin/tfm\"\n\nSMALL_TRAIN_DATASET_URL\u003d\"http://kdd.ics.uci.edu/databases/kddcup99\"\nBIG_TRAIN_DATASET_URL\u003d\"http://kdd.ics.uci.edu/databases/kddcup99\"\nTEST_DATASET_URL\u003d\"http://kdd.ics.uci.edu/databases/kddcup99\"\n\nSMALL_TRAIN_DATASET_FILE\u003d\"kddcup.data_10_percent\"\nBIG_TRAIN_DATASET_FILE\u003d\"kddcup.data\"\nTEST_DATASET_FILE\u003d\"corrected\"\n\nGZIP\u003d\".gz\"\n\n# Folder Setup\nmkdir -p $LOCAL_FOLDER\nhdfs dfs -mkdir -p $HDFS_FOLDER\n\n# Dataset Gathering\n## Small Train Dataset\n#rm -f $LOCAL_FOLDER\"/\"$SMALL_TRAIN_DATASET_FILE\nwget -P $LOCAL_FOLDER -q $SMALL_TRAIN_DATASET_URL\"/\"$SMALL_TRAIN_DATASET_FILE$GZIP\nhdfs dfs -put -f $LOCAL_FOLDER\"/\"$SMALL_TRAIN_DATASET_FILE$GZIP $HDFS_FOLDER\ngzip -fd $LOCAL_FOLDER\"/\"$SMALL_TRAIN_DATASET_FILE$GZIP\n\n## Big Train Dataset\n#rm -f $LOCAL_FOLDER\"/\"$BIG_TRAIN_DATASET_FILE\nwget -P $LOCAL_FOLDER -q $BIG_TRAIN_DATASET_URL\"/\"$BIG_TRAIN_DATASET_FILE$GZIP\nhdfs dfs -put -f $LOCAL_FOLDER\"/\"$BIG_TRAIN_DATASET_FILE$GZIP $HDFS_FOLDER\ngzip -fd $LOCAL_FOLDER\"/\"$BIG_TRAIN_DATASET_FILE$GZIP\n\n## Test Dataset\n#rm -f $LOCAL_FOLDER\"/\"$TEST_DATASET_FILE\nwget -P $LOCAL_FOLDER -q $TEST_DATASET_URL\"/\"$TEST_DATASET_FILE$GZIP\nhdfs dfs -put -f $LOCAL_FOLDER\"/\"$TEST_DATASET_FILE$GZIP $HDFS_FOLDER\ngzip -fd $LOCAL_FOLDER\"/\"$TEST_DATASET_FILE$GZIP",
+      "dateUpdated": "Mar 7, 2016 10:55:56 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/sh",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456184324934_-91099143",
+      "id": "20160222-233844_127669304",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Feb 22, 2016 11:38:44 PM",
+      "dateStarted": "Feb 28, 2016 1:48:18 PM",
+      "dateFinished": "Feb 28, 2016 1:48:42 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n##Dataset Setup",
+      "dateUpdated": "Mar 7, 2016 11:02:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456700404390_-2137399588",
+      "id": "20160228-230004_653210637",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eDataset Setup\u003c/h2\u003e\n"
+      },
+      "dateCreated": "Feb 28, 2016 11:00:04 PM",
+      "dateStarted": "Mar 7, 2016 11:02:50 AM",
+      "dateFinished": "Mar 7, 2016 11:02:50 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Python",
+      "text": "%pyspark\nimport pandas as pd\n\n#Constants\nLOCAL_FOLDER\u003d\"/home/zeppelin/tfm\"\n\nSMALL_TRAIN_DATASET_FILE\u003d\"kddcup.data_10_percent\"\nBIG_TRAIN_DATASET_FILE\u003d\"kddcup.data\"\nTEST_DATASET_FILE\u003d\"corrected\"\n\n# Variables\nall \u003d range(0, 42)\nused \u003d all[0:1]+all[4:41]\n\n# Dataset Loading\n## Small Train Dataset\nsmallTrainFeatures \u003d pd.read_csv(LOCAL_FOLDER+\"/\"+SMALL_TRAIN_DATASET_FILE, header\u003dNone, usecols \u003d used,  dtype \u003d \u0027float64\u0027)\nsmallTrainLabel \u003d pd.read_csv(LOCAL_FOLDER+\"/\"+SMALL_TRAIN_DATASET_FILE, header\u003dNone, usecols \u003d [41])\nprint \"Small Train data size is {0}\".format(smallTrainLabel.size)\n\n## Big Train Dataset\nbigTrainFeatures \u003d pd.read_csv(LOCAL_FOLDER+\"/\"+BIG_TRAIN_DATASET_FILE, header\u003dNone, usecols \u003d used,  dtype \u003d \u0027float64\u0027)\nbigTrainLabel \u003d pd.read_csv(LOCAL_FOLDER+\"/\"+BIG_TRAIN_DATASET_FILE, header\u003dNone, usecols \u003d [41])\nprint \"Big Train data size is {0}\".format(bigTrainLabel.size)\n\n## Test Dataset\ntestFeatures \u003d pd.read_csv(LOCAL_FOLDER+\"/\"+TEST_DATASET_FILE, header\u003dNone, usecols \u003d used,  dtype \u003d \u0027float64\u0027)\ntestLabel \u003d pd.read_csv(LOCAL_FOLDER+\"/\"+TEST_DATASET_FILE, header\u003dNone, usecols \u003d [41])\nprint \"Test data size is {0}\".format(testLabel.size)\n\n# Dataset Refining\n## Small Train Dataset\nsmallTrainLabel[41] \u003d smallTrainLabel[41].apply(lambda x: 0.0 if x \u003d\u003d \u0027normal.\u0027 else 1.0).astype(float)\n\n## Big Train Dataset\nbigTrainLabel[41] \u003d bigTrainLabel[41].apply(lambda x: 0.0 if x \u003d\u003d \u0027normal.\u0027 else 1.0).astype(float)\n\n## Test Dataset\ntestLabel[41] \u003d testLabel[41].apply(lambda x: 0.0 if x \u003d\u003d \u0027normal.\u0027 else 1.0).astype(float)",
+      "dateUpdated": "Mar 7, 2016 6:46:39 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456667439469_1900322586",
+      "id": "20160228-135039_1706705005",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Small Train data size is 494021\nBig Train data size is 4898431\nTest data size is 311029\n"
+      },
+      "dateCreated": "Feb 28, 2016 1:50:39 PM",
+      "dateStarted": "Mar 7, 2016 6:46:39 PM",
+      "dateFinished": "Mar 7, 2016 6:46:59 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "PySpark",
+      "text": "%pyspark\n\n#Constants\nHDFS_FOLDER\u003d\"/user/zeppelin/tfm\"\n\nSMALL_TRAIN_DATASET_FILE\u003d\"kddcup.data_10_percent\"\nBIG_TRAIN_DATASET_FILE\u003d\"kddcup.data\"\nTEST_DATASET_FILE\u003d\"corrected\"\n\nGZIP\u003d\".gz\"\n\n# Dataset Loading\n## Small Train Dataset\nsmallTrain \u003d sc.textFile(HDFS_FOLDER+\"/\"+SMALL_TRAIN_DATASET_FILE+GZIP)\nprint \"Small Train data size is {0}\".format(smallTrain.count())\n\n## Big Train Dataset\nbigTrain \u003d sc.textFile(HDFS_FOLDER+\"/\"+BIG_TRAIN_DATASET_FILE+GZIP)\nprint \"Big Train data size is {0}\".format(bigTrain.count())\n\n## Test Dataset\ntest \u003d sc.textFile(HDFS_FOLDER+\"/\"+TEST_DATASET_FILE+GZIP)\nprint \"Test data size is {0}\".format(test.count())\n\n# Dataset Refining\nfrom pyspark.mllib.regression import LabeledPoint\nfrom numpy import array\n\ndef parse_interaction(line):\n    line_split \u003d line.split(\",\")\n    # leave_out \u003d [1,2,3,41]\n    clean_line_split \u003d line_split[0:1]+line_split[4:41]\n    attack \u003d 1.0\n    if line_split[41]\u003d\u003d\u0027normal.\u0027:\n        attack \u003d 0.0\n    return LabeledPoint(attack, array([float(x) for x in clean_line_split]))\n   \ndef parse_interaction_cluster(line):\n    line_split \u003d line.split(\",\")\n    # leave_out \u003d [1,2,3,41]\n    clean_line_split \u003d line_split[0:1]+line_split[4:41]\n    return array([float(x) for x in clean_line_split])\n\n## Small Train Dataset\nsmallTrainRefined \u003d smallTrain.map(parse_interaction)\nsmallTrainRefinedCluster \u003d smallTrain.map(parse_interaction_cluster)\n\n## Big Train Dataset\nbigTrainRefined \u003d bigTrain.map(parse_interaction)\nbigTrainRefinedCluster \u003d bigTrain.map(parse_interaction_cluster)\n\n## Test Dataset\ntestRefined \u003d test.map(parse_interaction)\ntestRefinedCluster \u003d test.map(parse_interaction_cluster)",
+      "dateUpdated": "Feb 28, 2016 10:59:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456677248363_-1188824762",
+      "id": "20160228-163408_620261481",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Small Train data size is 494021\nBig Train data size is 4898431\nTest data size is 311029\n"
+      },
+      "dateCreated": "Feb 28, 2016 4:34:08 PM",
+      "dateStarted": "Feb 28, 2016 6:33:48 PM",
+      "dateFinished": "Feb 28, 2016 6:34:04 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Spark",
+      "text": "{\n//Constants\nval HDFS_FOLDER\u003d\"/user/zeppelin/tfm\"\n\nval SMALL_TRAIN_DATASET_FILE\u003d\"kddcup.data_10_percent\"\nval BIG_TRAIN_DATASET_FILE\u003d\"kddcup.data\"\nval TEST_DATASET_FILE\u003d\"corrected\"\n\nval GZIP\u003d\".gz\"\n\n//Dataset Loading\n////Small Train Dataset\nval smallTrain \u003d sc.textFile(HDFS_FOLDER+\"/\"+SMALL_TRAIN_DATASET_FILE+GZIP)\nprintln(\"Small Train data size is \" + smallTrain.count())\n\n////Big Train Dataset\nval bigTrain \u003d sc.textFile(HDFS_FOLDER+\"/\"+BIG_TRAIN_DATASET_FILE+GZIP)\nprintln(\"Big Train data size is \" + bigTrain.count())\n\n////Test Dataset\nval test \u003d sc.textFile(HDFS_FOLDER+\"/\"+TEST_DATASET_FILE+GZIP)\nprintln(\"Test data size is \" + test.count())\n\n//Dataset Refining\nimport org.apache.spark.mllib.linalg.Vectors\nimport org.apache.spark.mllib.regression.LabeledPoint\n\ndef labelAttack(v:String):Double\u003d{\n    if (v \u003d\u003d \"normal.\")\n        return 0.0\n    1.0\n}\n\ndef parse_interaction(line:String):LabeledPoint\u003d{\n    val parts \u003d line.split(\",\")\n    LabeledPoint( labelAttack(parts(41)), Vectors.dense (parts.zipWithIndex.filter(_._2 !\u003d 1).filter(_._2 !\u003d 2).filter(_._2 !\u003d 3).filter(_._2 !\u003d 41).map(_._1).map(_.toDouble)) )\n}\n\n////Small Train Dataset\nval smallTrainRefined \u003d smallTrain.map(parse_interaction)\nval smallTrainRefinedCluster \u003d smallTrain.map(s \u003d\u003e Vectors.dense(s.split(\u0027,\u0027).zipWithIndex.filter(_._2 !\u003d 1).filter(_._2 !\u003d 2).filter(_._2 !\u003d 3).filter(_._2 !\u003d 41).map(_._1).map(_.toDouble))).cache()\n\n////Big Train Dataset\nval bigTrainRefined \u003d bigTrain.map(parse_interaction)\nval bigTrainRefinedCluster \u003d bigTrain.map(s \u003d\u003e Vectors.dense(s.split(\u0027,\u0027).zipWithIndex.filter(_._2 !\u003d 1).filter(_._2 !\u003d 2).filter(_._2 !\u003d 3).filter(_._2 !\u003d 41).map(_._1).map(_.toDouble))).cache()\n\n////Test Dataset\nval testRefined \u003d test.map(parse_interaction)\nval testRefinedCluster \u003d test.map(s \u003d\u003e Vectors.dense(s.split(\u0027,\u0027).zipWithIndex.filter(_._2 !\u003d 1).filter(_._2 !\u003d 2).filter(_._2 !\u003d 3).filter(_._2 !\u003d 41).map(_._1).map(_.toDouble))).cache()\n}",
+      "dateUpdated": "Feb 28, 2016 10:59:49 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456678449471_665767796",
+      "id": "20160228-165409_250875914",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Small Train data size is 494021\nBig Train data size is 4898431\nTest data size is 311029\n"
+      },
+      "dateCreated": "Feb 28, 2016 4:54:09 PM",
+      "dateStarted": "Feb 28, 2016 7:05:17 PM",
+      "dateFinished": "Feb 28, 2016 7:05:21 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n##Logistic Regression",
+      "dateUpdated": "Mar 7, 2016 12:29:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456668225801_-569265112",
+      "id": "20160228-140345_1925753586",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eLogistic Regression\u003c/h2\u003e\n"
+      },
+      "dateCreated": "Feb 28, 2016 2:03:45 PM",
+      "dateStarted": "Mar 7, 2016 12:29:07 PM",
+      "dateFinished": "Mar 7, 2016 12:29:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Python",
+      "text": "%pyspark\nfrom sklearn import linear_model\nfrom time import time\n\n#Model Building\nt0 \u003d time()\nlogreg \u003d linear_model.LogisticRegression(solver\u003d\u0027lbfgs\u0027)\nlogreg.fit(bigTrainFeatures, bigTrainLabel[41].values)\ntt \u003d time() - t0\n\nprint \"Classifier trained in {0} seconds\".format(round(tt,3))\n\n#Model Testing\nt0 \u003d time()\ntrain_accuracy \u003d logreg.score(bigTrainFeatures, bigTrainLabel[41].values)\ntest_accuracy \u003d logreg.score(testFeatures, testLabel[41].values)\ntt \u003d time() - t0\n\nprint \"Prediction made in {0} seconds. Train accuracy is {1}. Test accuracy is {2}\"\\\n.format(round(tt,3), round(train_accuracy,4), round(test_accuracy,4))",
+      "dateUpdated": "Mar 7, 2016 6:47:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456668244684_-2062075520",
+      "id": "20160228-140404_1066799495",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 108.861 seconds\nPrediction made in 0.499 seconds. Train accuracy is 0.9898. Test accuracy is 0.8823\n"
+      },
+      "dateCreated": "Feb 28, 2016 2:04:04 PM",
+      "dateStarted": "Mar 7, 2016 6:47:07 PM",
+      "dateFinished": "Mar 7, 2016 6:48:56 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "PySpark",
+      "text": "%pyspark\nfrom pyspark.mllib.classification import LogisticRegressionWithLBFGS\nfrom time import time\n\n#Model Building\nt0 \u003d time()\nlogit_model \u003d LogisticRegressionWithLBFGS.train(bigTrainRefined)\ntt \u003d time() - t0\n\nprint \"Classifier trained in {0} seconds\".format(round(tt,3))\n\n#Model Testing\nt0 \u003d time()\nlabels_and_preds_train \u003d bigTrainRefined.map(lambda p: (p.label, logit_model.predict(p.features)))\ntrain_accuracy \u003d labels_and_preds_train.filter(lambda (v, p): v \u003d\u003d p).count() / float(bigTrainRefined.count())\n\nlabels_and_preds_test \u003d testRefined.map(lambda p: (p.label, logit_model.predict(p.features)))\ntest_accuracy \u003d labels_and_preds_test.filter(lambda (v, p): v \u003d\u003d p).count() / float(testRefined.count())\ntt \u003d time() - t0\n\nprint \"Prediction made in {0} seconds. Train accuracy is {1}. Test accuracy is {2}\"\\\n.format(round(tt,3), round(train_accuracy,4), round(test_accuracy,4))",
+      "dateUpdated": "Mar 7, 2016 6:49:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456677822831_157842885",
+      "id": "20160228-164342_764804717",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 192.695 seconds\nPrediction made in 288.556 seconds. Train accuracy is 0.9942. Test accuracy is 0.9164\n"
+      },
+      "dateCreated": "Feb 28, 2016 4:43:42 PM",
+      "dateStarted": "Feb 28, 2016 6:22:01 PM",
+      "dateFinished": "Feb 28, 2016 6:30:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Spark",
+      "text": "{\nimport org.apache.spark.mllib.classification.{LogisticRegressionWithLBFGS, LogisticRegressionModel}\n\n//Model Building\nval t0 \u003d System.nanoTime()\nval model \u003d new LogisticRegressionWithLBFGS().run(bigTrainRefined)\nval tt \u003d System.nanoTime() - t0\n\nprintln(\"Classifier trained in \" + BigDecimal(tt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble + \" seconds\")\n\n//Model Testing\nimport org.apache.spark.mllib.regression.LabeledPoint\nimport org.apache.spark.mllib.evaluation.MulticlassMetrics\n\nval tt0 \u003d System.nanoTime()\nval trainPredictionAndLabels \u003d bigTrainRefined.map { case LabeledPoint(label, features) \u003d\u003e\n  val prediction \u003d model.predict(features)\n  (prediction, label)\n}\n\nval train_metrics \u003d new MulticlassMetrics(trainPredictionAndLabels)\nval train_accuracy \u003d train_metrics.precision\n\n\nval testPredictionAndLabels \u003d testRefined.map { case LabeledPoint(label, features) \u003d\u003e\n  val prediction \u003d model.predict(features)\n  (prediction, label)\n}\n\nval test_metrics \u003d new MulticlassMetrics(testPredictionAndLabels)\nval test_accuracy \u003d test_metrics.precision\nval ttt \u003d System.nanoTime() - tt0\n\nprintln(\"Prediction made in \" + BigDecimal(ttt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble \n    + \" seconds. Train accuracy is \" + BigDecimal(train_accuracy).setScale(4, BigDecimal.RoundingMode.HALF_UP).toDouble \n    + \". Test accuracy is \" + BigDecimal(test_accuracy).setScale(4, BigDecimal.RoundingMode.HALF_UP).toDouble)\n}",
+      "dateUpdated": "Feb 28, 2016 5:58:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456679449789_-1520554411",
+      "id": "20160228-171049_495550128",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 170.476 seconds\nPrediction made in 68.238 seconds. Train accuracy is 0.9965. Test accuracy is 0.8702\n"
+      },
+      "dateCreated": "Feb 28, 2016 5:10:49 PM",
+      "dateStarted": "Feb 28, 2016 5:58:05 PM",
+      "dateFinished": "Feb 28, 2016 6:02:04 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n##KMeans",
+      "dateUpdated": "Mar 6, 2016 6:44:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456577963777_-1959934530",
+      "id": "20160227-125923_1502362848",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eKMeans\u003c/h2\u003e\n"
+      },
+      "dateCreated": "Feb 27, 2016 12:59:23 PM",
+      "dateStarted": "Mar 6, 2016 6:44:19 PM",
+      "dateFinished": "Mar 6, 2016 6:44:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Python",
+      "text": "%pyspark\nfrom sklearn.cluster import KMeans\nfrom sklearn import metrics\n\n#Model Building\nt0 \u003d time()\nrandom_K_means \u003d KMeans(init\u003d\u0027random\u0027, n_clusters \u003d 2, max_iter \u003d 100, n_init \u003d 10)\nrandom_K_means.fit(bigTrainFeatures)\ntt \u003d time() - t0\n\nprint \"Classifier trained in {0} seconds\".format(round(tt,3))\n\n#Model Evaluation\nt0 \u003d time()\nwssse \u003d random_K_means.inertia_\ntt \u003d time() - t0\n\nprint \"Evaluation made in {0} seconds. WSSSE is {1}.\".format(round(tt,3), round(wssse,4))",
+      "dateUpdated": "Mar 7, 2016 7:19:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456577977280_423564125",
+      "id": "20160227-125937_927904038",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 51.147 seconds\nEvaluation made in 0.0 seconds. WSSSE is 2.64981625926e+18.\n"
+      },
+      "dateCreated": "Feb 27, 2016 12:59:37 PM",
+      "dateStarted": "Mar 7, 2016 7:19:19 PM",
+      "dateFinished": "Mar 7, 2016 7:20:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "PySpark",
+      "text": "%pyspark\nfrom pyspark.mllib.clustering import KMeans\nfrom time import time\nfrom math import sqrt\n\n#Model Building\nt0 \u003d time()\nclusters \u003d KMeans.train(bigTrainRefinedCluster, 2, maxIterations\u003d100, runs\u003d10, initializationMode\u003d\"random\")\ntt \u003d time() - t0\n\nprint \"Classifier trained in {0} seconds\".format(round(tt,3))\n\n#Model Evaluation\ndef error(point):\n    center \u003d clusters.centers[clusters.predict(point)]\n    return sqrt(sum([x**2 for x in (point - center)]))\n\nt0 \u003d time()\nwssse \u003d bigTrainRefinedCluster.map(lambda point: error(point)).reduce(lambda x, y: x + y)\ntt \u003d time() - t0\n\nprint \"Evaluation made in {0} seconds. WSSSE is {1}.\".format(round(tt,3), round(wssse,4))",
+      "dateUpdated": "Feb 28, 2016 7:23:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456577975342_-700672161",
+      "id": "20160227-125935_1754253043",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 183.208 seconds\nEvaluation made in 285.885 seconds. WSSSE is 13736653156.2.\n"
+      },
+      "dateCreated": "Feb 27, 2016 12:59:35 PM",
+      "dateStarted": "Feb 28, 2016 6:47:06 PM",
+      "dateFinished": "Feb 28, 2016 6:54:55 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Spark",
+      "text": "{\r\nimport org.apache.spark.mllib.clustering.{KMeans, KMeansModel}\r\n\r\n//Model Building\r\nval k \u003d 2\r\nval maxIterations \u003d 100\r\nval runs \u003d 10\r\nval initializationMode \u003d \"random\"\r\n\r\nval t0 \u003d System.nanoTime()\r\nval clusters \u003d KMeans.train(bigTrainRefinedCluster, k, maxIterations, runs, initializationMode)\r\nval tt \u003d System.nanoTime() - t0\r\n\r\nprintln(\"Classifier trained in \" + BigDecimal(tt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble + \" seconds\")\r\n\r\n//Model Testing\r\nval tt0 \u003d System.nanoTime()\r\nval wssse \u003d clusters.computeCost(bigTrainRefinedCluster)\r\nval ttt \u003d System.nanoTime() - tt0\r\n\r\nprintln(\"Evaluation made in \" + BigDecimal(ttt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble \r\n    + \" seconds. WSSSE is \" + BigDecimal(wssse).setScale(4, BigDecimal.RoundingMode.HALF_UP).toDouble)\r\n}",
+      "dateUpdated": "Feb 28, 2016 10:24:34 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "title": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456577971432_2043372319",
+      "id": "20160227-125931_30897710",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 67.423 seconds\nEvaluation made in 1.04 seconds. WSSSE is 3.0525489575100616E18.\n"
+      },
+      "dateCreated": "Feb 27, 2016 12:59:31 PM",
+      "dateStarted": "Feb 28, 2016 7:12:45 PM",
+      "dateFinished": "Feb 28, 2016 7:13:53 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n##PCA",
+      "dateUpdated": "Mar 6, 2016 6:44:16 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456307050368_508576779",
+      "id": "20160224-094410_156882696",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003ePCA\u003c/h2\u003e\n"
+      },
+      "dateCreated": "Feb 24, 2016 9:44:10 AM",
+      "dateStarted": "Mar 6, 2016 6:44:16 PM",
+      "dateFinished": "Mar 6, 2016 6:44:16 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Python",
+      "text": "%pyspark\nfrom sklearn.decomposition import PCA\n\n#Model Building\nt0 \u003d time()\npca \u003d PCA(10).fit(bigTrainFeatures)\ntt \u003d time() - t0\n\nprint \"Classifier trained in {0} seconds\".format(round(tt,3))\n\n#Model Appliance\nt0 \u003d time()\ntrainPcaFeatures \u003d pca.transform(bigTrainFeatures)\ntestPcaFeatures \u003d pca.transform(testFeatures)\ntt \u003d time() - t0\n\nprint \"Classifier applied in {0} seconds\".format(round(tt,3))\n\n#Model Integration\nfrom sklearn import linear_model\n\nlogreg \u003d linear_model.LogisticRegression(solver\u003d\u0027lbfgs\u0027)\nlogreg.fit(bigTrainFeatures, bigTrainLabel[41].values)\n\nlogreg_pca \u003d linear_model.LogisticRegression(solver\u003d\u0027lbfgs\u0027)\nlogreg_pca.fit(trainPcaFeatures, bigTrainLabel[41].values)\n\n#Model Evaluation\nt0 \u003d time()\noriginal_accuracy \u003d logreg.score(testFeatures, testLabel[41].values)\npca_accuracy \u003d logreg_pca.score(testPcaFeatures, testLabel[41].values)\ntt \u003d time() - t0\n\nprint \"Evaluation made in {0} seconds. Original accuracy is {1}. PCA(10) accuracy is {2}\".\\\nformat(round(tt,3), round(original_accuracy,4), round(pca_accuracy,4))",
+      "dateUpdated": "Mar 7, 2016 7:39:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456245764903_-84470345",
+      "id": "20160223-164244_162237943",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 12.965 seconds\nClassifier applied in 1.443 seconds\nEvaluation made in 0.042 seconds. Original accuracy is 0.8823. PCA(10) accuracy is 0.8069\n"
+      },
+      "dateCreated": "Feb 23, 2016 4:42:44 PM",
+      "dateStarted": "Feb 29, 2016 8:49:12 PM",
+      "dateFinished": "Feb 29, 2016 8:53:21 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "PySpark",
+      "text": "%pyspark\nprint \"NOT AVAILABLE\"",
+      "dateUpdated": "Feb 28, 2016 11:02:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456308610439_-472127386",
+      "id": "20160224-101010_1585294461",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "NOT AVAILABLE\n"
+      },
+      "dateCreated": "Feb 24, 2016 10:10:10 AM",
+      "dateStarted": "Feb 28, 2016 7:15:08 PM",
+      "dateFinished": "Feb 28, 2016 7:15:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Spark",
+      "text": "{\r\nimport org.apache.spark.mllib.regression.LabeledPoint\r\nimport org.apache.spark.mllib.feature.PCA\r\n\r\n//Model Building\r\nval t0 \u003d System.nanoTime()\r\nval pca \u003d new PCA(10).fit(bigTrainRefined.map(_.features))\r\nval tt \u003d System.nanoTime() - t0\r\n\r\nprintln(\"Classifier trained in \" + BigDecimal(tt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble + \" seconds\")\r\n\r\n//Model Appliance\r\nval tt0 \u003d System.nanoTime()\r\nval trainPca \u003d bigTrainRefined.map(p \u003d\u003e p.copy(features \u003d pca.transform(p.features)))\r\nval testPca \u003d testRefined.map(p \u003d\u003e p.copy(features \u003d pca.transform(p.features)))\r\nval ttt \u003d System.nanoTime() - tt0\r\n\r\nprintln(\"Classifier applied in \" + BigDecimal(ttt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble + \" seconds\")\r\n\r\n//Model Integration\r\nimport org.apache.spark.mllib.classification.{LogisticRegressionWithLBFGS, LogisticRegressionModel}\r\n\r\nval model \u003d new LogisticRegressionWithLBFGS().run(bigTrainRefined)\r\nval model_pca \u003d new LogisticRegressionWithLBFGS().run(trainPca)\r\n\r\n//Model Evaluation\r\nimport org.apache.spark.mllib.evaluation.MulticlassMetrics\r\n\r\nval ttt0 \u003d System.nanoTime()\r\n\r\nval originalValuesAndPreds \u003d testRefined.map { point \u003d\u003e\r\n  val score \u003d model.predict(point.features)\r\n  (score, point.label)\r\n}\r\nval originalMetrics \u003d new MulticlassMetrics(originalValuesAndPreds)\r\nval original_accuracy \u003d originalMetrics.precision\r\n\r\n\r\nval pcaValuesAndPreds \u003d testPca.map { point \u003d\u003e\r\n  val score \u003d model_pca.predict(point.features)\r\n  (score, point.label)\r\n}\r\nval pcaMetrics \u003d new MulticlassMetrics(pcaValuesAndPreds)\r\nval pca_accuracy \u003d pcaMetrics.precision\r\n\r\nval tttt \u003d System.nanoTime() - ttt0\r\n\r\nprintln(\"Prediction made in \" + BigDecimal(tttt/1000000000.0).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble \r\n    + \" seconds. Original accuracy is \" + BigDecimal(original_accuracy).setScale(4, BigDecimal.RoundingMode.HALF_UP).toDouble \r\n    + \". PCA(10) accuracy is \" + BigDecimal(pca_accuracy).setScale(4, BigDecimal.RoundingMode.HALF_UP).toDouble)\r\n}",
+      "dateUpdated": "Feb 28, 2016 10:49:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456246980099_-1863437056",
+      "id": "20160223-170300_410865725",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Classifier trained in 70.482 seconds\nClassifier applied in 0.003 seconds\nPrediction made in 8.472 seconds. Original accuracy is 0.8702. PCA(10) accuracy is 0.8078\n"
+      },
+      "dateCreated": "Feb 23, 2016 5:03:00 PM",
+      "dateStarted": "Feb 28, 2016 10:49:10 PM",
+      "dateFinished": "Feb 28, 2016 10:56:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Feb 27, 2016 9:13:02 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1456604680642_-135720387",
+      "id": "20160227-202440_1225038864",
+      "dateCreated": "Feb 27, 2016 8:24:40 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "TFM",
+  "id": "2BDH2MSHR",
+  "angularObjects": {
+    "2BDPFGRPP": [],
+    "2BDSMSSUE": [],
+    "2BBZCKQ4C": [],
+    "2BBEXVK96": [],
+    "2BBDN8HYX": [],
+    "2BB75FC4F": [],
+    "2BBDXPNC7": [],
+    "2BDMTAXP3": [],
+    "2BBK4Z7C2": [],
+    "2BDD3ZAX6": [],
+    "2BDKQH5A4": [],
+    "2BD53BXZX": [],
+    "2BD1BV3TR": [],
+    "2BDFQ3N6R": []
+  },
+  "config": {},
+  "info": {}
+}

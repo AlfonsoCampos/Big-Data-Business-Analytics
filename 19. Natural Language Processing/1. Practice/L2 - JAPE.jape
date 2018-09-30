@@ -1,0 +1,18 @@
+
+
+Phase: Phaseanimal  
+Input: Token 
+Options: control = appelt debug = true  
+ 
+Rule: Ruleanimal  
+(  
+ {Token.lema == "perro"}  
+)  
+:animal2  
+-->  
+:animal2.animal = {} 
+
+
+
+
+

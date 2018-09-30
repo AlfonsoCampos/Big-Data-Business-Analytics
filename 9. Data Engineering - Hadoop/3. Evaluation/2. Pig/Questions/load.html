@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>LOAD </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li class="current-page-parent"><a href="introduccin_a_pig_latin.html" class="current-page-parent daddy">Introducción a Pig Latin</a>
+   <ul>
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li class="current-page-parent"><a href="operadores_relacionales.html" class="current-page-parent daddy">Operadores relacionales</a>
+      <ul>
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li id="active"><a href="load.html" class="active no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="limit.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="order_by.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">LOAD</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id79">
+<div class="iDevice emphasis0">
+<div id="ta79_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-52dd-323c-939f-e27280b662cf" style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Carga datos del sistema de archivos. </span></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><img src="https://lh6.googleusercontent.com/2ZHtj3K29D09dnXZGW2wmfqh0jSfffsIbFm_mPMSHgI76MN36gvV5GJzDg4TgRuYXp95dBTWeuTcZ4fojhQnLFBU_9SxghHVBM268zs0hpHSqNKVl39cXDLF8fC-aERsbg" height="165px;" width="624px;" /></span></p>
+<div style="margin-left: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></div>
+<div style="margin-left: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Por defecto la función empleada es PigStorage que recibe un parámetro de entrada que por defecto es un tabulador. Sin embargo como se ha visto en otros ejemplos es posible emplear otro valor como separador o incluso emplear una función definida por el usuario como función de troceo. </span></div>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span id="docs-internal-guid-dd5e2e58-952e-cfae-9a38-c6d71f23767f"><img src="https://lh5.googleusercontent.com/m-josZMf2Nf8RvJdtY5BxySbywQJBwBOV98jrMiW4JwbxuzdIkiHxaj3JfRkudLwW3Xf-WGmpV_WDa0YXEtNTwKAFCzkjyC2LLtR5Mp5QMMftDG0ecjat7-Uqjdaomgp0g" height="127px;" width="624px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="limit.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="order_by.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

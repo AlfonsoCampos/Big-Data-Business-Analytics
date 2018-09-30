@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Configuración de ficheros </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li class="current-page-parent"><a href="instalacin.html" class="current-page-parent daddy">Instalación</a>
+   <ul>
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li id="active"><a href="configuracin_de_ficheros.html" class="active no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="descarga.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="arrancar_hbase.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Configuración de ficheros</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id216">
+<div class="iDevice emphasis0">
+<div id="ta216_85" class="block iDevice_content">
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Una vez descargado y descomprimido, procederemos a editar los ficheros de configuración que se encuentran dentro de la carpeta conf. Básicamente editaremos el fichero en el que indicaremos la ruta a hbase y el directorio en el que se almacenarán los datos.  </span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>$ cd conf</em></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>$ ls</em></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><img src="https://lh5.googleusercontent.com/7cDidLfPVUwJV4RiCMDfvgD9B68pzbPLBK1nVXhGKlnv1F5UpCyZkfnrhNvCJl34MenNljaY22zHPeOItWycVXJ_fH6I1h0aBDIOvaSRRiFWY4nVFr0eQKIXfCg26zw7Hw" width="624px;" height="105px;" /></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>$ sudo nano hbase-site.xml</em> </span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Añadir las propiedades</span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><img src="https://lh5.googleusercontent.com/ALIHBZDU54mYGdAMiR86RT-Lzclc_mn4gjHXyXrjQxK1x4veiGMhqAzlgAPYemEj3mxs8gdoXG9XQGMAOTsgqicmgHcXMwutBVURlomwGZH9pW8n2rlGy9q--5Ux4nQ8Wg" width="165px;" height="50px;" /> </span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;property&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;name&gt;hbase.rootdir&lt;/name&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;value&gt;file:///home/bigdata/hbase&lt;/value&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;/property&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;property&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;value&gt;/home/bigdata/zookeeper&lt;/value&gt;</em></span><br /><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>&lt;/property&gt;</em></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><img src="https://lh3.googleusercontent.com/x_z8CV2hxLKnIA0-_CVEGTfS4L3Ei7IQKc5lnhWHXeUnBLIY-dPLmq0wfugoPIim5-ZEZgAt610RKi-sHavpVi99AlAEgvjExpVlCehoID31psF2Ec883ezg-3mCU_osuQ" width="624px;" height="308px;" /></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">No es necesario crear el directorio de datos de zookeeper, ya que HBase lo creará cuando se arranque.</span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Incluimos en el classpath la información de las rutas en las que se encuentran las librerías de HBase, para después poder emplearlas. </span><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"></span></p>
+<p dir="ltr"><strong>$ sudo nano ~/.bashrc</strong></p>
+<p dir="ltr"><strong><span id="docs-internal-guid-485d6fa7-0ccd-21a4-520c-6a52aa1df275"><span><img src="https://lh4.googleusercontent.com/b4fApPwznhJmFNuiWMPh4TfeWiE8UwG0gw41rAOuMg3_DeEZggVE2S0qB6I0Jp1RhHWwbBW9qIawTiY-qxGq0SNI3I7slNrGBI-0R_SC8rpHOjKp0o9WKsRuEvwe2rExxg" width="409px;" height="21px;" /></span></span></strong></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"></span></p>
+<p dir="ltr"></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"></span></p>
+<p># Rutas de HBase<br />export HBASE_HOME=/home/bigdata/hbase<br />export PATH=$PATH:/$HBASE_HOME/lib</p>
+<p><span id="docs-internal-guid-485d6fa7-0ccc-4fb2-db94-2cbf542a988b"><span><img src="https://lh5.googleusercontent.com/3ojhpUVeZzUeu0N-AvRBP97MVFqmcJWhAdCItuhimGYa-dcgCbrJT__ZfiQSiiy6kR8x63n5_q8HD4XXyc6YCZnDyp3tlEFx4xx2ZzWjuQv0mLTotYC4ln8678cIJk-hwg" width="356px;" height="68px;" /></span></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong><span>$ source ~/.bashrc</span></strong></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong><span><span id="docs-internal-guid-485d6fa7-0ccd-7496-ff84-26e1a6697f7c"><span><img src="https://lh5.googleusercontent.com/CwxaKuGniKAPpndosoZktbTHGIghr2FV-0Q8XnMO3z9X7MmtKSNodKUxzHMO76qrgz-_GpF2xSNtzLvgVvcEXBFa6UrQoweUGMfXLMhqGz2NPrS_1N9beCqiPzKtm8JJ7g" width="379px;" height="25px;" /></span></span></span></strong></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="descarga.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="arrancar_hbase.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

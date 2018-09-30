@@ -1,0 +1,13 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX g:  <http://example.org/film/> 
+PREFIX g1:  <http://example.org/film/g1/> 
+PREFIX g2:  <http://example.org/film/g2/> 
+SELECT ?name ?director
+FROM default
+FROM NAMED <http://example.org/film/g2>
+WHERE {
+	?s g:bestPicture ?name
+GRAPH ?graph1
+	{ ?film g2:originalTitle ?name .
+	  ?film g2:director ?director}
+}

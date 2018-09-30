@@ -1,0 +1,102 @@
+Analitica Web
+> Libraco de Avinash Kaushik: Analitica Web 2.0
+> Libraco2 de Gemma Muñoz: El arte de medir
+
+Concepto de Lead: Elementos del obj de negocio
+> Blog objetivo 1: lectores recurrentes
+> Otro obj puede ser suscripcion a newsletter tal que luego se volviera lector recurrente!
+
+Definir objetivo de negocio es fundamental
+Objetivo & micro-objetivo --> Conversion
+
+SEO: Posicionamiento Google gratis
+SEM: Posicionamiento Google pagando
+
+Plan de medicion=> Funnel de usuario:
+Conocimiento --> Activacion --> Accion --> Fidelizacion
+
+KPIs vs Metricas
+KPI: Key Performance Implication: basicamente metricas que te valen para tus objetivos
+Metricas: Hay que huir de metricas y mirar los KPIs
+
+KPI se orienta a RESULTADOS, OBJETIVO y ACCIONABLE
+La segmentacion (hombres, mujers, edad,...) ayudan a entender los datos!
+
+Display: Anuncio en cuadro en pagina
+Afiliacion: Anuncion en mail
+
+Se trata de adaptar Google Analytics al negocio y no al reves!
+
+Atribucion es asignarle valor economico a una conversion!
+CPA: Coste de aquision
+
+Cookie de castigo!!
+
+Google Analytics <-> CRM database ==> Google BigQuery (Cloud Database) - REST API
+· BigQuery connector to Pandas / R
+
+Google Analytics!!
+Metricas vs Dimensiones!
+Sesiones por defecto son 30 mins!
+
+Webmaster tool te permite ver las plabras x busqueda organica que estan activando tu sitio web.
+
+Home
+Cuenta (Puedes tener varios)
+    Propiedad Web (UA por cada dominio)
+        Vista
+
+Crear filtro a nivel de Cuenta para luego tenerlo disponible xa todas las vistas!
+Recomienda tener un perfil de Vista que no tocas (de Backup)
+Luego creas otros y emiezas a currar en esos
+
+Accesos tb se dan a nivel de cuenta, dominio o vista
+
+Segmentos comunes o segmento como vista directamente
+
+Usuarios con acceso a nivel de cuenta, propiedad o vista
+
+
+Secciones del GA:
+· Audicencia: Nos cuenta COMO son y QUE tienen en comun nuestras visitias
+· Adquision: Nos cuenta por dond ellegan nuestras bisitas
+· Comportamiento: Que hacen nuestras visitias ene l sitio y que les  gusta mas
+· Conversiones: Nos cuenta las conversiones en el site
+Rollo fuente vs medio
+Puedes configurar las cajitas de alguna forma... (directo, pago, etc...)
+
+Tipos:
+Trafico directo es un cajon desastre --> Si lo tienes bien montado deberia ser accesos directos
+Organico --> buscador  gratis. Not provided es navegacion anonimo, pero con Webmaster tools y dimension secundaria la landing page, puedes iinferir las palabras con las que llegan.
+
+not provided vs not set --> anonimo vs ni puta idea
+
+CPC - Coste por click (lo que te cobra Google por cada click!)
+Eventos: Tb es util ficharlo, esto son acciones que no cambian navegacion, mas rollo boton
+
+Tema Ad Words y Campañas vs Experimentos para prbar a la vez distintas opciones en la pagina (distintas versiones de la pagina) y decididr cual tiene features que estan a trayendo mas la atencion
+
+ClickTale/Crzyegg -- Heatmap de color xa las paginas!!
+
+La paralisis del analisis!
+
+Extraer datos de GA a traves de API, ?
+
+2 Plugins calve
+Googla Analitcis Debuuger
+Tag Algo.. --> estra en las diapos
+
+3k visitas al mes xa que valga de algo
+15k visitas al mes xa ganar pasta
+
+50% de beneficio es clave, parece que 20% no es suficiente ni pa atras!
+luisbernabe@campusciff.com
+
+3a es crear un informe personalizado: 
+pestaña informes > te cojes el que quieras de vision general --> esto NO es informe personalizado
+Customizacion te creas uno nuevo
+Y lo exportas a PDF y le envias
+
+Jing
+
+

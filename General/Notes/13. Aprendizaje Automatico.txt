@@ -1,0 +1,28 @@
+Los modelos se van renovand...
+Ojo con estirarloa en demasia...!
+
+- Aprendizaje Supervisado: Cuando tenemso una variable objetivo
+- Aprendizaje NO Supervisado: Cuando NO tenemos una variable objetivo
+
+Minero de datos: extrae y analiza los datos
+KDD: Proceso iterativo que incluye de manera amplia a la minería de datos y las actividades relacionadas
+
+CRISP-DM - Metodologgia xa extraccion de datos:
+· Business Understanding --> Data Understanding --> Data Preparation --> Modeling --> Evaluation --> Deployment
+
+Validacion cruzada es mejor que entrenamiento + validacion + test
+
+Model.score te da el R cuadrado!
+
+SVM: Hiperplano que mejor separa los elementos. Como centroide pero aqui son 2 colores, no distancia.
+
+En k-means le dices el numero de centroides que quieres.
+Ejercicio Titanic, quitar numero de bote xq si estas en un bote te has salvado fijo
+
+Segmentacion vinos clases/categorias
+
+Para lo de theano: 
+export THEANO_FLAGS=blas.ldflags="-L/usr/lib64/ -lblas" 
+ipython notebook
+
+PCA esta haciendo autovalores y autovectores, es como si proyectara en otras dimensiones algo para reconnocerlo mejor

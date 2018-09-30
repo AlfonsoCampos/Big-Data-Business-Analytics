@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Comandos de manipulación de datos CRUD. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li class="current-page-parent"><a href="comandos_disponibles_en_hbase_shell.html" class="current-page-parent daddy">Comandos Disponibles en HBase Shell</a>
+   <ul>
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li id="active"><a href="comandos_de_manipulacin_de_datos_crud.html" class="active no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="comandos_ddl_definicin_de_datos.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="comandos_avanzados.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Comandos de manipulación de datos CRUD.</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id198">
+<div class="iDevice emphasis0">
+<div id="ta198_1" class="block iDevice_content">
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>Comandos de manipulación de datos sobre filas y columnas</strong></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>put</strong>: inserta el valor de una celda en la tabla/fila/columna especificada y opcionalmente con las coordenadas del timestamp.</span></li>
+<ul>
+<li dir="ltr"><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Ejemplo: poner una celda con valor 1 en la tabla 1  en la fila 1 en la columna 1 </span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">put 't1', 'r1', 'col1', '1'</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 17.7272720336914px;"><img src="https://lh3.googleusercontent.com/37XdHt6N9mSCEudQGI_JsZAlHC5l-rqs92rgoCzbkwu3saIzH8ydw7qH4MH79x1yQEP4c863EqQgY0BF1xVkQC90RfGXuPkWx1IP2uc3tl--Oz2BsDx7njVv2NQU6nyCvw" width="432px;" height="60px;" /></span></span></p>
+<ul>
+<ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">put 't1', 'r2', 'col1', 1</span></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>get</strong>: recupera los contenidos de una celda o fila.</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplos:</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span id="docs-internal-guid-c350855c-0853-872f-71fc-1137d9e69f02"><span><img src="https://lh6.googleusercontent.com/KPiDzj9DIkICxyI63zBBDgbpjj96cVVRT0yy3iEVzABSCmA9r7ZMAsrnUgqxpc9ClrxMt_RtADQPsMwLCMvAPj26IvXwg4jHMBhV6LxTSb-sykmSxgzShicCBa6b3OdFrA" width="551px;" height="90px;" /></span></span></p>
+<ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Si se dispone de un conjunto de datos más extenso, se pueden emplear las siguientes consultas:</span>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', {TIMERANGE =&gt; [ts1, ts2]}</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', {COLUMN =&gt; 'col1'}</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', {COLUMN =&gt; ['c<span>ol</span>1', 'c<span>ol</span>2', 'c<span>ol</span>3']}</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', {COLUMN =&gt; 'c<span>ol</span>1', TIMESTAMP =&gt; ts1}</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', {COLUMN =&gt; 'c<span>ol</span>1', TIMERANGE =&gt; [ts1, ts2], VERSIONS =&gt; 4}</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', {COLUMN =&gt; 'c<span>ol</span>1', TIMESTAMP =&gt; ts1, VERSIONS =&gt; 4}</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', 'c<span>ol</span>1'</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', 'c<span>ol</span>1', 'c<span>ol</span>2'</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get 't1', 'r1', ['c<span>ol</span>1', 'c<span>ol</span>2']</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></li>
+</ul>
+</li>
+</ul>
+</ul>
+<ul>
+<li dir="ltr"><span><strong>incr</strong>: aumenta el valor de una celda, indicando sus coordenadas (tabla/fila/columna)</span>
+<ul>
+<li dir="ltr"><span>Ejemplos:</span>
+<ul>
+<li dir="ltr"><span>hbase&gt; incr 't1', 'r1', 'c<span>ol</span>1' → incrementar en 1</span></li>
+<li dir="ltr"><span>hbase&gt; incr 't1', 'r1', 'c<span>ol</span>1', 1→ incrementar en 1</span></li>
+<li dir="ltr"><span>hbase&gt; incr 't1', 'r1', 'c<span>ol</span>1', 10→ incrementar en 10</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>count</strong>: devuelve el nº de filas de una tabla.Esta operación tardará mucho. Por defecto, count se muestra cada 1000 filas por defecto, pero el intervalo puede ser indicado excepcionalmente, del mismo modo que los scaneos de caché se pueden indicar.</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplos:</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; count 't1'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-c350855c-085b-1b97-fad0-eed1f8ba1fd5"><span><img src="https://lh6.googleusercontent.com/vvG2Q-6X6p1VNPKZzcwCkr-4bEM4y6ixIW5LvJ3-DtfI3n5C98RIs5yI8pwBIT2AD08MOsvkpAzqRuQtmtQWIvw1zERkVUTcuq-pRBZwU8ddn-QuNp1aePsV7PY5wPYoxw" width="292px;" height="78px;" /></span></span></span></span></p>
+<ul>
+<ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; count 't1', INTERVAL =&gt; 100000</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; count 't1', CACHE =&gt; 1000</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; count 't1', INTERVAL =&gt; 10, CACHE =&gt; 1000</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>getcounter</strong>: devuelve el contador de una celda especificando las coordenadas de la tabla/fila/columna.</span>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplos:</span>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; get_counter 't1', 'r1', 'col1'</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>delete</strong>: elimina una celda de una tabla/fila/columna</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplo: </span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; delete 't1', 'r1', 'col1'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-c350855c-085d-06a7-0712-86f1e3fa491c"><span><img src="https://lh4.googleusercontent.com/eU-FK9NzdO-podLZJFlHAxqsiYrxawVqAyWoefSe48fRZmc7_dRKoIp7EtkaRxN4s_Bszv_SPNRqOWF8CAQMkksZjn6Bz0LMhJcoIG6L-uc4uuIx2RSnNASZ6nza0WqVeQ" width="414px;" height="58px;" /></span></span></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>delete_all</strong>: elimina toda una fila. Opcionalmente se puede indicar la columna y el timestamp</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplos: </span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; deleteall 't1', 'r1'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-c350855c-085e-175c-4f03-f68d639c7481"><span><img src="https://lh4.googleusercontent.com/dg4XwDNyKjYKaI6v7G999DzEpuH1CIWpw6rkXCDeNdSrkIbNtEzMj7iC3lXpw_HGnG41fLVrW-1Lf3zAT6ODhHXJEi_HPozykdBZ3s3ynFcxkEzjPxT4gd4vso-RvNBGaw" width="381px;" height="49px;" /></span></span></span></span></p>
+<ul>
+<ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; deleteall 't1', 'r1', 'c1'</span></li>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; deleteall 't1', 'r1', 'c1', ts1</span></li>
+</ul>
+</ul>
+</ul>
+<p><span style="font-size: small; font-family: 'trebuchet ms', geneva;"> </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="comandos_ddl_definicin_de_datos.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="comandos_avanzados.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Almacenamiento en ficheros </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hive</a></li>
+   <li><a href="caractersticas.html" class="no-ch">Características</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="comprobar_instalacin.html" class="no-ch">Comprobar instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+   <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+   <li><a href="otros_operadores.html" class="no-ch">Otros operadores</a></li>
+   <li><a href="estructuras_de_datos.html" class="daddy">Estructuras de datos</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos.html" class="no-ch">Bases de datos</a></li>
+      <li><a href="tablas.html" class="no-ch">Tablas</a></li>
+      <li><a href="partitioned_tables.html" class="no-ch">Partitioned Tables</a></li>
+      <li><a href="external_tables_and_partitioned_tables.html" class="no-ch">External Tables and Partitioned Tables</a></li>
+      <li><a href="bucket.html" class="no-ch">Bucket</a></li>
+      <li><a href="vistas.html" class="no-ch">Vistas</a></li>
+      <li><a href="indices.html" class="no-ch">Indices</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_word_count.html" class="no-ch">Ejemplo: word count</a></li>
+   <li><a href="ejercicio_1_tipos_de_datos_simples.html" class="no-ch">Ejercicio 1: tipos de datos simples</a></li>
+   <li><a href="ejemplo_estructuras_complejas.html" class="no-ch">Ejemplo: estructuras complejas</a></li>
+   <li><a href="ejercicio_2_tipos_de_datos_complejos.html" class="no-ch">Ejercicio 2: tipos de datos complejos</a></li>
+   <li><a href="otros_comandos_ddl_data_definition_language.html" class="no-ch">Otros comandos DDL (Data Definition Language)</a></li>
+   <li><a href="operaciones_dmldata_manipulation_language.html" class="daddy">Operaciones DML(Data Manipulation Language)</a>
+   <ul class="other-section">
+      <li><a href="load.html" class="no-ch">Load</a></li>
+      <li><a href="insert.html" class="no-ch">Insert</a></li>
+      <li><a href="update.html" class="no-ch">Update</a></li>
+      <li><a href="delete.html" class="no-ch">Delete</a></li>
+      <li><a href="exportimport.html" class="no-ch">Export/Import</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_crear_una_tabla_en_hive_y_cargar_un_origen_de_datos.html" class="no-ch">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</a></li>
+   <li class="current-page-parent"><a href="almacenamiento_de_datos.html" class="current-page-parent daddy">Almacenamiento de datos</a>
+   <ul>
+      <li id="active"><a href="almacenamiento_en_ficheros.html" class="active no-ch">Almacenamiento en ficheros</a></li>
+      <li><a href="almacenamiento_en_registros.html" class="no-ch">Almacenamiento en registros</a></li>
+      <li><a href="conversin_del_tipo_de_almacenamiento.html" class="no-ch">Conversión del tipo de almacenamiento</a></li>
+      <li><a href="compresin.html" class="no-ch">Compresión</a></li>
+   </ul>
+   </li>
+   <li><a href="introduccin_a_sqoop.html" class="daddy">Introducción a Sqoop</a>
+   <ul class="other-section">
+      <li><a href="import_creacin_de_conexin.html" class="no-ch">Import: creación de conexión</a></li>
+      <li><a href="import_definicin_de_datos_a_migrar.html" class="no-ch">Import: definición de datos a migrar</a></li>
+      <li><a href="import_cargar_datos_en_hive_y_hbase.html" class="no-ch">Import: cargar datos en Hive y Hbase</a></li>
+      <li><a href="importalltables.html" class="no-ch">Import-all-tables</a></li>
+      <li><a href="export.html" class="no-ch">Export</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="almacenamiento_de_datos.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="almacenamiento_en_registros.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Almacenamiento en ficheros</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id49">
+<div class="iDevice emphasis0">
+<div id="ta49_85" class="block iDevice_content">
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Existen distintos tipos de almacenamientos en ficheros permitidos por Hive: </span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php" id="docs-internal-guid-4b9ad1c8-fac9-9eba-aad8-361cebddb695"><img src="https://lh4.googleusercontent.com/qWDwDoGe5xILjWbu16qVlrEEhEKbZYerAdC7kNSGQxW3xAbOE6rp7PgmCyaisesCeivbvffi_ClwaHwo_lLcJLERWiz8bjNNrfazvDE4mre7U3wMODYKMsIK0MCZdMSoYUQ5QZc" width="624px;" height="172px;" /></a></span></p>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">SEQUENCEFILE: almacena el fichero como una secuencia única de pares claves-valores en binario que se guardan en Hadoop. Es bueno para compartir ficheros en el ecosistema de Hadoop</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">TEXTFILE (por defecto): almacena cada registro como una línea de texto. Es muy útil para compartir ficheros con otras aplicaciones y editar ficheros manualmente. Es menos eficiente que los ficheros de texto en formato binario al no emplear ningún tipo de estructura. </span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">RCFILE: almacena las columnas de la tabla como registros en forma de columna. Permite buenas compresión</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">ORC (optimized row columnar file): nuevo formato optimizado que podrá sustituir a RCFILE</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">PARQUET <a href="https://cwiki.apache.org/confluence/display/Hive/Parquet">https://cwiki.apache.org/confluence/display/Hive/Parquet</a> / <a href="http://parquet.incubator.apache.org/">http://parquet.incubator.apache.org/</a> formato de almacenamiento en columna disponible para cualquier proyecto del ecosistema de Hadoop.</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">AVRO <a href="http://avro.apache.org/">http://avro.apache.org/</a> : sistema de serialización de datos de Hadoop que pretende convertirse en un estándar. Se apoya en la definición de un esquema para almacenar los datos. </span></li>
+</ul>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Cuando se define la tabla, se puede indicar el tipo de formato de archivo que vamos a emplear. Para ello se emplea el comando STORED AS FILEFORMAT. Es muy importante saber el tipo de uso que va a tener nuestro fichero para saber en qué formato vamos a almacenarlo. </span></p>
+<p style="margin-left: 30px;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>CREATE TABLE ejemplo1 </em></span></p>
+<p style="margin-left: 30px;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>STORED AS SEQUENCEFILE</em></span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Mediante la instrucción INPUT/OUTPUT FORMAT se puede especificar otro formato específico</span></p>
+<p><em></em></p>
+<p><em>CREATE TABLE ejemplo2</em></p>
+<p><em>STORED AS </em></p>
+<p><em>INPUTFORMAT org.apache.hadoop.mapred.SequenceFileInputFormat</em></p>
+<p><em>OUTPUTFORMAT <em>org.apache.hadoop.hive.contrib.fileformat.base64.Base64TextInputFormat</em></em></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="almacenamiento_de_datos.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="almacenamiento_en_registros.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

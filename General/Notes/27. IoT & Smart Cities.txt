@@ -1,0 +1,13 @@
+m2m y m2h?
+
+Factor clave de IoT es que tiene que enviar la info a la nube porque el fin es avisar o informar a un 3o...
+
+
+Ciudad lego:
+- Router3g
+- Raspberry Pi
+
+Grupo 4
+- Activar alarma sonora!
+- Mostrar aviso en panel de control de no se donde...
+- Enviar email "Alerta 4 posibl urto"

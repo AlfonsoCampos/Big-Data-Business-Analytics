@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Introducción </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li id="active"><a href="introduccin.html" class="active no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="index.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="instalacin.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Introducción</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id65">
+<div class="iDevice emphasis0">
+<div id="ta65_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-52d4-11a8-1ae0-28a12b58b5f9" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: 13px; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Apache Pig es una plataforma de análisis de grandes conjuntos de datos que proporciona un lenguaje de programación de alto nivel y toda la infraestructura que permite la evaluación de los programas desarrollados en dicho lenguaje. La característica destacada de los programas de PIG es que su estructura es susceptible de paralelización, que a su vez les permite manejar grandes conjuntos de datos. </span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: 13px; line-height: 1.15;">En la actualidad, la capa de infraestructura de PIG se compone de un compilador que produce secuencias de programas de Map - Reduce y de una capa de lenguaje textual llamado Pig Latin, que tiene las siguientes propiedades clave:</span><span style="font-family: 'trebuchet ms', geneva; font-size: 0.75em; line-height: 1.5;"> </span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: justify;">
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>Facilidad de programación</strong>. Es sencillo lograr la ejecución paralela de tareas de análisis de datos simples. Las tareas complejas compuestas de múltiples transformaciones de datos relacionados entre sí están codificados explícitamente como secuencias de flujo de datos, haciendo que sean fáciles de escribir, entender y mantener.</span></p>
+</li>
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;"><strong>Flujo de datos o grafos acíclicos (DAG)</strong>: Pig Latin es un lenguaje de flujo de datos. Esto significa que permite a los usuarios describir cómo los datos de una o más entradas deben ser leídos, procesados y almacenados en una o varias salidas en paralelo. Debido a esta forma de codificación de tareas, permite que el sistema pueda optimizar su ejecución de forma automática en los distintos nodos del cluster, ayudando al usuario a centrarse en la semántica en vez de en la eficiencia. Los flujos de datos pueden ser lineales o complejos donde varias entradas se unen entre sí. </span></p>
+</li>
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr"><span style="font-size: 13px; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>Map Reduce</strong>: </span><span style="line-height: 1.5;">Pig Latin ofrece operadores para muchas de las operaciones de datos tradicionales (unir, ordenar, agrupar, filtrar, etc.), así como la capacidad de que los usuarios pueden desarrollar sus propias funciones (User Defined Functions: UDF) de lectura, procesamiento y escritura de datos. </span><span style="line-height: 1.5;"> Estas funciones pueden desarrollarse en múltiples lenguajes como JRuby, Python y Java. </span></li>
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr"><span style="font-size: 13px; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>Código abierto</strong>: Pig es un proyecto de código abierto de Apache, es decir, los usuarios son libres de </span><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15;">descargarlo como fuente o binario, utilizarlo para sí mismos, contribuir a él, y bajo los términos de la Licencia de uso de Apache modificarlo si lo consideran conveniente.</span></li>
+</ul>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="index.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="instalacin.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

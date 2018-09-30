@@ -1,0 +1,10 @@
+shapiro.test(df$altura)
+grupo2<-c(rep(1,1000),rep(0,1000))
+df2<-data.frame(p,altura,grupo,grupo2)
+t.test(df2$altura,df2$grupo2,alternative="two.side",paired=FALSE,var.equal=FALSE,conf.level=0.95)
+wilcox.test(df2$altura,df2$grupo2,alternative="two.side",paired=FALSE,conf.int=TRUE, conf.level=0.95)
+kruskal.test(df2$altura,df2$p)
+library(MASS) 
+tbl = table(df2$grupo, df2$grupo2) 
+tbl
+chisq.test(tbl)

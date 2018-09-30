@@ -1,0 +1,125 @@
+Predictive Analytics!
+
+CAO - 
+
+· Big Data
+· Data-driven
+
+Predictive Analytics
+- Dentro entran en el fondo tanto predictivos como no predicitovss
+- Estamos hablando de cualquier algritmo o metodologia avanzada que nos permita dar respuesta a cualquier pregunta de negocio la que sea
+- Advanced Analytics es como se llaman las metodoligas avanzadas basadas en calculos estadisticos
+
+> Dificultades de contar con los datos
+· Idea del data lake!
+- Data quality
+
+> La pregunta es necesaria! --> Conocer el negocio!
+> Cultura data-driven!
+
+El que modeliza debe tener conocimientos tecnologicos en tratar los datos --> logicamente
+
+Datos > permite:
+- Tecnologia aka Big Data
+- Modelos aka Data Scientist
+- Negocio aka Business Analyst
+
+90% son modelos de regresion...
+
+Mola muxo el angulo de como se va a usar el modelo, jugada de predictivo vs expicativo... es clave!!!
+
+Analytics Methodology:
+> Sampling
+- Sample Selection (abajo tb)
+- Data Partition: Dividir en train y test
+    · Se suele hacer un balanceo de la muestra de entrenamiento --> 1 sies : 3 noes
+    · La idea es q lo q quieres detectar es muy bajo, lo subes; si no la balanceas hace underfitting
+    · Escojerias para entrenar los datos mejor informados; como entrenas, lo haces como crees que es mejor
+    
+    · En la muestra test mantienes la proporcion real del conjunto
+    · Fijas k de si y completas con los n necesarios para mantener proporcion dle conjunto
+
+- Variables Selection
+    · Ahora seleccionas en funcion del conocimiento del negocio
+    · Casi es mas que tienes en cuenta commo variables movidas que no pensabas relevantes x como afectan a la variable objetivo
+    
+    > Exploring
+- Visual Analytics
+    · Lo 1o que quieres hacer es explorar los datos visualmente para hacerte una idea
+- Outliers Selection
+- Descriptive Analytics
+    · Miticos estadisticos descriptivos
+   
+> Modifying
+    · Discretizar: Information Values, ...
+    · Para ver relaciones e interacciones usas arboles de decision porque a veces no son metricas. Si nno podrias usar correlacion
+    · Hay que ver el arbol para ver como rula. Esto hay que mirarlo...
+    
+- New variables & metrics
+- Missing values treatment
+
+> Modelling (6 a 8 semanas se supone que se tarda...!)
+- Machine Learning
+    · Redes neuronales
+    · Inconveniente es que necesita volumen super-masivo de datos!
+    · Son buenos para predecir pero malos para explicar; tiene sentido porque mete aqui redes neuronales y lo poco explicativos que son estos modelos
+    
+- GLM Models
+    · Ve GLM como un vs con ML
+    · Pone a competir los 3 tipos (GLM, ML, RF)a ver q plan... luego escoje en base a matriz de confusion
+
+- Random Forest
+    · Es + facil de explicar el random forest xq puedes decirle las variables q utiliza a alto nivel vs red neuronal q no ves nada...
+    
+- Unsupervised Models
+    · Reconocer patrones en los datos    
+
+    · Los modelos se prueban con prueba ciega: O sea con datos que no conoces; lo mitico, no tienen variable objetivo
+    · Cuando se evalua, muchas veces se ven cruces que no hay, el tipo que las sabe las ha detectado con info de fuera del modelo!
+    · Sin embargo, las que tu detectas tienes que ver que ahi si y compara con las suyas y ve que el ROI retorno de la inversion le merece
+    
+> Assesment
+- Model comparison
+- Hybrid models
+    · Modelos semi-supervisados es que utilizan este clustering y luego lo conectan con la variable objetivo xa ver q plan
+   
+Cross-Industry PA Solutions   
+ - Motores de recomendacion: productos de consumo masivo y alta rotacion...
+ - Cross-selling: modelo de propension por lineas de producto... WTH?!
+ 
+ Modelo y Business Case
+ 
+ CAT1 en adelante hasta fecha cat2
+ codigo postal, provicnia si
+ de sin.atestado hasta num testigos
+ de la de num perjudicasdos debemos dejarla a 0
+ numero de contrarios si, el resto no
+ hasta las 2 de garantia, estas si
+ garantia 3 cat si
+ saltamos 2 aki
+ las 2 de demanda si
+ deman tipo no
+ f nacimiento
+ contr_dgs no
+ danos_vehiculo_contr_prop fuera
+ TARGET: TARGET_FRAUD_S_N
+ Las de suplemento si... esto es lo que conto que es util
+ fecha cancelacion y todo eso nada
+ franquicia solo importe franquicia
+ tipologia, categoria, valor del vehiculo, OK
+ garan las 14 fuera!!
+ 
+ La muestra de training esta bien selle
+ 
+ Fichero de trainingn perfecto
+ Fichero de test hay que quitar 0s (en la objetivo) hasta que quede proporcion del 0.005 por ciento (1 de cada 200!).
+ 
+ 70/30 en trainig y de ahi a test...
+ 
+ vidal.fernandez@d3pap.com
+ 
+ 21 de Diciembre!--> Recordarle que yo lo hacia solo..
+    
+
+    
+

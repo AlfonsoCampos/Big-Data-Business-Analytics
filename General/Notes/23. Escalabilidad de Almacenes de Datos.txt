@@ -1,0 +1,58 @@
+Escalabillidad de almacenes de datos
+
+Redundancia:
+- Aumenta throughput
+- Aumenta disponibilidad
+- Puede aumentar la disponibilidad
+
+> DevOps: Se disminuye interdependencia entre desarrollo y operacion de un sistema
+· Aqui el enfoque es que desarrollador sepa empaquetar, desplegar, etc.. movidas de sistemas
+· La gente de sistemas tiene que saber programar.
+
+> 3 perfiles que se piden:
+Big Data
+Data Scientist
+DevOps
+
+Tecnicas:
+- Incrementales
+1) Indices
+2) Replica Sets
+3) Sharding
+
+Indices para campos con texto --> recomienda ElasticSearch; lol
+
+Covered Queries: Almacenas en el indice la informacion que necesitas en tu consulta!
+
+.explain("executionStats"): Le estas pidiendo al optimizador de queries que te explica que planes tenia para hacer esta mubi...
+- Salta x si mismo cada 1000 queries
+- Con reindexado
+- Cambios de indice
+
+Explain te pilla 3 niveles de verbosity
+- queryPlanner, executionStats y allPlansExecution
+
+Ejercicios
+9.42 :(
+
+ej1:
+7. Solo estas recorriendo el indice!
+
+ej2:
+2. 7
+3. NO
+4. SI, quantity_1
+5. Metiendo tooodos los campos en el indice!
+6. En la del 1 solo se pedia el campo quantity
+7. Ahora utiliza Collscan; Recorre 10
+
+ej3:
+- Xa keli
+
+> Eliminar indices si no se usan
+> La clave con los indices es mirar con executionStats que ha hecho y como lo ha implementado...
+
+Mongo recomienda 3 con tolerancia a 1.
+
+ej4 
+- Candidato xa keli

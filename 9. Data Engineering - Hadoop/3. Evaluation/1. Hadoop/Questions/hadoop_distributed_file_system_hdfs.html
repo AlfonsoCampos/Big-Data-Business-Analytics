@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Hadoop Distributed File System (HDFS™) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hadoop</a></li>
+   <li class="current-page-parent"><a href="conceptos_bsicos_y_definiciones.html" class="current-page-parent daddy">Conceptos básicos y definiciones</a>
+   <ul>
+      <li><a href="conceptos_previos.html" class="no-ch">Conceptos previos</a></li>
+      <li><a href="qu_es_apache_hadoop.html" class="no-ch">¿Qué es Apache Hadoop?</a></li>
+      <li><a href="ecosistema_hadoop.html" class="no-ch">Ecosistema Hadoop</a></li>
+      <li><a href="quin_usa_hadoop.html" class="no-ch">Quién usa Hadoop</a></li>
+      <li class="current-page-parent"><a href="mdulos_de_hadoop.html" class="current-page-parent daddy">Módulos de Hadoop</a>
+      <ul>
+         <li><a href="hadoop_common.html" class="no-ch">Hadoop Common</a></li>
+         <li id="active"><a href="hadoop_distributed_file_system_hdfs.html" class="active no-ch">Hadoop Distributed File System (HDFS™)</a></li>
+         <li><a href="hadoop_yarn.html" class="no-ch">Hadoop YARN</a></li>
+         <li><a href="hadoop_mapreduce.html" class="no-ch">Hadoop MapReduce</a></li>
+         <li><a href="programacin_de_trabajos.html" class="no-ch">Programación de trabajos</a></li>
+      </ul>
+      </li>
+      <li><a href="instalacin_de_hadoop.html" class="daddy">Instalación de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="prerrequisitos.html" class="daddy">Prerrequisitos</a>
+         <ul class="other-section">
+            <li><a href="descargar_e_instalar_hadoop.html" class="no-ch">Descargar e instalar Hadoop</a></li>
+            <li><a href="actualizar_mquina_virtual.html" class="no-ch">Actualizar máquina virtual</a></li>
+            <li><a href="confirmar_versin_de_java.html" class="no-ch">Confirmar versión de Java</a></li>
+            <li><a href="crear_y_configurar_los_certificados_ssh.html" class="no-ch">Crear y configurar los certificados SSH</a></li>
+         </ul>
+         </li>
+         <li><a href="modificar_ficheros_de_configuracin.html" class="daddy">Modificar ficheros de configuración</a>
+         <ul class="other-section">
+            <li><a href="bashrc.html" class="no-ch">~/.bashrc</a></li>
+            <li><a href="coresitexml.html" class="no-ch">core-site.xml</a></li>
+            <li><a href="hadoopenvsh.html" class="no-ch">hadoop-env.sh</a></li>
+            <li><a href="hdfssitexml.html" class="no-ch">hdfs-site.xml</a></li>
+            <li><a href="mapredsitexml.html" class="no-ch">mapred-site.xml</a></li>
+            <li><a href="yarnsitexml.html" class="no-ch">yarn-site.xml</a></li>
+         </ul>
+         </li>
+         <li><a href="formatear_el_sistema_de_archivos_de_hadoop.html" class="no-ch">Formatear el sistema de archivos de Hadoop</a></li>
+         <li><a href="demonios.html" class="daddy">Demonios</a>
+         <ul class="other-section">
+            <li><a href="arrancar_demonios_hdfs.html" class="no-ch">Arrancar demonios HDFS</a></li>
+            <li><a href="arrancar_demonios_yarn.html" class="no-ch">Arrancar demonios Yarn</a></li>
+            <li><a href="parar_demonios_hdfs.html" class="no-ch">Parar demonios HDFS</a></li>
+            <li><a href="parar_demonios_yarn.html" class="no-ch">Parar demonios Yarn</a></li>
+            <li><a href="arrancar_demonios_individualmente.html" class="no-ch">Arrancar demonios individualmente</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="interfaces_web_de_hadoop.html" class="daddy">Interfaces Web de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="namenode_web_interface_hdfs_layer.html" class="no-ch">NameNode Web Interface (HDFS layer)</a></li>
+         <li><a href="resource_manager_web_interface_yarn_layer.html" class="no-ch">Resource Manager Web Interface (Yarn layer)</a></li>
+         <li><a href="map_reduce_jobhistory.html" class="no-ch">Map Reduce JobHistory</a></li>
+      </ul>
+      </li>
+      <li><a href="ejemplo_comprobacin_instalacin.html" class="no-ch">Ejemplo comprobación instalación</a></li>
+      <li><a href="ejercicio_comprobacin_instalacin.html" class="no-ch">Ejercicio: comprobación instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="hdfs.html" class="daddy">HDFS</a>
+   <ul class="other-section">
+      <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+      <li><a href="arquitectura_hdfs.html" class="no-ch">Arquitectura HDFS</a></li>
+      <li><a href="replicacin_de_datos.html" class="no-ch">Replicación de datos</a></li>
+      <li><a href="el_nodo_secundario.html" class="no-ch">El nodo secundario</a></li>
+      <li><a href="arrancar_hadoop.html" class="no-ch">Arrancar Hadoop</a></li>
+      <li><a href="comandos_bsicos_de_hdfs.html" class="no-ch">Comandos básicos de HDFS</a></li>
+      <li><a href="ejemplo_de_uso_de_comandos_bsicos_hdfs.html" class="no-ch">Ejemplo de uso de comandos básicos HDFS</a></li>
+      <li><a href="api_de_programacin_de_hdfs.html" class="no-ch">API de programación de HDFS</a></li>
+      <li><a href="ejercicio1.html" class="daddy">EJERCICIO</a>
+      <ul class="other-section">
+         <li><a href="a_uso_de_hdfs.html" class="no-ch">A. Uso de HDFS</a></li>
+         <li><a href="b_map_reduce.html" class="no-ch">B: Map Reduce</a></li>
+         <li><a href="ejercicio2.html" class="no-ch">EJERCICIO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="map_reduce.html" class="daddy">Map Reduce</a>
+   <ul class="other-section">
+      <li><a href="procesamiento_en_paralelo.html" class="no-ch">Procesamiento en Paralelo</a></li>
+      <li><a href="fundamentos.html" class="no-ch">Fundamentos</a></li>
+      <li><a href="ejemplo_sencillo_de_map_reduce.html" class="no-ch">Ejemplo sencillo de map Reduce</a></li>
+      <li><a href="explicacin_modelo_map_reduce.html" class="no-ch">Explicación modelo Map Reduce</a></li>
+      <li><a href="ejemplo.html" class="daddy">Ejemplo</a>
+      <ul class="other-section">
+         <li><a href="datos_de_entrada.html" class="no-ch">Datos de entrada</a></li>
+         <li><a href="1_mapeo.html" class="no-ch">1. Mapeo</a></li>
+         <li><a href="2_mezcla.html" class="no-ch">2. Mezcla</a></li>
+         <li><a href="3_reduccin.html" class="no-ch">3. Reducción</a></li>
+         <li><a href="resultado.html" class="no-ch">Resultado</a></li>
+         <li><a href="interfaz_web.html" class="no-ch">Interfaz Web</a></li>
+      </ul>
+      </li>
+      <li><a href="ejercicio_diccionario.html" class="no-ch">Ejercicio: diccionario</a></li>
+      <li><a href="ejercicio_opcional.html" class="no-ch">Ejercicio (opcional)</a></li>
+      <li><a href="ms_ejemplos.html" class="no-ch">Más ejemplos</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="hadoop_common.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="hadoop_yarn.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Hadoop Distributed File System (HDFS™)</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id12">
+<div class="iDevice emphasis0">
+<div id="ta12_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-4f06-12a0-f8ec-7d25044468aa" style="line-height: 1.5; margin-top: 5pt; margin-bottom: 5pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">HDFS es un sistema de archivos distribuido que proporciona alto rendimiento en el acceso a los datos. Fue creado a partir del <a href="http://labs.google.com/papers/gfs.html">Google File System (GFS)</a></span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">. HDFS tiene optimizada la lectura y escritura de grandes masas de datos y ficheros grandes. Su diseño reduce la entrada-salida en la red, es escalable y altamente disponible gracias a las tecnicas de replicación y tolerancia ante fallos que implementa.</span></span></p>
+<p style="line-height: 1.5; margin-top: 5pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">En un cluster completamente configurado, “hacer correr Hadoop”, significa ejecutar una serie de demonios o programas residentes en diferentes servidores de la red. Algunos demonios con roles específicos existen sólo en un servidor mientras que otros se ejecutan en múltiples servidores. Estos demonios incluyen:</span></p>
+<ul>
+<li style="line-height: 1.5; margin-top: 5pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>NameNode</strong>: Sólo hay uno en el cluster y actúa por lo tanto como <strong>nodo maestro</strong>. Regula el acceso de entrada/salida a los ficheros por parte de los clientes. Su función principal es mantener en memoria la estructura de cómo se dividen los ficheros en bloques, y qué DataNode almacena cada uno de esos bloques. A diferencia del resto de los demonios,  donde si hay algún fallo hardware o software el cluster Hadoop continúa funcionando o se puede reiniciar, la recuperación de un fallo del NameNode no es trivial.</span></li>
+<li style="line-height: 1.5; margin-top: 5pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>DataNode</strong>: Son los responsables de leer y escribir las peticiones de los clientes, los llamados <strong>nodos esclavos</strong>. Cuando un cliente solicita operación de lectura o escritura de datos, el fichero se divide en bloques y el NameNode es el encargado de decir donde se encuentra o almacenará cada uno de estos bloques. Además los DataNodes se comunican con otros nodos para replicar los datos aumentando la redundancia y favoreciendo el control frente a errores.</span><img src="https://lh6.googleusercontent.com/LpIywV7wS-5MBogbcrPK1s9sAZiiYcp0SL0-BXvwim_FBLBz-b8oJykAVVlvPGug8OBJ4NKoVHUQPGWj1z9lZgppieiMLyoLQKuVf0VLuYYTPoRtxOdeP9snFFDAOXY2Iw" style="font-family: Verdana; font-size: 13px; line-height: 1.15; display: block; margin-left: auto; margin-right: auto;" width="624px;" height="320px;" /></span></li>
+<li style="line-height: 1.5; margin-top: 0pt; margin-bottom: 5pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>Secondary NameNode</strong>: Su papel principal es mezclar la imagen del N<strong>ameNode</strong> con el log de transacciones ejecutadas, para evitar que el log crezca demasiado. Normalmente este demonio corre en una máquina física separada, ya que este proceso requiere mucha CPU y mucha memoria. <strong>Mantiene una copia de la imagen del namespace</strong> para que pueda ser usada en el caso de que el <strong><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">N<strong>ameNode</strong> </span>falle</strong>.</span></li>
+<li style="line-height: 1.5; margin-top: 0pt; margin-bottom: 5pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>JobTracker y TaskTracker</strong>: demonios que se explicarán en el apartado de MapReduce. </span></li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Además, el sistema de archivos HDFS no se restringe sólo al uso de MapReduce. Puede usarse para otras aplicaciones como por ejemplo almacenamiento de datos de HBase, aprendizaje automático de Mahout y operaciones de matriz. </span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper readingIdevice em_iDevice" id="id139">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Actividad de lectura</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta139_165_4" class="block iDevice_content">
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;"><a href="http://static.googleusercontent.com/media/research.google.com/es//archive/gfs-sosp2003.pdf">The Google File System. Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung. Google, 2003.</a></span></p>
+</div>
+<div id="ta139_165_5" class="block iDevice_content">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="hadoop_common.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="hadoop_yarn.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

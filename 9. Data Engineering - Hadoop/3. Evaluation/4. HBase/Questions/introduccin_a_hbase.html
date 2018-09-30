@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Introducción a HBase </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li id="active"><a href="introduccin_a_hbase.html" class="active no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="index.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="terminologa_del_modelo_de_datos_de_hbase.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Introducción a HBase</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id191">
+<div class="iDevice emphasis0">
+<div id="ta191_1" class="block iDevice_content">
+<p dir="ltr" style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Apache HBase es una base de datos que se emplea cuando se necesita acceso aleatorio de lecturas y escrituras en tiempo real en Big Data. El objetivo del proyecto HBase es alojar grandes tablas (miles de millones de registros por millones de columnas) sobre servidores de bajo coste. </span></p>
+<p dir="ltr" style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Más específicamente, Apache HBase es una base de datos distribuida que  ha sido desarrollada como un subproyecto de Hadoop y que usa HDFS como su sistema de almacenamiento de archivos, proporcionándonos escasa tolerancia a fallos cuando estamos almacenando grandes volúmenes de datos.  </span></p>
+<p dir="ltr" style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Con esta arquitectura es posible lograr no solo altos niveles de rendimiento, sino que además altos niveles de redundancia en datos, ya que a cierto nivel los datos están distribuidos de manera redundante.<span style="line-height: 1.5;"> </span></span></p>
+<p dir="ltr" style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Aunque HBase representa una amenaza a largo plazo tanto para las bases de datos comerciales como Oracle, DB2 o MS SQL Server, así como a las de Código Libre como Postgres o MySQL, hay que seguir teniendo en cuenta que hay situaciones en donde es mejor aún tener una base de datos relacional.</span></p>
+<p dir="ltr" style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Sus principales características son:</span></p>
+<ul style="text-align: justify;">
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Open source</strong>: puede ser utilizado libremente y además su código puede ser modificado y mejorado. </span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Implementado en Java</strong>: puede funcionar bajo cualquier plataforma que tenga una máquina virtual Java, siendo accesible desde distintos entornos como Unix, Linux, Windows y OSX</span></p>
+</li>
+</ul>
+<ul style="text-align: justify;">
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Distribuida</strong>. Los datos se particionan y fragmentan sobre múltiples servidores.</span></p>
+</li>
+</ul>
+<ul style="text-align: justify;">
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Escalable</strong>. Se pueden añadir nuevos servidores al cluster de manera automática dependiendo de las necesidades</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Tolerancia a fallos</strong>: al ser un subproyecto de Hadoop, permite la configuración de mecanismos de tolerancia a fallos.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Redundancia de datos</strong>: asociado a lo anterior, incorpora redundancia de datos como mecanismo de control frente a errores.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>HDFS</strong>: HBase permite el uso de HDFS como sistema de archivos distribuido. </span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Orientado a columnas</strong>. la información se almacena en celdas agrupadas en columnas que a su vez se agrupan en familias de columnas, pudiendo ser las columnas creadas en tiempo de ejecución. Además los registros se identifican mediante una clave que relaciona una o varias columnas, dando lugar a una representación de los datos en forma de mapas. </span></p>
+</li>
+</ul>
+<ul style="text-align: justify;">
+<li dir="ltr">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Fragmentación automática por regiones</strong>. Las tablas de datos son dinámicamente distribuidas dentro del cluster en regiones que contienen los valores entre una clave de inicio y una clave de fin. Además incorpora recuperación automática frente a fallos de las regiones. </span></p>
+</li>
+</ul>
+<ul>
+<li dir="ltr" style="text-align: justify;">
+<p dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Map Reduce</strong>: HBase permite el procesamiento masivo de forma paralela empleando MapReduce tanto como entrada como salida de los jobs. </span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr" style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Cacheo de bloques</strong>: permite el cacheado de bloques de datos para la ejecución de consultas en tiempo real.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="index.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="terminologa_del_modelo_de_datos_de_hbase.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

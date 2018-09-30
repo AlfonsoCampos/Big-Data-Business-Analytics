@@ -1,0 +1,9 @@
+hive-site.xml
+Ahi estan las propiedades
+> hive.metastore.warehouse.dir
+
+Buckets es otro nivel de carpetas x columna dentro de la particion!
+
+Sqoop
+
+Importas desde SQL a HDFS

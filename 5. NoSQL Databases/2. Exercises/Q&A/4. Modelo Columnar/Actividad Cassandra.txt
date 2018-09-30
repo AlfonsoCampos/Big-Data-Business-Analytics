@@ -1,0 +1,89 @@
+ACTIVIDAD DE CASSANDRA - CIFF - ALFONSO CAMPOS
+
+0. Es necesario aportar los comandos oportunos para la creación del keyspace e inserción de datos en las familias de columnas.
+-- Creamos el Keyspace
+CREATE KEYSPACE tweetssandra WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : '1' };
+
+-- Seleccionamos el esquema
+USE tweetsssandra;
+
+-- Creamos las tablas necesarias para la actividad (omitimos el resto)
+CREATE TABLE users (
+    username text PRIMARY KEY,
+    password text
+);
+
+CREATE TABLE followers (
+    username text,
+    follower text,
+    since timestamp,
+    PRIMARY KEY (username, follower)
+);
+
+CREATE TABLE tweets (
+    tweet_id uuid PRIMARY KEY,
+    username text,
+    body text
+);
+
+CREATE TABLE userline (
+    username text,
+    time timeuuid,
+    body text,
+    tweet_id uuid, 
+    PRIMARY KEY (username, time)
+) WITH CLUSTERING ORDER BY (time DESC);
+
+-- Añadimos la columna name a la tabla de users
+ALTER TABLE users ADD name text;
+
+
+1. Actualizar la familia de columnas “users” para hacer incluir las direcciones de correo de los usuarios.
+ALTER TABLE users ADD emails set<text>;
+
+
+2. Realizar las modificaciones oportunas para permitir que un usuario comente el tweet de otro.
+ALTER TABLE tweets ADD comments map<text, text>;
+
+
+-- Realizamos inserciones para que se pueda realizar querys
+-- Inserciones de usuarios
+INSERT INTO users (username, password, emails, name) 
+	VALUES ('acampos', '4c4mp0s', {'alfalive@gmail.com','alfonsocampos@campusciff.net'}, ' Alfonso Campos');
+INSERT INTO users (username, password, emails, name) 
+	VALUES ('agarcia', '4g4rc14', {'agarcia@gmail.com','anagarcia@campusciff.net'}, ' Ana Garcia');
+INSERT INTO users (username, password, emails, name) 
+	VALUES ('dllorente', 'dll0r3nt3', {'dllorente@gmail.com'}, 'David Llorente');
+
+-- Inserciones de seguidores
+INSERT INTO followers (username, follower, since) VALUES ('acampos', 'agarcia', '2013-01-12 15:33');
+INSERT INTO followers (username, follower, since) VALUES ('acampos', 'dllorente', '2013-02-22 09:32');
+INSERT INTO followers (username, follower, since) VALUES ('dllorente', 'agarcia', '2013-02-22 11:32');
+
+-- Inserciones de tweets
+INSERT INTO tweets(tweet_id,body,comments,username) 
+	VALUES (c294f4ae-c875-4f66-ad50-9d8ce83c9bd6,'Mi primer Tweet!',{'agarcia':'Bienvenido!','dllorente':'Te sigo'},'acampos');
+INSERT INTO tweets(tweet_id,body,comments,username) 
+	VALUES (e191b3f1-e088-4037-8610-b707424d87b5,'Como va?',{'acampos':'Genial'},'agarcia');
+INSERT INTO tweets(tweet_id,body,comments,username) 
+	VALUES (a9482c19-032c-4806-9f57-3904e9a419dc,'Cassandra mola!',{'dllorente':'Yo soy mas de Neo4j!!'},'acampos');
+	
+-- Inserciones de userline
+INSERT INTO userline(username,time,body,tweet_id) VALUES ('acampos',maxTimeuuid('2015-01-12 15:31+0000'),'Mi primer Tweet!',c294f4ae-c875-4f66-ad50-9d8ce83c9bd6);
+INSERT INTO userline(username,time,body,tweet_id) VALUES ('agarcia',maxTimeuuid('2015-01-23 17:12+0000'),'Como va?',e191b3f1-e088-4037-8610-b707424d87b5);
+INSERT INTO userline(username,time,body,tweet_id) VALUES ('acampos',maxTimeuuid('2015-02-02 12:05+0000'),'Cassandra mola!',a9482c19-032c-4806-9f57-3904e9a419dc);
+
+3. Visualizar todos los tweets que Alfonso Campos haya realizado durante el mes de enero junto con sus respectivos comentarios y autores de los mismos.
+-- Realizamos la busqueda
+SELECT username, body, dateOf(time), tweet_id FROM userline WHERE username = 'acampos' and time > minTimeuuid('2014-12-31 23:59+0000') and time < maxTimeuuid('2015-02-01 00:00+0000');
+
+4. Mostrar todos los followers de un determinado usuario.
+-- Realizamos la busqueda
+SELECT follower FROM followers WHERE username = 'acampos';
+
+5. Mostrar el nombre de usuario de todas las personas a las que sigue Ana Garcia (realice las modificaciones oportunas en el modelo de datos, si fueran necesarias).
+-- Añadimos un indice para poder buscar por seguidor
+CREATE INDEX ON followers (follower);
+
+-- Realizamos la busqueda
+SELECT username FROM followers WHERE follower = 'agarcia';

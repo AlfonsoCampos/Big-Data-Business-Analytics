@@ -1,0 +1,9 @@
+@prefix myNamespace: <http://example/> .
+@prefix wikisiit: <http://wikisiit.cl/> .
+
+
+myNamespace:book1  myNamespace:nacimiento  1945-02-01 ;
+				   myNamespace:tieneHijo  myNamespace:Pedro ;
+				   myNamespace:viveEn  http://wikisiit.cl/Valparaiso .
+		   
+http://wikisiit.cl/Valparaiso  wikisiit:tieneCut  501.

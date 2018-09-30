@@ -1,0 +1,24 @@
+
+1. Obtener, para cada actor, su nombre, el nombre de las películas en que ha participado y con qué rol, es decir, el nombre de su personaje en cada película.
+> MATCH (a:Person)-[r:ACTED_IN]->(m:Movie) RETURN a.name AS Actor, collect(m.title) AS Peliculas, collect(r.roles) AS Rol ORDER BY a.name
+
+2. Obtener el número medio de películas en que han trabajado los actores. En la misma consulta se debe devolver también el número máximo y mínimo de películas en las que han trabajado los actores.
+> MATCH (a:Person)-[r:ACTED_IN]->(m:Movie) WITH a AS Actor, count(m) AS nPeliculas RETURN avg(nPeliculas) as Media, max(nPeliculas) as Maximo, min(nPeliculas) as Minimo
+
+3. ¿Qué actores han dirigido una película donde también han actuado?
+> MATCH (a:Person)-[r:ACTED_IN]->(m:Movie), (a:Person)-[s:DIRECTED]->(m:Movie) RETURN a
+
+4. ¿Qué actores han trabajado con el director Andy Wachowski?
+> MATCH (a:Person)-[r:ACTED_IN]->(m:Movie), (b:Person {name:"Andy Wachowski"})-[s:DIRECTED]->(m:Movie) RETURN a.name
+
+5. ¿Cuáles son las 3 películas con más actores?
+> MATCH (m:Movie)<-[r:ACTED_IN]-(a:Person) RETURN m.title AS Pelicula, count(a) AS nActores ORDER BY nActores DESC LIMIT 3
+
+6. Supón que queremos hacer un análisis de los actores en función de su fecha de nacimiento. 
+	Para facilitar dicho análisis, hemos decidido crear en la base de datos una relación de tipo “HAS_SAME_AGE” entre actores que han nacido el mismo año.
+	Se pide que creéis dichas relaciones.
+> MATCH (a:Person),(b:Person) WITH a AS PersonA, b AS PersonB WHERE a<>b and a.born = b.born CREATE UNIQUE (PersonA)-[:HAS_SAME_AGE]-(PersonB)
+
+7. Una vez cerrado el punto anterior, realizad una consulta que permita obtener los actores de la misma edad que han trabajado juntos.
+> MATCH (a:Person)-[:HAS_SAME_AGE]-(b:Person), (a:Person)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(b:Person) RETURN collect(DISTINCT a.name) AS Actores, a.born AS Nacimiento, m.title AS Pelicula ORDER BY a.born,m.title
+ 

@@ -1,0 +1,1559 @@
+poblacion;provincia
+A Coruña                                 ;A Coruña              
+A Gándara-Narón                          ;A Coruña              
+A Gándara. Narón                         ;A Coruña              
+A Gándara. Narón.                        ;A Coruña              
+A Pobra Do Caramiñal                     ;A Coruña              
+Ames                                     ;A Coruña              
+Arteixo                                  ;A Coruña              
+Arzua                                    ;A Coruña              
+As Pontes                                ;A Coruña              
+Baio                                     ;A Coruña              
+Bergondo                                 ;A Coruña              
+Bertamirans                              ;A Coruña              
+Bertamirans-Ames                         ;A Coruña              
+Bertamiras Ames                          ;A Coruña              
+Betanzos                                 ;A Coruña              
+Boiro                                    ;A Coruña              
+Burgo                                    ;A Coruña              
+Camariñas                                ;A Coruña              
+Cambre                                   ;A Coruña              
+Caranza                                  ;A Coruña              
+Carballo                                 ;A Coruña              
+Carral                                   ;A Coruña              
+Cedeira                                  ;A Coruña              
+Cee                                      ;A Coruña              
+Conxo                                    ;A Coruña              
+Coristanco                               ;A Coruña              
+Coruña                                   ;A Coruña              
+Coruña (A)                               ;A Coruña              
+Coruña A                                 ;A Coruña              
+Coruña, La                               ;A Coruña              
+Culleredo                                ;A Coruña              
+Dumbria                                  ;A Coruña              
+El Burgo                                 ;A Coruña              
+El Ferrol                                ;A Coruña              
+El Ferrol- A Coruña                      ;A Coruña              
+Fene                                     ;A Coruña              
+Ferrol                                   ;A Coruña              
+La Coruña                                ;A Coruña              
+La Solana                                ;A Coruña              
+Laracha                                  ;A Coruña              
+Melide                                   ;A Coruña              
+Milladoiro                               ;A Coruña              
+Miño                                     ;A Coruña              
+Muros                                    ;A Coruña              
+Narón                                    ;A Coruña              
+Negreira                                 ;A Coruña              
+Noia                                     ;A Coruña              
+Noya                                     ;A Coruña              
+O Burgo                                  ;A Coruña              
+O Graxal                                 ;A Coruña              
+Oleiros                                  ;A Coruña              
+Órdenes                                  ;A Coruña              
+Ordes                                    ;A Coruña              
+Ordes (Ordes)                            ;A Coruña              
+Ortigueira                               ;A Coruña              
+Padrón                                   ;A Coruña              
+Palavea                                  ;A Coruña              
+Perillo (Oleiros)                        ;A Coruña              
+Perillo (Sta Leocadia)                   ;A Coruña              
+Perillo - Oleiros                        ;A Coruña              
+Perlio                                   ;A Coruña              
+Pontedeume                               ;A Coruña              
+Pontes De Garcia Rodriguez, As           ;A Coruña              
+Ribeira                                  ;A Coruña              
+Ribeira (Santa Uxia)                     ;A Coruña              
+Riveira                                  ;A Coruña              
+Sada                                     ;A Coruña              
+San Xoan De Calo-Teo                     ;A Coruña              
+Santa Eugenia De Riveira                 ;A Coruña              
+Santiago                                 ;A Coruña              
+Santiago De Compostela                   ;A Coruña              
+St Cristina                              ;A Coruña              
+Teo                                      ;A Coruña              
+Teo / Santiago De Compostela             ;A Coruña              
+Vimianzo                                 ;A Coruña              
+Álava                                    ;Alava                 
+Amurrio                                  ;Alava                 
+Etxabarr- Iviña-Zigoitia                 ;Alava                 
+Gorbeia Zigoita                          ;Alava                 
+Llodio                                   ;Alava                 
+Salvatierra-Agurain                      ;Alava                 
+Vitoria                                  ;Alava                 
+Vitoria - Gasteiz                        ;Alava                 
+Vitoria Gasteiz                          ;Alava                 
+Vitoria-Gasteiz                          ;Alava                 
+Albacete                                 ;Albacete              
+Almansa                                  ;Albacete              
+Caudete                                  ;Albacete              
+Hellín                                   ;Albacete              
+La Roda                                  ;Albacete              
+Roda (La)                                ;Albacete              
+Villarobledo                             ;Albacete              
+Villarrobledo                            ;Albacete              
+--                                       ;Alicante              
+Alcoi                                    ;Alicante              
+Alcoy                                    ;Alicante              
+Alcoy- Alicante                          ;Alicante              
+Alfas Del Pi                             ;Alicante              
+Alfaz Del Pí                             ;Alicante              
+Alicante                                 ;Alicante              
+Almoradí                                 ;Alicante              
+Altea                                    ;Alicante              
+Aspe                                     ;Alicante              
+Bañeres                                  ;Alicante              
+Benejuzar                                ;Alicante              
+Benidorm                                 ;Alicante              
+Benissa                                  ;Alicante              
+Cabo Huertas                             ;Alicante              
+Callosa De Segura                        ;Alicante              
+Callosa Segura                           ;Alicante              
+Calpe                                    ;Alicante              
+Calpe/Calp                               ;Alicante              
+Campello                                 ;Alicante              
+Castalla                                 ;Alicante              
+Cocentaina                               ;Alicante              
+Crevillent                               ;Alicante              
+Crevillente                              ;Alicante              
+Dehesa De Campoamor                      ;Alicante              
+Denia                                    ;Alicante              
+El Altet                                 ;Alicante              
+El Campello                              ;Alicante              
+El Vergel                                ;Alicante              
+El Verger                                ;Alicante              
+Elche                                    ;Alicante              
+Elche (Alicante)                         ;Alicante              
+Elche-Alicante                           ;Alicante              
+Elche/Elx                                ;Alicante              
+Elda                                     ;Alicante              
+Finestrat                                ;Alicante              
+Gata De Gorgos                           ;Alicante              
+Guardamar                                ;Alicante              
+Guardamar Del Segura                     ;Alicante              
+Ibi                                      ;Alicante              
+Javea                                    ;Alicante              
+Novelda                                  ;Alicante              
+Ondara                                   ;Alicante              
+Orihuela                                 ;Alicante              
+Orihuela Costa                           ;Alicante              
+Pedreguer                                ;Alicante              
+Petrer                                   ;Alicante              
+Petrer-Elda                              ;Alicante              
+Pilar De La Horadada                     ;Alicante              
+Playa Del Arenal (Javea)                 ;Alicante              
+Polop                                    ;Alicante              
+San Juan                                 ;Alicante              
+San Juan De Alicante                     ;Alicante              
+San Vicente                              ;Alicante              
+San Vicente De Raspeig                   ;Alicante              
+San Vicente Del Raspeig                  ;Alicante              
+Sant Joan D'Alacant                      ;Alicante              
+Sant Vicent Del Raspeig                  ;Alicante              
+Santa Faz                                ;Alicante              
+Santa Pola                               ;Alicante              
+St. Vicente Del Raspeig                  ;Alicante              
+Torrevieja                               ;Alicante              
+Villajoyosa                              ;Alicante              
+Villena                                  ;Alicante              
+Adra                                     ;Almeria               
+Aguadulce                                ;Almeria               
+Albox                                    ;Almeria               
+Almería                                  ;Almeria               
+Antas                                    ;Almeria               
+Benahadux                                ;Almeria               
+Berja                                    ;Almeria               
+Campohermoso                             ;Almeria               
+Cuevas De Almanzora                      ;Almeria               
+Cuevas Del Almanzora                     ;Almeria               
+Ejido (El)                               ;Almeria               
+El Ejido                                 ;Almeria               
+Garrucha                                 ;Almeria               
+Huercal - Overa                          ;Almeria               
+Huércal De Almería                       ;Almeria               
+Huercal Overa                            ;Almeria               
+Mojacar                                  ;Almeria               
+Mojácar Playa                            ;Almeria               
+Olula Del Río                            ;Almeria               
+Puente Del Río-Adra                      ;Almeria               
+Roquetas De Mar                          ;Almeria               
+S.Mª Del Aguila-El Ejido                 ;Almeria               
+Vera                                     ;Almeria               
+Arriondas                                ;Asturias              
+Asturias                                 ;Asturias              
+Avilés                                   ;Asturias              
+Áviles- Asturias                         ;Asturias              
+Blimea                                   ;Asturias              
+C. Narcea                                ;Asturias              
+Cabañaquinta                             ;Asturias              
+Candas                                   ;Asturias              
+Cangas Del Narcea                        ;Asturias              
+Cangas Narcea                            ;Asturias              
+Cangas Onis                              ;Asturias              
+Colloto                                  ;Asturias              
+Colunga                                  ;Asturias              
+Corbera                                  ;Asturias              
+Corvera                                  ;Asturias              
+Corvera De Asturias                      ;Asturias              
+Cudillero                                ;Asturias              
+El Entrego                               ;Asturias              
+Gijón                                    ;Asturias              
+Grado                                    ;Asturias              
+Granda (Siero)                           ;Asturias              
+Granda-Siero                             ;Asturias              
+Infiesto                                 ;Asturias              
+La Corredoria                            ;Asturias              
+La Felguera                              ;Asturias              
+Langreo                                  ;Asturias              
+Laviana                                  ;Asturias              
+Llanera                                  ;Asturias              
+Llanes                                   ;Asturias              
+Luanco                                   ;Asturias              
+Luarca                                   ;Asturias              
+Lugonés                                  ;Asturias              
+Lugones-Siero                            ;Asturias              
+Mieres                                   ;Asturias              
+Moreda (Aller)                           ;Asturias              
+Nava                                     ;Asturias              
+Navia                                    ;Asturias              
+Noreña                                   ;Asturias              
+Oviedo                                   ;Asturias              
+Paredes-Siero                            ;Asturias              
+Piedras Blancas                          ;Asturias              
+Pola De Laviana                          ;Asturias              
+Pola De Lena                             ;Asturias              
+Pola De Siero                            ;Asturias              
+Pola Siero                               ;Asturias              
+Porceyo (Gijon)                          ;Asturias              
+Posada De Llanera                        ;Asturias              
+Posada De Llanes                         ;Asturias              
+Posada Llanera                           ;Asturias              
+Pravia                                   ;Asturias              
+Raices Nuevo                             ;Asturias              
+Ribadesella                              ;Asturias              
+S.J. La Arena                            ;Asturias              
+Salas                                    ;Asturias              
+Salinas                                  ;Asturias              
+Sama De Langreo                          ;Asturias              
+San Claudio                              ;Asturias              
+San Martin Del Rey Aurelio               ;Asturias              
+Serantes-Tapia De Casariego              ;Asturias              
+Siero                                    ;Asturias              
+Sotrondio                                ;Asturias              
+Tapia Casarieg                           ;Asturias              
+Tapia De Casariego                       ;Asturias              
+Tineo                                    ;Asturias              
+Trasona                                  ;Asturias              
+Trasona - Aviles                         ;Asturias              
+Trasona Aviles                           ;Asturias              
+Vegadeo                                  ;Asturias              
+Villaviciosa                             ;Asturias              
+Arenas De San Pedro                      ;Avila                 
+Arevalo                                  ;Avila                 
+Ávila                                    ;Avila                 
+Candeleda                                ;Avila                 
+Espinosa De Los Caballeros               ;Avila                 
+Sotillo De La Adrada                     ;Avila                 
+Almendralejo                             ;Badajoz               
+Azuaga                                   ;Badajoz               
+Badajoz                                  ;Badajoz               
+Castuera                                 ;Badajoz               
+Don Benito                               ;Badajoz               
+Jerez De Los Caballeros                  ;Badajoz               
+Llerena                                  ;Badajoz               
+Mérida                                   ;Badajoz               
+Montijo                                  ;Badajoz               
+Olivenza                                 ;Badajoz               
+San Roque                                ;Badajoz               
+San Vicente De Alcántara- Badajoz        ;Badajoz               
+Talarrubias (Badajoz)                    ;Badajoz               
+Talavera La Real                         ;Badajoz               
+Villafranca De Los Barros                ;Badajoz               
+Villanueva De La Serena                  ;Badajoz               
+Zafra                                    ;Badajoz               
+Alcudia                                  ;Baleares              
+Arenal De Llucmajor                      ;Baleares              
+Cala Millor                              ;Baleares              
+Calviá                                   ;Baleares              
+Can Pastilla                             ;Baleares              
+Ciudatella                               ;Baleares              
+Ciutadella De Menorca                    ;Baleares              
+Coll De Rabassa                          ;Baleares              
+Cuitadella De Menorca                    ;Baleares              
+Eivissa                                  ;Baleares              
+Felanitx                                 ;Baleares              
+Ibiza                                    ;Baleares              
+Inca                                     ;Baleares              
+Llucmajor                                ;Baleares              
+Magalluf                                 ;Baleares              
+Mahón                                    ;Baleares              
+Mallorca                                 ;Baleares              
+Manacor                                  ;Baleares              
+Maó                                      ;Baleares              
+Marratxi                                 ;Baleares              
+Marratxí (Mallorca)                      ;Baleares              
+Menorca                                  ;Baleares              
+Palma                                    ;Baleares              
+Palma De Mallorca                        ;Baleares              
+Palma Mallorca                           ;Baleares              
+Palmanova                                ;Baleares              
+Pobla (Sa)                               ;Baleares              
+Porreres (Mallorca)                      ;Baleares              
+Sa Pobla                                 ;Baleares              
+San Antonio - Ibiza                      ;Baleares              
+San Antonio De Portmany-Ibiza            ;Baleares              
+Sant Antoni                              ;Baleares              
+Sant Llorenç Des Cardassar               ;Baleares              
+Santa Eulalia Del Río                    ;Baleares              
+Santa Eulalia Del Río, Ibiza             ;Baleares              
+Santa Gertrudis-Ibiza                    ;Baleares              
+Santa Margalida                          ;Baleares              
+Santanyi - Mallorca                      ;Baleares              
+Soller                                   ;Baleares              
+Soller-Palma Mallorca                    ;Baleares              
+Sta. Eularia Del Rio - Eivissa           ;Baleares              
+Abrera                                   ;Barcelona             
+Aiguafreda                               ;Barcelona             
+Andorra                                  ;Barcelona             
+Arenys De Mar                            ;Barcelona             
+Badalona                                 ;Barcelona             
+Barberá Del Vallés                       ;Barcelona             
+Barbera V.                               ;Barcelona             
+Barberà Vallés                           ;Barcelona             
+Barcelona                                ;Barcelona             
+Barcelona Zona Franca                    ;Barcelona             
+Batlloria - Badalona                     ;Barcelona             
+Bellaterra                               ;Barcelona             
+Bellaterra (Cerdanyola)                  ;Barcelona             
+Berga                                    ;Barcelona             
+Cabrera De Mar                           ;Barcelona             
+Cabrera Del Mar                          ;Barcelona             
+Caldes De Montbui                        ;Barcelona             
+Calella                                  ;Barcelona             
+Calella De Mar                           ;Barcelona             
+Canet De Mar                             ;Barcelona             
+Canovelles                               ;Barcelona             
+Cardedeu                                 ;Barcelona             
+Castellar Del Vallés                     ;Barcelona             
+Castellbisbal                            ;Barcelona             
+Castelldefells                           ;Barcelona             
+Castelldefels                            ;Barcelona             
+Centelles                                ;Barcelona             
+Cerdanyola                               ;Barcelona             
+Cerdanyola Del Vallés                    ;Barcelona             
+Cervelló                                 ;Barcelona             
+Collbató                                 ;Barcelona             
+Cornellà                                 ;Barcelona             
+Cornellá De Llobregat                    ;Barcelona             
+Cubelles                                 ;Barcelona             
+El Masnou                                ;Barcelona             
+El Prat                                  ;Barcelona             
+El Prat De Llobregat                     ;Barcelona             
+El Prat Del Llobregat                    ;Barcelona             
+Esparraguera                             ;Barcelona             
+Esparreguera                             ;Barcelona             
+Esplugues                                ;Barcelona             
+Esplugues De Llobregat                   ;Barcelona             
+Esplugues Del Llobregat                  ;Barcelona             
+Franqueses Del Valles (Les)              ;Barcelona             
+Garrigas                                 ;Barcelona             
+Gavá                                     ;Barcelona             
+Granollers                               ;Barcelona             
+Hospitalet                               ;Barcelona             
+Hospitalet De Llobregat                  ;Barcelona             
+Hospitalet De Llobregat (L')             ;Barcelona             
+Hospitalet De Llobregat,L                ;Barcelona             
+Hospitalet Del Llobregat                 ;Barcelona             
+Hospitalet, L'                           ;Barcelona             
+Igualada                                 ;Barcelona             
+L'Hospitalet                             ;Barcelona             
+L'Hospitalet De Llobregat                ;Barcelona             
+L'Hospitalet Llobregat                   ;Barcelona             
+La Garriga                               ;Barcelona             
+La Roca Del Vallès                       ;Barcelona             
+Lliçà D'Amunt                            ;Barcelona             
+Lliça De Munt                            ;Barcelona             
+Llinars Del Vallés                       ;Barcelona             
+Londres                                  ;Barcelona             
+L´Hospitalet De Llobregat                ;Barcelona             
+Malla                                    ;Barcelona             
+Manlleu                                  ;Barcelona             
+Manresa                                  ;Barcelona             
+Martorell                                ;Barcelona             
+Massanet De La Selva                     ;Barcelona             
+Matadepera                               ;Barcelona             
+Mataró                                   ;Barcelona             
+Molins De Rei                            ;Barcelona             
+Molins Del Rei                           ;Barcelona             
+Mollet                                   ;Barcelona             
+Mollet Del Vallés                        ;Barcelona             
+Mollet Vallès                            ;Barcelona             
+Montblanc                                ;Barcelona             
+Montcada I Reixac                        ;Barcelona             
+Montcada I Reixac                        ;Barcelona             
+Montcada-Reixac                          ;Barcelona             
+Montmeló                                 ;Barcelona             
+Montornès Del Vallès                     ;Barcelona             
+Olesa                                    ;Barcelona             
+Olesa De Montserrat                      ;Barcelona             
+Olessa De Monserrat                      ;Barcelona             
+Palau De Plegamans                       ;Barcelona             
+Pallejà                                  ;Barcelona             
+Parets Del Valles                        ;Barcelona             
+Paris                                    ;Barcelona             
+Piera                                    ;Barcelona             
+Pineda                                   ;Barcelona             
+Pineda De Mar                            ;Barcelona             
+Platja D´Aro                             ;Barcelona             
+Prat                                     ;Barcelona             
+Prat De Llobregat                        ;Barcelona             
+Prat De Llobregat, El                    ;Barcelona             
+Prats Del Lluçanès                       ;Barcelona             
+Premia                                   ;Barcelona             
+Premiá De Mar                            ;Barcelona             
+Puig-Reig                                ;Barcelona             
+Ripollet                                 ;Barcelona             
+Roda De Ter                              ;Barcelona             
+Rubí                                     ;Barcelona             
+S. Baudilio Llobregat                    ;Barcelona             
+S.Andres La Barca                        ;Barcelona             
+Sabadell                                 ;Barcelona             
+Sabadelll                                ;Barcelona             
+Sallent                                  ;Barcelona             
+San Adrián De Besós                      ;Barcelona             
+San Adrián Del Besos                     ;Barcelona             
+San Cugat Del Vallés                     ;Barcelona             
+San Juan Despí                           ;Barcelona             
+San Pere De Ribes                        ;Barcelona             
+San Vicente                              ;Barcelona             
+Sant Adrià Besòs                         ;Barcelona             
+Sant Adria De Besos                      ;Barcelona             
+Sant Adrià Del Besós                     ;Barcelona             
+Sant Andreu                              ;Barcelona             
+Sant Andreu De La Barca                  ;Barcelona             
+Sant Antoni De Vilamajor                 ;Barcelona             
+Sant Boi                                 ;Barcelona             
+Sant Boi De Ll.                          ;Barcelona             
+Sant Boi De Llobregat                    ;Barcelona             
+Sant Boi Llobregat                       ;Barcelona             
+Sant Celoni                              ;Barcelona             
+Sant Cugat                               ;Barcelona             
+Sant Cugat Del Vallès                    ;Barcelona             
+Sant Esteve Sesrovires                   ;Barcelona             
+Sant Feliu                               ;Barcelona             
+Sant Feliú De Llobregat                  ;Barcelona             
+Sant Fruitos De Bages                    ;Barcelona             
+Sant Fruitos Del Bages                   ;Barcelona             
+Sant Joan De Vilatorrada                 ;Barcelona             
+Sant Joan Despi                          ;Barcelona             
+Sant Pere De Ribes                       ;Barcelona             
+Sant Quirze Del Valles                   ;Barcelona             
+Sant Sadurni D'Anoia                     ;Barcelona             
+Sant Sadurní D´Anoia                     ;Barcelona             
+Sant Vicenç Dels Horts                   ;Barcelona             
+Santa Coloma                             ;Barcelona             
+Santa Coloma De Gramanet                 ;Barcelona             
+Santa Coloma De Gramenet                 ;Barcelona             
+Santa Eulalia De Ronçana                 ;Barcelona             
+Santa Margarita De Montbui               ;Barcelona             
+Santa Perpetua                           ;Barcelona             
+Santa Perpetua De La Moguda              ;Barcelona             
+Santa Perpetua De Mogoda                 ;Barcelona             
+Santa Perpetura De La Moguda             ;Barcelona             
+Santa Susana                             ;Barcelona             
+Santquirze Del Valles                    ;Barcelona             
+Sitges                                   ;Barcelona             
+St Cugat Del Vallès                      ;Barcelona             
+St Pere De Riutdebilles                  ;Barcelona             
+St. Cugat Del Vallès                     ;Barcelona             
+St. Vicenç De Castellet                  ;Barcelona             
+St.Celoni                                ;Barcelona             
+St.Fruitos                               ;Barcelona             
+St.Hipòlit Voltregà                      ;Barcelona             
+St.Joan Vilatorrada                      ;Barcelona             
+St.Sadurní D'Anoia                       ;Barcelona             
+Sta Coloma                               ;Barcelona             
+Sta Coloma Gramanet                      ;Barcelona             
+Sta Perpetua De La Mogoda                ;Barcelona             
+Sta Susanna                              ;Barcelona             
+Suria                                    ;Barcelona             
+Taradell                                 ;Barcelona             
+Tarrasa                                  ;Barcelona             
+Teià                                     ;Barcelona             
+Terrasa                                  ;Barcelona             
+Terrassa                                 ;Barcelona             
+Tona                                     ;Barcelona             
+Tordera                                  ;Barcelona             
+Torelló                                  ;Barcelona             
+Vic                                      ;Barcelona             
+Viladecans                               ;Barcelona             
+Vilafranca                               ;Barcelona             
+Vilafranca Del Pendès                    ;Barcelona             
+Vilafranca Del Penedes                   ;Barcelona             
+Vilanova I La Geltrú                     ;Barcelona             
+Aranda De Duero                          ;Burgos                
+Burgos                                   ;Burgos                
+Medina De Pomar                          ;Burgos                
+Miranda De Ebro                          ;Burgos                
+Quintanapalla                            ;Burgos                
+Cáceres                                  ;Caceres               
+Coria                                    ;Caceres               
+Jarandilla De La Vera                    ;Caceres               
+Logrosán                                 ;Caceres               
+Madroñera                                ;Caceres               
+Miajadas                                 ;Caceres               
+Montehermoso                             ;Caceres               
+Navalmoral De La Mata                    ;Caceres               
+Plasencia                                ;Caceres               
+Trujillo                                 ;Caceres               
+Algeciras                                ;Cadiz                 
+Arcos De La Frontera                     ;Cadiz                 
+Barbate                                  ;Cadiz                 
+Cádiz                                    ;Cadiz                 
+Chiclana                                 ;Cadiz                 
+Chiclana De La Frontera                  ;Cadiz                 
+Conil De La Frontera                     ;Cadiz                 
+El Puerto De Santa María                 ;Cadiz                 
+Jerez                                    ;Cadiz                 
+Jerez De La Frontera                     ;Cadiz                 
+La Línea                                 ;Cadiz                 
+La Línea De La Concepción                ;Cadiz                 
+Linea De La Concepcion (La)              ;Cadiz                 
+Los Barrios                              ;Cadiz                 
+Los Barrios (Cádiz)                      ;Cadiz                 
+Prado Del Rey                            ;Cadiz                 
+Puerta Del Sur - Jerez                   ;Cadiz                 
+Puerto De Santa Maria                    ;Cadiz                 
+Puerto De Santa Maria (El)               ;Cadiz                 
+Puerto De Sta.María                      ;Cadiz                 
+Puerto Real                              ;Cadiz                 
+Rota                                     ;Cadiz                 
+San Fernando                             ;Cadiz                 
+San Lucar De Barrameda                   ;Cadiz                 
+San Roque                                ;Cadiz                 
+Sanlucar De Barrameda                    ;Cadiz                 
+Tarifa                                   ;Cadiz                 
+Ubrique                                  ;Cadiz                 
+Cabezón De La Sal                        ;Cantabria             
+Camargo                                  ;Cantabria             
+Cantabria                                ;Cantabria             
+Cartes                                   ;Cantabria             
+Castañeda                                ;Cantabria             
+Castro Urdiales                          ;Cantabria             
+Castro-Urdiales                          ;Cantabria             
+Colindres                                ;Cantabria             
+Laredo                                   ;Cantabria             
+Maliaño                                  ;Cantabria             
+Maliaño-Camargo                          ;Cantabria             
+Matamorosa                               ;Cantabria             
+Muriedas-Camargo                         ;Cantabria             
+Peñacastillo                             ;Cantabria             
+Peñacastillo, Santander                  ;Cantabria             
+Reinosa                                  ;Cantabria             
+Revilla De Camargo                       ;Cantabria             
+Santander                                ;Cantabria             
+Santoña                                  ;Cantabria             
+Torrelavega                              ;Cantabria             
+Alcocéber                                ;Castellon             
+Almassora                                ;Castellon             
+Almazora                                 ;Castellon             
+Benicarló                                ;Castellon             
+Benicassim                               ;Castellon             
+Burriana                                 ;Castellon             
+Castello De La Plana                     ;Castellon             
+Castellón                                ;Castellon             
+Castellon De La Plana                    ;Castellon             
+La Vall D' Uixo                          ;Castellon             
+Montanejos                               ;Castellon             
+Nules                                    ;Castellon             
+Onda                                     ;Castellon             
+Peñiscola                                ;Castellon             
+Segorbe                                  ;Castellon             
+Torreblanca                              ;Castellon             
+Vall D Uxió                              ;Castellon             
+Vall D'Uixo (La)                         ;Castellon             
+Vall D'Uxó                               ;Castellon             
+Vall De Uxó                              ;Castellon             
+Vall Duixo                               ;Castellon             
+Vila-Real                                ;Castellon             
+Vila-Real/Villarreal                     ;Castellon             
+Villareal                                ;Castellon             
+Villarreal                               ;Castellon             
+Villarreal De Los Infantes               ;Castellon             
+Vinaròs                                  ;Castellon             
+Vinaroz                                  ;Castellon             
+Ceuta                                    ;Ceuta                 
+Alcazar De San Juan                      ;Ciudad Real           
+Argamasilla De Calatrava                 ;Ciudad Real           
+Bolaños De Calatrava                     ;Ciudad Real           
+Ciudad Real                              ;Ciudad Real           
+Daimiel                                  ;Ciudad Real           
+Manzanares                               ;Ciudad Real           
+Puerto Lapice                            ;Ciudad Real           
+Puertollano                              ;Ciudad Real           
+Tomelloso                                ;Ciudad Real           
+Valdepeñas                               ;Ciudad Real           
+Villarubia De Los Ojos                   ;Ciudad Real           
+Aguilar De La Frontera                   ;Cordoba               
+Baena                                    ;Cordoba               
+Cabra                                    ;Cordoba               
+Córboba                                  ;Cordoba               
+Córdoba                                  ;Cordoba               
+Fernan Nuñez                             ;Cordoba               
+La Carlota                               ;Cordoba               
+Lucena                                   ;Cordoba               
+Lucena (Córdoba)                         ;Cordoba               
+Montalban De Cordoba                     ;Cordoba               
+Montilla                                 ;Cordoba               
+Oleiros                                  ;Cordoba               
+Palma Del Río                            ;Cordoba               
+Peñarroya                                ;Cordoba               
+Peñarroya-Pueblo Nuevo                   ;Cordoba               
+Pozoblanco                               ;Cordoba               
+Priego                                   ;Cordoba               
+Priego De Córdoba                        ;Cordoba               
+Puente Genil                             ;Cordoba               
+Villa Del Río                            ;Cordoba               
+Belinchon                                ;Cuenca                
+Cuenca                                   ;Cuenca                
+Iniesta                                  ;Cuenca                
+Mota Del Cuervo                          ;Cuenca                
+Motilla De Palancar                      ;Cuenca                
+Motilla Del Palancar                     ;Cuenca                
+Tarancón                                 ;Cuenca                
+Albufeira                                ;Extranjero            
+Algarve                                  ;Extranjero            
+Almada                                   ;Extranjero            
+Almada (Lisboa)                          ;Extranjero            
+Alto De Vieiro - Leiria                  ;Extranjero            
+Amadora                                  ;Extranjero            
+Amsterdam                                ;Extranjero            
+Andorra La Vella                         ;Extranjero            
+Aveiro                                   ;Extranjero            
+Belfast                                  ;Extranjero            
+Berlin                                   ;Extranjero            
+Biatorbágy                               ;Extranjero            
+Bordeaux                                 ;Extranjero            
+Braga                                    ;Extranjero            
+Bragança                                 ;Extranjero            
+Budapest                                 ;Extranjero            
+Campanha                                 ;Extranjero            
+Carnaxide                                ;Extranjero            
+Casablanca                               ;Extranjero            
+Castel Romano                            ;Extranjero            
+Coimbra                                  ;Extranjero            
+Copenhague                               ;Extranjero            
+Custóias Mts - Oporto                    ;Extranjero            
+Debrecen                                 ;Extranjero            
+Escaldes-Engordany                       ;Extranjero            
+Estoril                                  ;Extranjero            
+Faro                                     ;Extranjero            
+Figueira Da Foz                          ;Extranjero            
+Fiumicino                                ;Extranjero            
+Frankfurt                                ;Extranjero            
+Funchal                                  ;Extranjero            
+Guidonia Montecelio                      ;Extranjero            
+Guimaraes                                ;Extranjero            
+Gyor                                     ;Extranjero            
+Hamburg                                  ;Extranjero            
+Ingoldstadt                              ;Extranjero            
+Joao Da Madeira                          ;Extranjero            
+Köln                                     ;Extranjero            
+Krakow                                   ;Extranjero            
+Leiria                                   ;Extranjero            
+Lelystad                                 ;Extranjero            
+Lieusaint Cedex, Paris                   ;Extranjero            
+Lisboa                                   ;Extranjero            
+Lisboa (Vila Franca De Xira)             ;Extranjero            
+Lisbon, 1250-140                         ;Extranjero            
+London                                   ;Extranjero            
+Londres                                  ;Extranjero            
+Lubon                                    ;Extranjero            
+Lunghezza                                ;Extranjero            
+L´Ille                                   ;Extranjero            
+Maia                                     ;Extranjero            
+Matosinhos                               ;Extranjero            
+Matosinhos-Oporto                        ;Extranjero            
+Montijo                                  ;Extranjero            
+Montijo (Lisboa)                         ;Extranjero            
+Oberhausen                               ;Extranjero            
+Oporto                                   ;Extranjero            
+Ordino                                   ;Extranjero            
+Ovar                                     ;Extranjero            
+Paris                                    ;Extranjero            
+Pas De La Casa                           ;Extranjero            
+Polgár                                   ;Extranjero            
+Ponta Delgada                            ;Extranjero            
+Ponta Delgada (Isla)                     ;Extranjero            
+Portimao                                 ;Extranjero            
+Porto                                    ;Extranjero            
+Portugal                                 ;Extranjero            
+Prague                                   ;Extranjero            
+Riello Viterbo                           ;Extranjero            
+Rio De Mouro - Sintra (Lisboa)           ;Extranjero            
+Rio Tinto                                ;Extranjero            
+Roma                                     ;Extranjero            
+Roppenheim                               ;Extranjero            
+Rotterdam                                ;Extranjero            
+S. João Da Madeira                       ;Extranjero            
+Sant Julia De Loria                      ;Extranjero            
+Senhora Da Hora (Oporto)                 ;Extranjero            
+Srª Hora                                 ;Extranjero            
+Tavagueira - Guia                        ;Extranjero            
+Tejo                                     ;Extranjero            
+Trato-Montijo                            ;Extranjero            
+Troyes                                   ;Extranjero            
+Vale De Morelos                          ;Extranjero            
+Valença                                  ;Extranjero            
+Vasco De Gama                            ;Extranjero            
+Viana Do Castelo                         ;Extranjero            
+Vila Nova De Gaia                        ;Extranjero            
+Vila Nova De Gaia - Oporto               ;Extranjero            
+Vila Real                                ;Extranjero            
+Vila-Real De Tras-Os-Mont                ;Extranjero            
+Vimercate                                ;Extranjero            
+Viseu                                    ;Extranjero            
+Warsawa                                  ;Extranjero            
+Warszawa                                 ;Extranjero            
+Wertheim                                 ;Extranjero            
+Amer                                     ;Girona                
+Anglés                                   ;Girona                
+Arbúcies                                 ;Girona                
+Banyoles                                 ;Girona                
+Blanes                                   ;Girona                
+Cadaqués                                 ;Girona                
+Camprodon                                ;Girona                
+Celra                                    ;Girona                
+Empuriabrava                             ;Girona                
+Figueras                                 ;Girona                
+Figueres                                 ;Girona                
+Fornells De La Selva                     ;Girona                
+Gerona                                   ;Girona                
+Girona                                   ;Girona                
+Hostalric                                ;Girona                
+L'Escala                                 ;Girona                
+La Bisbal                                ;Girona                
+La Bisbal D'Empordà                      ;Girona                
+La Bisbal De L'Emporda                   ;Girona                
+La Bisbal Del Emporda                    ;Girona                
+La Jonquera                              ;Girona                
+Llagostera                               ;Girona                
+Lloret De Mar                            ;Girona                
+Lloret Del Mar                           ;Girona                
+Maçanet                                  ;Girona                
+Maçanet De La Selva                      ;Girona                
+Olot                                     ;Girona                
+Palafrugell                              ;Girona                
+Palamós                                  ;Girona                
+Platja D'Aro                             ;Girona                
+Platja D´Aro                             ;Girona                
+Porqueres                                ;Girona                
+Puigcerda                                ;Girona                
+Ripoll                                   ;Girona                
+Rosas                                    ;Girona                
+Roses                                    ;Girona                
+Salt                                     ;Girona                
+Salt-Girona                              ;Girona                
+San Feliu De Guixols                     ;Girona                
+Sant Antoni De Calonge                   ;Girona                
+Sant Feliú De Guixols                    ;Girona                
+Santa Coloma De Farners                  ;Girona                
+Santa Llogaia D'Alguema                  ;Girona                
+St.Feliu Guíxols                         ;Girona                
+St.Hilari Sacalm                         ;Girona                
+St.Pere Pescador                         ;Girona                
+Sta.Cristina D'Aro                       ;Girona                
+Torroella De Montgrí                     ;Girona                
+Tossa De Mar                             ;Girona                
+Tunel Del Cadí                           ;Girona                
+Vilajoan                                 ;Girona                
+Vilatenim                                ;Girona                
+Albolote                                 ;Granada               
+Almuñecar                                ;Granada               
+Armilla                                  ;Granada               
+Atarfe                                   ;Granada               
+Baza                                     ;Granada               
+Granada                                  ;Granada               
+Guadix                                   ;Granada               
+Illora                                   ;Granada               
+La Zubia                                 ;Granada               
+La Zubia / Granada                       ;Granada               
+Loja                                     ;Granada               
+Maracena                                 ;Granada               
+Monachil                                 ;Granada               
+Motril                                   ;Granada               
+Pulianas                                 ;Granada               
+Sierra Nevada                            ;Granada               
+Vegas Del Genil                          ;Granada               
+Ventas De Zafarraya                      ;Granada               
+Azuqueca                                 ;Guadalajara           
+Azuqueca De Henares                      ;Guadalajara           
+Guadalajara                              ;Guadalajara           
+Siguenza                                 ;Guadalajara           
+Anoeta                                   ;Guipuzcoa             
+Arrasate                                 ;Guipuzcoa             
+Arrasate-Mondragon                       ;Guipuzcoa             
+Arrasate/Mondragon                       ;Guipuzcoa             
+Azkoitia                                 ;Guipuzcoa             
+Azpeitia                                 ;Guipuzcoa             
+Beasain                                  ;Guipuzcoa             
+Bergara                                  ;Guipuzcoa             
+Donosti                                  ;Guipuzcoa             
+Donostia                                 ;Guipuzcoa             
+Donostia-San Sebastian                   ;Guipuzcoa             
+Eibar                                    ;Guipuzcoa             
+Elgoibar                                 ;Guipuzcoa             
+Guipuzcoa                                ;Guipuzcoa             
+Hernani                                  ;Guipuzcoa             
+Hondarribia                              ;Guipuzcoa             
+Irún                                     ;Guipuzcoa             
+Lasarte                                  ;Guipuzcoa             
+Mondragon                                ;Guipuzcoa             
+Oiartzun                                 ;Guipuzcoa             
+Olaberria                                ;Guipuzcoa             
+Oyarzun                                  ;Guipuzcoa             
+Rentería                                 ;Guipuzcoa             
+San Sebastian                            ;Guipuzcoa             
+Tolosa                                   ;Guipuzcoa             
+Usurbil                                  ;Guipuzcoa             
+Zarautz                                  ;Guipuzcoa             
+Zarauz                                   ;Guipuzcoa             
+Zumarraga                                ;Guipuzcoa             
+Almonte                                  ;Huelva                
+Aracena                                  ;Huelva                
+Bollullos Del Condado                    ;Huelva                
+Bollullos Par Del Condado                ;Huelva                
+Cartaya                                  ;Huelva                
+Corrales-Aljaraque                       ;Huelva                
+Hinojos                                  ;Huelva                
+Huelva                                   ;Huelva                
+Isla Cristina                            ;Huelva                
+La Palma Del Condado                     ;Huelva                
+Lepe                                     ;Huelva                
+Moguer                                   ;Huelva                
+Niebla                                   ;Huelva                
+Punta Umbría                             ;Huelva                
+Valverde Del Camino                      ;Huelva                
+Barbastro                                ;Huesca                
+Binefar                                  ;Huesca                
+Ertyuiop                                 ;Huesca                
+Fraga                                    ;Huesca                
+Huesca                                   ;Huesca                
+Jaca                                     ;Huesca                
+Monzón                                   ;Huesca                
+Sabiñanigo                               ;Huesca                
+Alcalá La Real                           ;Jaen                  
+Andujar                                  ;Jaen                  
+Baeza                                    ;Jaen                  
+Bailen                                   ;Jaen                  
+Jaen                                     ;Jaen                  
+Jodar                                    ;Jaen                  
+La Carolina                              ;Jaen                  
+Linares                                  ;Jaen                  
+Mancha Real                              ;Jaen                  
+Martos                                   ;Jaen                  
+Torre Don Jimeno                         ;Jaen                  
+Úbeda                                    ;Jaen                  
+Astorga                                  ;Leon                  
+Bañeza, La                               ;Leon                  
+Bembibre                                 ;Leon                  
+Camponaraya-Ponferrad                    ;Leon                  
+Fuentes Nuevas                           ;Leon                  
+La Bañeza                                ;Leon                  
+La Ba¥Eza                                ;Leon                  
+León                                     ;Leon                  
+Ponferrada                               ;Leon                  
+S.And.Rabanedo                           ;Leon                  
+Trobajo Del Cami                         ;Leon                  
+Trobajo Del Camino                       ;Leon                  
+Trobajo Del Campo                        ;Leon                  
+Val.Don Juan                             ;Leon                  
+Villablino                               ;Leon                  
+Virgen Camino                            ;Leon                  
+Alcarràs                                 ;Lleida                
+Alcoletge                                ;Lleida                
+Alfes                                    ;Lleida                
+Almacelles                               ;Lleida                
+Almenar                                  ;Lleida                
+Alpicat                                  ;Lleida                
+Balaguer                                 ;Lleida                
+Bassella                                 ;Lleida                
+Cervera                                  ;Lleida                
+El Pont De Suert                         ;Lleida                
+Golmés                                   ;Lleida                
+Guissona                                 ;Lleida                
+La Seu D'Urgell                          ;Lleida                
+La Seu De Urgell                         ;Lleida                
+Lérida                                   ;Lleida                
+Lleida                                   ;Lleida                
+Mollerusa                                ;Lleida                
+Mollerussa                               ;Lleida                
+Ponts                                    ;Lleida                
+Seu D'Urgell (La)                        ;Lleida                
+Solsona                                  ;Lleida                
+Sort                                     ;Lleida                
+Tárrega                                  ;Lleida                
+Torreferrera                             ;Lleida                
+Tremp                                    ;Lleida                
+Vielha                                   ;Lleida                
+Abadin                                   ;Lugo                  
+Barreiros                                ;Lugo                  
+Becerrea                                 ;Lugo                  
+Burela                                   ;Lugo                  
+Chantada                                 ;Lugo                  
+Foz                                      ;Lugo                  
+Guitiriz                                 ;Lugo                  
+Lorenzana                                ;Lugo                  
+Lugo                                     ;Lugo                  
+Mondoñedo (Casco Urbano)                 ;Lugo                  
+Monforte                                 ;Lugo                  
+Monforte De Lemos                        ;Lugo                  
+Puentenuevo                              ;Lugo                  
+Ribadeo                                  ;Lugo                  
+Ribadeo (Casco Urbano)                   ;Lugo                  
+Sarria                                   ;Lugo                  
+Vilalba                                  ;Lugo                  
+Villalba                                 ;Lugo                  
+Viveiro                                  ;Lugo                  
+Vivero                                   ;Lugo                  
+Vivero (Lu                               ;Lugo                  
+Alcala De Henares                        ;Madrid                
+Alcobendas                               ;Madrid                
+Alcobendas Y La Moraleja                 ;Madrid                
+Alcorcón                                 ;Madrid                
+Aranjuez                                 ;Madrid                
+Aranjuez (Madrid)                        ;Madrid                
+Aravaca                                  ;Madrid                
+Aravaca-Madrid                           ;Madrid                
+Arganda Del Rey                          ;Madrid                
+Arroyo De La Encomienda                  ;Madrid                
+Arroyo De La Vega                        ;Madrid                
+Arroyomolinos                            ;Madrid                
+Aventel                                  ;Madrid                
+Barajas                                  ;Madrid                
+Barjas                                   ;Madrid                
+Boadilla Del Monte                       ;Madrid                
+Carabanchel                              ;Madrid                
+Ciempozuelos                             ;Madrid                
+Cititeam                                 ;Madrid                
+Ciudad Loranca - (Fuenlabrada) Madrid    ;Madrid                
+Collado Villalba                         ;Madrid                
+Colmenar Viejo                           ;Madrid                
+Colmenar Viejo Madrid                    ;Madrid                
+Colonia De Las Mercedes                  ;Madrid                
+Contesta                                 ;Madrid                
+Coslada                                  ;Madrid                
+Coslada- Madrid                          ;Madrid                
+El Nogal, Algete                         ;Madrid                
+El Pinar De Las Rozas                    ;Madrid                
+El Plantio                               ;Madrid                
+Ensanche De Vallecas                     ;Madrid                
+Fuenlabrada                              ;Madrid                
+Fuente El Saz Del Jarama                 ;Madrid                
+Fuentidueña Del Tajo                     ;Madrid                
+Galapagar                                ;Madrid                
+Getafe                                   ;Madrid                
+Getafe -Madrid                           ;Madrid                
+Guadarrama                               ;Madrid                
+Humanes                                  ;Madrid                
+Humanes De Madrid                        ;Madrid                
+La Cabrera                               ;Madrid                
+La Moraleja                              ;Madrid                
+Las Rozas                                ;Madrid                
+Las Rozas - Madrid                       ;Madrid                
+Las Rozas De Madrid                      ;Madrid                
+Leganés                                  ;Madrid                
+Leganés-Madrid                           ;Madrid                
+Madrid                                   ;Madrid                
+Madrid - Carrada Abril 2013              ;Madrid                
+Madrid_orense                            ;Madrid                
+Majadahonda                              ;Madrid                
+Majadahonda - Madrid                     ;Madrid                
+Mejorada Del Campo                       ;Madrid                
+Móstoles                                 ;Madrid                
+Móstoles - El Soto                       ;Madrid                
+Paracuellos De Jarama                    ;Madrid                
+Parla                                    ;Madrid                
+Parque Sur                               ;Madrid                
+Pinto                                    ;Madrid                
+Pozuelo                                  ;Madrid                
+Pozuelo De Alarcón                       ;Madrid                
+Puente Vallecas                          ;Madrid                
+Rivas Futura                             ;Madrid                
+Rivas Vaciamadrid                        ;Madrid                
+Rivas-Vaciamadrid                        ;Madrid                
+Rivas-Vaciamadrid Arganda                ;Madrid                
+Rozas De Madrid (Las)                    ;Madrid                
+S.S. De Los Reyes                        ;Madrid                
+S.S. Reyes - Madrid                      ;Madrid                
+S.Sebastian De Los Reyes                 ;Madrid                
+Salesland                                ;Madrid                
+San Blas (Madrid)                        ;Madrid                
+San Fernando De Henares                  ;Madrid                
+San Lorenzo De El Escorial               ;Madrid                
+San Lorenzo Del Escorial                 ;Madrid                
+San Sebastián De Los                     ;Madrid                
+San Sebastián De Los Reyes               ;Madrid                
+San Sebastian De Los Reyes, Industrial De;Madrid                
+Segovia                                  ;Madrid                
+Ss De Los Reyes                          ;Madrid                
+Te Sin Fee                               ;Madrid                
+Test                                     ;Madrid                
+Torrejón De Ardoz                        ;Madrid                
+Torrelodones                             ;Madrid                
+Tres Cantos                              ;Madrid                
+Valdemoro                                ;Madrid                
+Valderas                                 ;Madrid                
+Vallecas                                 ;Madrid                
+Vallecas   Madrid                        ;Madrid                
+Vicalvaro                                ;Madrid                
+Villalba                                 ;Madrid                
+Villanueva De La Cañada                  ;Madrid                
+Villaverde                               ;Madrid                
+Villaviciosa De Odón                     ;Madrid                
+Algeciras                                ;Malaga                
+Alhaurín De La Torre                     ;Malaga                
+Alhaurín El Grande                       ;Malaga                
+Antequera                                ;Malaga                
+Benalmadena                              ;Malaga                
+Benalmádena (Arroyo De La Miel)          ;Malaga                
+Campanillas                              ;Malaga                
+Cartama                                  ;Malaga                
+Cartama Estación                         ;Malaga                
+Casarabonela                             ;Malaga                
+Churriana                                ;Malaga                
+Coin                                     ;Malaga                
+Estepona                                 ;Malaga                
+Fuengirola                               ;Malaga                
+La Cala                                  ;Malaga                
+La Cala Del Moral                        ;Malaga                
+Málaga                                   ;Malaga                
+Malaga - Fuengirola                      ;Malaga                
+Marbella                                 ;Malaga                
+Mijas                                    ;Malaga                
+Mijas Costa                              ;Malaga                
+Mijas Pueblo                             ;Malaga                
+Nerja                                    ;Malaga                
+Nueva Andalucía                          ;Malaga                
+Pizarra                                  ;Malaga                
+Puerto Banus                             ;Malaga                
+Rincon De La Victoria                    ;Malaga                
+Ronda                                    ;Malaga                
+S. Pedro De Alcantara                    ;Malaga                
+San Pedro De Alcantara                   ;Malaga                
+Torre Del Mar                            ;Malaga                
+Torremolinos                             ;Malaga                
+Vélez                                    ;Malaga                
+Velez Malaga                             ;Malaga                
+Velez-Malaga                             ;Malaga                
+Melilla                                  ;Melilla               
+Aguilas                                  ;Murcia                
+Alcantarilla                             ;Murcia                
+Alhama De Murcia                         ;Murcia                
+Archena                                  ;Murcia                
+Bullas                                   ;Murcia                
+Campillo (Lorca)                         ;Murcia                
+Caravaca                                 ;Murcia                
+Caravaca De La Cruz                      ;Murcia                
+Cartagena                                ;Murcia                
+Cehegin                                  ;Murcia                
+Churra                                   ;Murcia                
+Churra - Murcia                          ;Murcia                
+Churra Cabezo De Torres                  ;Murcia                
+Cieza                                    ;Murcia                
+El Algar                                 ;Murcia                
+El Palmar                                ;Murcia                
+Espinardo                                ;Murcia                
+Espinardo-Murcia                         ;Murcia                
+Fuente Alamo                             ;Murcia                
+Fuente Alamo De Murcia                   ;Murcia                
+Jumilla                                  ;Murcia                
+La Manga Del Mar Menor                   ;Murcia                
+La Ñora                                  ;Murcia                
+La Unión                                 ;Murcia                
+Las Torres De Cotillas                   ;Murcia                
+Lorca                                    ;Murcia                
+Mazarrón                                 ;Murcia                
+Media Sala (Cartagena)                   ;Murcia                
+Medina Sala (Cartagena)                  ;Murcia                
+Molina De Segura                         ;Murcia                
+Mula                                     ;Murcia                
+Murcia                                   ;Murcia                
+Palma, La                                ;Murcia                
+Patiño (Murcia)                          ;Murcia                
+Pto Lumbreras                            ;Murcia                
+Pto Mazarrón                             ;Murcia                
+Roldan                                   ;Murcia                
+San Javier                               ;Murcia                
+San Pedro Del Pinatar                    ;Murcia                
+Torre Pacheco                            ;Murcia                
+Totana                                   ;Murcia                
+Yecla                                    ;Murcia                
+Zeneta                                   ;Murcia                
+Alsasua                                  ;Navarra               
+Ansoain                                  ;Navarra               
+Azagra                                   ;Navarra               
+Baranain                                 ;Navarra               
+Bera                                     ;Navarra               
+Bera  Vera De Bidasoa                    ;Navarra               
+Burlada                                  ;Navarra               
+Cintruenigo                              ;Navarra               
+Cordovilla                               ;Navarra               
+Cordovilla (Pamplona)                    ;Navarra               
+Cordovilla(Pamplona)                     ;Navarra               
+Cordovilla-Pamplona                      ;Navarra               
+Estella                                  ;Navarra               
+Huarte                                   ;Navarra               
+Mendavia                                 ;Navarra               
+Murchante                                ;Navarra               
+Navarra                                  ;Navarra               
+Pamplona                                 ;Navarra               
+Pamplona (Iruña)                         ;Navarra               
+Pamplona / Burlada                       ;Navarra               
+Pamplona O Iruña                         ;Navarra               
+Ribaforada                               ;Navarra               
+Salinas                                  ;Navarra               
+Tafalla                                  ;Navarra               
+Tudela                                   ;Navarra               
+Viana                                    ;Navarra               
+Villafranca De Navarra                   ;Navarra               
+Allariz                                  ;Orense                
+Barbadas                                 ;Orense                
+Barco De Valdeorras                      ;Orense                
+Barco Valdeorras                         ;Orense                
+Barco Valdeorras Orense                  ;Orense                
+Carballiño                               ;Orense                
+Celanova                                 ;Orense                
+El Barco De Valdeorras                   ;Orense                
+Maside                                   ;Orense                
+O Barco                                  ;Orense                
+Orense                                   ;Orense                
+Ourense                                  ;Orense                
+Pontevella                               ;Orense                
+Verín                                    ;Orense                
+Xinzo De Limia                           ;Orense                
+Carrion De Los Condes                    ;Palencia              
+Palencia                                 ;Palencia              
+Aeropuerto Del Matorral                  ;Palmas, Las           
+Agüimes                                  ;Palmas, Las           
+Arrecife (Lanzarote)                     ;Palmas, Las           
+Arrecife De Lanzarote                    ;Palmas, Las           
+Arucas                                   ;Palmas, Las           
+Caleta De Fuste (Fuerteventura)          ;Palmas, Las           
+Corralejo                                ;Palmas, Las           
+Corralejo (Fuerteventura)                ;Palmas, Las           
+Costa Teguise                            ;Palmas, Las           
+El Carrizal- Ingenio                     ;Palmas, Las           
+El Tablero De Maspalomas                 ;Palmas, Las           
+Galdar                                   ;Palmas, Las           
+Gran Tarajal                             ;Palmas, Las           
+Jandía (Fuerteventura)                   ;Palmas, Las           
+Jinámar                                  ;Palmas, Las           
+Junamar, Telde                           ;Palmas, Las           
+Lanzarote                                ;Palmas, Las           
+Las Palmas                               ;Palmas, Las           
+Las Palmas De G.C.                       ;Palmas, Las           
+Las Palmas De Gran C.                    ;Palmas, Las           
+Las Palmas De Gran Canaria               ;Palmas, Las           
+Las Palmas De Gran Canarias              ;Palmas, Las           
+Maspalomas                               ;Palmas, Las           
+Meloneras                                ;Palmas, Las           
+Meloneras - Gran Canarias                ;Palmas, Las           
+Mogán                                    ;Palmas, Las           
+Pájara                                   ;Palmas, Las           
+Palma Gran Canaria                       ;Palmas, Las           
+Palmas De Gran Canaria (Las)             ;Palmas, Las           
+Palmas De Gran Canaria,Las               ;Palmas, Las           
+Playa Blanca (Yaiza)                     ;Palmas, Las           
+Playa Del Inglés                         ;Palmas, Las           
+Playa Honda-San Bartolome De Lanzarote   ;Palmas, Las           
+Puerto Del Rosario                       ;Palmas, Las           
+Puerto Del Rosario (Fuerteventura)       ;Palmas, Las           
+Puerto Rico                              ;Palmas, Las           
+San Bartolomé                            ;Palmas, Las           
+San Bartolomé De Tirajana                ;Palmas, Las           
+Santa Lucía De Tirajana (Vecindario)     ;Palmas, Las           
+Taco-La Laguna.                          ;Palmas, Las           
+Telde                                    ;Palmas, Las           
+Telde (Gran Canaria)                     ;Palmas, Las           
+Tías (Lanzarote)                         ;Palmas, Las           
+Vecindario                               ;Palmas, Las           
+Vecindario - Santa Lucía                 ;Palmas, Las           
+A Estrada                                ;Pontevedra            
+A Guarda                                 ;Pontevedra            
+A Ramallosa                              ;Pontevedra            
+Atios (Santa Eulalia)                    ;Pontevedra            
+Bayona                                   ;Pontevedra            
+Bueu                                     ;Pontevedra            
+Caldas De Reyes                          ;Pontevedra            
+Cambados                                 ;Pontevedra            
+Cangas                                   ;Pontevedra            
+Cangas De Morrazo                        ;Pontevedra            
+Cobres                                   ;Pontevedra            
+Estrada (A)                              ;Pontevedra            
+Gondomar                                 ;Pontevedra            
+Guarda, A                                ;Pontevedra            
+La Estrada                               ;Pontevedra            
+La Guardia                               ;Pontevedra            
+Lalín                                    ;Pontevedra            
+Marín                                    ;Pontevedra            
+Moaña                                    ;Pontevedra            
+Mos                                      ;Pontevedra            
+Mos-Porriño                              ;Pontevedra            
+Nigrán                                   ;Pontevedra            
+O Grove                                  ;Pontevedra            
+Poio                                     ;Pontevedra            
+Ponteareas                               ;Pontevedra            
+Ponteareas (San Miguel)                  ;Pontevedra            
+Pontevedra                               ;Pontevedra            
+Pontevedra / Salcedo                     ;Pontevedra            
+Porriño                                  ;Pontevedra            
+Portonovo                                ;Pontevedra            
+Puenteareas                              ;Pontevedra            
+Redondela                                ;Pontevedra            
+Regueiro, O (Estrada, A)                 ;Pontevedra            
+Rosal (O)                                ;Pontevedra            
+Salcedo                                  ;Pontevedra            
+Salvaterra De Miño                       ;Pontevedra            
+San Xenxo                                ;Pontevedra            
+Sanguiñeda                               ;Pontevedra            
+Tomiño                                   ;Pontevedra            
+Tuy                                      ;Pontevedra            
+Vigo                                     ;Pontevedra            
+Vigo - Pontevedra                        ;Pontevedra            
+Vilagarcia De Arousa                     ;Pontevedra            
+Villagarcia                              ;Pontevedra            
+Villagarcía De Arosa                     ;Pontevedra            
+Villagarcia De Arousa                    ;Pontevedra            
+Arnedo                                   ;Rioja, La             
+Calahorra                                ;Rioja, La             
+Haro                                     ;Rioja, La             
+La Rioja                                 ;Rioja, La             
+Logroño                                  ;Rioja, La             
+Aldehuela De La Boveda                   ;Salamanca             
+Bejar                                    ;Salamanca             
+Carbajosa De La Sagrada                  ;Salamanca             
+Ciudad Rodrigo                           ;Salamanca             
+Salamanca                                ;Salamanca             
+Salamanca / Santa Marta De Tormes        ;Salamanca             
+Santa Marta De Tormes                    ;Salamanca             
+Villares De La Reina                     ;Salamanca             
+Vitigudino                               ;Salamanca             
+Acoran-Santa Cruz De Tenerife            ;Santa Cruz De Tenerife
+Adeje                                    ;Santa Cruz De Tenerife
+Adeje (Santa Cruz De Tenerife)           ;Santa Cruz De Tenerife
+Adeje - Tenerife                         ;Santa Cruz De Tenerife
+Arafo                                    ;Santa Cruz De Tenerife
+Arona                                    ;Santa Cruz De Tenerife
+Candelaria                               ;Santa Cruz De Tenerife
+El Puerto De La Cruz                     ;Santa Cruz De Tenerife
+Guía De Isora                            ;Santa Cruz De Tenerife
+Guimar                                   ;Santa Cruz De Tenerife
+Icod De Los Vinos                        ;Santa Cruz De Tenerife
+La Laguna                                ;Santa Cruz De Tenerife
+La Orotava                               ;Santa Cruz De Tenerife
+Laguna (La)                              ;Santa Cruz De Tenerife
+Laguna,La                                ;Santa Cruz De Tenerife
+Las Americas Arona                       ;Santa Cruz De Tenerife
+Las Caletillas                           ;Santa Cruz De Tenerife
+Las Galletas Arona                       ;Santa Cruz De Tenerife
+Los Cristianos                           ;Santa Cruz De Tenerife
+Los Llanos De Ariadne                    ;Santa Cruz De Tenerife
+Los Llanos De Aridane                    ;Santa Cruz De Tenerife
+Los Realejos                             ;Santa Cruz De Tenerife
+Orotava                                  ;Santa Cruz De Tenerife
+Orotava, La                              ;Santa Cruz De Tenerife
+Playa De Las Américas                    ;Santa Cruz De Tenerife
+Playa De Las Americas - Tenerife         ;Santa Cruz De Tenerife
+Playa De Las Américas. Arona             ;Santa Cruz De Tenerife
+Puerto Colón                             ;Santa Cruz De Tenerife
+Puerto De La Cruz                        ;Santa Cruz De Tenerife
+Realejos (Los) (Diseminado)              ;Santa Cruz De Tenerife
+San Cristobal De La Laguna               ;Santa Cruz De Tenerife
+San Cristobal La De Laguna               ;Santa Cruz De Tenerife
+San Isidro  Granadilla De Abon           ;Santa Cruz De Tenerife
+San Isidro, Granadilla De Abona          ;Santa Cruz De Tenerife
+San Miguel De Abona                      ;Santa Cruz De Tenerife
+San Sebastian De La Gomera               ;Santa Cruz De Tenerife
+Santa Cruz                               ;Santa Cruz De Tenerife
+Santa Cruz De La Palma                   ;Santa Cruz De Tenerife
+Santa Cruz De Tenerife                   ;Santa Cruz De Tenerife
+Sta. Ursula                              ;Santa Cruz De Tenerife
+Sta.Cruz De Tenerife                     ;Santa Cruz De Tenerife
+Tacoronte                                ;Santa Cruz De Tenerife
+Tejina  La Laguna                        ;Santa Cruz De Tenerife
+Tenerife                                 ;Santa Cruz De Tenerife
+Tenerife -  La Orotava                   ;Santa Cruz De Tenerife
+Valle San Lorenzo (Arona)                ;Santa Cruz De Tenerife
+Valverde (Isla El Hierro)                ;Santa Cruz De Tenerife
+Victoria De Acentejo (La)                ;Santa Cruz De Tenerife
+Cantalejo                                ;Segovia               
+Cuellar                                  ;Segovia               
+Segovia                                  ;Segovia               
+Alcalá De Guadaira                       ;Sevilla               
+Arahal                                   ;Sevilla               
+Aznalfarache                             ;Sevilla               
+Bollullos De La Mitacion                 ;Sevilla               
+Bormujos                                 ;Sevilla               
+Brenes                                   ;Sevilla               
+Camas                                    ;Sevilla               
+Cantillana                               ;Sevilla               
+Carmona                                  ;Sevilla               
+Castilleja De La Cuesta                  ;Sevilla               
+Coria Del Río                            ;Sevilla               
+Dos Hermanas                             ;Sevilla               
+Ecija                                    ;Sevilla               
+El Saucejo                               ;Sevilla               
+El Viso Del Alcor                        ;Sevilla               
+Estepa                                   ;Sevilla               
+La Algaba                                ;Sevilla               
+La Puebla Del Río                        ;Sevilla               
+La Rinconada                             ;Sevilla               
+Las Cabezas De San Juan                  ;Sevilla               
+Lebrija                                  ;Sevilla               
+Lora Del Río                             ;Sevilla               
+Los Palacios                             ;Sevilla               
+Mairena De Aljarafe                      ;Sevilla               
+Mairena Del Alcor                        ;Sevilla               
+Mairena Del Aljarafe                     ;Sevilla               
+Marchena                                 ;Sevilla               
+Morón De La Frontera                     ;Sevilla               
+Osuna                                    ;Sevilla               
+Pilas                                    ;Sevilla               
+San José De La Rinconada                 ;Sevilla               
+San Juan Aznalfarache                    ;Sevilla               
+San Juan De Aznalfarache                 ;Sevilla               
+San Pablo                                ;Sevilla               
+Sanlucar La Mayor                        ;Sevilla               
+Sevilla                                  ;Sevilla               
+Sevilla (La Rinconada)                   ;Sevilla               
+Tomares                                  ;Sevilla               
+Utrera                                   ;Sevilla               
+Almazan                                  ;Soria                 
+Golmayo                                  ;Soria                 
+Golmayo-Soria                            ;Soria                 
+Olvega                                   ;Soria                 
+Soria                                    ;Soria                 
+Alcanar                                  ;Tarragona             
+Altafulla                                ;Tarragona             
+Amposta                                  ;Tarragona             
+Banyeres Del Penedes                     ;Tarragona             
+Calafell                                 ;Tarragona             
+Cambrils                                 ;Tarragona             
+Cambrils                                 ;Tarragona             
+Castellbisbal                            ;Tarragona             
+Cunit                                    ;Tarragona             
+Deltebre                                 ;Tarragona             
+El Vendrell                              ;Tarragona             
+Flix                                     ;Tarragona             
+La Granja (Tarragona)                    ;Tarragona             
+La Pineda                                ;Tarragona             
+L´Ampolla                                ;Tarragona             
+Miami Platja                             ;Tarragona             
+Montblanc                                ;Tarragona             
+Mora D'Ebre                              ;Tarragona             
+Mora La Nova                             ;Tarragona             
+Reus                                     ;Tarragona             
+Roda De Barà                             ;Tarragona             
+Roquetes                                 ;Tarragona             
+S.Pedro S.Pablo                          ;Tarragona             
+Salou                                    ;Tarragona             
+San Carles De La Rapita                  ;Tarragona             
+Sant Carles De La Rápita                 ;Tarragona             
+Tarragona                                ;Tarragona             
+Torredembarra                            ;Tarragona             
+Tortosa                                  ;Tarragona             
+Valls                                    ;Tarragona             
+Vendrell                                 ;Tarragona             
+Vendrell (El)                            ;Tarragona             
+Vendrell, El                             ;Tarragona             
+Vila Seca                                ;Tarragona             
+Vila-Seca                                ;Tarragona             
+Vilaseca                                 ;Tarragona             
+Vilaseca - Salou                         ;Tarragona             
+Vilaseca- Salou                          ;Tarragona             
+Vinyols I Els Arcs                       ;Tarragona             
+Alcañiz                                  ;Teruel                
+Andorra                                  ;Teruel                
+Andorra De Teruel                        ;Teruel                
+Teruel                                   ;Teruel                
+Calera Y Chozas                          ;Toledo                
+Cazalegas                                ;Toledo                
+Illescas                                 ;Toledo                
+Madridejos                               ;Toledo                
+Mora                                     ;Toledo                
+Ocaña                                    ;Toledo                
+Olias Del Rey                            ;Toledo                
+Polan                                    ;Toledo                
+Puebla De Montalban (La)                 ;Toledo                
+Quintanar De La Orden                    ;Toledo                
+San Roman De Los Montes                  ;Toledo                
+Talavera De La Reina                     ;Toledo                
+Toledo                                   ;Toledo                
+Torrijos                                 ;Toledo                
+Valmojado                                ;Toledo                
+Villacañas                               ;Toledo                
+Alacuas                                  ;Valencia              
+Alaquas                                  ;Valencia              
+Albal                                    ;Valencia              
+Alberic                                  ;Valencia              
+Alboraya                                 ;Valencia              
+Albuixech                                ;Valencia              
+Alcira                                   ;Valencia              
+Alcudia                                  ;Valencia              
+Aldaia                                   ;Valencia              
+Aldaia - Valencia                        ;Valencia              
+Aldaya                                   ;Valencia              
+Alfafar                                  ;Valencia              
+Alfara Del Patriarca                     ;Valencia              
+Algemesí                                 ;Valencia              
+Alginet                                  ;Valencia              
+Almusafes                                ;Valencia              
+Alzira                                   ;Valencia              
+Anna                                     ;Valencia              
+Barrio De La Luz Xirivella               ;Valencia              
+Benetusser                               ;Valencia              
+Benifaio                                 ;Valencia              
+Benifayó                                 ;Valencia              
+Beniganin                                ;Valencia              
+Benisano                                 ;Valencia              
+Betera                                   ;Valencia              
+Bonrepos (Valencia)                      ;Valencia              
+Burjasot                                 ;Valencia              
+Burjassot                                ;Valencia              
+Campanar                                 ;Valencia              
+Canals                                   ;Valencia              
+Canet D En Berenguer                     ;Valencia              
+Carcaixent                               ;Valencia              
+Carlet                                   ;Valencia              
+Castellón                                ;Valencia              
+Catarroja                                ;Valencia              
+Catarroja- Valencia                      ;Valencia              
+Chirivella                               ;Valencia              
+Chiva                                    ;Valencia              
+Cullera                                  ;Valencia              
+El Puig                                  ;Valencia              
+El Saler                                 ;Valencia              
+Gandía                                   ;Valencia              
+Gandia (Valencia)                        ;Valencia              
+Godella                                  ;Valencia              
+Jativa                                   ;Valencia              
+L Eliana                                 ;Valencia              
+L'Eliana                                 ;Valencia              
+La Eliana                                ;Valencia              
+La Pobla De Vallbona                     ;Valencia              
+Liria                                    ;Valencia              
+Lliria                                   ;Valencia              
+L´Eliana                                 ;Valencia              
+Manises                                  ;Valencia              
+Masamagrell                              ;Valencia              
+Massalfasar                              ;Valencia              
+Massalfassar                             ;Valencia              
+Mislata                                  ;Valencia              
+Mogente                                  ;Valencia              
+Moncada                                  ;Valencia              
+Montserrat- Valencia                     ;Valencia              
+Museros                                  ;Valencia              
+Oliva                                    ;Valencia              
+Onteniente                               ;Valencia              
+Ontinyent                                ;Valencia              
+Paiporta                                 ;Valencia              
+Palmera                                  ;Valencia              
+Paterna                                  ;Valencia              
+Paterna (Valencia)                       ;Valencia              
+Picanya                                  ;Valencia              
+Picassent                                ;Valencia              
+Pto.De Sagunto                           ;Valencia              
+Puçol                                    ;Valencia              
+Puerto De Sagunto                        ;Valencia              
+Puerto Sagunto                           ;Valencia              
+Puzol                                    ;Valencia              
+Quart                                    ;Valencia              
+Quart De Poblet                          ;Valencia              
+Quart De Poblet - Valencia               ;Valencia              
+Real De Gandia                           ;Valencia              
+Requena                                  ;Valencia              
+Riba Roja                                ;Valencia              
+Ribarroja                                ;Valencia              
+Ribarroja De Turia                       ;Valencia              
+Sagunto                                  ;Valencia              
+Silla                                    ;Valencia              
+Sueca                                    ;Valencia              
+Tabernes De Valldigna                    ;Valencia              
+Tavernes De Valdigna                     ;Valencia              
+Tavernes De Valldigna                    ;Valencia              
+Torrent                                  ;Valencia              
+Torrente                                 ;Valencia              
+Utiel                                    ;Valencia              
+Valencia                                 ;Valencia              
+Vara De Quart                            ;Valencia              
+Villamarxant                             ;Valencia              
+Xátiva                                   ;Valencia              
+Xirivella                                ;Valencia              
+Arroyo De La Encomienda                  ;Valladolid            
+Arroyo La Encomienda                     ;Valladolid            
+Ary.Encomienda                           ;Valladolid            
+Cigales                                  ;Valladolid            
+Iscar                                    ;Valladolid            
+Laguna De Duero                          ;Valladolid            
+Laguna Del Duero                         ;Valladolid            
+Mayorga                                  ;Valladolid            
+Medina                                   ;Valladolid            
+Medina Del Campo                         ;Valladolid            
+Tordesillas                              ;Valladolid            
+Tudela De Duero                          ;Valladolid            
+Valladolid                               ;Valladolid            
+Valladolid / Zaratan                     ;Valladolid            
+Villa Del Prado                          ;Valladolid            
+Zaratán                                  ;Valladolid            
+Abadiño                                  ;Vizcaya               
+Algorta                                  ;Vizcaya               
+Amorebieta                               ;Vizcaya               
+Asua - Erandio                           ;Vizcaya               
+Baracaldo                                ;Vizcaya               
+Barakaldo                                ;Vizcaya               
+Barakaldo-Vizcaya                        ;Vizcaya               
+Basauri                                  ;Vizcaya               
+Bermeo                                   ;Vizcaya               
+Bilbao                                   ;Vizcaya               
+Bilbao - Vizcaya                         ;Vizcaya               
+Bilbao / Erandio                         ;Vizcaya               
+Deusto                                   ;Vizcaya               
+Durango                                  ;Vizcaya               
+Erandio                                  ;Vizcaya               
+Erandio (Astrabudua)                     ;Vizcaya               
+Ermua                                    ;Vizcaya               
+Galdacano                                ;Vizcaya               
+Galdakano                                ;Vizcaya               
+Galdakao                                 ;Vizcaya               
+Galdakaos                                ;Vizcaya               
+Gernika                                  ;Vizcaya               
+Getxo (Bizkaia)                          ;Vizcaya               
+Iurreta                                  ;Vizcaya               
+Las Arenas                               ;Vizcaya               
+Leioa                                    ;Vizcaya               
+Leioa - Bilbao                           ;Vizcaya               
+Lejona                                   ;Vizcaya               
+Munguía                                  ;Vizcaya               
+Portugalete                              ;Vizcaya               
+San Vicente De Barakaldo.                ;Vizcaya               
+Santurce                                 ;Vizcaya               
+Santurtzi                                ;Vizcaya               
+Sestao                                   ;Vizcaya               
+Sopelana                                 ;Vizcaya               
+Valle De Trápaga                         ;Vizcaya               
+Vizcaya                                  ;Vizcaya               
+Zalla                                    ;Vizcaya               
+Benavente                                ;Zamora                
+Toro                                     ;Zamora                
+Zamora                                   ;Zamora                
+Calatayud                                ;Zaragoza              
+Caspe                                    ;Zaragoza              
+Ejea De Los Caballeros                   ;Zaragoza              
+Pedrola                                  ;Zaragoza              
+Pina De Ebro                             ;Zaragoza              
+Plataforma Logística De Zaragoza         ;Zaragoza              
+Sobradiel                                ;Zaragoza              
+Utebo                                    ;Zaragoza              
+Zaragoza                                 ;Zaragoza              
+Zaragoza Plataforma Logistica            ;Zaragoza              

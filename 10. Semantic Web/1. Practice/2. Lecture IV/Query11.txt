@@ -1,0 +1,5 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+DELETE DATA
+{ 
+  <http://example.org/book/book3> dc:title "A new book" .
+}

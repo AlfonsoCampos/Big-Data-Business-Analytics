@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns="http://curso2015.campusciff/ontologies/sesion2/example2#"
+	xml:base="http://curso2015.campusciff/ontologies/sesion2/example2">
+  
+	<owl:Ontology rdf:about=""/>
+ 
+	<owl:Class rdf:ID="Hombre"/>
+	<owl:Class rdf:ID="Mujer"/>
+ 
+	<owl:Class rdf:ID="Persona">
+	  <owl:unionOf rdf:parseType="Collection">
+		<owl:Class rdf:about="#Hombre" />
+		<owl:Class rdf:about="#Mujer" />
+	  </owl:unionOf>
+	</owl:Class>
+	
+</rdf:RDF>
+

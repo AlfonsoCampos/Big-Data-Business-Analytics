@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Otros comandos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li class="current-page-parent"><a href="grunt_shell.html" class="current-page-parent daddy">Grunt Shell</a>
+   <ul>
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li id="active"><a href="otros_comandos.html" class="active no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="acceso_a_hdfs.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="log4j.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Otros comandos</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id174">
+<div class="iDevice emphasis0">
+<div id="ta174_1" class="block iDevice_content">
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Grunt incluye también una serie de comandos para controlar Pig y Map Reduce: </span></p>
+<ul>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">define: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Permite definr funciones de usuario parametrizadas. </span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">describe: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Muestra el esquema definido para un determinado alias.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">dump: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Muestra el contenido de un alias de pig en la pantalla.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">explain: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Permite visualizar las etapas de ejecución de un determinado plan.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">help: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Lista los comandos disponibles.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">illustrate: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Muestra una ejecución de muestra de un script.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">kill: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Para un trabajo en curso en función de su ID.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">quit: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Sale de Grunt.</span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">set:</span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Permite parsear pares clave-valor a Pig de la forma <span style="font-family: courier new,courier;">set &lt;key&gt; '&lt;value&gt;'</span>.<br /></span></li>
+<li><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">store: </span></strong><span style="font-family: 'trebuchet ms',geneva; font-size: small;">Permite almacenar el contenido de un alias de Pig a un fichero.<br /></span></li>
+</ul>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">La descripción de cada uno de ellos se puede encontrar en el siguiente enlace: <a>https://wiki.apache.org/pig/Grunt</a></span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">A continuación se muestran algunos ejemplos de uso de los comandos anteriores <span style="font-family: courier new,courier;">describe</span> e <span style="font-family: courier new,courier;">ilustrate</span> sobre los discos de la sección anterior. En primer lugar carga el fichero discografía al alias discos mediante el comando:</span></p>
+<p><em><span style="font-family: courier new,courier; font-size: small;">discos = load 'ejemplos/discos' using PigStorage(',') as (anio, disco, eeuu, uk);</span></em></p>
+<p><span style="font-family: trebuchet ms,geneva;"><span style="font-size: small;">Una vez cargado, el comando <span style="font-family: courier new,courier;">describe</span> muestra la información relativa al alias y el comando <span style="font-family: courier new,courier;">ilustrate</span> muestra un ejemplo de registro almacenado en el alias. En las siguientes figuras se muestra el proceso realizado.</span></span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> <span id="docs-internal-guid-59b8b72b-8621-6aba-b022-5d20ce5a3cd6"><img src="https://lh4.googleusercontent.com/XSFgpMUaVFLqRQDvJtvS8y-xLgvzKlUVHbOIbOx3XtKSnHOndSjFQVz3zgVNGix8PJfaeoTxT4UPlcDzfzXulTphg3Rd2ErWAE8uFpvMM-dRntvFCVYglGXNCYUjqWgyhg" height="111px;" width="624px;" /></span></span></p>
+<p><span id="docs-internal-guid-59b8b72b-8621-d611-0af9-3e6f18741e2e" style="font-family: 'trebuchet ms', geneva; font-size: small;"><img src="https://lh6.googleusercontent.com/KP1IB9yOeEfZBoIgc2RcmnsVGnbp0YzeLgPW2w4nKLslrHMLhlOwalKXLDKV78NAswqCs1ShGBiogj7TbDQ4-OxIX1JG4cIG_JiNGVK7oVTcf9ZuHQl-bf58cVBjR1a-Ow" height="123px;" width="624px;" /></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="acceso_a_hdfs.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="log4j.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

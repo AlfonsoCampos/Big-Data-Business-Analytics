@@ -1,0 +1,30 @@
+SpringXD, kafka, flume, sqoop, logstash,... distintas technologias de ingestion de datos
+jat tf package
+
+-----
+
+ARQ Flume
+
+> Sources, fuents: consumen eventos del sistema y los reenvian a los channels
+> Intereptors: interceptan eventos al vuelo
+> Selectors: definen rutas xa los eventos
+> Channels: alamcenan eventos hasta que son consumi2 x un sumidero
+> Sinks : obtienen del channel y persisten el rollo
+
+Agregacion
+Cliente -> Agente -> HDFS
+Flume: Garantiza ejecucion n2n
+
+A veces no se utiliza una capa de persistencia como destino de los datos sno que lo envias a un otor de procesamiento --> Storm o Spark streaming!!
+
+-----
+
+Kafka
+
+En kafka tienes que programar vs flume que no --> aunque ya tienes librerias hechas que te inhiben de tener que programarlo al final del dia
+Para almacenar mensajes Kafkaa en HDFS es Camus
+Flume mas orientado a ingesta
+Kfka mas orientado a mensajes
+
+----
+Intentar enviar la mubi plus Twitter API?

@@ -1,0 +1,83 @@
+> Rating de individuos
+
++1 semana ejercicio grupo... q grupo?! Yo creo que va aser individual xa mi lol!!
+Y luego gilipolleces pardas con su rollo
+
+A Basilea ira gente experta en modelos - financieros entiendo..
+Validacion del modelo es clave: hasta el punto q un aea desarrolla el modelo y otra area lo validao - lol
+
+En fraude los missings jamas se reemplazan por 0s, mejor la media o algo.
+- La mejor solucion es sustituir por el peor caso!! - lol. Never in a year!
+
+Valores q estan fuera del rango - haces bins y cojes un bin con valores fuera de rango!!!
+- Agrupacion de variables es clave precisamente xa lidiar con esta mubi!
+
+Tienen un decalogo q les limita la mubi...
+
+No les mola no poder ver el modelo - y esto entra en pugna con escojer el mejor modelo... acaban usando tress, lm y a priori q no son las mejores!
+- Visualizacionn es clave x el tema de interpretar el modelo
+
+
+> Rating de empresas
+· Pregunts demograficas no sirven x ej xa el caso dde la empresa... - makes sense
+· En el caos de empresa se entra en variabbles del funcioamiento interno de la empresa
+
+< LEAN: Justo a lo que necesita, como limpio sin movidas laterlaes innecesarios 
+
+Balance:
+- Cuenta de resultados aka PNL - Profit 'n' Losses
+- Balance de situacion
+- Cash flow
+
+Analasis de Rating es la mubi esta mitika de la tripleA y bono basura y tal...
+- A partir de tripleB- ya empieza a ser bono basura
+- La zona de las Cs son bono lokura! - lol
+
+Las 5 fuerzas de Potter?:
+- Rollo quien es + fuerte en la relacion, empresa o clientes - ej. Apple
+
+Rating:
+- Ratios Cuantitativos
+vs
+- Cuestionario Cualitativos
+
+Python ratios... la jugada es calcular ratios con el codigo y tal... xa q? - how knows...
+
+Al final vas a cconseguir un ranking de empresas x medio de una distribucion normal con las mejores a la derecha y las peores ala izauierda... veremos
+- Los modelos de estos tios no sirven de nada si los datos que ofrecen las empresas son mentira... logicamente
+
+Conexion: Estadistica - Informatica - Inversiones
+· Algorithm Trading
+· High Freequency Trading
+
+Iesgo Operacional: Lamubi esta de Karim relacionada con el arnitraje de la latencia que tienes entre unas bolsas y otras x ej.
+
+Arbitraje: Quieres comprar algo que ya tienes vendido, te evitas riesgos de mercado.. basicamente es la mubi de Karim
+- Delta de precio
+- Garantizada la venta en ese delta
+
+Timeseries es clave xa el notas este... ake sense again
+- El shift esta engarzado de alguna forma en esta movida... esta transponiendo por algun motivo oscuro
+
+Con Flask transforma proptoptipo en WebService/API... xq? Je ne sais pas...
+
+Quantopian, alguna paranoia relacionada con meter los algoritmos ML q programes dentro y luego risas con la mubi de Trading y predicciones y tal..
+
+Trabajo en grupo
+· Explicar tema q vas a abordar
+· Como esta el mercado con esa mubi
+· Como se puede resolveríamos nosotros el problema..?
+- Aki ejemplo facil es Social Media Scoring o cosas asi
+
+
+· La jugada sería escribirle para ver movidas por ejemplo de social media scoring
+- O cualquier otro tema x el q aboge
+- Dentro de 3 semanas
+- Broma de ver con q grupo me pongo
+
+- No hace falta solución sino mas como plantaerías la mubi:
+· Scraping de donde xa el SMS
+· Como luego se muestra x ej grafo
+· Ese tipo de mubis
+
+

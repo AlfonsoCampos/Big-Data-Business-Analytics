@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ORDER BY </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li class="current-page-parent"><a href="introduccin_a_pig_latin.html" class="current-page-parent daddy">Introducción a Pig Latin</a>
+   <ul>
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li class="current-page-parent"><a href="operadores_relacionales.html" class="current-page-parent daddy">Operadores relacionales</a>
+      <ul>
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li id="active"><a href="order_by.html" class="active no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="load.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="sample.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">ORDER BY</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id82">
+<div class="iDevice emphasis0">
+<div id="ta82_1" class="block iDevice_content">
+<p id="docs-internal-guid-a67f2e02-52dd-edf4-bff0-ac42eefc8475" style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">Sirve para ordenar la relación en base a uno o más campos. </span></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="line-height: 1.15; font-family: courier new,courier; font-size: small; background-color: transparent;">A = LOAD 'data' AS (col11:int,col2:int,col3:int);</span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-family: courier new,courier; font-size: small;"><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">DUMP A;</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(1,2,3)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(4,2,1)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(8,3,4)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(4,3,3)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(7,2,5)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(8,4,3)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /><br class="kix-line-break" /></span></span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><em><span style="font-family: courier new,courier; font-size: small; line-height: 1.15; background-color: transparent;">X = ORDER A BY col3 DESC;</span></em></p>
+<p style="line-height: 1.15; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: courier new,courier;"><em><span style="font-size: small;"><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">DUMP X;</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(7,2,5)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(8,3,4)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(1,2,3)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(4,3,3)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(8,4,3)</span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"><br class="kix-line-break" /></span><span style="color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">(4,2,1)</span></span></em><span style="font-size: 15px; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /><br class="kix-line-break" /></span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="load.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="sample.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

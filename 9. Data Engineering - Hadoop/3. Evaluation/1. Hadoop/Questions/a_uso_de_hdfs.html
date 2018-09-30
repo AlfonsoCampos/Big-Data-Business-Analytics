@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>A. Uso de HDFS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hadoop</a></li>
+   <li><a href="conceptos_bsicos_y_definiciones.html" class="daddy">Conceptos básicos y definiciones</a>
+   <ul class="other-section">
+      <li><a href="conceptos_previos.html" class="no-ch">Conceptos previos</a></li>
+      <li><a href="qu_es_apache_hadoop.html" class="no-ch">¿Qué es Apache Hadoop?</a></li>
+      <li><a href="ecosistema_hadoop.html" class="no-ch">Ecosistema Hadoop</a></li>
+      <li><a href="quin_usa_hadoop.html" class="no-ch">Quién usa Hadoop</a></li>
+      <li><a href="mdulos_de_hadoop.html" class="daddy">Módulos de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="hadoop_common.html" class="no-ch">Hadoop Common</a></li>
+         <li><a href="hadoop_distributed_file_system_hdfs.html" class="no-ch">Hadoop Distributed File System (HDFS™)</a></li>
+         <li><a href="hadoop_yarn.html" class="no-ch">Hadoop YARN</a></li>
+         <li><a href="hadoop_mapreduce.html" class="no-ch">Hadoop MapReduce</a></li>
+         <li><a href="programacin_de_trabajos.html" class="no-ch">Programación de trabajos</a></li>
+      </ul>
+      </li>
+      <li><a href="instalacin_de_hadoop.html" class="daddy">Instalación de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="prerrequisitos.html" class="daddy">Prerrequisitos</a>
+         <ul class="other-section">
+            <li><a href="descargar_e_instalar_hadoop.html" class="no-ch">Descargar e instalar Hadoop</a></li>
+            <li><a href="actualizar_mquina_virtual.html" class="no-ch">Actualizar máquina virtual</a></li>
+            <li><a href="confirmar_versin_de_java.html" class="no-ch">Confirmar versión de Java</a></li>
+            <li><a href="crear_y_configurar_los_certificados_ssh.html" class="no-ch">Crear y configurar los certificados SSH</a></li>
+         </ul>
+         </li>
+         <li><a href="modificar_ficheros_de_configuracin.html" class="daddy">Modificar ficheros de configuración</a>
+         <ul class="other-section">
+            <li><a href="bashrc.html" class="no-ch">~/.bashrc</a></li>
+            <li><a href="coresitexml.html" class="no-ch">core-site.xml</a></li>
+            <li><a href="hadoopenvsh.html" class="no-ch">hadoop-env.sh</a></li>
+            <li><a href="hdfssitexml.html" class="no-ch">hdfs-site.xml</a></li>
+            <li><a href="mapredsitexml.html" class="no-ch">mapred-site.xml</a></li>
+            <li><a href="yarnsitexml.html" class="no-ch">yarn-site.xml</a></li>
+         </ul>
+         </li>
+         <li><a href="formatear_el_sistema_de_archivos_de_hadoop.html" class="no-ch">Formatear el sistema de archivos de Hadoop</a></li>
+         <li><a href="demonios.html" class="daddy">Demonios</a>
+         <ul class="other-section">
+            <li><a href="arrancar_demonios_hdfs.html" class="no-ch">Arrancar demonios HDFS</a></li>
+            <li><a href="arrancar_demonios_yarn.html" class="no-ch">Arrancar demonios Yarn</a></li>
+            <li><a href="parar_demonios_hdfs.html" class="no-ch">Parar demonios HDFS</a></li>
+            <li><a href="parar_demonios_yarn.html" class="no-ch">Parar demonios Yarn</a></li>
+            <li><a href="arrancar_demonios_individualmente.html" class="no-ch">Arrancar demonios individualmente</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="interfaces_web_de_hadoop.html" class="daddy">Interfaces Web de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="namenode_web_interface_hdfs_layer.html" class="no-ch">NameNode Web Interface (HDFS layer)</a></li>
+         <li><a href="resource_manager_web_interface_yarn_layer.html" class="no-ch">Resource Manager Web Interface (Yarn layer)</a></li>
+         <li><a href="map_reduce_jobhistory.html" class="no-ch">Map Reduce JobHistory</a></li>
+      </ul>
+      </li>
+      <li><a href="ejemplo_comprobacin_instalacin.html" class="no-ch">Ejemplo comprobación instalación</a></li>
+      <li><a href="ejercicio_comprobacin_instalacin.html" class="no-ch">Ejercicio: comprobación instalación</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="hdfs.html" class="current-page-parent daddy">HDFS</a>
+   <ul>
+      <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+      <li><a href="arquitectura_hdfs.html" class="no-ch">Arquitectura HDFS</a></li>
+      <li><a href="replicacin_de_datos.html" class="no-ch">Replicación de datos</a></li>
+      <li><a href="el_nodo_secundario.html" class="no-ch">El nodo secundario</a></li>
+      <li><a href="arrancar_hadoop.html" class="no-ch">Arrancar Hadoop</a></li>
+      <li><a href="comandos_bsicos_de_hdfs.html" class="no-ch">Comandos básicos de HDFS</a></li>
+      <li><a href="ejemplo_de_uso_de_comandos_bsicos_hdfs.html" class="no-ch">Ejemplo de uso de comandos básicos HDFS</a></li>
+      <li><a href="api_de_programacin_de_hdfs.html" class="no-ch">API de programación de HDFS</a></li>
+      <li class="current-page-parent"><a href="ejercicio1.html" class="current-page-parent daddy">EJERCICIO</a>
+      <ul>
+         <li id="active"><a href="a_uso_de_hdfs.html" class="active no-ch">A. Uso de HDFS</a></li>
+         <li><a href="b_map_reduce.html" class="no-ch">B: Map Reduce</a></li>
+         <li><a href="ejercicio2.html" class="no-ch">EJERCICIO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="map_reduce.html" class="daddy">Map Reduce</a>
+   <ul class="other-section">
+      <li><a href="procesamiento_en_paralelo.html" class="no-ch">Procesamiento en Paralelo</a></li>
+      <li><a href="fundamentos.html" class="no-ch">Fundamentos</a></li>
+      <li><a href="ejemplo_sencillo_de_map_reduce.html" class="no-ch">Ejemplo sencillo de map Reduce</a></li>
+      <li><a href="explicacin_modelo_map_reduce.html" class="no-ch">Explicación modelo Map Reduce</a></li>
+      <li><a href="ejemplo.html" class="daddy">Ejemplo</a>
+      <ul class="other-section">
+         <li><a href="datos_de_entrada.html" class="no-ch">Datos de entrada</a></li>
+         <li><a href="1_mapeo.html" class="no-ch">1. Mapeo</a></li>
+         <li><a href="2_mezcla.html" class="no-ch">2. Mezcla</a></li>
+         <li><a href="3_reduccin.html" class="no-ch">3. Reducción</a></li>
+         <li><a href="resultado.html" class="no-ch">Resultado</a></li>
+         <li><a href="interfaz_web.html" class="no-ch">Interfaz Web</a></li>
+      </ul>
+      </li>
+      <li><a href="ejercicio_diccionario.html" class="no-ch">Ejercicio: diccionario</a></li>
+      <li><a href="ejercicio_opcional.html" class="no-ch">Ejercicio (opcional)</a></li>
+      <li><a href="ms_ejemplos.html" class="no-ch">Más ejemplos</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="ejercicio1.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="b_map_reduce.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">A. Uso de HDFS</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id124">
+<div class="iDevice emphasis0">
+<div id="ta124_1" class="block iDevice_content">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">En este ejercicio se trabajará con los comandos básicos de HDFS. </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong><span style="color: #000000; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><span style="font-size: medium;">Paso 1. Crear un directorio HDFS, subir un fichero y mostrarlo.</span> </span></strong></span></p>
+<p style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small; font-weight: normal; line-height: 1.15;">La sintaxis a seguir es la siguiente:<br /></span></p>
+<p style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -mkdir &lt;paths&gt;: </span><span style="font-weight: normal; line-height: 1.15;">Recibe un uri path como argumento y crea uno o varios directorios. </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><em><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo:</span></em><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><em><span style="font-family: courier new,courier;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> hdfs dfs -mkdir /user/bigdata/dir1 /user/bigdata/dir2</span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> hdfs dfs -mkdir hdfs://localhost:9000/user/bigdata/dir</span></span></em></span><em><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /><br class="kix-line-break" /></span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span id="docs-internal-guid-cccd68ec-718c-4315-2489-f0e4128c938a"><span><img src="https://lh3.googleusercontent.com/QzF51Q7OltGFcQSXpb2ZP9BORM10VVT4xFQ2saSsQTaXC_tbsUaHo4CerQhmxD48AZTm82FWXDvjoCbmWyFwGliC92kHDsif4vioYxMhTrUuaPkZWrWKoVpOWYTsJ4Jrxg" width="624px;" height="87px;" /></span></span></span></p>
+<p style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -ls &lt;args&gt;:</span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Lista el contenido de un directorio</span></p>
+</li>
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Para un fichero, muestra sus estadísticas</span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><em>Ejemplos:</em> </span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> hdfs dfs -put ejemplo.txt /user/bigdata/dir1</span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span id="docs-internal-guid-dd5e2e58-7190-8695-653c-32172177f1ea"><span><img src="https://lh4.googleusercontent.com/g2Mx3oRC585iAMPWDSR5h1bXMpSUho7qlRnzVcH2Cqh7EMlfPn9G55zoXDaRUqeCP5UEMIuhfhBdyURHIyLRhFM5bn098fLYdUAnhVFY0o0_3sgGTeh1CWRZB78a7RhMNQ" width="624px;" height="49px;" /></span></span><br class="kix-line-break" /></span><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: courier new,courier;"><em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -ls /user/bigdata/dir1 /user/bigdata/dir2</span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span><span id="docs-internal-guid-dd5e2e58-7191-3373-6d23-5433b82ac152"><span><img src="https://lh6.googleusercontent.com/VveU515DkdDXShv5EsrprJOh5cMgckxBiJqlpx1EZqFtThMUhfnAnAPq340k9OZ_L0Biz6pTtJRWnCgmBOuIfvcCmI22E03MQPTHQh2e1X2-shjOIaGqNkNCMc_K49K2FQ" width="624px;" height="85px;" /></span></span></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: courier new,courier;"><em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -ls /user/bigdata/dir1/filename.txt</span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span id="docs-internal-guid-dd5e2e58-7191-8412-d4a3-e8a28f4eabdb"><span><img src="https://lh4.googleusercontent.com/5qr2TAvGpV1pJWLMLp5o7SAJfcK7gBdS2Qfa4PLrlW-dx9KyHjn2zFKVTh--WScp6DfXxhZ2RBOqnwvOFslsKeFV6SzAcUkcUA4FSKvD3Uof8mEOCQ9uD35rD2AggNSjEA" width="624px;" height="72px;" /></span></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: courier new,courier;"><em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -ls hdfs://localhost:9000/user/bigdata/dir1/</span><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /><span id="docs-internal-guid-dd5e2e58-7192-1486-69d3-d6dba1437c89"><img src="https://lh3.googleusercontent.com/scDecRnfdPqmT-hGkA9CF0v0Q3nJxVpRtJ541rF4BGS-ExrrK0AtK96UUEaTeckbmNkyZ2U71BtV8UxAluMbvmUgG1G8S6tFxd22xLyDRofOWKxRK0h_OaP-VX_B0a4jZA" width="624px;" height="91px;" /></span><br class="kix-line-break" /></span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><span style="font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -du URI: </span><span style="font-family: Arial; font-weight: normal; line-height: 1.15;"><span style="font-family: trebuchet ms,geneva;">Muestra el tamaño de los archivos y directorios que contiene un directorio dado o el tamaño de un archivo si el parámetro de entrada es un archivo.</span> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo:</span><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> hdfs dfs -du /user/bigdata/ /user/bigdata/dir1/ejemplo.txt</span></em><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-7194-b0b9-7f63-fb22afb9667f"><span><img src="https://lh5.googleusercontent.com/WrFtd0OOzl6pwLg7lq4CoNJ9CXqYOyN2CleeBX8lxtnBdB-LHEXPjNAd7jC0Te6uCnn0r4dU70XKTWgAjyMiqN2LoBN1blcyxT6YuYaUtWsUfj7-o93EChLoJmbjncpMtw" width="624px;" height="103px;" /></span></span></p>
+<h4 style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: medium; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Paso 2: Subir y descargar ficheros de HDFS</span></h4>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-weight: bold; line-height: 1.15;">hdfs dfs -put &lt;localsrc&gt; ... &lt;HDFS_dest_Path&gt;:</span></span><span style="font-size: 13px; line-height: 1.15;"> Copia uno o múltiples ficheros de la ruta local al sistema de archivos de Hadoop (HDFS)</span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo:</span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Creación de los ficheros:</span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> echo "ejemplo1" &gt; /tmp/ejemplo1.txt</span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> echo "ejemplo2" &gt; /tmp/ejemplo2.txt</span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: 13px; font-family: courier new,courier; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> ls /tmp/ejemplo*.txt</span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-family: courier new,courier;"> hdfs dfs -put /tmp/ejemplo1.txt /tmp/ejemplo2.txt /user/bigdata/dir3/</span></em><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /><br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span id="docs-internal-guid-dd5e2e58-71b2-362e-3d02-ab0ca9348ec6"><span><img src="https://lh5.googleusercontent.com/_i3dkKN1ACSdOQCsFpmGPNfm_NnskRRunvHTUUnRQbS276764AnjA7Jd3H6tjvwXYOc_jQEPTeLPV0ZTDwXSdROr8Mnm5GiX40EbyCQMk-arJd0LcYx8PP7vEZup6adkCA" width="624px;" height="253px;" /></span></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: Arial; font-size: 13px; line-height: 1.15;"></span></strong></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong><span style="line-height: 1.15;">hdfs dfs -get &lt;hdfs_src&gt; &lt;localdst&gt;: </span></strong><span style="line-height: 1.15;">copia o descarga un fichero al sistema local de archivos. </span><span style="line-height: 1.15;"><br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo:</span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="font-family: courier new,courier;"><em><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -get /user/bigdata/dir3/ejemplo1.txt /home/bigdata</span></em></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-71ba-3f1f-8680-833470483488"><span><img src="https://lh6.googleusercontent.com/E7DM_bI0caPOL0ONANxiz7WUKrYcRF90kqvskpZabtqLcS6zmOVG2Dk__xHXD0BafSg2ExCfl0JR9B64-JDGKTUiOUJ5LKPqjSFcgwfXM1Pj5fF7IAsb9A89dsxoyCO26w" width="624px;" height="85px;" /></span></span></p>
+<h4 style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: medium; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Paso 3: Otros comandos</span></h4>
+<h5 style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs dfs -getmerge &lt;src&gt; &lt;localdst&gt; [addnl]: </span><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">recibe un directorio de archivos como entrada y concatena los archivos en un único fichero en el destino local</span><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></h5>
+<p><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: small;"><span style="color: #000000; background-color: #ffffff; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> Ejemplo:</span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><em><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-family: courier new,courier;"> hdfs dfs -getmerge /user/bigdata/dir3 ./EjemploMerge.txt</span></em><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> Opcional:</span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-family: courier new,courier;"><em> addnl:</em></span> se puede activar añadiendo para que añada una nueva línea al final de cada archivo</span></span><span style="font-size: 13px; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /><span id="docs-internal-guid-dd5e2e58-71bf-56ec-95fe-23b4b49d065a"><img src="https://lh4.googleusercontent.com/BZjw5KT4EsvUhpCtD84heTYmwLJMkZQ9b-g2odYIbkreBFf3clcZbIWN18DZLxGkSrF9TRDF9cVwsRW6IB2L5Jx2xkNTqTW57RJk4mCBoThHUrNTDropHtp_o041gGe6WA" width="624px;" height="220px;" /></span><br class="kix-line-break" /></span></span></p>
+<h5 style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs distcp &lt;srcurl&gt; &lt;desturl&gt;:</span></h5>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Copia un archivo o directorios recursivamente</span></p>
+</li>
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Es una herramienta usada para realizar grandes copias entre clusters. </span></p>
+</li>
+<li style="list-style-type: disc; font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Usa MapReduce para efectuar una distribución de la copia, gestionar errores y recuperación y para mostrar resultados. </span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo:</span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="font-family: courier new,courier;"><em><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hdfs distcp hdfs://&lt;NameNode1&gt;:8020/user/bigdata/dir1/ \ </span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> hdfs://&lt;NameNode2&gt;:8020/user/bigdata/dir2/</span></em></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /><br class="kix-line-break" /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: medium; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-weight: bold; line-height: 1.15;">Paso 4: Acceso a la ayuda</span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Se puede emplear el comando Help para listar todos los comandos soportados por Hadoop Data File System(HDFS)</span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Ejemplo: </span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span><em><span style="font-family: courier new,courier;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"> </span></span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><em><span style="font-family: courier new,courier;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"></span></span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><em><span style="font-family: courier new,courier;"><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">hadoop fs -help</span><span style="color: #000000; background-color: #ffffff; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span></span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><img src="https://lh3.googleusercontent.com/njIjuIY7yxEDYCgcQvQyklfezoS8F_K9JoVx_Q14ZWhi1s86VGEOgDQTxB0vQWIrkktNoPqDFrRCvmgHhxM1O-16hamC_HT5FRRabNgCGrVuIpwAyDL2GN1deZHBCH9_ag" style="border: none; transform: rotate(0.00rad); -webkit-transform: rotate(0.00rad);" alt="enter image description here" title="HDFS_HW_step3.png" width="624px;" height="185px;" /></span></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="ejercicio1.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="b_map_reduce.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

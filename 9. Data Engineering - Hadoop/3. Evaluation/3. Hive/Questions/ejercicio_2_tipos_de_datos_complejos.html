@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicio 2: tipos de datos complejos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hive</a></li>
+   <li><a href="caractersticas.html" class="no-ch">Características</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="comprobar_instalacin.html" class="no-ch">Comprobar instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+   <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+   <li><a href="otros_operadores.html" class="no-ch">Otros operadores</a></li>
+   <li><a href="estructuras_de_datos.html" class="daddy">Estructuras de datos</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos.html" class="no-ch">Bases de datos</a></li>
+      <li><a href="tablas.html" class="no-ch">Tablas</a></li>
+      <li><a href="partitioned_tables.html" class="no-ch">Partitioned Tables</a></li>
+      <li><a href="external_tables_and_partitioned_tables.html" class="no-ch">External Tables and Partitioned Tables</a></li>
+      <li><a href="bucket.html" class="no-ch">Bucket</a></li>
+      <li><a href="vistas.html" class="no-ch">Vistas</a></li>
+      <li><a href="indices.html" class="no-ch">Indices</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_word_count.html" class="no-ch">Ejemplo: word count</a></li>
+   <li><a href="ejercicio_1_tipos_de_datos_simples.html" class="no-ch">Ejercicio 1: tipos de datos simples</a></li>
+   <li><a href="ejemplo_estructuras_complejas.html" class="no-ch">Ejemplo: estructuras complejas</a></li>
+   <li id="active"><a href="ejercicio_2_tipos_de_datos_complejos.html" class="active no-ch">Ejercicio 2: tipos de datos complejos</a></li>
+   <li><a href="otros_comandos_ddl_data_definition_language.html" class="no-ch">Otros comandos DDL (Data Definition Language)</a></li>
+   <li><a href="operaciones_dmldata_manipulation_language.html" class="daddy">Operaciones DML(Data Manipulation Language)</a>
+   <ul class="other-section">
+      <li><a href="load.html" class="no-ch">Load</a></li>
+      <li><a href="insert.html" class="no-ch">Insert</a></li>
+      <li><a href="update.html" class="no-ch">Update</a></li>
+      <li><a href="delete.html" class="no-ch">Delete</a></li>
+      <li><a href="exportimport.html" class="no-ch">Export/Import</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_crear_una_tabla_en_hive_y_cargar_un_origen_de_datos.html" class="no-ch">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</a></li>
+   <li><a href="almacenamiento_de_datos.html" class="daddy">Almacenamiento de datos</a>
+   <ul class="other-section">
+      <li><a href="almacenamiento_en_ficheros.html" class="no-ch">Almacenamiento en ficheros</a></li>
+      <li><a href="almacenamiento_en_registros.html" class="no-ch">Almacenamiento en registros</a></li>
+      <li><a href="conversin_del_tipo_de_almacenamiento.html" class="no-ch">Conversión del tipo de almacenamiento</a></li>
+      <li><a href="compresin.html" class="no-ch">Compresión</a></li>
+   </ul>
+   </li>
+   <li><a href="introduccin_a_sqoop.html" class="daddy">Introducción a Sqoop</a>
+   <ul class="other-section">
+      <li><a href="import_creacin_de_conexin.html" class="no-ch">Import: creación de conexión</a></li>
+      <li><a href="import_definicin_de_datos_a_migrar.html" class="no-ch">Import: definición de datos a migrar</a></li>
+      <li><a href="import_cargar_datos_en_hive_y_hbase.html" class="no-ch">Import: cargar datos en Hive y Hbase</a></li>
+      <li><a href="importalltables.html" class="no-ch">Import-all-tables</a></li>
+      <li><a href="export.html" class="no-ch">Export</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="ejemplo_estructuras_complejas.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="otros_comandos_ddl_data_definition_language.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Ejercicio 2: tipos de datos complejos</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id216">
+<div class="iDevice emphasis0">
+<div id="ta216_85" class="block iDevice_content">
+<p><span style="font-size: small;">Partiendo de una base de datos de genios que contenga la siguiente información:</span></p>
+<ul>
+<li><span style="font-size: small;">Nombre: Leonhard Paul</span></li>
+<li><span style="font-size: small;">Apellido: Euler</span></li>
+<li><span style="font-size: small;">Campos: ['física','matematicas']</span></li>
+<li><span style="font-size: small;">Nacimiento:</span>
+<ul>
+<li>Fecha: 1973-09-18</li>
+<li>Ciudad: Basilea</li>
+<li>País: Suiza</li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size: small;">Realizar los siguientes ejercicios: </span></p>
+<p><span style="font-size: small;">1. Crear una base de datos que permita almacenar la estructura anterior</span></p>
+<p><span style="font-size: small;">2. Insertar los siguientes elementos</span></p>
+<p dir="ltr" id="docs-internal-guid-4cd4eb48-db85-9e2a-5a11-659f5e0ff555"><span style="font-size: small;">{</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nombre": "Leonhard Paul",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "apellido": "Euler",               </span></p>
+<p dir="ltr"><span style="font-size: small;">       "campos": ["física", "matemáticas"],</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nacimiento":{</span></p>
+<p dir="ltr"><span style="font-size: small;">           "fecha": new Date('1973-09-18'),</span></p>
+<p dir="ltr"><span style="font-size: small;">           "ciudad": "Basilea",</span></p>
+<p dir="ltr"><span style="font-size: small;">           "pais": "Suiza"</span></p>
+<p dir="ltr"><span style="font-size: small;">           }</span></p>
+<p dir="ltr"><span style="font-size: small;">      },</span></p>
+<p dir="ltr"><span style="font-size: small;">      {</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nombre": "Johann Karl Friedrich",        </span></p>
+<p dir="ltr"><span style="font-size: small;">       "apellido": "Gauss",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "campos": ["matemáticas", "astronomía", "geodesia", "física"],</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nacimiento":{</span></p>
+<p dir="ltr"><span style="font-size: small;">           "fecha": new Date('1777-04-30'),</span></p>
+<p dir="ltr"><span style="font-size: small;">           "ciudad": "Brunswick",</span></p>
+<p dir="ltr"><span style="font-size: small;">           "pais": "Alemania"</span></p>
+<p dir="ltr"><span style="font-size: small;">           },</span></p>
+<p dir="ltr"><span style="font-size: small;">     },</span></p>
+<p dir="ltr"><span style="font-size: small;">     {</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nombre": "Giuseppe Lodovico",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "apellido": "Lagrange",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "campos": ["física", "matemáticas", "astronomía"],</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nacimiento":{</span></p>
+<p dir="ltr"><span style="font-size: small;">           "fecha": new Date('1736-01-25'),</span></p>
+<p dir="ltr"><span style="font-size: small;">           "ciudad": "Turín",</span></p>
+<p dir="ltr"><span style="font-size: small;">           "pais": "Italia"</span></p>
+<p dir="ltr"><span style="font-size: small;">       }</span></p>
+<p dir="ltr"><span style="font-size: small;">     },</span></p>
+<p dir="ltr"><span style="font-size: small;">     {</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nombre": "Werner",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "apellido": "Heisenberg",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "campos": ["física"],</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nacimiento":{</span></p>
+<p dir="ltr"><span style="font-size: small;">           "fecha": new Date('1901-12-05'),</span></p>
+<p dir="ltr"><span style="font-size: small;">           "ciudad": "Wurzburgo",</span></p>
+<p dir="ltr"><span style="font-size: small;">           "pais": "Alemania"</span></p>
+<p dir="ltr"><span style="font-size: small;">           }</span></p>
+<p dir="ltr"><span style="font-size: small;">     },</span></p>
+<p dir="ltr"><span style="font-size: small;">     {</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nombre": "Roger",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "apellido": "Penrose",</span></p>
+<p dir="ltr"><span style="font-size: small;">       "campos": ["física", "matemáticas"],</span></p>
+<p dir="ltr"><span style="font-size: small;">       "nacimiento":{</span></p>
+<p dir="ltr"><span style="font-size: small;">           "fecha": new Date('1931-08-08'),</span></p>
+<p dir="ltr"><span style="font-size: small;">           "ciudad": "Colchester",</span></p>
+<p dir="ltr"><span style="font-size: small;">           "pais": "Inglaterra"</span></p>
+<p dir="ltr"><span style="font-size: small;">       }</span></p>
+<p><span style="font-size: small;">     }</span></p>
+<p><span style="font-size: small;">3. Ejecutar una query que permita identificar cuantos elementos tienen como nombre "Euler"</span></p>
+<p><span style="font-size: small;">4. <span id="docs-internal-guid-4cd4eb48-db86-abec-480c-02630a69c9e7">Escribir una consulta para obtener los elementos de la tabla genios anterior que seleccione sólo aquellos personajes que hayan tratado los campos de las matemáticas y la geodesia (Pista: emplear una Collection Function de https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF).</span></span></p>
+<p><span style="font-size: small;">5. <span id="docs-internal-guid-4cd4eb48-db87-0774-6277-8baf86978560">Escribir una consulta para obtener los elementos de la tabla genios anterior que seleccione sólo aquellos personajes que hayan tratado o bien el campo de la física o bien el campo de la geodesia, entre otros.</span></span></p>
+<p><span style="font-size: small;">6. <span id="docs-internal-guid-4cd4eb48-db87-48fc-4bdd-7a6624988130">Escrib<span>ir</span> una consulta que devuelva el número de personajes nacidos en Alemania.</span></span></p>
+<p><span style="font-size: small;">7. <span style="line-height: 1.5;">Escrib<span>ir</span> una consulta que devuelva los personajes nacidos en Alemania y que hayan trabajado en el campo de las matemáticas.</span></span></p>
+<p><span style="font-size: small;"><span style="line-height: 1.5;">8. </span><span style="line-height: 1.5;">Escrib<span>ir</span> una consulta que devuelva el número de personajes que se han dedicado a la física como campo principal. Se entiende que los campos aparecen ordenados según dedicación.</span></span></p>
+<p><span style="font-size: small;"><span style="line-height: 1.5;">9. </span><span style="line-height: 1.5;">Escrib<span>ir</span> una consulta que devuelva únicamente el nombre de los personajes que cumplen el criterio del ejercicio anterior.</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="ejemplo_estructuras_complejas.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="otros_comandos_ddl_data_definition_language.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

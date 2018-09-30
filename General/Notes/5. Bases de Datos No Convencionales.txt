@@ -1,0 +1,43 @@
+
+Correo NOSQL Elena: elena.garcia@uah.es
+Evaluacion:
+1a entrega x cada sistema gestor de BB.DD (4 x 10%)
+Resolucion de un caso practico (en grupo) 60% de la calificacion
+
+Teorema CAP
+
+Libro: Seven DBs in 7 weeks...
+------------------------
+show dbs
+db
+
+show collections
+
+
+
+Entregar en 2 semanas en un .txt ( o .js imagino)
+
+----Clave valor:
+> El documento aqui no sabes que es!
+Transacciones a nivel de anidado. Consultas solo por la clave!
+Con la clave-valor basicamente sabrias 0 del rollo de las realciones
+
+> Usarias esto para escalar brutalmente con info no critica, estilo cesta de la copra, sesiones de usuarios, posts de un blog
+
+-----
+match (p)
+optional match (p)-[r]-(q)
+delete p,r,q
+return count(*)
+
+Soporta expresiones regulares tb!
+
+
+---------
+Correo UOC jcomesac@uoc.edu
+
+
+-----
+Sardkeys son fundamentales, lo pinesa desde ese angulo en mongodb
+Para fechas que accedes por rangos lo quieres secuencial^
+Para autores lo utiliza hasheadno a un numerito con funcion h(x)

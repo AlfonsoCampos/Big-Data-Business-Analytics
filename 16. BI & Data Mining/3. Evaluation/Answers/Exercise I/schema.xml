@@ -1,0 +1,72 @@
+<Schema name="VentasCSV">
+  <Dimension name="TERRITORY">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="TERRITORY" uniqueMembers="false" column="TERRITORY" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="COUNTRY">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="COUNTRY" uniqueMembers="false" column="COUNTRY" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="STATE">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="STATE" uniqueMembers="false" column="STATE" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="CITY">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="CITY" uniqueMembers="false" column="CITY" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="POSTALCODE">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="POSTALCODE" uniqueMembers="false" column="POSTALCODE" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="YEAR ID">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="YEAR ID" uniqueMembers="false" column="YEAR_ID" type="Numeric">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="MONTH ID">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="MONTH ID" uniqueMembers="false" column="MONTH_ID" type="Numeric">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="DEALSIZE">
+    <Hierarchy hasAll="true">
+      <Table name="ventascsv"/>
+      <Level name="DEALSIZE" uniqueMembers="false" column="DEALSIZE" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="VentasCSV">
+    <Table name="ventascsv"/>
+    <DimensionUsage name="TERRITORY" source="TERRITORY"/>
+    <DimensionUsage name="COUNTRY" source="COUNTRY"/>
+    <DimensionUsage name="STATE" source="STATE"/>
+    <DimensionUsage name="CITY" source="CITY"/>
+    <DimensionUsage name="POSTALCODE" source="POSTALCODE"/>
+    <DimensionUsage name="YEAR ID" source="YEAR ID"/>
+    <DimensionUsage name="MONTH ID" source="MONTH ID"/>
+    <DimensionUsage name="DEALSIZE" source="DEALSIZE"/>
+    <Measure name="SALES" column="SALES" aggregator="sum" formatString="&#x23;"/>
+    <Measure name="MSRP" column="MSRP" aggregator="sum" formatString="&#x23;"/>
+    <Measure name="QUANTITYORDERED" column="QUANTITYORDERED" aggregator="sum" formatString="&#x23;"/>
+  </Cube>
+</Schema>

@@ -1,0 +1,21 @@
+# Default graph
+@prefix sn:  <http://ciff.curso2015/ontologies/owl/socialNetwork#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+sn:instancia1 a sn:Person;
+				rdfs:label "Alicia Keys"@en .
+
+sn:instancia2 a sn:Person;
+				rdfs:label "Manu Chao"@en-gb .
+				
+sn:instancia3 a sn:Film;
+				rdfs:label "Batman" ;
+				rdfs:label "Batman"@es ;
+				rdfs:label "Madrid"@en .
+				
+sn:instancia4 a sn:Guide;
+				rdfs:label "Un vino cosmopolita" ;
+				rdfs:label "Un vino cosmopolita"@es ;
+				rdfs:label "Un vino cosmopolita"@en .
+
+

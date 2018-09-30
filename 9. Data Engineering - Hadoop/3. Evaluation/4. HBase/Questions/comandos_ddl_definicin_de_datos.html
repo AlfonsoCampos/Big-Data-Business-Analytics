@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Comandos DDL (definición de datos) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li class="current-page-parent"><a href="comandos_disponibles_en_hbase_shell.html" class="current-page-parent daddy">Comandos Disponibles en HBase Shell</a>
+   <ul>
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li id="active"><a href="comandos_ddl_definicin_de_datos.html" class="active no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="comandos_generales.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="comandos_de_manipulacin_de_datos_crud.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Comandos DDL (definición de datos)</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id197">
+<div class="iDevice emphasis0">
+<div id="ta197_1" class="block iDevice_content">
+<p><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Operaciones sobre NameSpaces: </span></span></strong></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 1.5;"><strong>create</strong>: permite crear namespaces </span></span></li>
+<ul>
+<li dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;">create_namespace 'master2015'</span></em></li>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span id="docs-internal-guid-c350855c-0815-d5dd-2dd7-f05d9feb04b1"><span><img src="https://lh5.googleusercontent.com/ctYLZ6nHgsWP1c6unBfz7x1ugsFl3wjl5rdnuKBGk8aj5b2GiBxzmGZ6TiWVV70KwtLieH0YpknMp5Hibv_66HmU4CaVg1RMd2TFSjZiiBmqTyTIpwXjPFlgZXTz2B5wGQ" width="450px;" height="53px;" /></span></span></p>
+<p dir="ltr" style="margin-left: 90px;"></p>
+<ul>
+<li dir="ltr"><strong>alter_namespace: </strong>permite añadir o eliminar una propiedad de un namespace</li>
+<ul>
+<li dir="ltr"><em><span id="docs-internal-guid-c350855c-07c7-6446-dcaf-530f88df370d">alter_namespace 'master2015', {METHOD=&gt;'set','Propiedad1'=&gt;'Valor1'}</span></em></li>
+<li dir="ltr"><em><span>alter_namespace 'master2015', {METHOD=&gt;'set','Propiedad2'=&gt;'Valor2'}</span></em></li>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span id="docs-internal-guid-c350855c-0816-7d07-698a-04332cd9c079"><span><img src="https://lh3.googleusercontent.com/ea7IlKRk5EqGtQl0zx5gJhrmg7525KOo9bcd0f5rNOS0ebVMqm3WfMGTuz2Q-f4-4P7zAw72rcrrthhZeHBqr2ELiwO-L-WUviG4D_WTiz8BXQx7cREIuzduSOMPOcd3uw" width="624px;" height="84px;" /></span></span></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>alter_namespace 'master2015', {METHOD=&gt;'unset',NAME=&gt;'Propiedad2'}</li>
+</ul>
+</li>
+</ul>
+<p style="margin-left: 90px;"><span id="docs-internal-guid-c350855c-0817-1f48-62ba-e419b677ff69"><span><img src="https://lh3.googleusercontent.com/eu0g0IkV0JkduVGIkdWpo2vqxYotdwnWVT3R9tn40OsSELWUEfqDX6nc6dcBfNup-DRLwhlTWA7WfMFrZGs_Mux97SmCwBIs-8AsDLvRB8lhKh8KMnu9oGFiFFjdhwfJDw" width="624px;" height="53px;" /></span></span></p>
+<ul>
+<li dir="ltr"><strong>describe_namespace: </strong>muestra la información del namespace</li>
+<ul>
+<li dir="ltr"><em>describe_namespace 'master2015'</em></li>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span id="docs-internal-guid-c350855c-0817-a252-6482-e72a2758ef53"><span><img src="https://lh3.googleusercontent.com/P1p1fKaoRYRGf-FAktlmkWfmmL5sjp5SEcaAMnDWuW97PlC8_Eev3WJ3v-SZEDYd4ooKrK1qB1G9T91ejcm251f34Dyz9twjNXlnSdsVs3etUXTOciSdvcsvmJDWg6UBEg" width="478px;" height="83px;" /></span></span></p>
+<ul>
+<li dir="ltr"><strong>list_namespace</strong>: permite mostrar la información de los tablespaces existentes</li>
+<ul>
+<li dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5; font-size: small;">list_namespace </span></em></li>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span id="docs-internal-guid-c350855c-0818-1d52-c046-0a71ce816dbf"><span><img src="https://lh6.googleusercontent.com/MSr-zy0UXuA73uPRlF055BwseLSmv8Pn0TzH66zMSnlwOcN0uXSc2Abk4Z7ys6Oxw1Z4k4H56z7xzodIvfS3nNQ4S6YC_cSVptxJ5nAiPxMCHai1ZukVvRAM8yMofDXJuA" width="314px;" height="129px;" /></span></span></p>
+<p><strong><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5; font-size: small;">Operaciones sobre Tablas:</span></strong></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>create</strong>: crea una nueva tabla en Hbase</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">Ejemplo 1: namespace = master2015</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">create 'master2015:tabla_ejemplo',  {NAME =&gt; 'column_family_1', VERSIONS =&gt; 1, TTL =&gt; 2592000, BLOCKCACHE =&gt; true}</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" style="font-family: 'trebuchet ms', geneva;"><span id="docs-internal-guid-c350855c-0819-d78e-2d48-1adf81141f60"><span><img src="https://lh3.googleusercontent.com/KHMcVw9L5i5iiPaaF2oDsYdi-zChFQM-pWnPP8nXk2b4680cK3yXbUD13q9no016G7q6EZt8vjH6PKlZ-u_Ifm-7exU5_chDga-JEQXPerfI_GNV0hj2UwEkEgXUHW2Dsw" width="624px;" height="92px;" /></span></span></span></p>
+<ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">Ejemplo 2: namespace = default</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;">create 'tabla_ejemplo_en_default_namespace',  {NAME =&gt; 'column_family_1'}, {NAME =&gt; 'column_family_2'}, {NAME =&gt; 'column_family_3'}</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" style="font-family: 'trebuchet ms', geneva;"><span id="docs-internal-guid-c350855c-081a-8967-67ba-bb89092ad460"><span><img src="https://lh6.googleusercontent.com/tAqoDU3yl9tdmB3RZ2jK5l_gtG00tQgnkSX16YFmK8ck1dEaMyRcKz4zbaD4TMeePalbHzsU7baaY0n8PrfO8jUxKl4UmeOp6_lpjMMf_FszZp6JRVvgp1k9y1jOwJqw4w" width="624px;" height="83px;" /></span></span></span></p>
+<ul>
+<ul>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;">create 'tabla1', 'column_family_1', 'column_family_2', 'column_family_3'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" style="font-family: 'trebuchet ms', geneva;"><span id="docs-internal-guid-c350855c-081c-e0ff-6e59-480d5606b101"><span><img src="https://lh4.googleusercontent.com/K_FlBnNvfG0UHbgf3vVsIYb_O6bvvXY9ZQX5V2Rz3pKUIGBYRAmhv5l_QWBXpM2yOPrW0xs_vMf5U5fm1SDILLFpKYIxWYndqTN4fob0KmZu85uk_XrNLcLli00UQE5NLA" width="624px;" height="69px;" /></span></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>alter</strong>: permite modificar la información de una tabla así como atributos como MAX_FILESIZE, MEMSTORE_FLUSHSIZE, READONLY, y DEFERRED_LOG_FLUSH.</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Ejemplo 1: Cambiar o añadir la columna Family column_family_1 en la tabla tabla1 manteniendo un máximo de 5 versiones de Celdas.</span></li>
+<ul>
+<li dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5; font-size: small;">hbase&gt; alter 'tabla1', NAME =&gt; 'column_family_1', VERSIONS =&gt; 5</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><i><span id="docs-internal-guid-c350855c-081d-e96d-83d5-d870553731c7"><span><img src="https://lh3.googleusercontent.com/bVNpwsBCIy-YX4uX94SbzetNUrtcMm-Uu7H6_kFeGTC-oOHGIBQBmM7dNva_W2bXJIQhD3BK4ef03CBdb5L2ByJxivAuRCAIyqpw2gw4V6lA5b7XyHT3Cf3uVRhinKs3Bg" width="624px;" height="136px;" /></span></span></i></span></span></p>
+<ul>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplo 2: Cambiar el tamaño máximo de la column family a 128MB</span></span></li>
+<ul>
+<li><em><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">hbase&gt; alter 'tabla1', METHOD =&gt; 'table_att', MAX_FILESIZE =&gt; '134217728'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><i><span id="docs-internal-guid-c350855c-081f-dfd4-43a0-c4ecc52446c7"><span><img src="https://lh5.googleusercontent.com/XLjfCys9f5MfXD5ndiuWEzpyD7YyzkkKc7dSl7yqCUFqwuHVVAVA4deFQ62swhqnFr33uIO1pfUNFIAfT4e368PEncDEi12aeWsTUdJM2uLBTphUNPZj9T4T62lZgZhO4g" width="624px;" height="101px;" /></span></span></i></span></span></p>
+<p></p>
+<ul>
+<ul>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Ejemplo 3: Cambiar varios parámetros de una vez</span></li>
+<ul>
+<li>hbase&gt; <em>alter  'tabla1', {NAME =&gt; 'column_family_1'}, {NAME =&gt; 'column_family_2', METHOD =&gt; 'delete'} </em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><i><span id="docs-internal-guid-c350855c-0824-7c35-2b44-1a9e76f3ee30"><span><img src="https://lh4.googleusercontent.com/dq24tFm571DJt9ZzA9xS2XIwawBWnpC71H5xsJF-Uooiw6FOYINrqGVD8-X3Q0PE2DpjPIpAFMKRPOo8Y6Mmxg3MgCF1hd3bSqhGjwSXLpW_EXKtSlmK7ZUvUudLzWhFuQ" width="624px;" height="149px;" /></span></span></i></p>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>delete</strong>: permite borrar elementos de una tabla</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva;"><span style="line-height: 19.5px;">Ejemplo 1: b</span></span><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;">orrar la column family 1 de la tabla 1</span></li>
+<ul>
+<li><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;">hbase&gt; alter 'tabla1', NAME =&gt; 'column_family_1', METHOD =&gt; 'delete'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" style="font-family: 'trebuchet ms', geneva;"><i><span id="docs-internal-guid-c350855c-0825-1d02-c07b-e8fe79efe8c9"><span><img src="https://lh6.googleusercontent.com/lE2Is2S2JBJgZhysCLSJIub31JUiL0ZpViSF7xPRhkJDl31Qxya_eSls3lvb07bDer0Iz1eSqBUAIjJKf-zCfao2C4HW1dwRkNG8W-AM0SSrtPwaB-zVBFWEIGAIdQAKvw" width="624px;" height="113px;" /></span></span></i></span></p>
+<ul>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva;"><span style="line-height: 19.5px;">Ejemplo 2: de un modo más simplificado</span></span></li>
+<ul>
+<li><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;">hbase&gt; alter 'tabla1', 'delete' =&gt; 'column_family_3'</span></em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-c350855c-0827-8be9-312f-6a3fa2c895ef"><span><img src="https://lh3.googleusercontent.com/ZdVZSqjbs_jZFM2UGuGUHSLvp5mVH7Ds1WSliN8Qs_xwt44rx5HgwShXoaeC9l6Avx-tyKYEq2cAZ2Wv-Jig_hohpRMfAKwPT2pEnJ_mTVV4tTkDwXTkuzYagLgGQErbBQ" width="596px;" height="113px;" /></span></span></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong> describe</strong>: muestra la descripción de la tabla</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplo: </span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">describe 'tabla1'</span></li>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-c350855c-0828-202b-dd80-90a4be87e6bb"><span><img src="https://lh5.googleusercontent.com/GarVOESonOjHBtmFjfaKweWQa66HtMOQjac_nF54mR9CwTl7oSH-BUPRLQ8oS-TY0F-fz3vZ86CjpGtlH6DZVUdr-qvQm8sA-M_piZ6eT_ViWyyHc4OjEE1tQ7fC9bF1RQ" width="624px;" height="101px;" /></span></span></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>disable</strong> : deshabilita una tabla. Por ejemplo es necesario deshabilitarla para poder borrarla. </span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplo: </span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; disable 'tabla1'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span id="docs-internal-guid-c350855c-082c-7425-db25-53e8c060021a"><span><img src="https://lh3.googleusercontent.com/8JFoYhO_jDJQAyhXyOFWEqIihdkhRmqyw1EXCDxZTLU5hQYK-LFMXGJuzFvrDKsu7mAczoWdrrhCCxQZF2_JqEqwvWJCFNMKm6n5lBPOzLehRu8hvq9jUt_q6A-QIb6VBw" width="333px;" height="47px;" /></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>drop</strong> : Elimina una tabla. Antes de eliminarla hay que deshabilitarla. Si la tabla tiene más de una región hay que ejecutar antes el comando de compactación en .META.</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplo: </span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; drop 'tabla1'</span></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 90px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-c350855c-082c-eead-527a-387d40295c22"><span><img src="https://lh6.googleusercontent.com/N5TO0eTakup75TGqX4paZgW2tBllujt2N8vxHvJ5mE9ucaD8QlXmCpWrh2F-kQlVTpTI9F_tHii3BEbn57W4tVG4zGQo0gRv9o-0y9a0cuEveFvRwMG69cyFCxtd-Az6Bw" width="303px;" height="50px;" /></span></span></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>enable</strong> : Habilita una tabla</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Ejemplo</span></li>
+<ul>
+<li dir="ltr"><em><em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; create 't1', 'col1', 'col2', 'col3'<em><span><br /></span></em></span></em></em></li>
+<li dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; disable 't1'</span></em></li>
+<li dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; enable 't1'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><i><span id="docs-internal-guid-c350855c-084f-b5c4-07c0-3b7d963786b2"><span><img src="https://lh6.googleusercontent.com/Cb12024XHs8AI5CEDH32QGiYRxMe9QCJyp9WbpTJGVuK441-eMb-R1tg6yMXU-0e2biM1ykrTsKrN3043CpW0k2A6_-PpUZyP5GdNo9prdM8AuM12dwdNTvZZqG5HsknVA" width="499px;" height="178px;" /></span></span></i></span></span></p>
+<p style="margin-left: 120px;"></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>exists</strong> : Comprueba si una tabla existe</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplo: </span></li>
+<ul>
+<li dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">hbase&gt; exists 't1'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><i><span id="docs-internal-guid-c350855c-0842-c69d-66e2-ecacd57ddb77"><span><img src="https://lh4.googleusercontent.com/rihzZ8-t2snckE4snoIZ9_C66SLGXMJYCKBU_dtGsnsvNfPsXiMWLqJE6lYnM1Ea6K9vo32SnbkluZiqr4ohKw7dk8ULmKSXMecxsbhS9HCa04pNTZUJ2PRD6gI9SPHJNw" width="286px;" height="76px;" /></span></span></i></span></span></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>is_disabled</strong> : Comprueba si una tabla está deshabilitada</span></li>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Ejemplo:</span></li>
+<ul>
+<li dir="ltr"><em><span style="font-size: small; line-height: 1.5;">hbase&gt; is_disabled 't1'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><span size="2" style="font-size: small;"><span style="line-height: 19.5px;"><i><span id="docs-internal-guid-c350855c-0843-db7a-56c2-ac108bba4080"><span><img src="https://lh4.googleusercontent.com/jm8322BsVMGiEjG1MYKiqua9K-UULy_wp5PFbNBLhmJ1zUSlZ6j_a0CVM80L2CHvybYu5TPoULkqiO4-H7kYIQwAgH6zN31jCSLHd_TacUSczeZDq_njMJ68fBAfhFFO6Q" width="329px;" height="73px;" /></span></span></i></span></span></p>
+<p></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>is_enabled</strong> : Comprueba si una tabla está habilitada</span></span></li>
+<ul>
+<li dir="ltr"><span>Ejemplo:</span></li>
+<ul>
+<li dir="ltr"><em><span>hbase&gt; is_enabled 't1'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><i><span id="docs-internal-guid-c350855c-0844-3295-0137-e3ff801cf534"><span><img src="https://lh5.googleusercontent.com/18eI23Nulj1t9II9h3Vw_RwgNb4xKQM3sRDgUSTGakFVjLeqvvatUCea_gf30XghOdcYSj0FIXBSviwQQFxwapJ0bItGGo-aNv8qsmTc5cOFgM0U6jEmQSv11JVnJRQcdw" width="321px;" height="72px;" /></span></span></i></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>list</strong> : Lista todas las tablas de una base de datos.</span></span></li>
+<ul>
+<li dir="ltr"><span>Ejemplo:</span></li>
+<ul>
+<li dir="ltr"><em><span>hbase&gt; list</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><i><span id="docs-internal-guid-c350855c-0844-d9aa-4b37-af6dc8c845b5"><span><img src="https://lh5.googleusercontent.com/MQkLuTRHZTvILpx2r7_8UQCloBAz-zVMw0Z7Vma2CJMuFAX-m2QS4nxUdH839NfuJ_65S8ObwiI8ACAO2nJOBoLl-PhgyeNR_5FIyCzYcfZ5YPUum_YFvJqna5VMhmcoxg" width="624px;" height="140px;" /></span></span></i></p>
+<ul>
+<li dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>truncate</strong> : deshbilita, elimina o recrea una tabla.</span></span></li>
+<ul>
+<li dir="ltr"><span>Ejemplo:</span></li>
+<ul>
+<li dir="ltr"><em><span>hbase&gt; truncate 't1'</span></em></li>
+</ul>
+</ul>
+</ul>
+<p style="margin-left: 120px;"><i><span id="docs-internal-guid-c350855c-0846-6a74-b436-569e35d61db4"><span><img src="https://lh6.googleusercontent.com/D0rIrUsRXMfNXu-PYW1MqKWAiNvVSSnJZ51TIK8Y8swWg0-EcWEWalN1jPPWaIUZsvKADWEcYGGtIHTQSsxQOqIeCPpt2rltnNYR1HRiG6q54WQ7ul62ai5e3sVo4IR4-Q" width="421px;" height="113px;" /></span></span></i></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="comandos_generales.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="comandos_de_manipulacin_de_datos_crud.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

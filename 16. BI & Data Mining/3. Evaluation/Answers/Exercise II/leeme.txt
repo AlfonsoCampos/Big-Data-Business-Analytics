@@ -1,0 +1,6 @@
+Hola,
+se adjuntan:
+- transformaciones (etl.ktr, report.ktr)
+- trabajo (pdi.kjb)
+- schema.sql (34 MB sin comprimir!)
+- Informe - out.txt (lo genera la transofrmacion Report, es una query simple de ejemplo a fichero plano)

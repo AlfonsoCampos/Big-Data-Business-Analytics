@@ -1,0 +1,9 @@
+@prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix ex2: <http://example.org/book/> .
+@base         <http://example.org/book>  .
+
+ex2:book1  dc:title  "SPARQL Tutorial";
+		   ex2:price  "42" .
+		   
+ex2:book2  dc:title  "The Semantic Web";
+           ex2:price  "23" .

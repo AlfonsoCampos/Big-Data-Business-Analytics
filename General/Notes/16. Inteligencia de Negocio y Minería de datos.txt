@@ -1,0 +1,21 @@
+pedro.pasquau@gmail.com
+
+OLAP: motor de análisis
+DW: motor de datos
+
+KPI: Los indicadores claves concretos
+KG: El objetivo que te hass marcado
+
+Scorecard:  KG por cada KPI
+Cuadro de mando: No necesariamente
+
+BI vs Big Data: BI solo guarda lo que se quiere analizar, Big Data lo guarda todo
+
+Data Miner: Mas desde el DW
+Data Scientist: Mas desde R y herramientas programaticas
+
+Dashboard de este tipo: 2 metricas, 3 dimensiones
+· Recordar, primero tienes origen de datos y a partir de ahi ya creas el Saiku Analytcis
+· Pivot4j puede que tenga para hacer lo del plus de agregar con MDX aka SQL chungo
+
+2 dimensiones y una tabla de hechos con la herramienta ETL

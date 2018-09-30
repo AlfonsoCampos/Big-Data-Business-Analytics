@@ -1,0 +1,26 @@
+Visualizacion
+No va a mandar nada xa casa =)
+..Xoo parece q hay examen/practica final?!
+- 1) Decir tipo de presentacion que se usaria xa hacer tal mubi...
+http://ciff.dgcmedia.es/
+
+Chart.js -> Canvas con compatibilidad
+Highcharts --> Potente xo de pago, en desuso
+D3, resto --> Imagenes SVG: vectoriales
+
+- Ejercicio final del examen es hacer cosas soobre mapas
+
+Le calza el JSON en la URL!
+
+Google Charts: Mapas y y otros rollo estandar.
+Canvas se apoya en la grafica, a este nivel es mas rollo 3D de grafica...
+Highcharts: Dashboards corporativos
+
+nvd3 vs d3: nvd3 libreria sobre framework d3...S
+
+Ejercicio: https://s3.eu-central-1.amazonaws.com/ciff/apple.tsv
+Con nvd3
+
+-Ejercicio drill down sobbre el mapa?
+-Rollo pintar quien ha ganado elecciones por provincia
+

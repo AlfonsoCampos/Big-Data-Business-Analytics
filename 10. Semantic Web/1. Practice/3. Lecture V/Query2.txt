@@ -1,0 +1,21 @@
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX imdb: <http://data.linkedmdb.org/resource/movie/>
+PREFIX es-dbpedia-owl: <http://es.dbpedia.org/property/>
+PREFIX g: <http://example.org/film/>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+SELECT ?filmMdb ?directorName ?birthPlace
+WHERE
+{   
+	SERVICE <http://data.linkedmdb.org/sparql> 
+  { ?filmMdb rdfs:label "boyhood".
+    ?filmMdb  imdb:director ?director. 
+    ?director imdb:director_name ?directorName}
+  
+   SERVICE <http://es.dbpedia.org/sparql> 
+    { ?person foaf:name ?name . 
+      ?person es-dbpedia-owl:lugarDeNacimiento ?birthPlace .
+      FILTER regex(?name, ?directorName)}
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejemplo: word count </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hive</a></li>
+   <li><a href="caractersticas.html" class="no-ch">Características</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="comprobar_instalacin.html" class="no-ch">Comprobar instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+   <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+   <li><a href="otros_operadores.html" class="no-ch">Otros operadores</a></li>
+   <li><a href="estructuras_de_datos.html" class="daddy">Estructuras de datos</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos.html" class="no-ch">Bases de datos</a></li>
+      <li><a href="tablas.html" class="no-ch">Tablas</a></li>
+      <li><a href="partitioned_tables.html" class="no-ch">Partitioned Tables</a></li>
+      <li><a href="external_tables_and_partitioned_tables.html" class="no-ch">External Tables and Partitioned Tables</a></li>
+      <li><a href="bucket.html" class="no-ch">Bucket</a></li>
+      <li><a href="vistas.html" class="no-ch">Vistas</a></li>
+      <li><a href="indices.html" class="no-ch">Indices</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="ejemplo_word_count.html" class="active no-ch">Ejemplo: word count</a></li>
+   <li><a href="ejercicio_1_tipos_de_datos_simples.html" class="no-ch">Ejercicio 1: tipos de datos simples</a></li>
+   <li><a href="ejemplo_estructuras_complejas.html" class="no-ch">Ejemplo: estructuras complejas</a></li>
+   <li><a href="ejercicio_2_tipos_de_datos_complejos.html" class="no-ch">Ejercicio 2: tipos de datos complejos</a></li>
+   <li><a href="otros_comandos_ddl_data_definition_language.html" class="no-ch">Otros comandos DDL (Data Definition Language)</a></li>
+   <li><a href="operaciones_dmldata_manipulation_language.html" class="daddy">Operaciones DML(Data Manipulation Language)</a>
+   <ul class="other-section">
+      <li><a href="load.html" class="no-ch">Load</a></li>
+      <li><a href="insert.html" class="no-ch">Insert</a></li>
+      <li><a href="update.html" class="no-ch">Update</a></li>
+      <li><a href="delete.html" class="no-ch">Delete</a></li>
+      <li><a href="exportimport.html" class="no-ch">Export/Import</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_crear_una_tabla_en_hive_y_cargar_un_origen_de_datos.html" class="no-ch">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</a></li>
+   <li><a href="almacenamiento_de_datos.html" class="daddy">Almacenamiento de datos</a>
+   <ul class="other-section">
+      <li><a href="almacenamiento_en_ficheros.html" class="no-ch">Almacenamiento en ficheros</a></li>
+      <li><a href="almacenamiento_en_registros.html" class="no-ch">Almacenamiento en registros</a></li>
+      <li><a href="conversin_del_tipo_de_almacenamiento.html" class="no-ch">Conversión del tipo de almacenamiento</a></li>
+      <li><a href="compresin.html" class="no-ch">Compresión</a></li>
+   </ul>
+   </li>
+   <li><a href="introduccin_a_sqoop.html" class="daddy">Introducción a Sqoop</a>
+   <ul class="other-section">
+      <li><a href="import_creacin_de_conexin.html" class="no-ch">Import: creación de conexión</a></li>
+      <li><a href="import_definicin_de_datos_a_migrar.html" class="no-ch">Import: definición de datos a migrar</a></li>
+      <li><a href="import_cargar_datos_en_hive_y_hbase.html" class="no-ch">Import: cargar datos en Hive y Hbase</a></li>
+      <li><a href="importalltables.html" class="no-ch">Import-all-tables</a></li>
+      <li><a href="export.html" class="no-ch">Export</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="indices.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejercicio_1_tipos_de_datos_simples.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Ejemplo: word count</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id102">
+<div class="iDevice emphasis0">
+<div id="ta102_1" class="block iDevice_content">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;">Ejemplo de word count empleando HIVE </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">Para ello, lo primero que haremos es crear una tabla sobre la que luego almacenaremos la información. </span><span style="line-height: 1.15;"> </span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p dir="ltr"><span style="font-size: small;"><strong><span style="font-family: 'trebuchet ms', geneva;">1. Crear documentos de texto<span style="line-height: 1.5;"> </span><span style="line-height: 1.15;"> </span></span></strong></span></p>
+<p dir="ltr"><span style="font-size: small;"><em><span style="font-family: 'trebuchet ms', geneva;">echo -e "Hola\nmundo.\nEjemplo\nde\nfichero\nde\nHive" &gt; /tmp/ejemplo1<span style="line-height: 1.15;"> </span></span></em></span></p>
+<p dir="ltr"><span style="font-size: small;"><em><span style="font-family: 'trebuchet ms', geneva;">echo -e "Hola Hive. Segundo fichero" &gt; /tmp/ejemplo2<span style="line-height: 1.5;"> </span></span></em></span></p>
+<p dir="ltr"><span style="font-size: small;"><em><span style="line-height: 1.5; font-family: 'trebuchet ms', geneva;">cat /tmp/ejemplo1</span></em></span></p>
+<p dir="ltr"><span id="docs-internal-guid-59b8b72b-9af6-64b7-e721-755e1ecb0f67" style="font-size: small;"><img src="https://lh5.googleusercontent.com/3tsUHcPCtyJU7wIvRVxYppWDFVOUZB0Jr1hqrrCXAZXFdfqWtrkBGRQ62bfE2phFDB7uabm-uV4KkxfdMpX8YfqGGxNr0awdC1DzcNGBdx2ZBWF3CydUiba_St4WUD2dyQ" width="624px;" height="168px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><strong><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">2. Arrancar Hive</span></strong></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15; background-color: transparent;">$ cd <em><span>$HIVE_HOME</span></em></span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><em><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15; background-color: transparent;">$ $HIVE_HOME/bin/hive o hive</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-59b8b72b-9ae8-0b3c-ab86-05e91e0c1c0b" style="font-size: small;"><img src="https://lh3.googleusercontent.com/uF2uA-1jWoVAr0FZOkaxNNjoZUalt_YsZXDYdXawP2l3fxO8IM0KG7uqYoBas50khu5aloe_0NmF9TnaV88RZmG4w2-8vWMDh-nt-hS8kIbwCSXQaQC0087Cw4LzqQ3zYQ" width="624px;" height="147px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><strong><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">3. Crear tabla y salir de hive</span></strong></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p id="docs-internal-guid-e225f011-52ed-d771-92a5-65049ac845e7" style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">CREATE TABLE docs (line STRING);</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;">quit; o exit;</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;"><span id="docs-internal-guid-dd5e2e58-9730-3dec-f7a4-6268c9667493"><span style="line-height: 1.15;"> <span id="docs-internal-guid-59b8b72b-9ae9-0da0-e911-fa9e1e08d94d"><img src="https://lh6.googleusercontent.com/2XSaIaTNvzbSEcRA2hQwL0LC8Al_VdprfBbvYgb-MtzWPS0l8f-VxTVchFm0gkkN84N32LocbOzQefV93OujqSs1RKBeJDrdjw3DIKySOBKhm0uIeZDHPsM6rDrDBO_5qg" width="359px;" height="101px;" /><span style="line-height: 1.15;"> </span></span></span></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small;">4.Cargar ficheros en la tabla</span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small;">./bin/hive -e "LOAD DATA LOCAL INPATH '/tmp/ejemplo1' INTO TABLE docs";</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small;">hive -e "LOAD DATA LOCAL INPATH '/tmp/ejemplo2' INTO TABLE docs";</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;"><span style="line-height: 1.15;"><span id="docs-internal-guid-59b8b72b-9aea-1577-2bb3-35149bb4c34a"><img src="https://lh6.googleusercontent.com/Nyp42tlx69-0Y0e6zCsgIA52UzqeRTFmJgkLYLteX0pKeSv__2s7e7F_KnKhVENXvCUkzyfvgckN8d1kq-6Wwf04LDyyHB5nb9xBiiTUUIfYj8aqTY6HqIMzdnKfWspvHA" width="624px;" height="272px;" /></span> </span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small;">5. Acceder a Hive y ejecutar un consulta sencilla para verificar que hay datos</span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small;">hive</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small;">select * from docs;</span></em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-59b8b72b-9aff-ded0-5f2d-80c515882ecf" style="font-size: small;"><img src="https://lh5.googleusercontent.com/c4cpVZusloUyi27fw7CRDmz2hRPmlXIgoDYRCgvxdKpkxlZA3iZZu_vKE-EJYdNk8LvGg4OrvLx8iZf5znethIYHwWRsiA0-qnksI2Ga9phCEsAXko6mjOjUap7JE4_wmA" width="624px;" height="268px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small;">6. Trocearemos cada una de las líneas de los documentos en palabras separadas por espacios en blanco y luego las agruparemos para contar el número de palabras</span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;">CREATE TABLE word_counts AS</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;">SELECT word, count(1) AS count FROM</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;">(SELECT explode(split(line, ' ')) AS word FROM docs) w</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;">GROUP BY word</span></em></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; font-size: small; background-color: transparent;">ORDER BY word;</span></em></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span id="docs-internal-guid-cccd68ec-9b30-9543-5f03-e8ce53728bc3"><img src="https://lh3.googleusercontent.com/EgmbGZPzQf4yG0H3O7N2DoFHl2Jc6JRCNezYVoXsL4US-dj8M0_vXVfafN-QFtJO0krXvPoIVM44iL1kH3iBpKdly4qPNa0DVZ4IauC1E3R8EhMsgRA-sUIQ_SL7WH3AXA" width="624px;" height="255px;" /></span> </span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span id="docs-internal-guid-dd5e2e58-9b33-779b-d949-cd146d7d29d9"><img src="https://lh4.googleusercontent.com/riiQGVmrqLb6YSTAysMtkrwB_7LUDDB4DKAFmk--Eq_88nn6OZHPaohUHTkJ_h0X-M9Uf_fbkEd9yEVmzDgeWSBBac_tWi02vENC-TGMYrOQ3froJq_EG8tWTiRgGLP3rA" width="624px;" height="256px;" /></span></span></p>
+<p><span id="docs-internal-guid-dd5e2e58-9b35-924d-bca0-9b73e5002a8a" style="font-size: small;"><img src="https://lh4.googleusercontent.com/nHuxI_n2UWliCtCCNnKG-ZnVfXyBI3rMnbjapfnUjIgkVdNPkVfql5HxGaUTg58pUemGHgu1yQqoU0yH1PWe3XoSkQZEEqwd-IH6uU-BmwdQTn1QBibg61uGpt3MUSl7pA" width="624px;" height="95px;" /></span></p>
+<p><strong><span style="font-size: small;">7. Consultamos el resultado</span></strong></p>
+<p><em><span style="font-size: small;">select * from word_counts;</span></em></p>
+<p><span id="docs-internal-guid-dd5e2e58-9b36-7fd4-fc87-270a86d733fa" style="font-size: small;"><span style="line-height: 1.5;"> </span><img src="https://lh4.googleusercontent.com/coL0EytyJY1nfCvIoMMJX3fKD4lU0lcrl3iTgLySYcp_UhhTg2VPftqvSMWJUdFPWgYM0IwHh0z37fV0nGwLmkZ6W_ElatGdCHBdRwz0bnDTE2HaNSaUphOSWYTit2fcGQ" width="412px;" height="232px;" /></span></p>
+<p><strong>8. Mostrar todas las tablas existentes</strong></p>
+<p><em>show tables;</em></p>
+<p><strong><em>9. Mostrar información de una tabla</em></strong></p>
+<p><em>describe word_counts;</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="indices.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejercicio_1_tipos_de_datos_simples.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

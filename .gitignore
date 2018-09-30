@@ -1,0 +1,64 @@
+### R ###
+.Rhistory
+.Rapp.history
+.Rdata
+.Rproj.user
+
+### Scala ###
+*.class
+*.log
+
+### Java ###
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### SBT ###
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history/
+.cache/
+.lib/
+logs/
+project/*-shim.sbt
+project/project/
+project/target/
+target/
+.scala_dependencies
+.worksheet
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### Intellij ###
+*.iml
+*.iws
+*.ipr
+.idea/
+out/
+
+### Jupyter ###
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+### Custom ###
+beer_reviews.csv

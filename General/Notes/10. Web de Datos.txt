@@ -1,0 +1,24 @@
+Web de Datos (y Semantica)
+Mashup: Apps que integran datos que coje de distintos APIS de paginas (x ejemplo REST que permitia cojer datos)
+
+1) Publicar datos, no paginas web
+2) URIs de datos
+3) Links por URIs de unos datos a otros
+4) Hacerlos comprensibles: Metadata, linkado y categorizacion
+5) Estandarizacion de modelo de datos: RDF, RDFS, SPARQL
+
+RDF, RDFS, OWL, SPARQL?
+RDF: Sujeto, predicado(relacion/propiedad), objeto(valor de la propiedad)
+(s,p,o) --> (uri,uri,literal)
+
+RDFS: Incorpora semantica a los RDF
+· Define el concepto de clase
+· Relaciones entre clases determina semantica!: Restringir propiedades
+
+Ontologias: elemento principal son las taxonomias
+Taxonomia: Jerarquia de clases o jerarquia de propiedades
+
+Ontologia: Reglas semanticas
+Razonadores: semantica se define con descriptores logicas para permitir hacer inferencia
+
+SPARQL te permite hacer Querys sobre los OWL

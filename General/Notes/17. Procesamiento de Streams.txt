@@ -1,0 +1,83 @@
+Notas Spark Streaming:
+La clave es que en vez de almacenar antes de procesar, almacenas despues de procesar!
+
+· Video: pue un delete from y se me olvido el where!!!
+
+RDD: INTERFAZ para 2 acciones
+- transformaciones: RDD --> RDD (map, reduceByKey; no se hace nada)
+- acciones: RDD --> otra cosa (take, count, collect; aki es cuando se hace)
+
+Spark Streming crea una abstraccion x encima de un RDD
+- Un conjunto de RDDs es un Stream (de una misma fuente de datos, sino es otro RDD)
+
+DStreams: Lista (RDD vs fuentes de datos)
+- Cada fuente de datos genera su propia información
+
+S --> |RDD --> W| : RDD le pasa info al Worker que es el que procesa los datos
+
+Xa evitar perder datos y tb para picos de traficos se pone Kafka!
+S --> KAFKA --> |RDD --> W| : KAFKA hace de proxy  
+
+Los micro-Batch grantiza que los envía en orden pero la info dentro de un micro-batch no!
+
+original DStream vs windowed DStream - ventanas
+
+CODIGO
+setMaster() --> tiene que ser 2 porque sino solo tienes el que escucha, pero no el que mira.
+
+----
+2 tipos de streaming:
+- micro-batch: ~ 3-4 segundos --> Spark
+- eventos: ~ <1 segundo --> Storm
+
+
+Spark streaming: factores ideales
+- cientos de no2
+- baja latencia
+- tolerancia a fallos
+- no pierde mensajes
+
+
+Ad+:
+- convinar batch con streaming
+- tolerante a fallos, garantizar procesamiento de elementos solo una vez- todo en 1a tecnologia
+- estado --> puede servir xa sacar una media x ejemplo
+- sistema de monitorizacion
+
+Union Europea = Apache Flint!
+
+Spark Streaming:
+
+
+Kafka
+Fluma       HDFS
+HDFS/S3 --> ...
+Kinesis
+Twitter
+
+> alvaro.egea@gmail.com
+
+- ARQ Lambda
+            ---> Batch Layer (All Data) ---> Serving Layer (Batch View) 
+Data Stream                                                                 ---> Query's
+            ---> Speed Layer (New Data) ---> Speed Layer (Realtime View)
+
+- ARQ Kappa!
+· Directamente no hay Batch
+
+- Reprocesar --> KAFKA
+· Necesitas que los conjuntos sean disjuntos!
+· El tipo de oeraciones q haces te garantizan q f(a+b) = f(a) + f(b) = f(b) + f(a)
+
+· ARQUITECTURA de estos tios
+
+Micro-servicio (Docker): Es independiente del resto de la ARQ
+API Ingesta --> K --> NORM --> K --> SUM --> K --> DIC --> K --> Fun usuario
+|                           |         |             |
+|    (Gestor de Recursos) MESOS       |             |
+|                           |         |             |
+|---------------------------->     CASSANDRA       REP
+|                                      |
+|---------------------------->      BACKEND
+|                                      |
+----------------------------->      FRONTEND

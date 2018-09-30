@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Procesamiento en Paralelo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hadoop</a></li>
+   <li><a href="conceptos_bsicos_y_definiciones.html" class="daddy">Conceptos básicos y definiciones</a>
+   <ul class="other-section">
+      <li><a href="conceptos_previos.html" class="no-ch">Conceptos previos</a></li>
+      <li><a href="qu_es_apache_hadoop.html" class="no-ch">¿Qué es Apache Hadoop?</a></li>
+      <li><a href="ecosistema_hadoop.html" class="no-ch">Ecosistema Hadoop</a></li>
+      <li><a href="quin_usa_hadoop.html" class="no-ch">Quién usa Hadoop</a></li>
+      <li><a href="mdulos_de_hadoop.html" class="daddy">Módulos de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="hadoop_common.html" class="no-ch">Hadoop Common</a></li>
+         <li><a href="hadoop_distributed_file_system_hdfs.html" class="no-ch">Hadoop Distributed File System (HDFS™)</a></li>
+         <li><a href="hadoop_yarn.html" class="no-ch">Hadoop YARN</a></li>
+         <li><a href="hadoop_mapreduce.html" class="no-ch">Hadoop MapReduce</a></li>
+         <li><a href="programacin_de_trabajos.html" class="no-ch">Programación de trabajos</a></li>
+      </ul>
+      </li>
+      <li><a href="instalacin_de_hadoop.html" class="daddy">Instalación de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="prerrequisitos.html" class="daddy">Prerrequisitos</a>
+         <ul class="other-section">
+            <li><a href="descargar_e_instalar_hadoop.html" class="no-ch">Descargar e instalar Hadoop</a></li>
+            <li><a href="actualizar_mquina_virtual.html" class="no-ch">Actualizar máquina virtual</a></li>
+            <li><a href="confirmar_versin_de_java.html" class="no-ch">Confirmar versión de Java</a></li>
+            <li><a href="crear_y_configurar_los_certificados_ssh.html" class="no-ch">Crear y configurar los certificados SSH</a></li>
+         </ul>
+         </li>
+         <li><a href="modificar_ficheros_de_configuracin.html" class="daddy">Modificar ficheros de configuración</a>
+         <ul class="other-section">
+            <li><a href="bashrc.html" class="no-ch">~/.bashrc</a></li>
+            <li><a href="coresitexml.html" class="no-ch">core-site.xml</a></li>
+            <li><a href="hadoopenvsh.html" class="no-ch">hadoop-env.sh</a></li>
+            <li><a href="hdfssitexml.html" class="no-ch">hdfs-site.xml</a></li>
+            <li><a href="mapredsitexml.html" class="no-ch">mapred-site.xml</a></li>
+            <li><a href="yarnsitexml.html" class="no-ch">yarn-site.xml</a></li>
+         </ul>
+         </li>
+         <li><a href="formatear_el_sistema_de_archivos_de_hadoop.html" class="no-ch">Formatear el sistema de archivos de Hadoop</a></li>
+         <li><a href="demonios.html" class="daddy">Demonios</a>
+         <ul class="other-section">
+            <li><a href="arrancar_demonios_hdfs.html" class="no-ch">Arrancar demonios HDFS</a></li>
+            <li><a href="arrancar_demonios_yarn.html" class="no-ch">Arrancar demonios Yarn</a></li>
+            <li><a href="parar_demonios_hdfs.html" class="no-ch">Parar demonios HDFS</a></li>
+            <li><a href="parar_demonios_yarn.html" class="no-ch">Parar demonios Yarn</a></li>
+            <li><a href="arrancar_demonios_individualmente.html" class="no-ch">Arrancar demonios individualmente</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="interfaces_web_de_hadoop.html" class="daddy">Interfaces Web de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="namenode_web_interface_hdfs_layer.html" class="no-ch">NameNode Web Interface (HDFS layer)</a></li>
+         <li><a href="resource_manager_web_interface_yarn_layer.html" class="no-ch">Resource Manager Web Interface (Yarn layer)</a></li>
+         <li><a href="map_reduce_jobhistory.html" class="no-ch">Map Reduce JobHistory</a></li>
+      </ul>
+      </li>
+      <li><a href="ejemplo_comprobacin_instalacin.html" class="no-ch">Ejemplo comprobación instalación</a></li>
+      <li><a href="ejercicio_comprobacin_instalacin.html" class="no-ch">Ejercicio: comprobación instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="hdfs.html" class="daddy">HDFS</a>
+   <ul class="other-section">
+      <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+      <li><a href="arquitectura_hdfs.html" class="no-ch">Arquitectura HDFS</a></li>
+      <li><a href="replicacin_de_datos.html" class="no-ch">Replicación de datos</a></li>
+      <li><a href="el_nodo_secundario.html" class="no-ch">El nodo secundario</a></li>
+      <li><a href="arrancar_hadoop.html" class="no-ch">Arrancar Hadoop</a></li>
+      <li><a href="comandos_bsicos_de_hdfs.html" class="no-ch">Comandos básicos de HDFS</a></li>
+      <li><a href="ejemplo_de_uso_de_comandos_bsicos_hdfs.html" class="no-ch">Ejemplo de uso de comandos básicos HDFS</a></li>
+      <li><a href="api_de_programacin_de_hdfs.html" class="no-ch">API de programación de HDFS</a></li>
+      <li><a href="ejercicio1.html" class="daddy">EJERCICIO</a>
+      <ul class="other-section">
+         <li><a href="a_uso_de_hdfs.html" class="no-ch">A. Uso de HDFS</a></li>
+         <li><a href="b_map_reduce.html" class="no-ch">B: Map Reduce</a></li>
+         <li><a href="ejercicio2.html" class="no-ch">EJERCICIO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="map_reduce.html" class="current-page-parent daddy">Map Reduce</a>
+   <ul>
+      <li id="active"><a href="procesamiento_en_paralelo.html" class="active no-ch">Procesamiento en Paralelo</a></li>
+      <li><a href="fundamentos.html" class="no-ch">Fundamentos</a></li>
+      <li><a href="ejemplo_sencillo_de_map_reduce.html" class="no-ch">Ejemplo sencillo de map Reduce</a></li>
+      <li><a href="explicacin_modelo_map_reduce.html" class="no-ch">Explicación modelo Map Reduce</a></li>
+      <li><a href="ejemplo.html" class="daddy">Ejemplo</a>
+      <ul class="other-section">
+         <li><a href="datos_de_entrada.html" class="no-ch">Datos de entrada</a></li>
+         <li><a href="1_mapeo.html" class="no-ch">1. Mapeo</a></li>
+         <li><a href="2_mezcla.html" class="no-ch">2. Mezcla</a></li>
+         <li><a href="3_reduccin.html" class="no-ch">3. Reducción</a></li>
+         <li><a href="resultado.html" class="no-ch">Resultado</a></li>
+         <li><a href="interfaz_web.html" class="no-ch">Interfaz Web</a></li>
+      </ul>
+      </li>
+      <li><a href="ejercicio_diccionario.html" class="no-ch">Ejercicio: diccionario</a></li>
+      <li><a href="ejercicio_opcional.html" class="no-ch">Ejercicio (opcional)</a></li>
+      <li><a href="ms_ejemplos.html" class="no-ch">Más ejemplos</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="map_reduce.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="fundamentos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Procesamiento en Paralelo</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id129">
+<div class="iDevice emphasis0">
+<div id="ta129_1" class="block iDevice_content">
+<h1 style="text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; font-weight: normal; line-height: 1.5;">El concepto de <strong>procesamiento paralelo</strong> se relaciona con el diseño de programas con dos características principales: <strong>Corren en múltiples procesadores</strong> (o núcleos) y todos ellos <strong>cooperan para resolver un único problema</strong> [1]</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; font-weight: normal; line-height: 1.5;">.</span></h1>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">No se debe confundir el <strong>procesamiento</strong> paralelo con el <strong>distribuido</strong>. Por ejemplo, un servidor web, como el de Google, normalmente corre en un clúster formado por<strong> varias máquinas</strong> multinúcleo que atienden y procesan <strong>miles de peticiones</strong> cada segundo de forma simultánea. El navegador web muestra el contenido procesado llegando así al usuario final. Sin embargo, cada una de estas máquinas atienden peticiones individuales, no colaboran para resolver una única tarea. En este caso, por tanto, no se cumple la segunda característica mentada. Esto es lo que se denomina procesamiento distribuido, no paralelo.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">En la actualidad existen numerosas aplicaciones en las que se utiliza procesamiento paralelo. Google, por su parte, popularizó el paradigma map-reduce para el procesamiento paralelo de grandes volúmenes de datos y es, quizás, el ejemplo más significativo. Sin embargo, el <strong>procesamiento paralelo se emplea</strong> en muchas otras áreas como <strong>matemáticas computacionales</strong> (álgebra lineal numérica, soluciones numéricas de ecuaciones diferenciales, optimización, combinatoria, teoría de grafos...), <strong>procesamiento científico</strong> (predicción meteorológica, predicción de huracanes, modelado climatológico, astrofísica, bioinformática... ), <strong>ingeniería</strong> (simulación de túneles de viento, análisis de elementos finitos, análisis de circuitos...), finanzas (modelado de mercado, búsqueda de tendencias, ...), <strong>analítica BigData</strong> (minería de datos, indexación web, caracterización de usuarios..), etc.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">En cualquier caso el uso del procesamiento paralelo no ha estado siempre tan extendido. A principio de los años 80 la computación paralela era cara, cada proveedor ofrecía sus propias soluciones hardware y sus propios lenguajes de programación, de forma que su uso se limitaba a grandes compañías y centros de investigación.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">El cambio se produjo a finales del siglo XX debido a la importante reducción de costes de implantación de redes Ethernet locales, el abaratamiento de los PC’s, el desarrollo de los protocolos de comunicación TCP/IP y la distribución de Linux como sistema operativo libre. Además, en 1995 se publicó el<strong> paper Beowulf</strong> [2]</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> en el que se detallaba como aunar todos los recursos listados para crear un sistema completo, denominado Beowulf, que sentaba las <strong>bases</strong> de lo que actualmente se conoce como <strong>clúster</strong>. Por otra parte, en esta época se comenzaron a utilizar lenguajes como Fortran, C y C++ como estándares para el desarrollo de software de procesamiento paralelo. También se publicaron los estándares <strong>Message Passing Interface</strong> (MPI) y <strong>OpenMP</strong> (1994 y 1997 respectivamente), convirtiéndose en estándares de facto de programación en clusters de equipos de procesamiento paralelo. En cualquier caso las máquinas multinúcleo no eran una realidad, lo más habitual al implementar sistemas de procesamiento paralelo era construir clusters con múltiples equipos con un único procesador.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">El segundo hito que marcó el cambio fué en <strong>2004</strong>. Los fabricantes de microprocesadores explotaron la<strong> ley de Moore</strong> y comenzaron a desarrollar procesadores <strong>doblando el número de transistores</strong> y la <strong>frecuencia de reloj</strong> cada dos años. Sin embargo, en 2004, se llegó a los 3 GHz y al<strong> límite en la disipación de calor</strong>. De esta forma ya no era posible aumentar la frecuencia de reloj y únicamente quedaba la opción de<strong> incrementar el número de transistores</strong>. Así, se comenzaron a <strong>diseñar micros</strong> formados por <strong>múltiples</strong> <strong>procesadores operando paralelamente,</strong> con dos relojes, ya que, teóricamente, dos procesadores a 3GHz era equivalente a uno trabajando a 6. El número de núcleos de procesamiento implementados en un micro ha ido incrementándose hasta la actualidad, donde ya es posible encontrar procesadores de 8 núcleos económicos.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Además, la popularización de los videojuegos ha producido también un aumento considerable de las capacidades de memoria principal de los equipos, encontrando fácilmente dotaciones de 8 o 16 GB. De esta forma se ha llegado a que una única máquina está dotada capacidad suficiente para ser equiparada a los clusters empleados en los años 80. Gracias a todo ello se disponen de sistemas de procesamiento paralelo prácticamente en cualquier lugar del mundo.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Por otra parte, las aplicaciones modernas que corren sobre estos sistemas son desarrolladas en lenguajes nuevos como <strong>Java</strong> y empleando nuevos paradigmas de programación como <strong>map-reduce</strong>. El ejemplo más significativo es la librería map-reduce de <span>Hadoop  </span>escrita en Java y diseñada para realizar tareas de procesamiento paralelo en conjuntos de datos BigData.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">No obstante, se ha llegado a un punto de tales <strong>necesidades de procesamiento</strong> que incluso un equipo equiparable a un cluster de los años 80<strong> no es suficiente</strong> para realizar determinadas tareas sobre los volúmenes de datos que se manejan en la actualidad. Es por ello que se deben combinar formando<strong> clusters</strong> de equipos <strong>multiprocesamiento</strong>. En la actualidad estos centros de procesamiento se denominan <strong>supercomputadores</strong>. En noviembre de 2014, el mayor supercomputador del mundo es el National Supercomputer Center de Guangzhou en China [3]</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">; consta de 3.120.000 núcleos y funciona a una frecuencia de pico de 54.902 tflops por segundo, consumiendo una potencia de 17.808KW.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">En cualquier caso <strong>los clusters siguen siendo sistemas caros</strong> y no están al alcance de cualquier empresa o centro que lo requiera. En los últimos años se ha desarrollado como alternativa lo que se denomina </span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong><em>cloud computing</em></strong>.</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> Empresas como Amazon proveen servicios de computación en la nube, como es el caso de EC2</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">. En este modelo los <strong>nodos de procesamiento se alquilan</strong> en función de las necesidades de cada cliente en lo que a número y tiempo se refiere. Además, presenta la ventaja de que <strong>suprimen</strong> las tareas de <strong>mantenimiento</strong>.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">No obstante, la creciente capacidad de procesamiento paralelo no tiene sentido si no se <strong>desarrolla software capaz de sacarle rendimiento</strong>. Para desarrollar este tipo de software es necesario conocer, a su vez, en qué se basa el procesamiento paralelo. Esto es lo que se discute en la siguiente sección.</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> <br /></span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id130">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Referencias</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta130_43_2" class="block iDevice_content">
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">[1] BIG CPU, BIG DATA. Solving the World's Toughest Computational Problems with Parallel Computing. Prof. Alan Kaminsky, Rochester Institute of Technology — Department of Computer Science. 2014</span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">[2] <span style="color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" id="docs-internal-guid-aef7158c-f291-ea3f-a30f-5d955be638f0">T. Sterling, D. Becker, D. Savarese, J. Dorband, U. Ranawake, and C. Packer. Beowulf: A parallel workstation for scientific computation. Proceedings of the 24th International Conference on Parallel Processing (ICPP 1995),1995, volume 1, pages 11–14</span></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">[3] <span style="color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" id="docs-internal-guid-aef7158c-f292-298e-2f8b-571892dbbbf2">http://www.top500.org/lists/2014/11/</span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="map_reduce.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="fundamentos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

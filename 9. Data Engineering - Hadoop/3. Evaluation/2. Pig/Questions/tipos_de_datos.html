@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Tipos de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li class="current-page-parent"><a href="introduccin_a_pig_latin.html" class="current-page-parent daddy">Introducción a Pig Latin</a>
+   <ul>
+      <li id="active"><a href="tipos_de_datos.html" class="active no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="introduccin_a_pig_latin.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="operadores.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Tipos de datos</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id68">
+<div class="iDevice emphasis0">
+<div id="ta68_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-52d6-2448-514b-10137ac03f4e" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small;"><span style="font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Una de las ventajas del uso de Pig frente al Map Reduce, es que permite definir el tipo del dato.</span><span style="font-family: 'trebuchet ms', geneva; line-height: 1.5;"> Estos tipos pueden ser clasificados en dos categorías, simples y complejos. En particular:<br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 8pt; margin-bottom: 0pt;" dir="ltr"><span style="color: #339966; font-size: medium;"><em><strong><span style="font-family: 'trebuchet ms',geneva; font-variant: normal; vertical-align: baseline;">Tipos Simples</span></strong></em></span></p>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>int:</strong> Entero con signo de 32 bits.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>long:</strong> Entero con signo de 64 bits.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>float:</strong> Número en punto flotante de 32 bits.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>double:</strong> Número en punto flotante de 64 bits.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>chararray:</strong> Array de Strings codificados en UTF8.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>bytearray:</strong> Array de bytes.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>boolean:</strong> true o false.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><strong>datetime:</strong> Dato de tiempo con el formato 1970-01-01T00:00:00.000+00:00.<br style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;" /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; background-color: #ffffff;"><span><span><strong>Null:</strong> e</span></span><span>n Pig Latin, los nulos se implementan usando la definición de SQL de null, como desconocido o inexistente.</span></span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></li>
+</ul>
+<p style="line-height: 1.5; margin-top: 8pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: medium; color: #339966;"><strong><span style="font-family: 'trebuchet ms',geneva; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">Tipos Complejos</span></strong></span></em></p>
+<ul>
+<li style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small;"><span style="font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Tuple: </span></span>
+<ul>
+<li style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small;"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15;">Definición: Una TUPLA es un conjunto desordenado de campos (pueden ser de cualquier tipo de datos, incluso TUPLA y BAG).</span></span></li>
+<li style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Sintaxis: <span>( field [, field …] ) </span></span></li>
+<li style="line-height: 1.5; margin-top: 12pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;"><span>Ejemplo: tupla con dos campos: ('John',32)</span></span><span style="font-size: 0.75em; line-height: 1.5;"> </span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="line-height: 1.5; font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><span style="line-height: 1.5;">Bag</span></span></li>
+<ul>
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><span style="line-height: 1.5;">Definición: </span></span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><span>Un BAG es una colección de TUPLAS desordenadas</span></span></li>
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><span>Sintaxis: <span>{ tuple [, tuple …] }</span></span></span></li>
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Características:</span></li>
+<ul style="line-height: 1.5;">
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Un BAG puede tener tuplas duplicadas.</span></li>
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Un BAG puede tener tuplas de distinto números de campos. Sin embargo si Pig intenta acceder a un campo que no existe, devolverá un NULL.</span></li>
+<li style="line-height: 1.5; margin-top: 11pt; margin-bottom: 2pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Un BAG puede tener tuplas con diferentes tipos de datos.</span></li>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 14.9499998092651px;">Ejemplo: <span>{('John', 32), ('Mary', 25), ('Jack', 36)}</span></span></span></li>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 14.9499998092651px;">Map</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 14.9499998092651px;">Definición: <span>Un map es un conjunto de pares clave valor.</span></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 14.9499998092651px;"><span>Sintaxis: <span>[ key#value &lt;, key#value …&gt; ]</span></span></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Ejemplo: <span>['nombre'#'John', 'edad'#32]</span></span></li>
+</ul>
+</ul>
+<p></p>
+<p><span style="color: #339966; font-size: medium;"><em><strong><span style="font-family: 'trebuchet ms',geneva; line-height: 1.15;">Esquemas</span></strong></em></span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Los esquemas sirven para asignar a los campos el tipo de datos. Aunque son opcionales por la filosofía de PIG (los cerdos comen cualquier cosa y en ese sentido PIG debe gestionar cualquier tipo de elemento), es recomendable declararlos ya que ayudan a controlar errores y mejora la eficiencia del código.</span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">El modo más sencillo de comunicar un esquema a PIG es decírselo de forma explícita cuando se cargan datos:</span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: courier new,courier; font-size: small;"><span style="background-color: #ffffff;"><span style="font-variant: normal; text-decoration: none; vertical-align: baseline;">grunt&gt; discos = load 'ejemplos/discografia' </span></span><span style="line-height: 1.5;">using PigStorage(',') </span><span style="vertical-align: baseline;">as </span><span style="line-height: 1.15;">(anio:int, disco:chararray, eeuu:int, uk:int);</span></span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-family: courier new,courier; font-size: small;"><span style="line-height: 1.15;">grunt&gt; describe discos;</span></span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">En este ejemplo Pig espera 4 campos. Si hay más, los descarta y si tiene menos, añadirá nulls.</span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-59b8b72b-866f-95fd-4698-26de785fcd4a"><span style="line-height: 1.5; font-size: 0.75em;"> </span><span><img src="https://lh5.googleusercontent.com/vzalb4X11PAa_-M2xxZjJ3Jb1se1uvPilHoRLKP5VAhixugA71gRWEhygmPLob9ZqsCN1mwqvjtoU4RPAI4Jmh1HD9RKTTargsELhhSAfcwpbNIYnDK9b0aB27XJFzKWVA" height="55px;" width="624px;" /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">También se puede especificar el esquema sin indicar el tipo de datos como se vio anteriormente:</span><span style="line-height: 1.5; font-size: 0.75em;"> </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: courier new,courier;"><em><span style="font-size: small; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">grunt&gt; discos2 = load 'ejemplos/discografia' using PigStorage(',') as (anio, disco, eeuu, uk);</span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: courier new,courier;"><em><span style="font-size: small; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">grunt&gt; describe discos2;</span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">En este caso asumirá que el tipo de datos es bytearray.</span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-59b8b72b-8670-42d6-34eb-192e6e5b2f5c"><span><img src="https://lh6.googleusercontent.com/oYevEseOIHHqR2YD6OoVyPB_6bhakQbvSWw7zY587dMJnE-7G4plUZRjR94RQMh9GaXqOtE-D__cCYIPSSIMKrT3F6Sme_BLjuZYYUMpoKIeZJYkWBYi-pRTVLS773Jsgg" height="45px;" width="624px;" /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">A continuación se muestran algunos ejemplos de definición de tipos de datos complejos:<br /></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><br /><em><span style="font-family: courier new,courier;">tupla: as (a:tuple(), b:tuple(x:int, y:int))</span></em></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">map: as (a:map[], b:map[int])</span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><em><span style="font-size: small; font-family: courier new,courier; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">bag: as (a:bag{}, b:bag{t:(x:int, y:int)})</span></em></p>
+<p><span style="font-family: courier new,courier;"><em><span style="font-size: small; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">A = LOAD 'mydata' AS (T1:tuple(f1:int, f2:int), B:bag{T2:tuple(t1:float,t2:float)}, M:map[] );</span></em></span></p>
+<p><span style="font-family: courier new,courier;"><em><span style="font-size: small; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">A = LOAD 'mydata' AS (T1:(f1:int, f2:int), B:{T2:(t1:float,t2:float)}, M:[] );</span></em></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="introduccin_a_pig_latin.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="operadores.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,17 @@
+@prefix foaf:  	<http://xmlns.com/foaf/0.1/> .
+@prefix ex3:  	<http://example.org/person/> .
+@base           <http://example.org/person>  .
+
+ex3:a  foaf:name   "Johnny Lee Outlaw" .
+ex3:a  foaf:mbox   <mailto:jlow@example.com> .
+
+ex3:b  foaf:name   "Peter Goodguy" .
+ex3:b  foaf:mbox   <mailto:peter@example.org> .
+
+ex3:c  foaf:mbox   <mailto:carol@example.org> .
+
+ex3:d  foaf:name   "Alice" .
+
+ex3:e  foaf:name   "Bob" .
+
+

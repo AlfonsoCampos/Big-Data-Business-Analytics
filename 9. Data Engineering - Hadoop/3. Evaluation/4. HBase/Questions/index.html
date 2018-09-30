@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>HBase </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="introduccin_a_hbase.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">HBase</h1></div>
+<div class="iDevice_wrapper objectivesIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis1" >
+<div class="iDevice_header"><h2 class="iDeviceTitle">Objetivos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_89_2" class="block iDevice_content">
+<p></p>
+<table border="0">
+<tbody>
+<tr>
+<td><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><a href="http://hbase.apache.org/"><img src="https://lh6.googleusercontent.com/3gFQftNzQ8qAmJCZCFXEc2EkXVelxwZ4vs0LlS6tWC2VO_uCnxxWZy_HRX2CXIhfcuBrO7kBtg4G64dwgqnSxF4ETkbgLQyOuvLxkGhL1kbVmG96umwRW_97I4DX2dMnaw" width="200px;" height="150px;" /></a></span></td>
+<td>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span id="docs-internal-guid-e225f011-52d3-9ece-53de-4a3d998b7b7c">Conocer las características de HBase</span><span id="docs-internal-guid-e225f011-52d3-9ece-53de-4a3d998b7b7c"></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Aprender a instalarlo sobre un servidor Hadoop y conocer su estructura de directorios</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Aprender la terminología asociada a sus estructuras de datos</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Conocer los comandos básicos disponibles</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Conocer la existencia de APIs de comunicación o el modo de integración con otros sistemas como Pig</span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Resolver ejercicios simples </span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="introduccin_a_hbase.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pig Latin Avanzado </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="pig_latin_avanzado.html" class="active no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="ejemplo_de_udf.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejemplo.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Pig Latin Avanzado</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id56">
+<div class="iDevice emphasis0">
+<div id="ta56_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-52e8-aeb3-7681-1d0684c83440" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Además de los comandos básicos, los jar de piggybank y las funciones que pueda definirse el usuario, Pig facilita una serie de funciones para evaluar, cargar y almacenar datos, así como una serie de funciones matemáticas, de cadenas y de manejo de estructuras más complejas como bags y tuplas. A continuación se definen algunas de ellas. Puedes encontrar más información en el siguiente <a href="http://pig.apache.org/docs/r0.14.0/func.html">enlace</a>.</span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;"></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">Funciones de evaluación</span></span></strong></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">AVG</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">BagToString</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">CONCAT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">COUNT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">COUNT_STAR</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">DIFF</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">IsEmpty</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">MAX</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">MIN</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">PluckTuple</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SIZE</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SUBTRACT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SUM</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TOKENIZE</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;"><strong></strong></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;"><strong>Funciones de carga y almacenamiento</strong><br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">Handling Compression</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">BinStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">JsonLoader, JsonStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">PigDump</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">PigStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TextLoader</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">HBaseStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">AvroStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TrevniStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">AccumuloStorage</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">OrcStorage</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;"><strong>Funciones matemáticas</strong><br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ABS</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ACOS</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ASIN</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ATAN</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">CBRT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">CEIL</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">COS</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">COSH</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">EXP</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">FLOOR</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">LOG</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">LOG10</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">RANDOM</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ROUND</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ROUND_TO</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SIN</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SINH</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SQRT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TAN</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TANH</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: 'trebuchet ms',geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">Funciones de manejo de cadenas</span></span></strong></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ENDSWITH</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">EqualsIgnoreCase</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">INDEXOF</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">LAST_INDEX_OF</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">LCFIRST</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">LOWER</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">LTRIM</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">REGEX_EXTRACT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">REGEX_EXTRACT_ALL</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">REPLACE</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">RTRIM</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SPRINTF</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">STARTSWITH</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">STRSPLIT</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">STRSPLITTOBAG</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SUBSTRING</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TRIM</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">UCFIRST</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">UPPER</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">UniqueID</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;"><strong>Funciones de procesamiento de fechas</strong><br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">AddDuration</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">CurrentTime</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">DaysBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetDay</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetHour</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetMilliSecond</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetMinute</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetMonth</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetSecond</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetWeek</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetWeekYear</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">GetYear</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">HoursBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">MilliSecondsBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">MinutesBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">MonthsBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SecondsBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">SubtractDuration</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ToDate</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ToMilliSeconds</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ToString</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">ToUnixTime</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">WeeksBetween</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">YearsBetween</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="text-decoration: none; color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;"><strong>Funciones de manejo de estructuras complejas</strong><br /></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TOTUPLE</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TOBAG</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TOMAP</span></span></p>
+</li>
+<li style="list-style-type: disc; font-size: 17px; font-family: 'Trebuchet MS'; color: #000000; background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="color: #000000; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;">TOP</span></span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="ejemplo_de_udf.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejemplo.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

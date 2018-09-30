@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Terminología del modelo de datos de HBase </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li id="active"><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="active no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="introduccin_a_hbase.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="instalacin.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Terminología del modelo de datos de HBase</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id192">
+<div class="iDevice emphasis0">
+<div id="ta192_1" class="block iDevice_content">
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Antes de explicar realizar la instalación de HBase y de explicar su sintaxis, vamos a explicar los conceptos básicos de su terminología</span></span></p>
+<ul style="text-align: justify;">
+<li>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>Namespace: </strong>es la estructura empleada para agrupar tablas de modo lógico, similar a una base de datos en los sistemas de base de datos tradicionales. <span style="line-height: 1.5;">Por defecto HBase define 2 namespaces:</span></span></p>
+<ul>
+<li dir="ltr">
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">hbase: se emplea para almacenar las tablas internas de HBase</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">default: se emplea para almacenar las tablas en las que no se les indica su namespace.</span><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+</li>
+</ul>
+</li>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Tabla</strong>: una tabla de HBase está compuesta por múltiples filas.</span></li>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Fila</strong>: una fila en Hbase consiste en una clave de fila, y una o más columnas con valores asociados entre ellos. Las filas se ordenan alfabéticamente por la clave de la fila a medida que se van almacenando. Por esta razón, es importante diseñar la clave de la fila. El objetivo de este modo de almacenamiento del dato es que cada fila se relacione con las que tiene cerca.</span></li>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Columna</strong>: una columna en Hbase consiste en una column Family y un Column Qualifier, deliminatados por el caracter ‘,’</span></li>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Column Family</strong>: almacena información de columnas y sus valores, a menudo por razones de rendimiento. Cada column family almacena un conjunto de propiedades, como por ejemplo si sus valores deben almacenarse en cache, si sus datos se comprimen o si las claves de la fila están codificadas. Cada fila en una tabla tiene las mismas column families, pero no todas las column family de una fila tienen que tener almacenada información.</span></li>
+</ul>
+<p style="margin-left: 30px; text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">   Las column families se especifican en la creación de la tabla, e influyen en el modo en el que los datos son almacenados en el sistema de archivos. Por ello las column families deben ser analizadas en detalle al diseñar el esquema.</span></p>
+<ul>
+<li style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Column Qualifier</strong>: Un column qualifier se agrega a una column family para proporcionar el índice para un determinado grupo de datos. Ejemplos de column qualifier: content:html, content:pdf ...</span></li>
+<li style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Cell</strong>: una celda es una combinación de fila, column family y column qualifier, y contiene un valor (array de bytes) y un timestamp que representa el valor de la versión del dato.</span></li>
+<li style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Timestamp</strong>: con cada valor, se escribe un timestamp que identifica la versión del dato. Por defecto, el timestamp representa la hora de la región en la que el dato fue escrito, pero se puede especificar otro timestamp.</span></li>
+<li style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>Region</strong>: son los elementos básicos de disponibilidad y distribución de las tablas. En general HBase está diseñado para correr sobre un número pequeño (entre 20 y 200) de regiones por servidor (de entre 5 y 20 Gb). Para más información sobre las regiones consultar <a href="http://hbase.apache.org/book/regions.arch.html">http://hbase.apache.org/book/regions.arch.html</a> <span><br /></span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="introduccin_a_hbase.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="instalacin.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

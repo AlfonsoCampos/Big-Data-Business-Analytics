@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Comandos avanzados </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li class="current-page-parent"><a href="comandos_disponibles_en_hbase_shell.html" class="current-page-parent daddy">Comandos Disponibles en HBase Shell</a>
+   <ul>
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li id="active"><a href="comandos_avanzados.html" class="active no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="comandos_de_manipulacin_de_datos_crud.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejemplo.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Comandos avanzados</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id200">
+<div class="iDevice emphasis0">
+<div id="ta200_1" class="block iDevice_content">
+<p style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Adicionalmente, podéis ver otros comandos avanzados de HBase. Algunos de ellos se mostrarán en los siguientes ejemplos. </span></p>
+<p style="text-align: justify;"><strong><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Herramientas de HBase</span></strong></p>
+<ul style="text-align: justify;">
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>assign</strong>: asigna una región. Usar con cuidado y sólo por expertos. Si la región existe, este comando realizará una reasignación. </span></li>
+<ul>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Ejemplo: <span>hbase&gt; </span>assign 'REGION_NAME'</span></li>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>balancer</strong>: ejecuta el balanceador del cluster. Devuelve true si el balanceador se ejecuta y fue capaz de indicar a las regiones del servidor que desasignaran las regiones para balancear. En caso contrario devuelve false. </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplo: <span>hbase&gt;</span> balancer</span></span></li>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>balance_switch</strong>: Activa/inactiva el balanceador</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>hbase&gt;</span>balance_switch true</span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>hbase&gt;</span>balance_switch false</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>close_region</strong>: cierra una región. Solicita al servidor maestro el cierre de una región 'REGIONNAME' en el cluster o al servidor indicado, mediante 'SERVER_NAME'. Al cerrar una región se espera que la región sea un nombre de región correcto del estilo <span>TestTable,0094429456,1289497600452.527db22f95c8a9e0116f0cc13c680396. El nombre de la región esta codificado en hash al final del nombre de la región, es decir, <span>527db22f95c8a9e0116f0cc13c680396. El nombre del servidor se indica con el host, su puerto y su código de inicio. Por ejemplo: <span>host187.example.com,60020,1289493121758. Si se cierra una región indicando el servidor, el nodo maestro desconocerá su cierre. Una vez cerrada una región, permacenará cerrada debiendo emplear el comando assign para volver a activarla. </span></span></span></span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span><span><span>Ejemplos: </span></span></span></span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span><span><span><span><span>hbase&gt;</span>close_region ‘REGIONNAME’</span></span></span></span></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span><span><span><span>hbase&gt; close_region ‘REGIONNAME’, ‘SERVER_NAME</span></span></span></span></span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>compact</strong>: compacta todas las regiones de la tabla indicada o de la región indicada. También puede compactar una única columnfamily en una región. </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>Compactar todas las regiones de una tabla: hbase&gt; compact ‘t1′ </span></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span><span>Compactar toda una región: </span><span>hbase&gt; </span>compact ‘r1′</span></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span><span>Compactar una column family dentro de una región: </span>hbase&gt; compact ‘r1′, ‘c1′</span></span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>Compactar una column family dentro de una tabla: hbase&gt; compact ‘t1′, ‘c1′</span></span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>flush</strong>: libera la información de las regiones de la tabla o de la región indicada. </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; flush 'TABLENAME'</span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; flush 'REGIONNAME'</span></span></li>
+</ul>
+</ul>
+<li><strong>hlog_roll</strong>: Reinicia la escritura del log en un nuevo fichero. Se debe indicar el nombre del servidor de regiones como parámetro. 
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos</span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; hlog_roll <span>host187.example.com,60020,1289493121758</span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>major_compact</strong>: ejecuta una compactación completa de la tabla indicada o de la región. Para compactar una única column family dentro de una región se debe especificar el nombre de la región seguido del column family</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Compactar todas las regiones de una tabla: hbase&gt; major_compact 't1'</span></span></li>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Compactar una column family dentro de una región: hbase&gt; major_compact ‘r1′, ‘c1′</span></li>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Compactar una column family dentro de una tabla: hbase&gt; major_compact ‘t1′, ‘c1′</span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>move</strong>: permite mover regiones. Opcionalmente se puede indicar el objetivo al que se quiere mover. En caso contrario se moverá aleatoriamente. Se debe indicar el nombre de la región codificado para evitar solapamientos. </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; move 'ENCODED_REGIONNAME'</span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; move 'ENCODED_REGIONNAME', 'SERVER_NAME'</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>scan</strong>: realiza un escaneo de toda la tabla. Opcionalmente se puede indicar el diccionario con los parámetros a escanear como por ejemplo: LIMIT, STARTROW, STOPROW, TIMESTAMP, COLUMNS. Si no se especifican las columnas se escaneará toda la tabla. </span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; scan '.META'</span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; scan '.META.', {COLUMNS =&gt; 'info:regioninfo'}</span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; scan 't1', {COLUMNS =&gt; ['c1', 'c2'], LIMIT =&gt; 10, \STARTROW =&gt; 'xyz'}</span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>split</strong>: permite partir la tabla o la región indicada en una única región. Con el segundo parámetro se puede indicar la clave por la que se partirá la región.</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos</span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; split 'TABLENAME'</span></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; split 'REGIONNAME'</span></span></li>
+</ul>
+</li>
+</ul>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;"><strong>unassign</strong>: desasinga una región, cerrándola de su ubicación actual y reabriéndola después. Se puede indicar mediante el comando true, la reasignación forzada eliminado toda la información en el nodo maestro. </span>
+<ul>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Ejemplos: </span>
+<ul>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">hbase&gt; unassign 'REGIONNAME'</span></li>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">hbase&gt; unassign 'REGIONNAME', true</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>zk_dump</strong>: vacía el estado del cluster HBASE empleando un comando similar al Zookeeper. 
+<ul>
+<li>Ejemplos: 
+<ul>
+<li>hbase&gt; zk_dump<span style="font-size: 0.75em; line-height: 1.5;"> </span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;"><strong><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Herramientas de replicación del cluster</span></strong></p>
+<ul style="text-align: justify;">
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>add_peer</strong>: añade una copia del cluster para replicarlo. Se debe indicar el id y la clave del cluster para componerlo. </span></li>
+<ul>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Ejemplos: </span></li>
+<ul>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><span>hbase&gt; add_peer ‘1’, “server1.cie.com:2181:/hbase”</span></span></li>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><span>hbase&gt; add_peer ‘2’, “zk1,zk2,zk3:2182:/hbase-prod”</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>remove_peer</strong>: para la replicación y elimina la metainformación asociada. </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; remove_peer '1'</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>list_peers</strong>: muestra todas las replicaciones de clusters</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos:</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; list_peers</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>enable_peer</strong>: reinicia la replicación de un cluster que había sido deshabilitada</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; enable_peer '1'</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>disable_peer</strong>: para la replicación de un cluster, pero lo mantiene para terminar su replicación</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos:</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; disable_peer '1'</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>start_replication</strong>: reinicia todas las replicaciones. Sólo debe usarse en situaciones de carga críticas</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; start_replication</span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>stop_replication</strong>: para todas las replicaciones. Sólo debe usarse en situaciones críticas</span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">hbase&gt; stop_replication</span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div dir="ltr" style="text-align: justify;"> </div>
+<p style="text-align: justify;"><strong><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Herramientas de seguridad</span></strong></p>
+<ul>
+<li style="text-align: justify;"><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><strong>grant</strong>: permite dar permisos específicos a usuarios (RWXCA, es decir, read, write, exec, create, admin)</span></li>
+<ul style="text-align: justify;">
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;">Ejemplos: </span></li>
+<ul>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;">hbase&gt; grant 'johnsmith',  <span>‘RWXCA’hbase</span></span><span style="font-size: 0.75em; line-height: 1.5;"><br /></span></li>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva;"><span>hbase&gt; grant ‘bobsmith’, ‘RW’, ‘t1′, ‘f1′, ‘col1′</span></span></li>
+</ul>
+</ul>
+<li style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>revoke</strong>: elimina los permisos de acceso de un usuario</span></span></li>
+<ul style="text-align: justify;">
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos</span></span></li>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>hbase&gt; revoke ‘bobsmith’, ‘t1′, ‘f1′, ‘col1′</span></span></span></li>
+</ul>
+</ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><strong>user_permission</strong>: muestra todos los permisos de un usuario</span></span>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Ejemplos: </span></span>
+<ul>
+<li style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>hbase&gt; user_permission</span></span></span></li>
+<li style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span>hbase&gt; user_permission ‘table1′</span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="comandos_de_manipulacin_de_datos_crud.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejemplo.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

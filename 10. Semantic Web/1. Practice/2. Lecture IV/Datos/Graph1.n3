@@ -1,0 +1,18 @@
+# Graph: locally allocated IRI: http://example.org/film/g1 .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix g1:  <http://example.org/film/g1/> .
+
+g1:a foaf:name "Birdman";
+     g1:duration "118" ;
+	 g1:country "United State" ;
+	 g1:music "Antonio Sánchez".
+
+g1:b foaf:name "Boyhood";
+     g1:duration "166" ;
+	 g1:country "United State" ;
+	 g1:music "Various" .
+
+g1:c foaf:name "The Theory of Everything";
+     g1:duration "123" ;
+	 g1:country "United Kingdon" ;
+	 g1:music "Johann Johansson"  .

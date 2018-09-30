@@ -1,0 +1,28 @@
+@prefix dc:		<http://purl.org/dc/elements/1.1/> .
+@prefix ex:		<http://example.org/country/> .
+@prefix geo:	<http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@base           <http://example.org/country>  .
+
+
+ex:France a geo:Country ;
+	ex:continent geo:Europe ;
+	ex:poblacion "63,500" ;
+	ex:capital ex:Paris .
+	
+ex:Canada a geo:Country ;
+	ex:continent geo:America ;
+	ex:poblacion "32,900";
+	ex:capital ex:Ottawa .
+
+ex:Italy a geo:Country ;
+	ex:continent geo:Europe ;
+	ex:poblacion "58,900" ;
+	ex:capital ex:Rome .
+	
+ex:India a geo:Country ;
+	ex:continent geo:Asia ;
+	ex:poblacion "90,000" ;
+	ex:capital ex:NuevaDelhi .
+	
+	
+	

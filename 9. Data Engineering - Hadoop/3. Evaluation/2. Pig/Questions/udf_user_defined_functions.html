@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>UDF (user defined functions) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="udf_user_defined_functions.html" class="active daddy">UDF (user defined functions)</a>
+   <ul>
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="union.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejemplo_de_udf.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">UDF (user defined functions)</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id54">
+<div class="iDevice emphasis0">
+<div id="ta54_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-52e1-ab01-f0ce-be57d615c5d2" style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; vertical-align: baseline; background-color: #ffffff;"><a style="text-decoration: none;" href="http://pig.apache.org/docs/r0.14.0/udf.html#udf-java"><span style="color: #000000; background-color: #ffffff;">G</span></a>ran parte de la potencia de Pig recae en la posibilidad de permitir a los usuarios combinar los comandos propios de PIG con los definidos por el usuario (User Defined Functions: UDFs). Hasta la versión 0.7 sólo se permitía emplear Java para crear UDFs. Desde la versión 0.8 las UDFs pueden estar escritas en seis lenguajes: </span><span style="line-height: 1.5;"><strong>Java, Jython, Python, JavaScript, Ruby y Groovy</strong>. </span><span style="line-height: 1.5;">Las funciones Java son más eficientes y cuentan con mayor soporte ya que están en el mismo lenguaje que el propio Pig.</span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15; font-size: small;">En el caso del resto de lenguaje sólo existe soporte para algunas funcionalidades (por ejemplo no están soportadas las funciones de carga y almacenamiento). Además Javascript, Ruby y Groovy son características experimentales que no han tenido el mismo número de pruebas que Java y Jython. </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15; font-size: small;">En <strong>tiempo de ejecución Pig</strong> <strong>detecta</strong> automáticamente el <strong>uso de UDFs</strong> y ejecuta automáticamente el correspondiente jar en Jython, Rhino, JRuby o Groovy-all. Python no requiere ningún motor de ejecución ya que se invoca directamente el comando Python. </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15; font-size: small;">El propio <strong>Pig incluye un paquete con algunas UDFs</strong>. Hasta la versión 0.8 era un conjunto limitado que incluía una serie de funciones de agregación y algunas otras, pero desde la versión 0.8 hay un gran número de funciones de procesamiento de cadenas, matemáticas y procesamiento de tipos complejos. Este conjunto de funciones se encuentra dentro de<strong> Piggy Bank</strong> que contiene todas aquellas UDFs definidas por otros usuarios. Estas funciones deben ser registradas manualmente al no incluirse en el Jar de Pig. </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; line-height: 1.15; font-size: small;">A continuación se explica cómo se pueden<strong> definir, registrar e invocar este tipo de funciones</strong>.<br /></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong><span style="line-height: 14.9499998092651px;">DEFINE</span></strong><span style="line-height: 1.5;"> </span></span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Cuando se quiere emplear una función que ha sido construida como UDF, es necesario <strong>indicar</strong> a PIG <strong>donde se encuentra el fichero con el UDF.</strong> Esto se realiza mediante el comando Register que asigna un alias a una UDF. <span style="line-height: 1.5;"> </span></span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Sintaxis: <em><span style="line-height: 1.5; font-family: courier new,courier;">DEFINE alias {function | [`command` [input] [output] [ship] [cache] [stderr] ] };</span></em></span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em><span style="line-height: 1.5; font-family: courier new,courier;">Ejemplos: </span></em></span></p>
+<p style="text-align: justify;"></p>
+<div class="O3">  <span style="font-family: 'trebuchet ms', geneva; font-size: small;">DEFINE MAXNUM org.apache.pig.piggybank.evaluation.math.MAX;</span></div>
+<p style="text-align: justify;"></p>
+<pre class="code"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">DEFINE CMD `perl PigStreaming.pl - nameMap` input(stdin using PigStreaming(',')) output(stdout using PigStreaming(','));
+A = LOAD 'file';
+B = STREAM B THROUGH CMD;</span></pre>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong><span style="line-height: 1.5;">REGISTER</span></strong></span></p>
+<p style="text-align: justify;" id="docs-internal-guid-e225f011-52e6-16e4-5e83-97e99b307ad0" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong>Registra un archivo jar</strong> para que las UDFs incluidas en el jar puedan ser usadas. </span></p>
+<p style="text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Sintaxis: <em><span style="font-family: courier new,courier;">REGISTER path;</span> </em><span style="line-height: 1.5;"> </span></span></p>
+<p style="text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em><span style="font-family: courier new,courier;">REGISTER /src/myfunc.js;</span></em><br class="kix-line-break" /><em><span style="font-family: courier new,courier;">A = LOAD 'students';</span></em><br class="kix-line-break" /><em><span style="font-family: courier new,courier;">B = FOREACH A GENERATE myfunc.MyEvalFunc($0);</span></em><br class="kix-line-break" /></span></p>
+<p style="text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Otra forma de registrarlas es incluyéndolos en las variables de entorno. </span></p>
+<p style="text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">En el siguiente ejemplo varios jar son registrados vía la variable de entorno PIG_OPTS.</span></p>
+<p style="text-align: justify;" dir="ltr"><em><span style="font-family: courier new,courier; font-size: small;">export PIG_OPTS="-Dpig.additional.jars.uris=hdfs://nn.mydomain.com:9020/myjars/my.jar,file:///home/bigdata/pig/your.jar"</span></em></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small;">EJEMPLO CON PIGGYBANK</span></strong></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">A continuación se muestra un ejemplo sencillo de uso de librerías existentes. El ejemplo seleccionado es el jar <span style="font-family: courier new,courier; font-size: small;">org.apache.pig.piggybank.evaluation.string, <span style="font-family: trebuchet ms,geneva;">cuya documentación queda disponible en la <a href="https://pig.apache.org/docs/r0.14.0/api/">API</a>.</span></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span id="docs-internal-guid-dd5e2e58-95ce-3350-c3dd-84e96631e538"><span><img src="https://lh4.googleusercontent.com/SI_11QDwUxxePvORt1iCHrKYofR2NkJ1iyhaLlcNfjRe8xAbE59vfTXgEwKGId_n66tU-F9y4eh3E2vnqC4LpP93QTFc_4XcDS0UWvJf0DOOLf-citNoGugvnZHBYNEcvA" height="454" width="853" /></span></span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">En el ejemplo se emplea el método <span style="font-family: courier new,courier;">UPPER</span> del paquete</span> <em><span style="font-size: small; font-family: courier new,courier;"><span style="line-height: 1.5;">piggybank.evaluation.string</span></span></em><span style="font-family: trebuchet ms,geneva;"><span style="font-size: small;">,  que transforma el texto a mayúsculas. En primer lugar se registra el Jar que contiene las librerías, posteriormente se carga el fichero que contiene la discografía y, finalmente, por cada registro del fichero cargado se genera una salida que contiene el campo <span style="font-family: courier new,courier;">anio</span> y el campo <span style="font-family: courier new,courier;">disco</span> en mayúsculas.</span> </span></p>
+<p><em><span style="font-family: courier new,courier; font-size: small;">REGISTER piggybank.jar</span></em><br /><em><span style="font-family: courier new,courier; font-size: small;">A = LOAD 'ejemplos/discografia' using PigStorage (',') AS (anio: int, disco: chararray);</span></em><br /><em><span style="font-family: courier new,courier; font-size: small;">B = FOREACH A GENERATE anio, org.apache.pig.piggybank.evaluation.string.UPPER (disco);</span></em><br /><em><span style="font-family: courier new,courier; font-size: small;">DUMP B;</span></em></p>
+<p style="text-align: justify;" class="code"><img src="https://lh4.googleusercontent.com/OY2vDQWfwdGRV6FhNLA1AN4mmO6YOWfJOEgddmLI1REpStubMQPcjxXXMuuvL1c-3dWeSRjhnQCub0hgp-VNu1ukaf1jP_pGsMHYJW09UxJnLUoH9gfTeSsCAuzE167vyw" style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;" height="248px;" width="624px;" /></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="union.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejemplo_de_udf.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

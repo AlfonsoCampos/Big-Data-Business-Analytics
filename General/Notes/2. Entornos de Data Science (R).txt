@@ -1,0 +1,36 @@
+Lenguajes de programacion muy vectorizado
+Menor rendimiento con R --> Sugiere que se programa en un lenguaje de menor nivel (Fortran, C) y se hace un warpper para R
+Peor gestion con muchos datos (orden 10 GB creo)
+R guarda objetos en memoria...
+R lo vas a usar de forma exploratoria, jodido en entornos productivos
+No usar en = como <- (también ->!)
+
+mode() te da el tipo de dato... --> al final usas class()
+as.numeric(), as.integer()...
+Ojo v[0] que no da error y te da el nombre del objeto (interno entiendo)
+mitico: mean(x, na.rm=TRUE)
+Ctrl + L xa borrar la consola en rStudio
+
+A la menos 16 es precision máquina...!!
+Mitiko tapply!
+
+Lista es como un arrayList...
+attach xa que puedas ir al campo directamente sin terner que poner el nombre del data-frame
+y search() te da la lisa de cosas attach que tengas (y algunas que por defecto hay)
+data_frame[complete.cases(data_frame),]
+
+paste(c("V"),1:10, )
+le mola mas la funcion de bajo nivel scan() vs read.csv()/read.table()
+    - Xo ojo, scan lo lee como array de byte, luego lo tienes que convertir en un data.frame, aun asi tarda menos de lo que tardaba antes!
+    - Solo pilla numeric!!
+
+system.time() : te tiempos de ejecucion xo tienes que meter el codigo dentro...
+proc.time() : la llamas antes y despues y restas tiempos
+
+sample te hace la mitica del muestreo aleatorio, pwermutacion, etc
+sample(1:10, 5, replace=TRUE)
+table de lo de antes te daria conteos... aka TABLA DE CONTINGENCIAS
+
+En plot, funciones de bajo nivel añaden al grafico ya existente, mientras que alto nivel crean un nuevo gráfico...
+ECM lo saca con los Y de test y los Y del predecido sobre test con modelo entrenado con train =)
+Con muchas variables, los modelos lineales de toda la vida son buenos, no hace falta irse a movidas hardcore (redes neuronales, deep mubi, etc)s

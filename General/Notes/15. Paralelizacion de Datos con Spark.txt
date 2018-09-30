@@ -1,0 +1,76 @@
+Akka --> Modelo de actores: Event Driven Development
+Play --> Orientado a presentacion web, API REST sobre Akka
+Spark --> Lol!
+
+· Parte Java en Scala
+
+En object ppones codigo estatico
+En class comportamiento dinamico
+
+object MyClass {
+    val DefaultValue : Int = 3
+    def main(args: Array[String]): Unit = {
+        val mc = new MyClass(1)
+        println(mc.myMethod)
+    }
+}
+
+class MyClass(value:Int){
+    def myMethod() : Int {
+        MyClass.DefaultValue + this.value
+    }
+}
+
+2 tipos de variables en Scala:
+    var inmutableVariable : String = "InitialValue"
+    val mutableVariable : String = "InitialValue"
+    
+Options
+var c : Option[MyClass] = None
+
+Case class: clase estandar con cosas que vienen predefinidas --> tralla!
+
+Trait es como interfaz y clase abstracta...! --> extends es lo que usas y luego with, hay que mirar esto; mola!
+
+El for lo han dopao!!
+
+Try en vez de try catch y es como que las pillas al final!
+
+· Parte Funcional en Scala
+
+map
+reduce
+filter
+fold
+foldLeft!
+
+Implicit: lista de llamdas entre sobrecargas de funciones --> Peligrosos! (xq al final no tienes npi de que esta haciendo)
+Modos de herencia: lokuras pardas ya de heredar en funcion de cualquier locura
+Rendimiento de colecciones: Chungo aun, ppuede que tengas que usar tipos de Jaava (estilo HashMap)
+Sbt vs Maven vs Gradle: gradle lo ve muy libre, sbt para scala parece mejor porque es el rollo
+Evolucion de futuro: Colecciones, optimizaciones y sorpresas
+
+Ejercicios propuestos
+
+Terasort te permite calibrar algunos parametros de tu cluuster
+
+Apache Flint --> Version Cloudera de Spark mao o meno
+
+Dataframe = RDD + Schema
+
+Spark Streaming
+MLlib --> lib de Machin Learning
+GraphX --> Xa trabajar con grafos
+
+Frikadas
+Tungsten
+Tachyon
+
+3 ejercicios Scala y 3 de Spark
+
+CaseClass para encapsular la movida esta de Spark
+- tiene ya getters y setters. Clase Web Event aka WE para que este en atributos.
+
+
+
+

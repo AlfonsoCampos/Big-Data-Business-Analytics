@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicio </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li id="active"><a href="ejercicio.html" class="active no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="integracin_de_hbase_con_pig.html" class="prev"><span>&laquo; </span>Anterior</a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Ejercicio</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id225">
+<div class="iDevice emphasis0">
+<div id="ta225_85" class="block iDevice_content">
+<p>Partiendo de los datos de la discografía de álbumes de estudio de Pink Floyd </p>
+<p><a href="http://es.wikipedia.org/wiki/Anexo:Discograf%C3%ADa_de_Pink_Floyd">http://es.wikipedia.org/wiki/Anexo:Discograf%C3%ADa_de_Pink_Floyd</a><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p>Año Album Ranking Certificación EEUU Ranking Certificación UK<br />1967 The Piper at the Gates of Dawn 131 6 <br />1968 A Saucerful of Secrets — 9 <br />1969 Music from the Film More 153 9 <br />1969 Ummagumma (Disco 2) 74 5 <br />1970 Atom Heart Mother 55 1 <br />1971 Meddle 70 3 <br />1972 Obscured by Clouds 46 6 <br />1973 The Dark Side of the Moon 1 1 <br />1975 Wish You Were Here 1 1 <br />1977 Animals 3 2 <br />1979 The Wall 1 3 <br />1983 The Final Cut 6 1 <br />1987 A Momentary Lapse of Reason 3 3 <br />1994 The Division Bell 1 1 <br />2014 The Endless River 3 1</p>
+<p>Resolver las siguientes preguntas:</p>
+<p>1. Crear un namespace llamado discografía</p>
+<p>2. Crear una tabla llamada pink_floyd que contenga sólo dos columnas: nombre_disco, ranking (a su vez tendrá identificadores para EEUU y UK)</p>
+<p>3. Cargar los datos en HBase (se pueden emplear los comandos put o una importación desde PIG). Nota: algunos años hay más de un disco por lo que la clave será el año y un secuencial, y no se disponen de todos los datos de rankings por lo que esos datos nulos no será necesario cargarlos</p>
+<p>4. Escribir la instrucción y el resultado de consultar el álbum del año 1968</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="integracin_de_hbase_con_pig.html" class="prev"><span>&laquo; </span>Anterior</a>
+</div>
+</div>
+</div>
+</body></html>

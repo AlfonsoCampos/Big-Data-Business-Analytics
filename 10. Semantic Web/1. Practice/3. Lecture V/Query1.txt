@@ -1,0 +1,15 @@
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex4: <http://example.org/award/>
+PREFIX dbpedia-owl:	<http://dbpedia.org/ontology/>
+PREFIX es-dbpedia-owl: <http://es.dbpedia.org/property/>
+
+SELECT ?a ?name ?premios
+WHERE
+{
+  ?s ex4:bestActor ?name .
+  SERVICE <http://es.dbpedia.org/sparql> 
+  { ?a es-dbpedia-owl:nombre ?name . 
+    ?a dbpedia-owl:award ?premios
+	} 
+}

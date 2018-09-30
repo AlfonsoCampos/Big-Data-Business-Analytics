@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Integración de HBase con PIG </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li><a href="arrancar_hbase.html" class="no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li id="active"><a href="integracin_de_hbase_con_pig.html" class="active no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="ejemplo.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejercicio.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Integración de HBase con PIG</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id223">
+<div class="iDevice emphasis0">
+<div id="ta223_85" class="block iDevice_content">
+<p><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">Además del intérprete de comandos de HBase existen otras formas de interactuar con HBase. La más común es el empleo de su API desarrollada en Java, pero por falta de tiempo no entraremos en detalle de la misma. </span></span></p>
+<p>Si vamos a revisar brevemente el empleo PIG para interactuar con HBase mediante un ejemplo de carga de datos. </p>
+<p><strong>1. Arrancar HBase y acceder a la consola de HBase</strong></p>
+<p>$ cd /home/bigdata/hbase</p>
+<p>$ bin/start-hbase.sh</p>
+<p>$ jps</p>
+<p>$ bin/hbase shell</p>
+<p><span id="docs-internal-guid-485d6fa7-0d0c-54be-2229-28d84a6b5eb6"><span><img src="https://lh5.googleusercontent.com/hlpSoZDClCYjiylKsY2uhlemDiwq_Wp-z_kPGeq43dS1yk7mpsiyefK3ddRe-MjSoTMsrZTlUIfr2rldPb-VDt-sA477jSy3gMg0HZGw3XiI68peZ5QY-N3Z4nT2cxdJNQ" width="624px;" height="160px;" /></span></span></p>
+<p><strong>2. Crear una tabla llamada personas en el namespace ejemplos con una columna llamada info</strong></p>
+<p>create 'ejercicios:personas', 'info'</p>
+<p><span id="docs-internal-guid-485d6fa7-0d0d-f9ce-04d1-a2e1491f98aa"><span><img src="https://lh5.googleusercontent.com/s4Q1J7SUiVZ8JIdYDtca3alhOzSue8IwnULpriQ9bccClsPXXr-yup1mkqXH5wT5ZlK9D1QxeVTvJCeBi4GQmiC7r4RSohXOyPBexJOXoYltIQKd1LnUBEC-WlVFQzIQfA" width="624px;" height="112px;" /></span></span></p>
+<p><strong>3. Abrir otra consola</strong></p>
+<p><span><span id="docs-internal-guid-485d6fa7-0d0f-c20a-0c67-3e9ad371cf5e"><span><img src="https://lh6.googleusercontent.com/yJFEgo5gox_vx9lCRriD4ex3p00M_-nCseDtuqIY5eRLyD-oUyJss-0gItbtoy8i69Xcs1UHXDAYoZWBIuvL009icdH2LgA-2zg4Ckr5PkNCSNSAk-kpJ37Kb3ymCbaj7A" width="280px;" height="54px;" /></span></span></span></p>
+<p><strong>4. Crear una carpeta en /home/bigdata llamada ejemplos</strong> </p>
+<p>mkdir /home/bigdata/ejemplos</p>
+<p><span id="docs-internal-guid-485d6fa7-0d12-021b-21a5-a750a79eb12e"><span><img src="https://lh4.googleusercontent.com/gwzbJJ9KajdqPRd4rG7UikEWvrC4WUZ0PMdRH-M3I-XEQsyeuYHpoclc_IU123xm_GKJPJAfzPCmPlYkmeG9yEkyU5CbySS0QgJkGyV_D22nP-PV7RLeomedYQ6PwfzCdA" width="433px;" height="41px;" /></span></span></p>
+<p><strong>5. Crear un fichero llamado personas.csv</strong> que contendrá los nombres y apellidos de un grupo de personas</p>
+<p><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;">sudo nano /home/bigdata/ejemplos/personas.csv</span></span></p>
+<p><span face="trebuchet ms, geneva" size="2" style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="line-height: 19.5px;"><span id="docs-internal-guid-485d6fa7-0d13-5de8-1542-58d31e32e089"><span><img src="https://lh4.googleusercontent.com/7WvFBt2MBlup7t0Up3XBCYi0NfHB2QnPmyGKaoSnVsdRw2lvHjiRhiDL6mu2U9fm8p4fWNh9hLHPaRCqIVtc1AHH-h4r0V5QV2dIBg05OV5bEew-W4cbiAYOnH1xvVb1yA" width="597px;" height="52px;" /></span></span></span></span></p>
+<p>1, Juan, Pérez<br />2, Maria, Sánchez<br />3, Pedro, Rodríguez<br />4, Marta, Gómez</p>
+<p><span id="docs-internal-guid-485d6fa7-0d12-e723-525a-44efe77e857b"><span><img src="https://lh3.googleusercontent.com/BfhSaFVeELnwp0bggwftXdL0AkdjE8kYuVp5NwBSTLhAOsO7UDZqN0YwY42A6u1MoN_DCsKFhsKq-In55WOWva-OyRvly_4AaicFSaKroPe1hMRpQHzb6IssgGc9ssX8gw" width="589px;" height="146px;" /></span></span></p>
+<p><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">6. Crear fichero pig de carga de datos</span></strong></p>
+<p>sudo nano /home/bigdata/ejemplos/carga_personas.pig</p>
+<p>-- Cargamos el fichero csv empleando el separador , en los campos id, nombre y apellidos</p>
+<p>datos = LOAD 'personas.csv' USING PigStorage( ',' ) AS (<br />id: chararray,<br />nombre: chararray,<br />apellidos: chararray );</p>
+<p>-- Una vez cargados los datos en PIG, realizamos la carga en el namespace ejercicios dentro de la tabla personas, en la columna info. </p>
+<p>STORE datos INTO 'hbase://ejercicios:personas' USING<br />org.apache.pig.backend.hadoop.hbase.HBaseStorage (<br />'info:nombre info:apellidos');</p>
+<p><span id="docs-internal-guid-485d6fa7-0d8a-474e-3d1b-6b9f84f148f3"><span><img src="https://lh6.googleusercontent.com/mcQkzNQuTCXewqPULbfCfLiPdN_VwzUDknL_txXihfHxswUM_siCUJEMAHPF_iVsDf8wxJaP93i9SxQ0L6695NaprMIjxRerWp90o2cIEnREHPOcFrcjkDW6wxDDkT-LOQ" width="624px;" height="249px;" /></span></span></p>
+<p></p>
+<p><strong>7. Ejecutar el script</strong></p>
+<p><span>cd /home/bigdata/ejemplos</span></p>
+<p><span><span>pig -x local carga_personas.pig</span></span></p>
+<p><span id="docs-internal-guid-485d6fa7-0d8d-e78b-e096-a33d8c03bb6d"><span><img src="https://lh5.googleusercontent.com/D_jWBqSrUZZfsB_m7ZPuMYxD3UapSJNY2yTwtdAfu3z1oBBmuci-VJrkFUsQJqMvdMugPjGWYtzwMtXhBmWEt1fVTNGQZMcAqKRhNNzNJ-kyhrfol1sgUzfMt-IChPwyOg" width="624px;" height="213px;" /></span></span></p>
+<p><strong>8. Consultamos los datos en HBase</strong></p>
+<p>scan 'ejercicios:personas'</p>
+<p><span id="docs-internal-guid-485d6fa7-0d8f-58b9-1360-d4bd4d0c03ce"><span><img src="https://lh6.googleusercontent.com/sWbLhQsc-eiupb_Q4MX-L9-NJz0phjuWWrWLq3ALr1h2e0iqBK_-GD09NgsqVGJG0LIiHGY2eLQzQp7GlPReXN7646SC3j1UQhTMumnTAsy221KhZbrklKZs-_NzgUNrCQ" width="624px;" height="311px;" /></span></span></p>
+<p><span><span> </span></span></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="ejemplo.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejercicio.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

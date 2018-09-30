@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejemplo de uso de comandos básicos HDFS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hadoop</a></li>
+   <li><a href="conceptos_bsicos_y_definiciones.html" class="daddy">Conceptos básicos y definiciones</a>
+   <ul class="other-section">
+      <li><a href="conceptos_previos.html" class="no-ch">Conceptos previos</a></li>
+      <li><a href="qu_es_apache_hadoop.html" class="no-ch">¿Qué es Apache Hadoop?</a></li>
+      <li><a href="ecosistema_hadoop.html" class="no-ch">Ecosistema Hadoop</a></li>
+      <li><a href="quin_usa_hadoop.html" class="no-ch">Quién usa Hadoop</a></li>
+      <li><a href="mdulos_de_hadoop.html" class="daddy">Módulos de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="hadoop_common.html" class="no-ch">Hadoop Common</a></li>
+         <li><a href="hadoop_distributed_file_system_hdfs.html" class="no-ch">Hadoop Distributed File System (HDFS™)</a></li>
+         <li><a href="hadoop_yarn.html" class="no-ch">Hadoop YARN</a></li>
+         <li><a href="hadoop_mapreduce.html" class="no-ch">Hadoop MapReduce</a></li>
+         <li><a href="programacin_de_trabajos.html" class="no-ch">Programación de trabajos</a></li>
+      </ul>
+      </li>
+      <li><a href="instalacin_de_hadoop.html" class="daddy">Instalación de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="prerrequisitos.html" class="daddy">Prerrequisitos</a>
+         <ul class="other-section">
+            <li><a href="descargar_e_instalar_hadoop.html" class="no-ch">Descargar e instalar Hadoop</a></li>
+            <li><a href="actualizar_mquina_virtual.html" class="no-ch">Actualizar máquina virtual</a></li>
+            <li><a href="confirmar_versin_de_java.html" class="no-ch">Confirmar versión de Java</a></li>
+            <li><a href="crear_y_configurar_los_certificados_ssh.html" class="no-ch">Crear y configurar los certificados SSH</a></li>
+         </ul>
+         </li>
+         <li><a href="modificar_ficheros_de_configuracin.html" class="daddy">Modificar ficheros de configuración</a>
+         <ul class="other-section">
+            <li><a href="bashrc.html" class="no-ch">~/.bashrc</a></li>
+            <li><a href="coresitexml.html" class="no-ch">core-site.xml</a></li>
+            <li><a href="hadoopenvsh.html" class="no-ch">hadoop-env.sh</a></li>
+            <li><a href="hdfssitexml.html" class="no-ch">hdfs-site.xml</a></li>
+            <li><a href="mapredsitexml.html" class="no-ch">mapred-site.xml</a></li>
+            <li><a href="yarnsitexml.html" class="no-ch">yarn-site.xml</a></li>
+         </ul>
+         </li>
+         <li><a href="formatear_el_sistema_de_archivos_de_hadoop.html" class="no-ch">Formatear el sistema de archivos de Hadoop</a></li>
+         <li><a href="demonios.html" class="daddy">Demonios</a>
+         <ul class="other-section">
+            <li><a href="arrancar_demonios_hdfs.html" class="no-ch">Arrancar demonios HDFS</a></li>
+            <li><a href="arrancar_demonios_yarn.html" class="no-ch">Arrancar demonios Yarn</a></li>
+            <li><a href="parar_demonios_hdfs.html" class="no-ch">Parar demonios HDFS</a></li>
+            <li><a href="parar_demonios_yarn.html" class="no-ch">Parar demonios Yarn</a></li>
+            <li><a href="arrancar_demonios_individualmente.html" class="no-ch">Arrancar demonios individualmente</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="interfaces_web_de_hadoop.html" class="daddy">Interfaces Web de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="namenode_web_interface_hdfs_layer.html" class="no-ch">NameNode Web Interface (HDFS layer)</a></li>
+         <li><a href="resource_manager_web_interface_yarn_layer.html" class="no-ch">Resource Manager Web Interface (Yarn layer)</a></li>
+         <li><a href="map_reduce_jobhistory.html" class="no-ch">Map Reduce JobHistory</a></li>
+      </ul>
+      </li>
+      <li><a href="ejemplo_comprobacin_instalacin.html" class="no-ch">Ejemplo comprobación instalación</a></li>
+      <li><a href="ejercicio_comprobacin_instalacin.html" class="no-ch">Ejercicio: comprobación instalación</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="hdfs.html" class="current-page-parent daddy">HDFS</a>
+   <ul>
+      <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+      <li><a href="arquitectura_hdfs.html" class="no-ch">Arquitectura HDFS</a></li>
+      <li><a href="replicacin_de_datos.html" class="no-ch">Replicación de datos</a></li>
+      <li><a href="el_nodo_secundario.html" class="no-ch">El nodo secundario</a></li>
+      <li><a href="arrancar_hadoop.html" class="no-ch">Arrancar Hadoop</a></li>
+      <li><a href="comandos_bsicos_de_hdfs.html" class="no-ch">Comandos básicos de HDFS</a></li>
+      <li id="active"><a href="ejemplo_de_uso_de_comandos_bsicos_hdfs.html" class="active no-ch">Ejemplo de uso de comandos básicos HDFS</a></li>
+      <li><a href="api_de_programacin_de_hdfs.html" class="no-ch">API de programación de HDFS</a></li>
+      <li><a href="ejercicio1.html" class="daddy">EJERCICIO</a>
+      <ul class="other-section">
+         <li><a href="a_uso_de_hdfs.html" class="no-ch">A. Uso de HDFS</a></li>
+         <li><a href="b_map_reduce.html" class="no-ch">B: Map Reduce</a></li>
+         <li><a href="ejercicio2.html" class="no-ch">EJERCICIO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="map_reduce.html" class="daddy">Map Reduce</a>
+   <ul class="other-section">
+      <li><a href="procesamiento_en_paralelo.html" class="no-ch">Procesamiento en Paralelo</a></li>
+      <li><a href="fundamentos.html" class="no-ch">Fundamentos</a></li>
+      <li><a href="ejemplo_sencillo_de_map_reduce.html" class="no-ch">Ejemplo sencillo de map Reduce</a></li>
+      <li><a href="explicacin_modelo_map_reduce.html" class="no-ch">Explicación modelo Map Reduce</a></li>
+      <li><a href="ejemplo.html" class="daddy">Ejemplo</a>
+      <ul class="other-section">
+         <li><a href="datos_de_entrada.html" class="no-ch">Datos de entrada</a></li>
+         <li><a href="1_mapeo.html" class="no-ch">1. Mapeo</a></li>
+         <li><a href="2_mezcla.html" class="no-ch">2. Mezcla</a></li>
+         <li><a href="3_reduccin.html" class="no-ch">3. Reducción</a></li>
+         <li><a href="resultado.html" class="no-ch">Resultado</a></li>
+         <li><a href="interfaz_web.html" class="no-ch">Interfaz Web</a></li>
+      </ul>
+      </li>
+      <li><a href="ejercicio_diccionario.html" class="no-ch">Ejercicio: diccionario</a></li>
+      <li><a href="ejercicio_opcional.html" class="no-ch">Ejercicio (opcional)</a></li>
+      <li><a href="ms_ejemplos.html" class="no-ch">Más ejemplos</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="comandos_bsicos_de_hdfs.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="api_de_programacin_de_hdfs.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Ejemplo de uso de comandos básicos HDFS</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id122">
+<div class="iDevice emphasis0">
+<div id="ta122_1" class="block iDevice_content">
+<p><span style="font-size: small; line-height: 1.5; font-family: trebuchet ms,geneva;">A continuación se muestra un ejemplo de uso de los comandos básicos de HDFS. </span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: small;">Comprobación de la información que hay en el sistema de archivos.</span>  </span></p>
+<p id="docs-internal-guid-e225f011-528f-3adc-c6c9-d2ed518423cc" dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ hdfs dfs -ls /</strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;">  <span id="docs-internal-guid-59b8b72b-7135-3260-b25e-aa80a54c3b54"><img src="https://lh5.googleusercontent.com/MzvigZp1wdQS20vl2HBXF5ZSQeEhB9S49GRqCYHTE4I1W4uDd9qqluBEvaRQweooNA-xv-y_J9kuJUvZR9cYEoKBtuRrAO21BYnI9O658ylDsY6eW8LOVG4-Ac7jjsqDsA" width="570px;" height="95px;" /></span></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;"> </span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Creación de un directorio para los usuarios de la máquina</span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ hdfs dfs -mkdir /user</strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;"><strong><span id="docs-internal-guid-59b8b72b-7137-124e-e1db-11c89073c175"><img src="https://lh3.googleusercontent.com/VwEr77WTYpd-u2H4bbPcpAZAt2QVVuiBmbXfu6IXsHhTctua48ZODhiAPqOHuYdalgIq6MMBYott_uVNchYGFnlnnYnwM64eoT7knsLUX17fObup1msNUmy3HDtIBUdrBA" width="574px;" height="77px;" /></span></strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;"> </span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Creación de un subdirectorio para nuestro usuario</span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ hdfs dfs -mkdir /user/bigdata</strong></span></p>
+<p><span style="font-family: trebuchet ms,geneva;"> <span id="docs-internal-guid-59b8b72b-7137-9865-56e8-750cc6c5c7e0"><img src="https://lh5.googleusercontent.com/c1ZmtW4jkjFw3h2vZDz5HN-m8L4aarxMM4Abjpl16PQJPdmH7fDMQkjjaJUV92cBJxoS7y-7F4QxTzB5q_HA71zQRHz6P3SauvGKzJaTQ7rWMao185wz9IIX3a2_zAnTcA" width="571px;" height="73px;" /></span></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Creación de un fichero de ejemplo y asociación al usuario </span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ sudo nano ejemplo.txt</strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-59b8b72b-7138-a0e9-2f06-bdf3e26b2f94"><span style="font-size: 0.75em; line-height: 1.5;"> </span><img src="https://lh4.googleusercontent.com/o_gae2Su-_TR_BSTdG9ITZU5L0-rJkD37mflUF95Nnzuzqfo1w5oWVTGxeLD9WPleKttRH738qSLJhoZCZMSLop11gVvpnNp2aRUz3YhYLE6UJcXP-a1rhfWip0QgAlmFQ" width="433px;" height="26px;" /></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Ejemplo para mostrar el funcionamiento </span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">de HDFS y Map Reduce</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">1. Este es un ejemplo de fichero.</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">2. Otra línea de fichero para usar en map reduce con HDFS.</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">3. Escribiremos varias líneas </span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">4. para después poder emplear</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">5. comandos como TAIL</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">6. o HEAD</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">7. y así mostrar su funcionamiento</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">8. </span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">9.</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">10. </span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">11.</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">12. </span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">13. </span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">14.</span><br /><span style="font-family: trebuchet ms,geneva; font-size: small;">15.</span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">....</span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">50. Fin del ejemplo</span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;"><span style="font-size: 0.75em; line-height: 1.5;"> </span><span id="docs-internal-guid-59b8b72b-7139-8ddb-58e8-262cccc376e1" style="font-size: 0.75em; line-height: 1.5;"><span style="font-size: 0.75em; line-height: 1.5;"> <span id="docs-internal-guid-59b8b72b-714c-5ac0-3aa6-31b71da7b17c"><img src="https://lh3.googleusercontent.com/0JGMFI4WaYkqzUHC_y_kmqeCetYNDqYZDfdkFGof2HH7aIg-kruJz-rI0RjGX8Qz0ucFopb5CzntPM9XzNzSqRMmmei5QZ60yNFJB6vAn7loPejR2kgjpf1ETdfWSzRx0A" width="552px;" height="386px;" /><span style="font-size: 0.75em; line-height: 1.5;"> </span></span></span></span></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Movimiento del fichero a HDFS</span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ hdfs dfs -put ejemplo.txt /user/bigdata</strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-59b8b72b-713b-acfc-7fd5-a848d3deec87"><img src="https://lh6.googleusercontent.com/mb8aCawbH8wKG8FWOiFrMCOuZTMdryQqfiP_n7h2fKKKo_L5aF6UiLO0v1B-cWdO5o70Plgq4R4m5ILPGt25kjTPzDdUYahFSwIio2VsizsVfNx_PA5m6Gn0Rj9TZrZaQQ" width="570px;" height="117px;" /></span></p>
+<p><span style="font-size: small; font-family: trebuchet ms,geneva;">Ejecución de un listado del directorio recursivo para ver si se han subido correctamente los datos. </span></p>
+<p dir="ltr"><span style="font-size: small; font-family: trebuchet ms,geneva;"><strong>$ hdfs dfs -ls -R / </strong></span></p>
+<p><span style="font-family: trebuchet ms,geneva;"> <span id="docs-internal-guid-cccd68ec-7151-504f-92d5-e7e78918777c"><img src="https://lh5.googleusercontent.com/KqW5OwlGDnb4QKDurvG_sBssUJiRX-Fr68re8Qwj900QRjNyzxUwf4Wc2Y8VmfYQ4k1TBmAA7HKbKBKl-koh4hnGkox4aSl2dN4HOB8u4GlNEO7xrk40OCUILUoaCsrX_g" width="624px;" height="107px;" /></span><span style="font-size: 0.75em; line-height: 1.5;"> </span></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Una vez se ha subido un fichero a la estructura de directorios, es posible trabajar con él mediante los comandos correspondientes: </span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Para descargar un fichero se emplea el comando get indicando como segundo parámetro la ruta en la que queremos dejarlo. <span style="line-height: 1.5;"><br /></span></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ hdfs dfs -get /user/bigdata/ejemplo.txt /tmp</strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-dd5e2e58-7152-a4ef-95af-11d040998c3f"><span style="font-size: 0.75em; line-height: 1.5;"> </span><img src="https://lh3.googleusercontent.com/Hn_xZwN84rCbQebWAkejkGFhTG2mFFSysjLYqUKA4ayZzysUjVHAWV3R--HYkqXdTUaVo5UNjpw0kO_LrpoSPv0qhATM1q847k7CwZ_PowFctDZ9pjjoKP5N24F09eZqwQ" width="624px;" height="77px;" /></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;">Consulta de ficheros:<span style="line-height: 1.5;"> </span></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$hdfs dfs -cat /user/bigdata/ejemplo.txt</strong></span></p>
+<p><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-dd5e2e58-7153-90b6-ba66-2c958e6b6e9b"><img src="https://lh4.googleusercontent.com/OiniocGLVxDFYqCKd_7zYUM6RhYjk_To3P4P7r_XgF1znml9rGMZelJSP31RjRO1GnP7V3RXzc_oJvmSiN0PFWk6DyVURXZgjTXile_f4S8bXpuGDOgSD1Mgjx_ZoTB0pg" width="624px;" height="289px;" /></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$hadoop fs -cat /user/bigdata/ejemplo.txt | head<span style="line-height: 1.5;"> </span></strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-dd5e2e58-7154-270e-04cf-71b97c677038"><img src="https://lh4.googleusercontent.com/pvc1lUWWYVvy7thmU-0wwzUES5UGsSq1b1Pe5XFqORFATORO4FBFs_4jllvVjyn8q2ZV4x8bIUuzWL_RPPjTNGgwM5S3Dw7tx9WM5woHDuKqBibEAJH1GUl2mGGZXWacRQ" width="624px;" height="204px;" /></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$hadoop fs -cat /user/bigdata/ejemplo.txt |tail</strong></span></p>
+<p><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-dd5e2e58-7155-47f8-9b97-c0a7137ba8be"><img src="https://lh3.googleusercontent.com/SyoNqdBFoiht1RjLOQ65c84SRpeND2V_6WPQ3Ggo0WMS8oRP9fXEbCDv5mXPh6ELCEl523qmoTtqtj6FywG7SQO4RWelMOSBHmcpH27Gm3vWTAiLXuzlJeUxX-f31mO8Mw" width="624px;" height="208px;" /></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Eliminar un fichero</span><span style="font-size: 0.75em; line-height: 1.5; font-family: trebuchet ms,geneva;"><br /></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$ hdfs dfs -rm /user/bigdata/ejemplo.txt</strong></span></p>
+<p><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-dd5e2e58-7156-51d6-539f-92abb6171b36"><img src="https://lh4.googleusercontent.com/HEBr-z7eW5aw1RDRhx5SrQOY5pZk3ileqRqkRdC-gUNq5EjIAb1onqPHIrz3jQXSrjI8zOGSE_U6-4aEt5K-Oe_muw9BdAKnueweLboMqf7xqTCrV2pKSkJ0CwdIz86Zsg" width="624px;" height="104px;" /></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Listar directorios otra vez. </span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;"><strong>$hdfs dfs -ls -R /</strong></span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;" id="docs-internal-guid-dd5e2e58-7157-31c6-ea62-2a7b9b76f533"><img src="https://lh3.googleusercontent.com/2j_htoljvrfkxj-tvevDorJ08g3pIb8VRNVTuvEQVtfau54r50p6VSNeNpsRVNENlUpqAnDkCYNU9umnYIxoHHwEYeKYgvZrHd-nwiRgbA2hBFqoIvUbDgP-CCtO5KjThw" width="624px;" height="93px;" /></span></p>
+<p><span style="font-family: trebuchet ms,geneva;"> </span></p>
+<p dir="ltr"><span style="font-family: trebuchet ms,geneva;"> </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="comandos_bsicos_de_hdfs.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="api_de_programacin_de_hdfs.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

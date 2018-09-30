@@ -1,0 +1,12 @@
+# Graph: locally allocated IRI: http://example.org/film/g2 .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix g2:  <http://example.org/film/g2/> .
+
+g2:a g2:originalTitle "The Theory of Everything";
+     g2:runningTime "123" ;
+	 g2:director "James Marsh" ;
+	 g2:production "Working Title Films" .
+
+g2:b g2:originalTitle "Boyhood" ;
+     g2:runningTime "166" ;
+	 g2:director "Richard Linklater" .

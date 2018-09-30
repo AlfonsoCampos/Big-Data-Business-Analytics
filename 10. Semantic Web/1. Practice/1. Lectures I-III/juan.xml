@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:wikisiit="http://wikisiit.cl/"
+xmlns:myNamespace="http://example/">
+
+<rdf:Description rdf:about="http://example/Juan">
+	<myNamespace:nacimiento>1945-02-01</myNamespace:nacimiento>
+	<myNamespace:tieneHijo rdf:resource="http://example/Pedro"/>
+	<myNamespace:viveEn rdf:resource="http://wikisiit.cl/Valparaiso"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wikisiit.cl/Valparaiso">
+	<wikisiit:tieneCut>501<wikisiit:tieneCut>
+</rdf:Description>
+
+</rdf:RDF>

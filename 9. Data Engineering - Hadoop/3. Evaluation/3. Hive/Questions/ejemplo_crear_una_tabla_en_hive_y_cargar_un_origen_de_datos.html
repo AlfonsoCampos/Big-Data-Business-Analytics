@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>EJEMPLO: Crear una tabla en Hive y cargar un origen de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hive</a></li>
+   <li><a href="caractersticas.html" class="no-ch">Características</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="comprobar_instalacin.html" class="no-ch">Comprobar instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+   <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+   <li><a href="otros_operadores.html" class="no-ch">Otros operadores</a></li>
+   <li><a href="estructuras_de_datos.html" class="daddy">Estructuras de datos</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos.html" class="no-ch">Bases de datos</a></li>
+      <li><a href="tablas.html" class="no-ch">Tablas</a></li>
+      <li><a href="partitioned_tables.html" class="no-ch">Partitioned Tables</a></li>
+      <li><a href="external_tables_and_partitioned_tables.html" class="no-ch">External Tables and Partitioned Tables</a></li>
+      <li><a href="bucket.html" class="no-ch">Bucket</a></li>
+      <li><a href="vistas.html" class="no-ch">Vistas</a></li>
+      <li><a href="indices.html" class="no-ch">Indices</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_word_count.html" class="no-ch">Ejemplo: word count</a></li>
+   <li><a href="ejercicio_1_tipos_de_datos_simples.html" class="no-ch">Ejercicio 1: tipos de datos simples</a></li>
+   <li><a href="ejemplo_estructuras_complejas.html" class="no-ch">Ejemplo: estructuras complejas</a></li>
+   <li><a href="ejercicio_2_tipos_de_datos_complejos.html" class="no-ch">Ejercicio 2: tipos de datos complejos</a></li>
+   <li><a href="otros_comandos_ddl_data_definition_language.html" class="no-ch">Otros comandos DDL (Data Definition Language)</a></li>
+   <li><a href="operaciones_dmldata_manipulation_language.html" class="daddy">Operaciones DML(Data Manipulation Language)</a>
+   <ul class="other-section">
+      <li><a href="load.html" class="no-ch">Load</a></li>
+      <li><a href="insert.html" class="no-ch">Insert</a></li>
+      <li><a href="update.html" class="no-ch">Update</a></li>
+      <li><a href="delete.html" class="no-ch">Delete</a></li>
+      <li><a href="exportimport.html" class="no-ch">Export/Import</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="ejemplo_crear_una_tabla_en_hive_y_cargar_un_origen_de_datos.html" class="active no-ch">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</a></li>
+   <li><a href="almacenamiento_de_datos.html" class="daddy">Almacenamiento de datos</a>
+   <ul class="other-section">
+      <li><a href="almacenamiento_en_ficheros.html" class="no-ch">Almacenamiento en ficheros</a></li>
+      <li><a href="almacenamiento_en_registros.html" class="no-ch">Almacenamiento en registros</a></li>
+      <li><a href="conversin_del_tipo_de_almacenamiento.html" class="no-ch">Conversión del tipo de almacenamiento</a></li>
+      <li><a href="compresin.html" class="no-ch">Compresión</a></li>
+   </ul>
+   </li>
+   <li><a href="introduccin_a_sqoop.html" class="daddy">Introducción a Sqoop</a>
+   <ul class="other-section">
+      <li><a href="import_creacin_de_conexin.html" class="no-ch">Import: creación de conexión</a></li>
+      <li><a href="import_definicin_de_datos_a_migrar.html" class="no-ch">Import: definición de datos a migrar</a></li>
+      <li><a href="import_cargar_datos_en_hive_y_hbase.html" class="no-ch">Import: cargar datos en Hive y Hbase</a></li>
+      <li><a href="importalltables.html" class="no-ch">Import-all-tables</a></li>
+      <li><a href="export.html" class="no-ch">Export</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="exportimport.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="almacenamiento_de_datos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id48">
+<div class="iDevice emphasis0">
+<div id="ta48_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-534d-99c5-bf62-10fed8305878" style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Partiendo de los datos estadísticos del gobierno, realizaremos una carga de datos de un fichero en Hive y después efectuaremos una serie de consultas sobre él.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong>1. Obtener el fichero con los datos a analizar. </strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Para ello accederemos a la siguiente página</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><a href="http://www.minhap.gob.es/es-ES/Areas%20Tematicas/Administracion%20Electronica/OVEELL/Paginas/DeudaViva.aspx">http://www.minhap.gob.es/es-ES/Areas%20Tematicas/Administracion%20Electronica/OVEELL/Paginas/DeudaViva.aspx</a></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">y descargaremos el fichero del año 2012.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-a13a-e788-b819-ade920b79dcd"><span><img src="https://lh3.googleusercontent.com/fvNM9fJFbBYM98gscOtJnxVVLbjbryJ3XZr7N356QVLknClgTA57kGZfHQnoMYIyZfDoamsDnN7zMPvuX7xb8qxNs5jO9iIVIn-maY2DXcVeL7JwKNKrUcMpDmIqz_C8pg" width="624px;" height="508px;" /></span></span> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Se nos abrirá una página de descarga y seleccionaremos la opción guardar. </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-cccd68ec-a13c-39e7-f498-105ab76c4db6"><span><img src="https://lh6.googleusercontent.com/fORZTBjWHDdz5IYpcWZzxThuggpyaMjOuSIshEPgQcgK6go9WVMjEi2PmpD6F_os-juWl2s4xWN93kGQjZqEM7w2j_BmJ6pOlUeye_8DCrQ_GUrcTBSOos6L3ZjTaSQdAg" width="499px;" height="338px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">A continuación abriremos el fichero </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-a13d-4624-3489-088731bacde8"><span><img src="https://lh5.googleusercontent.com/UUZsKJmRqskqDhG41RQ4THvKKkqoVaKodqpCQputcaxx9h8f5yHU1Edqyk70C0CmY3EroFDPYcxIS90fUR6smd8coEovTpBjGsMLSPPimqjVCZSiNsARj5VRuGPToyUw2Q" width="450px;" height="148px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span>Se nos abrirá un fichero como el siguiente con una información por municipios y deudas asociadas. Nos centraremos en la solapa Datos_Format. </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span><span id="docs-internal-guid-dd5e2e58-a140-8fe1-680e-909c192c1ff4"><span><img src="https://lh5.googleusercontent.com/6PKZdaHXOX-ZyvFFfsHWgBxhBx0G_HNULrbMK8CeeCtwRttGJ-LZlmnML6gmlh0j2lYlKUmBV2YKw3YwmU8CCPDXxuMQHKDAiWRnSkbNthiwzArMnv94ZT9GZo8hxLy_TQ" width="624px;" height="368px;" /></span></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong>2. Preparar el fichero para su procesamiento</strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Lo siguiente que haremos es preparar el fichero para poder procesarlo. En la mayoría de los ejercicios de procesamiento de datos es necesario realizar primero una fase de limpieza y preparación de los datos.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">En este caso sólo tendremos que eliminar las 5 primeras líneas para quedarnos sólo con las filas que poseen datos de análisis </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-a143-de96-4f6f-d37d3ce382d6"><span><img src="https://lh4.googleusercontent.com/jwRwIIk8XFkq0QKFOjOAozYVUlABB85Y71SufK8hJkiNn-y8leM9uPWnAZ6Kg2gPkSvJBTolrN9hRq9CK2wuTj4gINHv5HZEwkSp5ng1iR3yXYdhMlvKQjt0bitdlYs_AA" width="624px;" height="231px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span>así como las últimas filas. </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-7a29d751-036a-efef-2b80-483853ab7737"><img src="https://lh3.googleusercontent.com/P2F5LPdZNGVQNUZgJ7sLTsyxfxGR9AuVQR0omu8ePJApQ5RmzSRNaGzZAIbh--4l4oMroG_UATCBAcOU0W9YPqvViFf688iDGKPU7mvvDQD3qjXXa1j2kIhpZzN3-uquc9cGORs" width="608px;" height="407px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span>y formatearemos los importes de deudas eliminando los separadores de miles. </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span><span id="docs-internal-guid-7a29d751-036b-ed4e-1bcd-5895cfb5290c"><img src="https://lh5.googleusercontent.com/kxIC9IJ7gBeFou5yDJY5hb9Bg_mrjV7ET9HKW_eWGCLuFNvyhqiQFudkFFy1atA6_uh1Kj7R9BK1EhTxLDTLgYe9eg1XSjhHyTu6-Z4xASZx-O0XIB5oUqTFRIo72zEgv2lXdQs" width="421px;" height="283px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-7a29d751-036c-cba9-3521-6b150523ca7e"><img src="https://lh4.googleusercontent.com/MdkQkWMCCngalBF6K61saV0o3GAzh5p5mihGOGIGXEQucozBMSFMzBv-rthAMipO4-93-vThu-OvIVZaRf0GQt95PONDCIlpyNfwto92oCUttd6SeJeo4_i5m55NOHs_gIf2qy4" width="624px;" height="411px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">y lo guardaremos con la opción GUARDAR COMO</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-7a29d751-036d-7c28-08f6-cd64df73c659"><img src="https://lh5.googleusercontent.com/GThVlj9mhZB-kRb9K0h4mTKmGBFewGng0cSJdxpUlALAEBhwkdCVcMG_Xj6jIf0ZYK_B2HPVbHDOeO_TJOQRLJIjS6lyYkwSmpPp4wvP5FA9_96flaOk53Q9wmX-JzZfvxvyVwA" width="393px;" height="259px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">como fichero csv en la ruta /tmp con el nombre Deuda2012.csv</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-a147-9f09-7e4a-65468aecbc13"><span><img src="https://lh4.googleusercontent.com/lm7DyyL8RgYOO8E98FquW32MJvJUkurdZ3nOsKHp0AIRFQeBRPbZYV2rgTegzEDN2tf1Oln1EZyvg0g_z_FGIG5RqJgUDcDMfVOUcDkLH3kp7fVeL7Z-993gIb5Q1XVBfg" width="624px;" height="448px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-7a29d751-036e-8e17-f30c-4741c567bf59"><img src="https://lh4.googleusercontent.com/eI0COD_sEa7__pINQ0yYEtWsBtJLx83ULxT43COwQhWCtmFu59e9fIvyEwZBZ98D2v-rDJfa-4womzwc25k3WXIzTjNOvagitNDkCLkDFZZMOV_v5sh4XSVXmEqI1I7cel0wj2w" width="624px;" height="297px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-7a29d751-036f-15a9-4a2f-603a11d0e821"><img src="https://lh4.googleusercontent.com/7HcA0Fczw6lfHz2Vh9fV17z4rSvJJ27U5XAr8UqGhkT7g45OK7SwjDg7ov8O2RhLE69NEO4Swypx9YJ8finRBV-aZfWkdX5pPf1q_yHEL9nJjZlnp32qmrEi0UGBFhzn81u-880" width="360px;" height="138px;" /></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-size: 13px; font-family: Arial; color: #000000; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">3. Arrancamos Hive</span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">Para ello arancaremos HDFS, MapReduce y después escribiremos el comando</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">$./bin/hive o $hive</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> <span id="docs-internal-guid-dd5e2e58-aacb-4ca3-3da0-8715e1132310"><span><img src="https://lh3.googleusercontent.com/fQdHR90fKgV3D9FYtNWi4479sQSaoM8rslD_HD3MTurJHZ55bYAHEw0diWVGWkikFsu2dPpq0pIRTrsVxCYKyziveFrM5W3HGP8Z7xtLv5a8Lm_su2in2rEx8n6yteMIMQ" width="624px;" height="239px;" /></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">4. Crear la tabla deuda_2012 en la que almacenaremos la información del fichero: </span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">cod_comunidad: String</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="line-height: 1.15; font-size: small; font-family: 'trebuchet ms', geneva;">cod_prov: String</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">cod_municipio: String</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">municipio: String</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">deuda: int</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">CREATE TABLE deuda_2012(cod_comunidad STRING, cod_prov STRING, cod_municipio STRING, municipio STRING, deuda INT) </span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">ROW </span><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">FORMAT </span><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">DELIMITED FIELDS TERMINATED BY '\;';</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-dd5e2e58-aacc-05b4-b2cf-2b7aff811506"><span><img src="https://lh4.googleusercontent.com/TgLWwpRo6l1NIBEM416ljWJpzgrjbmJ_PApMmTr3AIg0pYqER9S1aZWXef5Fd1zdFuv9408nIzZtNGUIu1wKvVUt4jzhVZy5Md7MI8Cd7lDddrfFmlxdc9YygikaB_DGug" width="624px;" height="93px;" /></span></span> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-size: 13px; font-family: Arial; color: #000000; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">5. Cargar el fichero Deuda2012.cvs en la tabla anterior</span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">LOAD DATA LOCAL INPATH '/tmp/Deuda2012.csv' INTO TABLE deuda_2012;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;"><span id="docs-internal-guid-dd5e2e58-aacd-6d9c-0c06-03deeb0c781a"><span><img src="https://lh5.googleusercontent.com/W1O9350P_klaesXImrm0U0NKkbe0g_1UnN_N66uxzC3AJLm6KrL1IvxmViLQ-j9jANKyMEWqL1YoT4y2ZMpUapavVi6RR9ug83Z58u2esucR8H3A0fSLd6HZGPGh9n3CkA" width="624px;" height="115px;" /></span></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong>6. Ejecuta una select sin criterios de filtrado para consultar información de la tabla: </strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">SELECT <span>deuda_2012</span>.* FROM <span>deuda_2012</span>;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: Arial; font-size: 13px; line-height: 1.15;"><span id="docs-internal-guid-dd5e2e58-aace-ba87-9029-bbab66b0fc1b"><span><img src="https://lh4.googleusercontent.com/UaUGN6rwCSjYXh6pNqI6yvT0vJR8D6N33Gzy-zPJzN9mTPY5qr7raJDyLcM0jDK3RLyBRV3mV3VClQe4lEb-cu9V6dJaXNnpS8GktsfnHJNKoARyVayit8Pv0kKRSlJHVA" width="427px;" height="48px;" /></span></span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><strong><span style="font-family: Arial; font-size: 13px; line-height: 1.15;">7. Ejecuta una sentencia que permita filtrar algunos datos. </span></strong></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="line-height: 1.15;">SELECT * FROM <span>deuda_2012 </span>WHERE municipio LIKE 'Madri%';</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span id="docs-internal-guid-7a29d751-036f-de48-65fc-f9a7f74997a5"><img src="https://lh5.googleusercontent.com/AeD5RI8CX3-InPs7WXyxVb_wykFPC56-qo7yvkL-L_aJz3vIh6B0VcdVv8-EMLNTST0AaJeq8cK4-qy7rIGXW4Y1DiXruhKB6qtkKP7P4BakMOA7L8sD8iO3PHktK_UP7olrHx4" width="624px;" height="124px;" /></span> </p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; font-family: Arial; color: #ff0000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"> </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="exportimport.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="almacenamiento_de_datos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

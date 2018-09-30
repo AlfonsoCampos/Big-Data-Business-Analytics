@@ -1,0 +1,50 @@
+Notas Python:
+Anaconda es distro de SciPy...
+
+ipython: se arranca con ipython en la shell --> interprete
+%lsmagic --> lista de comandos magicos estos avanczados (de Ipython)
+- %whos
+- %run test.py
+- %reset
+- %time
+- %timeit --> hace n ejecuciones hasta que piensa que el valor converge
+- %matplotlib inline --> graficos en la pagina...
+
+Filosofia Ipython es que frageas con tus cosas y tienes esto de ln[] xa poder volver a algo que exaste en el interprete.
+%history
+
+Literate programmin --> datos + metadatos + operaciones... ==> codigo y texto a la vez
+ipython notebook
+
+nuevo notebook y aki cell xa ejecutar bloques...
+markdown xa comentarios a lo Github...
+
+Shift + Enter para enviar
+
+Exportar a HTML es como una captura xa que lo embebas en la pagina web
+nbviewer: compartes Jupyter notebooks
+
+Jupyter: Julia + Python + R
+Julia es rollo algebraico
+
+Ver funciones: . + TAB para ver funciones de una clase
+NumPy: Array homogeneos (n-matrices). Tienen ejes y rango. Valores son tipos homogeneos (no se pueden mezclar).
+- Cada Numpy tiene un dtype... tipo de los valores.
+- Shape, la dimension
+- Maneras de inicializarlos... (aleatorio, ...)
+
+scipy.stas: si necesito algo estadistico
+numpy: arrays homogeneos eficientes es el mensaje...!
+pandas: tienen valores xo tb etiquetas en su interior
+
+@08/05/15
+SQLalchemy: para conecat SQL en Python
+Tb se puede usar SQL directamente en el Pandas
+
+> crawling("arañas") --> Nutch/Scrapy
+> scraping(HTML) -- lxml / Beautiful Soup / Selenium (automatizacion, simula interaccion del usuario)--> df
+
+En lode la parelelizacion habla de usar Task Farming que es como porbar mazo de modelos a lo bestia a la vez...
+Pestaña de cluster parece bastante divertido... quizas te permite aprovexar varios nucleso y si lo configuras te permite hacer cluster de verdad...!
+
+

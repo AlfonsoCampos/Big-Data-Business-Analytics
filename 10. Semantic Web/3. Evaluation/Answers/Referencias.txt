@@ -1,0 +1,7 @@
+file:///C:/Users/a181115/Downloads/321-510-1-SM.pdf
+http://web.ing.puc.cl/~marenas/publications/jws12.pdf
+
+[3] http://www.w3.org/2012/pyRdfa/Overview.html
+http://rdflib.github.io/sparqlwrapper/
+http://stackoverflow.com/questions/14160437/insert-delete-update-query-using-sparqlwrapper
+http://www.jenitennison.com/2011/01/25/getting-started-with-rdf-and-sparql-using-sesame-and-python.html

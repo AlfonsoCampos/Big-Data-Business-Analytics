@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Plantilla</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    <div id="mydiv"></div>
+<style type="text/css">
+    /* ESTILOS CSS AQUÍ */
+
+    div.bar {
+        display: inline-block;
+        width: 20px;
+        height: 75px;   /* Será sobreescrito */
+        background-color: blue;
+        margin-right: 2px;
+    }
+
+    /* FIN ESTILOS CSS */
+</style>
+<script>
+    $(function () {
+        // INICIO CÓDIGO JAVASCRIPT
+        var urlData1 = 'https://s3.eu-central-1.amazonaws.com/ciff/dataset.json';
+        var urlData2 = 'https://s3.eu-central-1.amazonaws.com/ciff/datasetbis.json';
+
+        //var dataset = [ 5, 10, 15, 20, 25 ];
+        d3.json(urlData2, function (error, data) {
+            if(error) return console.error(error);
+            d3.select("#mydiv").selectAll("div")
+                    .data(data)
+                    .enter()
+                    .append("div")
+                    .attr("class", "bar")
+                    .style("height", function(d) {
+                        return (d.value * 5) + "px";
+                    });
+        });
+
+
+
+        // FIN CÓDIGO JAVASCRIPT
+    });
+</script>
+</body>
+</html>

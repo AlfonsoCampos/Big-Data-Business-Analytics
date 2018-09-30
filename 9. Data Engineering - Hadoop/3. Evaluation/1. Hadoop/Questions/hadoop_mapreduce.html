@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Hadoop MapReduce </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hadoop</a></li>
+   <li class="current-page-parent"><a href="conceptos_bsicos_y_definiciones.html" class="current-page-parent daddy">Conceptos básicos y definiciones</a>
+   <ul>
+      <li><a href="conceptos_previos.html" class="no-ch">Conceptos previos</a></li>
+      <li><a href="qu_es_apache_hadoop.html" class="no-ch">¿Qué es Apache Hadoop?</a></li>
+      <li><a href="ecosistema_hadoop.html" class="no-ch">Ecosistema Hadoop</a></li>
+      <li><a href="quin_usa_hadoop.html" class="no-ch">Quién usa Hadoop</a></li>
+      <li class="current-page-parent"><a href="mdulos_de_hadoop.html" class="current-page-parent daddy">Módulos de Hadoop</a>
+      <ul>
+         <li><a href="hadoop_common.html" class="no-ch">Hadoop Common</a></li>
+         <li><a href="hadoop_distributed_file_system_hdfs.html" class="no-ch">Hadoop Distributed File System (HDFS™)</a></li>
+         <li><a href="hadoop_yarn.html" class="no-ch">Hadoop YARN</a></li>
+         <li id="active"><a href="hadoop_mapreduce.html" class="active no-ch">Hadoop MapReduce</a></li>
+         <li><a href="programacin_de_trabajos.html" class="no-ch">Programación de trabajos</a></li>
+      </ul>
+      </li>
+      <li><a href="instalacin_de_hadoop.html" class="daddy">Instalación de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="prerrequisitos.html" class="daddy">Prerrequisitos</a>
+         <ul class="other-section">
+            <li><a href="descargar_e_instalar_hadoop.html" class="no-ch">Descargar e instalar Hadoop</a></li>
+            <li><a href="actualizar_mquina_virtual.html" class="no-ch">Actualizar máquina virtual</a></li>
+            <li><a href="confirmar_versin_de_java.html" class="no-ch">Confirmar versión de Java</a></li>
+            <li><a href="crear_y_configurar_los_certificados_ssh.html" class="no-ch">Crear y configurar los certificados SSH</a></li>
+         </ul>
+         </li>
+         <li><a href="modificar_ficheros_de_configuracin.html" class="daddy">Modificar ficheros de configuración</a>
+         <ul class="other-section">
+            <li><a href="bashrc.html" class="no-ch">~/.bashrc</a></li>
+            <li><a href="coresitexml.html" class="no-ch">core-site.xml</a></li>
+            <li><a href="hadoopenvsh.html" class="no-ch">hadoop-env.sh</a></li>
+            <li><a href="hdfssitexml.html" class="no-ch">hdfs-site.xml</a></li>
+            <li><a href="mapredsitexml.html" class="no-ch">mapred-site.xml</a></li>
+            <li><a href="yarnsitexml.html" class="no-ch">yarn-site.xml</a></li>
+         </ul>
+         </li>
+         <li><a href="formatear_el_sistema_de_archivos_de_hadoop.html" class="no-ch">Formatear el sistema de archivos de Hadoop</a></li>
+         <li><a href="demonios.html" class="daddy">Demonios</a>
+         <ul class="other-section">
+            <li><a href="arrancar_demonios_hdfs.html" class="no-ch">Arrancar demonios HDFS</a></li>
+            <li><a href="arrancar_demonios_yarn.html" class="no-ch">Arrancar demonios Yarn</a></li>
+            <li><a href="parar_demonios_hdfs.html" class="no-ch">Parar demonios HDFS</a></li>
+            <li><a href="parar_demonios_yarn.html" class="no-ch">Parar demonios Yarn</a></li>
+            <li><a href="arrancar_demonios_individualmente.html" class="no-ch">Arrancar demonios individualmente</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+      <li><a href="interfaces_web_de_hadoop.html" class="daddy">Interfaces Web de Hadoop</a>
+      <ul class="other-section">
+         <li><a href="namenode_web_interface_hdfs_layer.html" class="no-ch">NameNode Web Interface (HDFS layer)</a></li>
+         <li><a href="resource_manager_web_interface_yarn_layer.html" class="no-ch">Resource Manager Web Interface (Yarn layer)</a></li>
+         <li><a href="map_reduce_jobhistory.html" class="no-ch">Map Reduce JobHistory</a></li>
+      </ul>
+      </li>
+      <li><a href="ejemplo_comprobacin_instalacin.html" class="no-ch">Ejemplo comprobación instalación</a></li>
+      <li><a href="ejercicio_comprobacin_instalacin.html" class="no-ch">Ejercicio: comprobación instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="hdfs.html" class="daddy">HDFS</a>
+   <ul class="other-section">
+      <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+      <li><a href="arquitectura_hdfs.html" class="no-ch">Arquitectura HDFS</a></li>
+      <li><a href="replicacin_de_datos.html" class="no-ch">Replicación de datos</a></li>
+      <li><a href="el_nodo_secundario.html" class="no-ch">El nodo secundario</a></li>
+      <li><a href="arrancar_hadoop.html" class="no-ch">Arrancar Hadoop</a></li>
+      <li><a href="comandos_bsicos_de_hdfs.html" class="no-ch">Comandos básicos de HDFS</a></li>
+      <li><a href="ejemplo_de_uso_de_comandos_bsicos_hdfs.html" class="no-ch">Ejemplo de uso de comandos básicos HDFS</a></li>
+      <li><a href="api_de_programacin_de_hdfs.html" class="no-ch">API de programación de HDFS</a></li>
+      <li><a href="ejercicio1.html" class="daddy">EJERCICIO</a>
+      <ul class="other-section">
+         <li><a href="a_uso_de_hdfs.html" class="no-ch">A. Uso de HDFS</a></li>
+         <li><a href="b_map_reduce.html" class="no-ch">B: Map Reduce</a></li>
+         <li><a href="ejercicio2.html" class="no-ch">EJERCICIO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="map_reduce.html" class="daddy">Map Reduce</a>
+   <ul class="other-section">
+      <li><a href="procesamiento_en_paralelo.html" class="no-ch">Procesamiento en Paralelo</a></li>
+      <li><a href="fundamentos.html" class="no-ch">Fundamentos</a></li>
+      <li><a href="ejemplo_sencillo_de_map_reduce.html" class="no-ch">Ejemplo sencillo de map Reduce</a></li>
+      <li><a href="explicacin_modelo_map_reduce.html" class="no-ch">Explicación modelo Map Reduce</a></li>
+      <li><a href="ejemplo.html" class="daddy">Ejemplo</a>
+      <ul class="other-section">
+         <li><a href="datos_de_entrada.html" class="no-ch">Datos de entrada</a></li>
+         <li><a href="1_mapeo.html" class="no-ch">1. Mapeo</a></li>
+         <li><a href="2_mezcla.html" class="no-ch">2. Mezcla</a></li>
+         <li><a href="3_reduccin.html" class="no-ch">3. Reducción</a></li>
+         <li><a href="resultado.html" class="no-ch">Resultado</a></li>
+         <li><a href="interfaz_web.html" class="no-ch">Interfaz Web</a></li>
+      </ul>
+      </li>
+      <li><a href="ejercicio_diccionario.html" class="no-ch">Ejercicio: diccionario</a></li>
+      <li><a href="ejercicio_opcional.html" class="no-ch">Ejercicio (opcional)</a></li>
+      <li><a href="ms_ejemplos.html" class="no-ch">Más ejemplos</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="hadoop_yarn.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="programacin_de_trabajos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Hadoop MapReduce</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id15">
+<div class="iDevice emphasis0">
+<div id="ta15_1" class="block iDevice_content">
+<p id="docs-internal-guid-e225f011-4f09-dde6-26b2-076ab5c0bc68" style="line-height: 1.5; margin-top: 5pt; margin-bottom: 5pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Es un sistema basado en Yarn para el procesamiento en paralelo de grandes conjuntos de datos. El modelo de MapReduce simplifica el procesamiento en paralelo, abstrayendo la complejidad que hay en los sistemas distribuidos. Básicamente las funciones </span><span style="color: #000000; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Map</span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"> transforman un conjunto de datos inicial a un conjunto de pares </span><span style="color: #000000; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">key/value</span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">. Cada uno de estos elementos se encontrará ordenado por su clave. Las funciones reduce son usadas para combinar los valores (con la misma clave) en un mismo resultado.</span></span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">En un programa en MapReduce o Job, la ejecución empieza cuando el cliente manda la configuración del Job al </span><span style="color: #000000; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">JobTracker. </span><span style="color: #000000; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">En </span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"> esta configuración se especifica las funciones </span><span style="color: #000000; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Map</span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">, </span><span style="color: #000000; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Combine</span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"> (shuttle) y </span><span style="color: #000000; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Reduce</span><span style="color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">, además de la entrada y salida de los datos.</span></span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></p>
+<p style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Aparte de gestionar el sistema de archivos en rack, Map Reduce está formado por dos demonios:</span></p>
+<ul>
+<li><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>Job Tracker</strong>: como su propio nombre indica (rastreador de trabajos) se encarga de intentar mantener cada uno de los trabajos que se envían al motor Map Reduce lo más cerca posible de los datos. Al tener un sistema de archivos en rack, el Job Tracker debe saber qué nodo contiene la información y qué otras máquinas están cerca. Si el trabajo no puede ser almacenado en el nodo donde residen los datos, da prioridad a nodos del mismo rack. De este modo se reduce el tráfico de red.</span></li>
+</ul>
+<ul>
+<li style="line-height: 1.5; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><strong>Task Tracker</strong> (rastreador de tareas): se encarga de monitorizar los trabajos para relanzarlos en caso de caída. En cada nodo se genera un demonio diferente para evitar que el propio Task Tracker falle si el job que tiene que gestionar falla. Cada pocos minutos, el Task Tracker envía información del estado del trabajo al Job Tracker. En las versiones anteriores a Hadoop 0.20 si el Job Tracker fallaba, todo el trabajo en curso se perdía. Desde la versión 0.21 se han añadido mejoras de autoguardado, de modo que el Task Tracker va haciendo salvados temporales para que cuando se reinicie el Job Tracker por un fallo, pueda recomenzar el trabajo desde donde lo dejó. </span></li>
+</ul>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><strong id="docs-internal-guid-59b8b72b-ecc5-392e-7b11-53fc57d8cc79" style="font-weight: normal;"><span style="font-size: 13px; font-family: Verdana; color: #000000; background-color: #ffffff; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img src="https://lh4.googleusercontent.com/NKCAt5Y7VmJFXsSCL-E6YGqFlYYkTDB6z8VUbcKuQu_w_sAjguipTWh2JO2AbTMIeaNUnSiGWUBLieuGY3-TJEH95y4Hx3Oslymd37W-OdJ3Y-T-67Q0f7Jxb3WU8uoagA" style="transform: rotate(0rad); display: block; margin-left: auto; margin-right: auto;" width="439px;" height="271px;" /></span></strong> </span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">El func<span style="font-size: small; color: #000000;">ionamiento de estos demonios es el siguiente:</span></span></p>
+<ul>
+<li><span style="color: #000000; font-family: trebuchet ms,geneva; font-size: small;">La asignación de trabajo de los Job Tracker es muy sencilla. Cada Task Tracker tiene un número de ranuras o slots disponibles(por ejemplo, "4 slots"). Cada map activo o cada reduce toma (ocupa) una posición. El Job Tracker asigna trabajo para el Task Tracker más cercano a los datos con una ranura disponible. No hay ninguna consideración de la carga activa actual de la máquina asignada, y por tanto de su disponibilidad real.</span></li>
+</ul>
+<ul>
+<li><span style="font-family: trebuchet ms,geneva; font-size: small; color: #000000;">Si una tarea de seguimiento es muy lenta, se puede retrasar toda la operación MapReduce, especialmente hacia el final de un trabajo, donde todo puede quedar a la espera de una única tarea.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="hadoop_yarn.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="programacin_de_trabajos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

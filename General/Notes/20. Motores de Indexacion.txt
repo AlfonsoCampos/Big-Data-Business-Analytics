@@ -1,0 +1,96 @@
+Motores de indexacion trabajan con Documentos - JSON
+- Tiene una serie de indices
+- Se almacenan en indices
+
+ElasticSearch - LogStash es como Flume a Hadoop
+LogStash es una suerte de Flume xa esta movida
+
+ELK = ElasticSearch + LogStash + Kibana!!
+SOLR + Flume + ??
+
+ELK - lo enganxarias - con 1a BBDD NoSQL supongos
+- En el caso de logs si parece q lo metes dentro!
+
+ES tiene BBDD pero si la usas te va a ralentizar xq indexa
+
+1 indice te permite no tener q escanear cada doc en cada consulta - Vamos,un Hash al final del dia
+
+Indice invertido: De cada palabra, almacena los documentos y posicion donde aparece
+Indice semantcio: Se guarda info adicional alrededodr de la mubi rollo frequencia, ...
+
+Indice es un conjunto de tipos... que serian distintos documentos... hay q ver q plan con esto!
+
+Fases:
+1)Indexacion
+- Crawling: Obtiene metadatos alrededor de la mubi
+--- Analisis de texto: Aki hay de todo, Thesaurus, Clustering, Ontologia, Proc. Semantico, Entidades, Relevancia, ...
+--- ETL + Conversion de tipos
+- Indexing: Indexa esa info
+
+2)Proceso de Busqueda
+- Query
+- Matching
+- Results
+
+La salida suele ser JSON tb!
+
+ES es 1a API REST!! lol : Consultas + Seguridad (de pago)
+
+> Indexar
+1) Tokenizar
+2) Filtro
+3) Minusculas
+
+> Para querys se hace la misma mubi!
+
+Otra mubi guapa q te da esto es filtrado x facetas! - Rollo filtros en los bugas/pisos
+
+> Usan ELK en la parte de Data Lake
+- Es como super clave xa hacerte un Catalogo de datos!
+
+Usan ES en vez de Hive como forma de explorar la info mas rapido y super enfocada a acabar en un Dashboard Kibana!!
+La parte Hive la usan como nosotros...
+
+Meten ES con Cassandra para real time.
+
+Mubi xa lanzar Alertas desde ELK...
+
+SAP Hana -- BBDD in-memory -- explotar toda esa info desde fuera...
+SAP Bora -- impala sobre SAP Hana
+
+Escala horizontal y vertical con toda facilidad-....
+Arquitectura Shared-Nothing: no comparten nada de nada...
+
+
+Xa hacer la mubi Sense es el rollo...
+
+Sesion2
+ej. tokenizer:
+tokenizer=
+- letter
+- lower
+- whitespace
+- uax_url_email
+
+
+Index API: como crear el indice, la base de datos, mappings, demas
+Document API: ahora ya metes los documentos
+
+Plugins te los baja mediante comando plugon a esa carpeta
+Necesario reiniciar xa q rule
+el plugin mysql y tal es + x tema seguridad q otra cosa
+X defecto el plugin q t trae se supone que permite conectar con esta vaina...!
+
+Los plugins xa ES se llaman river!
+- Mil ojos con ellos xq consumen al arrancar!
+- Scheduler!
+
+Logstash: Lee de entrada con conectores, procesa y escupe en multiples salidas
+    - O sea permite multiples entradas y salidas
+    - Utiliza grok xa tokenizar el log
+    
+    - Es cojonudo indexando
+    
+Se puede parsear el contenido:
+    -  Con grok es medio como una expresion regular pero mas divertido...!
+    - grokdebug.herokuapp.com ! Useful =)

@@ -1,0 +1,14 @@
+# Default graph
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix g:  <http://example.org/film/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+g:graph1 dc:title "Oscar 2014" .
+g:graph1 dc:date "2015-02-22"^^xsd:date .
+g:graph1 g:bestPicture "Boyhood" .
+
+g:graph2 dc:title "BAFTA 2014" .
+g:graph2 dc:date "2015-02-08"^^xsd:date .
+
+g:graph3 dc:title "Venecia 2014" .
+g:graph3 dc:date "2014-08-17"^^xsd:date .

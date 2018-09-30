@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+ <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+ <!ENTITY myPrefix "http://curso2015.campusciff/ontologies/sesion2/example2#" >
+]>
+
+<rdf:RDF
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:myPrefix="http://curso2015.campusciff/ontologies/sesion2/example2#"
+	xml:base="http://curso2015.campusciff/ontologies/sesion2/example2"
+	xmlns="http://curso2015.campusciff/ontologies/sesion2/example2#">
+  
+	<owl:Ontology rdf:about=""/>
+ 	<owl:Class rdf:ID="Animal"/>
+
+	<owl:Class rdf:ID="Persona">
+	  <rdfs:subClassOf rdf:resource="#Animal"/>
+	</owl:Class>
+
+	<owl:ObjectProperty rdf:about="#tieneHijo">
+		<rdfs:range rdf:resource="#Persona"/>
+		<rdfs:domain rdf:resource="#Persona"/>
+		<owl:inverseOf rdf:resource="#tienePadre"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="#tienePadre">
+		<rdfs:range rdf:resource="#Persona"/>
+		<rdfs:domain rdf:resource="#Persona"/>
+		<owl:inverseOf rdf:resource="#tieneHijo"/>
+	</owl:ObjectProperty>
+	
+	 <owl:DatatypeProperty rdf:ID="fechaNacimiento">
+		<rdfs:domain rdf:resource="Persona"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+	</owl:DatatypeProperty>
+	
+	
+	<Persona rdf:about="&myPrefix;Juan">
+		<tieneHijo rdfs:resource="Nines"/>
+	</Persona>
+	
+	<Persona rdf:about="Nines">
+		<tienePadre rdfs:resource="&myPrefix;Nines"/>
+	</Persona>
+	
+	
+</rdf:RDF>

@@ -1,0 +1,111 @@
+Hive
+
+1) CREATE TABLE deuda_2014(Anio INT, Cod_Comunidad STRING, Comunidad STRING, Cod_Provincia STRING, Provincia STRING, Cod_Corporacion STRING, Corporacion STRING, Deuda INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;';
+2) LOAD DATA LOCAL INPATH '/home/bigdata/Descargas/Deuda2014.csv' INTO TABLE deuda_2014;
+3) SELECT * FROM (SELECT * FROM deuda_2014 ORDER BY deuda DESC LIMIT 3) top3 ORDER BY deuda LIMIT 1;
+	297 Zaragoza: 817478
+4) SELECT * FROM deuda_2014 WHERE Cod_Comunidad='01' ORDER BY deuda DESC LIMIT 1;
+	067 Málaga: 638667
+5) SELECT sum(Deuda) as DeudaTotal, Comunidad FROM deuda_2014 GROUP BY Comunidad ORDER BY Comunidad; 
+	6697321	ANDALUCIA
+	1055543	ARAGON
+	393222	ASTURIAS
+	3110626	C.VALENCIANA
+	797080	CANARIAS
+	184332	CANTABRIA
+	1112156	CASTILLA-LEON
+	941010	CASTILLA-MANCHA
+	5069713	CATALUÑA
+	219525	CEUTA
+	294340	EXTREMADURA
+	583636	GALICIA
+	728849	ILLES BALEARS
+	8242076	MADRID
+	103394	MELILLA
+	915009	MURCIA
+	251339	NAVARRA
+	562176	PAIS VASCO
+	86141	RIOJA
+
+6) SELECT sum(Deuda) AS SumaVocal FROM deuda_2014 WHERE (SUBSTR(Corporacion,1,1) = 'A' OR SUBSTR(Corporacion,1,1) = 'E' OR SUBSTR(Corporacion,1,1) = 'I' OR SUBSTR(Corporacion,1,1) = 'O' OR SUBSTR(Corporacion,1,1) = 'U');
+	3766471
+
+7) INSERT OVERWRITE LOCAL DIRECTORY '/home/bigdata/Descargas/Deudas' ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' SELECT Corporacion FROM deuda_2014 WHERE Deuda > 10000 AND Cod_Comunidad = "09";
+	mv /home/bigdata/Descargas/Deudas/000000_0 /home/bigdata/Descargas/Deudas/deudas.csv
+	
+	Badalona                                                              
+	Barcelona                                                             
+	Berga                                                                 
+	Castellar del Vallès                                                  
+	Castelldefels                                                         
+	Corbera de Llobregat                                                  
+	Cornellà de Llobregat                                                 
+	Esplugues de Llobregat                                                
+	Franqueses del Vallès (Les)                                           
+	Gavà                                                                  
+	Granollers                                                            
+	Hospitalet de Llobregat (L')                                          
+	Igualada                                                              
+	Manlleu                                                               
+	Manresa                                                               
+	Martorell                                                             
+	Masnou (El)                                                           
+	Mataró                                                                
+	Molins de Rei                                                         
+	Mollet del Vallès                                                     
+	Montcada i Reixac                                                     
+	Moià                                                                  
+	Pineda de Mar                                                         
+	Prat de Llobregat (El)                                                
+	Rubí                                                                  
+	Sabadell                                                              
+	Sant Boi de Llobregat                                                 
+	Sant Cugat del Vallès                                                 
+	Sant Esteve Sesrovires                                                
+	Sant Feliu de Llobregat                                               
+	Vilassar de Dalt                                                      
+	Sant Joan Despí                                                       
+	Vilassar de Mar                                                       
+	Santa Coloma de Gramenet                                              
+	Barberà del Vallès                                                    
+	Santa Perpètua de Mogoda                                              
+	Santa Susanna                                                         
+	Cerdanyola del Vallès                                                 
+	Sitges                                                                
+	Terrassa                                                              
+	Tordera                                                               
+	Vic                                                                   
+	Viladecans                                                            
+	Vilafranca del Penedès                                                
+	Vilanova i la Geltrú                                                  
+	Blanes                                                                
+	Calonge                                                               
+	Castelló d'Empúries                                                   
+	Castell-Platja d'Aro                                                  
+	Figueres                                                              
+	Girona                                                                
+	Lloret de Mar                                                         
+	Olot                                                                  
+	Palamós                                                               
+	Roses                                                                 
+	Salt                                                                  
+	Torroella de Montgrí                                                  
+	Balaguer                                                              
+	Lleida                                                                
+	Mollerussa                                                            
+	Seu d'Urgell (La)                                                     
+	Tàrrega                                                               
+	Ametlla de Mar (L')                                                   
+	Amposta                                                               
+	Calafell                                                              
+	Cambrils                                                              
+	Cunit                                                                 
+	Mont-roig del Camp                                                    
+	Reus                                                                  
+	Tarragona                                                             
+	Torredembarra                                                         
+	Tortosa                                                               
+	Valls                                                                 
+	Vendrell (El)                                                         
+	Vila-seca                                                             
+	Salou

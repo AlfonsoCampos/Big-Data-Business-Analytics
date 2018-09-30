@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Acceso a HDFS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li class="current-page-parent"><a href="grunt_shell.html" class="current-page-parent daddy">Grunt Shell</a>
+   <ul>
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li id="active"><a href="acceso_a_hdfs.html" class="active no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="pigbootup.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="otros_comandos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Acceso a HDFS</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id173">
+<div class="iDevice emphasis0">
+<div id="ta173_1" class="block iDevice_content">
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">En el siguiente enlace se pueden encontrar los comandos básicos para acceder a la información del sistema de archivos HDFS. </span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span></p>
+<p><a href="https://wiki.apache.org/pig/Grunt"><span style="font-family: trebuchet ms,geneva; font-size: small;">https://wiki.apache.org/pig/Grunt</span></a></p>
+<ul>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>cat:</strong> Imprime el contenido de un fichero en pantalla.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>cd:</strong> Permite navegar por el sistema de ficheros.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>copyFromLocal:</strong> Permite copiar un fichero de una máquina local al sistema DFS, la sintaxis es <span style="font-family: courier new,courier;">copyFromLocal &lt;SRC PATH&gt; &lt;DST PATH&gt;</span>.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>copyToLocal:</strong> Permite copiar un fichero del sistema DFS a la máquina local, la sintaxis es <span style="font-family: courier new,courier;">copyToLocal &lt;SRC PATH&gt; &lt;DST PATH&gt;</span>.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>cp:</strong> Permite copiar ficheros o directorios en el sistema DFS, la sitaxis es <span style="font-family: courier new,courier;">cp &lt;SRC PATH&gt; &lt;DST PATH&gt;</span>.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>ls:</strong> Lista el contenido de un directorio.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>mkdir:</strong> Crea un directorio, la sintaxis es <span style="font-family: courier new,courier;">mkdir &lt;DIR&gt;.</span><br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>mv:</strong> Su funcionamiento es el mismo que el del comando cp pero borra el fichero o directorio original una vez que éste es copiado. <br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>pwd:</strong> Permite conocer la ruta del directorio de trabajo actual.<br /></span></li>
+<li><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><strong>rm:</strong> Elimina el/los fichero/s o directorio/s especificado/s, la sintaxis es <span style="font-family: courier new,courier;">rm &lt;PATH1&gt; &lt;PATH2&gt;</span>... <br /></span></li>
+</ul>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">A continuación se muestra un ejemplo de creación de ficheros con los álbumes de la discografía de Pink Floyd y el puesto que alcanzaron en las listas británicas y estadounidendes separados por coma (,). Para ello se deben ejecutar los siguientes comandos:</span></p>
+<p><em><span style="font-family: courier new,courier; font-size: small; line-height: 1.5;">mkdir ejemplos</span></em></p>
+<p><em><span style="font-family: courier new,courier; font-size: small; line-height: 1.5;">sudo nano ejemplos/discografia</span></em></p>
+<p><em><span style="font-family: courier new,courier; font-size: small; line-height: 1.5;">1967, The Piper at the Gates of Dawn,131,6<br />1968, A Saucerful of Secrets,999,9<br />1969, Music from the Film More,153,9<br />1969, Ummagumma,74,5<br />1970, Atom Heart Mother,55,1<br />1972, Obscured by Clouds, 46,6<br />1973, The Dark Side of the Moon, 1,1<br />1975, Wish you Were Here, 1,1<br />1977, Animals, 3,2<br />1979, The Wall, 1,3<br />1983, The Final Cut, 6,1<br />1987, A Momentary Lapse of Reason,3,3<br />1994, The Division Bell, 1,1<br />2014, The Endless River, 3, 1</span></em></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"><span id="docs-internal-guid-59b8b72b-85cb-5875-2bf8-55d70933b934"><span style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 0.75em; line-height: 1.5;"> <span id="docs-internal-guid-59b8b72b-8616-98fa-d8da-70b78ab2cded"><span><img src="https://lh5.googleusercontent.com/no4-BCtBXujnthJ_rGtwy4swwFcrSOREYQYhzbnAgNJrg9y7wMhmL_d8eXtfJgY4lHZkuAi_oYH2HlVZXP2b8rU8Vns2ZLJzq_4hjHpaKhbdO6AJHV8YSHoUXQeNDsJVbw" height="51px;" width="500px;" /></span></span></span></span></span></p>
+<p><span id="docs-internal-guid-59b8b72b-8616-1aec-7fb8-9ff80988942d"><span><img src="https://lh5.googleusercontent.com/q7VFL6wl7Rl-sp9izm4evCKfRy9Pdo2FDRlUlli8_YiLLN4GYG5LsQyu4PCPHMlcvQMtMMUk-oiwOMU4OqxX5n2eTRLD8qfgBA79E5YxZ9KqD0Qkpw9cAgcZ7zdnxDEYFg" height="346px;" width="559px;" /></span></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Posteriormente se arranca pig con el comando <span style="font-family: courier new,courier;">pig -x local</span> y ya es posible consultar el fichero introducido. Los siguientes comandos sirven para listar los ficheros almacenados (<span style="font-family: courier new,courier;">ls</span>) y el contenido del fichero (<span style="font-family: courier new,courier;">cat</span>):<br /></span></p>
+<p><em><span style="font-family: courier new,courier; font-size: small;">grunt&gt; ls ejemplos</span></em><br /><em><span style="font-family: courier new,courier; font-size: small;">grunt&gt; cat ejemplos/discografia</span></em></p>
+<p><span id="docs-internal-guid-59b8b72b-8618-2617-8c09-7b0392982ef4"><span><img src="https://lh5.googleusercontent.com/j323lJRcsD2gXgzP4QDD_MetqHqcpv4tkXVFe2VHC3jAw9nhpX9sS5uab-A8pRaEpDvJz766E7ud8v8TSUNwPk9PPjmeKeD4n5-ABK9s_u-tz-Gn1QHvsXZAgm442_wpuQ" height="324px;" width="547px;" /></span></span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Sin embargo, desde la versión 0.5 de Pig es recomendable emplear el prefijo <span style="font-family: courier new,courier;">fs</span>  para poder acceder a todos los comandos de HDFS ya que los comandos de acceso a ficheros de grunt pueden quedar obsoletos:</span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Por ejemplo </span></p>
+<p><span style="font-family: courier new,courier;"><em><span style="font-size: small;">grunt&gt; fs -ls ejemplos</span></em></span></p>
+<p><span id="docs-internal-guid-59b8b72b-8618-bdc8-26c9-8df2f3f18233"><span><img src="https://lh4.googleusercontent.com/uJ7fB41Dnjh9FdvJj5wa9Z8ErSL2672ip9aACL-wqudLjaKDlJOixGSdNQqUrFMxClktGeDCQxVudBbMzkIQeWP8PBcXhBrS6rJC0EF6px_LwuWYsWOJjNc0QOP3lD-wuA" height="56px;" width="624px;" /></span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="pigbootup.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="otros_comandos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

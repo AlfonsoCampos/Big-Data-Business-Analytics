@@ -1,0 +1,98 @@
+# TOKEN FILTERs
+# LowerCase - filtro que modifica los tokens recibidos y los pasa a minúsculas
+GET _analyze?tokenizer=keyword&filters=lowercase&text=ESTO ES UNA PRUEBA
+
+# Uppercase - filtro que modifica los tokens recibidos y los pasa a mayúsculas
+GET _analyze?tokenizer=keyword&filters=uppercase&text=esto es una prueba
+
+# Lenght - limitar el mínimo y máximo para considerarse válido
+DELETE indice
+PUT indice
+{
+    "settings" : {
+        "analysis" : {
+            "analyzer" : {
+                "default" : {
+                    "tokenizer" : "standard",
+                    "filter" : "mi_filtro"
+                }
+            },
+            "filter" : {
+                "mi_filtro" : {
+                    "type" : "length",
+                    "max" : 2
+                }
+            }
+        }
+    }
+}
+GET indice/_analyze?pretty=1&text=ejemplo muy simple de test
+
+# Stop words  - elimina las palabras 'stop' de la indexación final del documento  
+DELETE indice
+PUT indice
+{
+    "settings" : {
+        "analysis" : {
+            "analyzer" : {
+                "default" : {
+                    "tokenizer" : "standard",
+                    "filter" : "mi_filtro"
+                }
+            },
+            "filter" : {
+                "mi_filtro" : {
+                    "type" : "stop",
+                    "stopwords": ["el", "de", "a"]
+                }
+            }
+        }
+    }
+}
+GET indice/_analyze?pretty=1&text=el ejemplo de test a tope
+  
+# Word delimiter - eliminar delimitadores de palabras/numeros del texto
+DELETE indice
+PUT indice
+{
+    "settings" : {
+        "analysis" : {
+            "analyzer" : {
+                "default" : {
+                    "tokenizer" : "standard",
+                    "filter" : "mi_filtro"
+                }
+            },
+            "filter" : {
+                "mi_filtro" : {
+                    "type" : "word_delimiter"
+                }
+            }
+        }
+    }
+}
+GET indice/_analyze?pretty=1&text=test--para,ver/funciona
+
+# ANALIZADORES POR DEFECTO
+# Simple Analyzer - Whitespaces Tokenizer + Lowercase
+GET _analyze?text=OTRO test&analyzer=simple
+
+# Standard Analyzer -Standard Tokenizer + Standard Token Filter + Lower Case Token Filter + Stop Token Filter.
+DELETE indice
+PUT indice
+{
+    "settings" : {
+        "analysis" : {
+            "analyzer" : {
+                "default" : {
+                    "type" : "standard", 
+                    "stopwords": [ "test", "para" ]
+                }
+            }
+        }
+    }
+}
+GET indice/_analyze?pretty=1&text=test--para,ver-/funciona
+
+Importsnte indexar sólo lo que te interesa... en plan seleccionar campos xa q no indexe todo q es 1 poco bajon
+

@@ -1,0 +1,34 @@
+HBase
+
+1) create_namespace 'discografia'
+
+2) create 'discografia:pink_floyd', 'nombre_disco', 'ranking'
+
+3) @ PIG
+	cat carga_discografia.pig
+	datos = LOAD 'discografia.csv' USING PigStorage(',') AS
+	(
+			id:chararray,
+			nombre_disco:chararray,
+			eeuu:int,
+			uk:int
+	);
+
+	STORE datos INTO 'hbase://discografia:pink_floyd' USING org.apache.pig.backend.hadoop.hbase.HBaseStorage
+	('
+			nombre_disco:nombre_disco,
+			ranking:eeuu,
+			ranking:uk
+	');
+   pig -x local carga_discografia.pig
+   
+   @ HBase
+   scan 'discografia:pink_floyd'
+   
+4) get 'discografia:pink_floyd','1968#1'
+	COLUMN                                               CELL                                                                                                                                                    
+	 nombre_disco:nombre_disco                           timestamp=1438535610279, value=A Saucerful of Secrets                                                                                                   
+	 ranking:eeuu                                        timestamp=1438535610279, value=                                                                                                                         
+	 ranking:uk                                          timestamp=1438535610279, value=9                                                                                                                        
+	3 row(s) in 0.0300 seconds
+

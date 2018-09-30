@@ -1,0 +1,23 @@
+Gephi!!
+ Betweeness: Como de puente eres entre gru`pos
+ Closeness: Como de central estas dentro de un ggrupo
+ Eigenvector: Como estan conectadas las conexiones que yo tengo
+  => Grafos no dirigi2
+ Page Rank: Solo tiene en cuenta las entradas sobre eigenvector; quien esta apuntando a mi
+  => Grafos dirigi2
+  
+  Modularity te permite mediante Greedy aflorar de forma natural las comunidades que ya existen y no ves
+  
+  
+ 3 slides con el analisis de los datos que nos diga en Gephi
+ - Presentaran 5 personas 3 minutos
+ 
+
+ -> Viernes a las 17h 
+ 
+ ---
+· Triadic Closure --> Rollo cerrar triangulos que justo seria people you might know!!
+· Coeficiente de clusterizacion te permitiria clusterizar en tipos en base a ese valor y luego analizar porque cada tipo tiene su rollo
+· Snowball effect --> la jugada es que formas cliques cerra2 con tus mejores amigos porque sus amigos seran amigos tuyos, al final prefieres decirselo a alguien que te lleve a gente nueva 
+--> El tipo x el q pasa todo es un broker! Esta en medio de too
+ 

@@ -1,0 +1,46 @@
+nltk.download() # Movida para descargar la vaina esa
+Gate # WTF
+
+Al principio:
+- Tecnicas simbolicas!!
+
+Luego:
+- Aproximaciones estadísticas: Corpus
+
+2 partes:
+- Lenguaje Natural vs Generacion de LEnguaje Natural
+
+La ambigüedad es el gran problema de esta movida
+
+Fases
+Enconding
+Tokenizacion
+Fraseado
+Lema
+Sintactico
+Semantico! --> I+D.. lol
+- Ha vuelto la idea de usar la logica de predica2 xa esta mubi!!!
+
+Teoria de la representacion del discurso (DRT)!
+Metalenguaje Semantico Natural (NSM)
+
+Analisis de Sentimientos!! Conexion con la mubi de esta historia... IDEa TFM
+
+Practica Final de los webs!!
+Demo Power Point 3 minutos de que va aser la practica que vamos a entregar... --> Putos Power Points!!
+
+-- Hcer algo donde aplikes NLP con cierta vision de la movida...
+· Vamos a jugar con la Segmenizacion
+
++1: Leer slides de la movida... y hacer alguna preguntillla!!
+
+El notas es mega freak y lo mejor es mostrar interes...!!! 
+
+Corpus es conkjunto de textos... los hay anotados o no anotados!!
+
+Idea de angulo trabajo infojobs/tweets para extraer si una oferta es buena o no a partir de la mubi esta sobre las palabras....
+
+segmination --> lematizacion
+
+
+Otra herramienta BRAT en este caso se sirve para anotar... entiendo q columnas

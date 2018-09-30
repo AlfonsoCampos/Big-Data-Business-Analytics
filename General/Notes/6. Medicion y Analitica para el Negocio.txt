@@ -1,0 +1,40 @@
+Medicion y Analítica para el Negocio
+- Montar Cuadros de Mando!!!! --> QlickView <--
+
+Idea de informacion de como van las cosas mediante cuadro de mando donde esta toda la informacion.
+
+Informacion es clave xa obtener una ventaja competitiva
+Analisis predictivo, forecasting es el ultimo grito xa las empresas...
+
+Idea de que estamos aqui xa hacer q las empresas mas dinero:
+- Entender el modelo de negocio es clave, el objetivo es controlarlo y para ello hay que medir..
+
+--> Objetivos es entender los pasos del proceso este de los cuadros de mando
+
+DSS(decision algo systems) --> BI (el BI no se moja en las decisiones, solo facilita info) --> Analistas de negocio (este da un paso adicional xa decidir)
+
+- Ciclo de la inteligencia
+
+
+
+Conocimiento -- BI -- Sistemas de Soporte a la Decisión (estos te dicen que es lo optimo hacer, desembocan en una accion sugerida)
+Informacion -- ECM, CRM, BPM -- Sistemas de Gestion
+Datos -- DBs, ERPs( Navision  SAP, SAGE, ...) -- Sistemas Transaccionales
+
+Da un plus el conocer los orígenes de datos (tablas y módulos SAP míticos, Navision etc) --> Enfoque mu BI tradicional..
+
+Capa de Negocio                 -->         Capa de Backoffice              -->         Capa de Presentación    
+    Estrategia                  -->                 Datos                   -->             Información
+Objetivos, Metricas(KPIs), Acciones   --> Id Datos, ETL, Datawarehouse/Datamart   --> Informes, Data Discovery, Visual Analytics
+
+Tableau FTW
+
+1 Definicion Requerimientos (Capa de Negocio)
+2 Construccion Modelo (Capa de Backoffice)
+3 Desarrollo Cuadro de Mando (Capa de Presentación)
+4 Publicarlo (enviarlo x mail)
+
+Caso Practico: Cuadro de mando de ventas
+
+OJO
+El formato te la lia parda!!

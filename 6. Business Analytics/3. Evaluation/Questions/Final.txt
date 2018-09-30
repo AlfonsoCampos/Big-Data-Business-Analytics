@@ -1,0 +1,52 @@
+Kigamure Ropa Vaqueros
+Herramienta analisis ventas mayor rentabilidad --> PASTA
+
+Seguimiento vetnas y rentabilidad clientes --> ahora es costoso en tiempo y recursos
+
+- Lineas de negocio:
+> Venta tejido vaquero --> Esfuerzos x captar marcas de moda
+> Confeccion ropa --> Tejeido vaquero propio
+> Tienda spropias --> Outlets
+
+-Clientes:
+> Fabricantes ropa
+> Mayoristas ropa
+> Distribucion/tiendas moda
+> Venta al por menor
+
+- Estrucutra ventas
+> Director Comercial
+> Vendedores con paises y objetivos de ventas y margen
+
+- Proceso comercial
+> Captar clientes comerciales
+> Pedidos por correo y comercial lo graba
+> Orden de produccion
+> Pedido listo emite albarán y factura correspondiente: 1 a 1 a 1
+
+- Requerimientos
+> Tiempo
+> País
+> Vendedor
+> Producto
+> Cliente
+
+- En detalle:
+> Reunion semanal xa revisar cuadro
+> Reunion genera Informe a direccion y comparan
+> Margen bruto a nivel cliente
+> Analisis cuotas ventas pais
+> Elabroacion objetivos venta, estacionalidad
+
+
+--> Cuadro mando ventas (indicadores y dimensiones)
+
+Alarmas por pais, grupo y tal
+
+metricas
+dimensiones
+informes 
+
+
+--------
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejemplo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li><a href="grunt_shell.html" class="daddy">Grunt Shell</a>
+   <ul class="other-section">
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li id="active"><a href="ejemplo.html" class="active no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="pig_latin_avanzado.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejercicio.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Ejemplo</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id55">
+<div class="iDevice emphasis0">
+<div id="ta55_85" class="block iDevice_content">
+<p><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Dados los resultados de la liga 2014-2015, obtener el promedio de goles marcados en local por el Real Madrid o el Barcelona.</span></p>
+<p><strong><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">1. Crear fichero con los datos que vamos a analizar</span></strong></p>
+<p><span><em><span>$ <span id="docs-internal-guid-77ede745-260b-8507-b85e-8a61aa08a968">sudo nano /home/bigdata/ejemplosPig/liga</span></span></em></span></p>
+<p>25/08/2014,J1,Real Madrid,Córdoba,2,0<br />31/08/2014,J2,R.Sociedad,Real Madrid,4,2<br />13/09/2014,J3,Real Madrid,Atlético,1,2<br />20/09/2014,J4,Deportivo,Real Madrid,2,8<br />23/09/2014,J5,Real Madrid,Elche,5,1<br />27/09/2014,J6,Villareal,Real Madrid,0,2<br />05/10/2014,J7,Real Madrid,Athletic,5,0<br />18/10/2014,J8,Levante,Real Madrid,0,5<br />25/10/2014,J9,Real Madrid,Barcelona,3,1<br />01/11/2014,J10,Granada,Real Madrid,0,4<br />08/11/2014,J11,Real Madrid,Rayo Vallecano,5,1<br />22/11/2014,J12,Eibar,Real Madrid,0,4<br />29/11/2014,J13,Málaga,Real Madrid,1,2<br />06/12/2014,J14,Real Madrid,Celta,3,0<br />12/12/2014,J15,Almería,Real Madrid,1,4<br />04/02/2015,J16,Real Madrid,Sevilla,2,1<br />04/01/2015,J17,Valencia,Real Madrid,2,1<br />10/01/2015,J18,Real Madrid,Espanyol,3,0<br />18/01/2015,J19,Getafe,Real Madrid,0,3<br />20/01/2015,J20,Córdoba,Real Madrid,1,2<br />31/01/2015,J21,Real Madrid,R.Sociedad,4,1<br />07/02/2015,J22,Atlético,Real Madrid,4,0<br />14/02/2015,J23,Real Madrid,Deportivo,2,0<br />22/02/2015,J24,Elche,Real Madrid,0,2<br />01/03/2015,J25,Real Madrid,Villareal,1,1<br />07/03/2015,J26,Athletic,Real Madrid,1,0<br />15/03/2015,J27,Real Madrid,Levante,2,0<br />22/03/2015,J28,Barcelona,Real Madrid,2,1<br />05/04/2015,J29,Real Madrid,Granada,9,1<br />08/04/2015,J30,Rayo,Real Madrid,0,2<br />11/04/2015,J31,Real Madrid,Eibar,3,0<br />18/04/2015,J32,Real Madrid,Málaga,3,1<br />26/04/2015,J33,Celta,Real Madrid,2,4<br />29/04/2015,J34,Real Madrid,Almería,3,0<br />02/05/2015,J35,Sevilla,Real Madrid,2,3<br />09/05/2015,J36,Real Madrid,Valencia,2,2<br />17/05/2015,J37,Espanyol,Real Madrid,1,4<br />23/05/2015,J38,Real Madrid,Getafe,7,3<br />24/08/2014,J1,Barcelona,Elche,3,0<br />31/08/2014,J2,Villarreal,Barcelona,0,1<br />13/09/2014,J3,Barcelona,Athletic,2,0<br />21/09/2014,J4,Levante,Barcelona,0,5<br />24/09/2014,J5,Málaga,Barelona,0,0<br />27/09/2014,J6,Barcelona,Granada,6,0<br />04/10/2014,J7,Rayo Vallecano,Barcelona,0,2<br />18/10/2014,J8,Barcelona,Eibar,3,0<br />01/11/2014,J10,Barcelona,Celta,0,1<br />08/11/2014,J11,Almería,Barcelona,1,2<br />22/11/2014,J12,Barcelona,Sevilla,5,1<br />30/11/2014,J13,Valencia,Barcelona,0,1<br />07/12/2014,J14,Barcelona,Espanyol,5,1<br />13/12/2014,J15,Getafe,Barcelona,0,0<br />20/12/2014,J16,Barcelona,Córdoba,5,0<br />04/01/2015,J17,R.Sociedad,Barcelona,1,0<br />11/01/2015,J18,Barcelona,Atlético,3,1<br />18/01/2015,J19,Deportivo,Barcelona,0,4<br />24/01/2015,J20,Elche,Barcelona,0,6<br />01/02/2015,J21,Barcelona,Villareal,3,2<br />08/02/2015,J22,Athletic,Barcelona,2,5<br />15/02/2015,J23,Barcelona,Levante,5,0<br />21/02/2015,J24,Barcelona,Málaga,0,1<br />28/02/2015,J25,Granada,Barcelona,1,3<br />08/03/2015,J26,Barcelona,Rayo,6,1<br />14/03/2015,J27,Eibar,Barcelona,0,2<br />05/04/2015,J29,Celta,Barcelona,0,1<br />08/04/2015,J30,Barcelona,Almería,4,0<br />11/04/2015,J31,Sevilla,Barcelona,2,2<br />18/04/2015,J32,Barcelona,Valencia,2,0<br />25/04/2015,J33,Espanyol,Barcelona,0,2<br />28/04/2015,J34,Barcelona,Getafe,6,0<br />02/05/2015,J35,Córdoba,Barcelona,0,8<br />09/05/2015,J36,Barcelona,R.Sociedad,2,0<br />17/05/2015,J37,Atlético,Barcelona,0,1<br />23/05/2015,J38,Barcelona,Deportivo,2,2</p>
+<p><img src="https://lh4.googleusercontent.com/3Ny8wTRB6m01saeMfNX7NpPydaub2orw-hBYk8qIss68bY_k_VICgbf9gZ_cNE7-j_VMjwHBleEkBk8InMsNXng9sL6Ci0eiAGU54FgD1TD59XG8byp3FYWikU2ZukHdYknOqXhX" width="678px;" height="471px;" id="docs-internal-guid-77ede745-260b-4e91-21fd-2ed0067cd966" /></p>
+<p dir="ltr"><strong>2. Cargar el fichero y ejecutar la instrucción de consulta para ver los datos.</strong></p>
+<p dir="ltr"><em><span id="docs-internal-guid-77ede74d-260b-d4c8-8a69-47030bbb0d4c">a = LOAD '/home/bigdata/ejemplosPig/liga' using PigStorage (',') AS (fecha: chararray, jornada: chararray, local:chararray, invitado:chararray, gol_local:int, gol_invitado: int);</span></em></p>
+<p dir="ltr"><em><span><img src="https://lh3.googleusercontent.com/m9XBC2aW5msPabEMgQSfcyhtyLGM09WB6kfySrGjW_xfy4-iUB8fXZTnqH_kPFXAozvO2fnICbulzWyxGUiJeBQanrPTpz8ggdETxeoNlXLpY7N2Ndi_xwsgDmQDD__xiHF-5w4d" width="916px;" height="40px;" id="docs-internal-guid-77ede74d-260c-4f5d-714c-fdabbbd55099" /></span></em></p>
+<p dir="ltr"><span id="docs-internal-guid-77ede74d-260c-105f-94ef-5f600ae43afd">b= FOREACH a GENERATE ToDate (fecha, 'dd/MM/yyyy') as fecha, jornada, local, invitado, gol_local, gol_invitado;</span></p>
+<p dir="ltr"><span><img src="https://lh3.googleusercontent.com/nDKhh4H7gfdTyJ0Xkldl6sE3z60ME70ZCV-A1JKodzm-zAN5Rn3Ddmzz-MNWgZ2u62sG3-6Zw6ADZRYHmxcZb5GScZWyLSP-yKlUGYrvbE3ZyhYdGP_2UWtfxsc1AmUTsDIOITYO" width="882px;" height="40px;" id="docs-internal-guid-77ede74d-260c-65db-af38-08d8dbb20bdb" /></span></p>
+<p dir="ltr" id="docs-internal-guid-77ede74d-260c-2ee2-8f81-23add0c988fc"><span>grunt&gt; aux = limit b 5;</span></p>
+<p dir="ltr"><span>grunt&gt; dump aux;</span></p>
+<p dir="ltr"><img src="https://lh3.googleusercontent.com/UH9b__M4Y0k7Xdo5wwhFibqV7bdbagKnSXuuwn1yp4NsG0XPk2T3k5giF_byQnxfkLY-Cc3JDyfnfv-NlTLq5fTUjo_da2-P--eGOtYm-Nu9XzYLVU5AeKlRiRopp5HtRQaBZHoA" width="565px;" height="148px;" id="docs-internal-guid-77ede74d-260c-798e-1d1e-74797069beb4" /></p>
+<p dir="ltr"><strong>3. Ejecutar un filtrado sobre los datos anteriores</strong></p>
+<p><span id="docs-internal-guid-e012f7e3-260c-b917-5ac4-5b62b8ca25d0">c = filter b by (local == 'Real Madrid' or local =='Barcelona');</span><span><br class="kix-line-break" /></span><span>dump c;</span></p>
+<p><img src="https://lh6.googleusercontent.com/WLHbmMhQ4WMv0RMGZO2y4KLmjQfzRgdOqVZbl3L9TkUzOmGhRMEupK49_OfsvOjeRz6HQ9wwMOuf8-8pvn_08tptjaRd0dSfDh9nGqm6ARQxT24EJNms2NcPEv6lm_3S6Qsh3cv5" width="649px;" height="187px;" id="docs-internal-guid-e012f7e3-260c-d977-4728-c41e5a9d0e75" /></p>
+<p><strong>4. Emplear una función de agrupación</strong></p>
+<p><span><em><span>d = group c by local;</span></em></span><br /><span><em><span>dump d;</span></em></span></p>
+<p><img src="https://lh4.googleusercontent.com/Esn-PGICALhkx87f1enn6O0fM6PIzGKh2nNl6bLoveLd2pT6qAs_yJn2FfnfzuZ28VYSV9yBi8yRokeTGJ5h0wlNqQDraRQP32ly-M1k_wkcRGr52SMy8sHChr-mDDem-baUYm9v" width="669px;" height="317px;" id="docs-internal-guid-77ede76c-260d-104e-4360-df93ebd86f04" /></p>
+<p><strong>5. Calcular la media</strong></p>
+<p><span id="docs-internal-guid-77ede76c-260d-296c-b636-86612a066685">e = foreach d generate group, AVG (c.gol_local);</span></p>
+<p><img src="https://lh6.googleusercontent.com/fvFillPvz-pS6JOvmzmXLcwAS5JDzdwkAK59H20TKvK8-G0as817eOY-hiG3e8AxF0wBvFWW76WWSDzTRx2UEQvq9y-rQEAz-pBpLIFUqfnP0_6oTdX1IO61CaYFBBb4xS3GRsQh" width="526px;" height="95px;" id="docs-internal-guid-77ede76c-260d-483e-e03d-4816036de652" /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="pig_latin_avanzado.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="ejercicio.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

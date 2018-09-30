@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<rdf:RDF 
+xmlns="http://ontologia.curso2015#"
+xml:base="http://ontologia.curso2015"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:myNameSpace="http://ontologia.curso2015#">
+
+ 	<rdfs:Class rdf:about="#Tweet"/>
+    <rdfs:Class rdf:about="#Usuario"/>
+    
+ 	<rdf:Property rdf:about="#contenido">
+    	<rdfs:domain rdf:resource="#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdfs:Property>
+    <rdf:Property rdf:about="#creador">
+    	<rdfs:domain rdf:resource="#Tweet"/>
+     	<rdfs:domain rdf:resource="#Usuario"/>
+	</rdfs:Property>
+    
+	<Tweet rdf:about="tweet111">
+        <contenido>Un tweet</contenido>
+        <creador rdf:resource="#user211"/>
+    </Tweet>
+	
+	<Usuario rdf:about="user201"/>
+    
+</rdf:RDF>

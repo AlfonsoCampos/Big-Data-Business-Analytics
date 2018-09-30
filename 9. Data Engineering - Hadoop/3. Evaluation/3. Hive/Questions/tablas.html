@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Tablas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hive</a></li>
+   <li><a href="caractersticas.html" class="no-ch">Características</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="comprobar_instalacin.html" class="no-ch">Comprobar instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+   <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+   <li><a href="otros_operadores.html" class="no-ch">Otros operadores</a></li>
+   <li class="current-page-parent"><a href="estructuras_de_datos.html" class="current-page-parent daddy">Estructuras de datos</a>
+   <ul>
+      <li><a href="bases_de_datos.html" class="no-ch">Bases de datos</a></li>
+      <li id="active"><a href="tablas.html" class="active no-ch">Tablas</a></li>
+      <li><a href="partitioned_tables.html" class="no-ch">Partitioned Tables</a></li>
+      <li><a href="external_tables_and_partitioned_tables.html" class="no-ch">External Tables and Partitioned Tables</a></li>
+      <li><a href="bucket.html" class="no-ch">Bucket</a></li>
+      <li><a href="vistas.html" class="no-ch">Vistas</a></li>
+      <li><a href="indices.html" class="no-ch">Indices</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_word_count.html" class="no-ch">Ejemplo: word count</a></li>
+   <li><a href="ejercicio_1_tipos_de_datos_simples.html" class="no-ch">Ejercicio 1: tipos de datos simples</a></li>
+   <li><a href="ejemplo_estructuras_complejas.html" class="no-ch">Ejemplo: estructuras complejas</a></li>
+   <li><a href="ejercicio_2_tipos_de_datos_complejos.html" class="no-ch">Ejercicio 2: tipos de datos complejos</a></li>
+   <li><a href="otros_comandos_ddl_data_definition_language.html" class="no-ch">Otros comandos DDL (Data Definition Language)</a></li>
+   <li><a href="operaciones_dmldata_manipulation_language.html" class="daddy">Operaciones DML(Data Manipulation Language)</a>
+   <ul class="other-section">
+      <li><a href="load.html" class="no-ch">Load</a></li>
+      <li><a href="insert.html" class="no-ch">Insert</a></li>
+      <li><a href="update.html" class="no-ch">Update</a></li>
+      <li><a href="delete.html" class="no-ch">Delete</a></li>
+      <li><a href="exportimport.html" class="no-ch">Export/Import</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_crear_una_tabla_en_hive_y_cargar_un_origen_de_datos.html" class="no-ch">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</a></li>
+   <li><a href="almacenamiento_de_datos.html" class="daddy">Almacenamiento de datos</a>
+   <ul class="other-section">
+      <li><a href="almacenamiento_en_ficheros.html" class="no-ch">Almacenamiento en ficheros</a></li>
+      <li><a href="almacenamiento_en_registros.html" class="no-ch">Almacenamiento en registros</a></li>
+      <li><a href="conversin_del_tipo_de_almacenamiento.html" class="no-ch">Conversión del tipo de almacenamiento</a></li>
+      <li><a href="compresin.html" class="no-ch">Compresión</a></li>
+   </ul>
+   </li>
+   <li><a href="introduccin_a_sqoop.html" class="daddy">Introducción a Sqoop</a>
+   <ul class="other-section">
+      <li><a href="import_creacin_de_conexin.html" class="no-ch">Import: creación de conexión</a></li>
+      <li><a href="import_definicin_de_datos_a_migrar.html" class="no-ch">Import: definición de datos a migrar</a></li>
+      <li><a href="import_cargar_datos_en_hive_y_hbase.html" class="no-ch">Import: cargar datos en Hive y Hbase</a></li>
+      <li><a href="importalltables.html" class="no-ch">Import-all-tables</a></li>
+      <li><a href="export.html" class="no-ch">Export</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="bases_de_datos.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="partitioned_tables.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Tablas</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id106">
+<div class="iDevice emphasis0">
+<div id="ta106_1" class="block iDevice_content">
+<p><span style="color: #000000; background-color: #ffffff;"><strong>CREATE TABLE</strong></span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis:</span></p>
+<p style="margin-left: 30px;"><span style="color: #000000; background-color: #ffffff;">CREATE [TEMPORARY] [EXTERNAL] TABLE [IF NOT EXISTS] [db_name.]table_name -- (Note: TEMPORARY available in Hive 0.14.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> [(col_name data_type [COMMENT col_comment], ...)]</span><br /><span style="color: #000000; background-color: #ffffff;"> [COMMENT table_comment]</span><br /><span style="color: #000000; background-color: #ffffff;"> [PARTITIONED BY (col_name data_type [COMMENT col_comment], ...)]</span><br /><span style="color: #000000; background-color: #ffffff;"> [CLUSTERED BY (col_name, col_name, ...) [SORTED BY (col_name [ASC|DESC], ...)] INTO num_buckets BUCKETS]</span><br /><span style="color: #000000; background-color: #ffffff;"> [SKEWED BY (col_name, col_name, ...) ON ([(col_value, col_value, ...), ...|col_value, col_value, ...])</span><br /><span style="color: #000000; background-color: #ffffff;"> [STORED AS DIRECTORIES] -- (Note: Available in Hive 0.10.0 and later)]</span><br /><span style="color: #000000; background-color: #ffffff;"> [</span><br /><span style="color: #000000; background-color: #ffffff;"> [ROW FORMAT row_format] </span><br /><span style="color: #000000; background-color: #ffffff;"> [STORED AS file_format]</span><br /><span style="color: #000000; background-color: #ffffff;"> | STORED BY 'storage.handler.class.name' [WITH SERDEPROPERTIES (...)] -- (Note: Available in Hive 0.6.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> ]</span><br /><span style="color: #000000; background-color: #ffffff;"> [LOCATION hdfs_path]</span><br /><span style="color: #000000; background-color: #ffffff;"> [TBLPROPERTIES (property_name=property_value, ...)] -- (Note: Available in Hive 0.6.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> [AS select_statement]; -- (Note: Available in Hive 0.5.0 and later; not supported for external tables)</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">CREATE [TEMPORARY] [EXTERNAL] TABLE [IF NOT EXISTS] [db_name.]table_name</span><br /><span style="color: #000000; background-color: #ffffff;"> LIKE existing_table_or_view_name</span><br /><span style="color: #000000; background-color: #ffffff;"> [LOCATION hdfs_path];</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">data_type</span><br /><span style="color: #000000; background-color: #ffffff;"> : primitive_type</span><br /><span style="color: #000000; background-color: #ffffff;"> | array_type</span><br /><span style="color: #000000; background-color: #ffffff;"> | map_type</span><br /><span style="color: #000000; background-color: #ffffff;"> | struct_type</span><br /><span style="color: #000000; background-color: #ffffff;"> | union_type -- (Note: Available in Hive 0.7.0 and later)</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">primitive_type</span><br /><span style="color: #000000; background-color: #ffffff;"> : TINYINT</span><br /><span style="color: #000000; background-color: #ffffff;"> | SMALLINT</span><br /><span style="color: #000000; background-color: #ffffff;"> | INT</span><br /><span style="color: #000000; background-color: #ffffff;"> | BIGINT</span><br /><span style="color: #000000; background-color: #ffffff;"> | BOOLEAN</span><br /><span style="color: #000000; background-color: #ffffff;"> | FLOAT</span><br /><span style="color: #000000; background-color: #ffffff;"> | DOUBLE</span><br /><span style="color: #000000; background-color: #ffffff;"> | STRING</span><br /><span style="color: #000000; background-color: #ffffff;"> | BINARY -- (Note: Available in Hive 0.8.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | TIMESTAMP -- (Note: Available in Hive 0.8.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | DECIMAL -- (Note: Available in Hive 0.11.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | DECIMAL(precision, scale) -- (Note: Available in Hive 0.13.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | VARCHAR -- (Note: Available in Hive 0.12.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | CHAR -- (Note: Available in Hive 0.13.0 and later)</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">array_type</span><br /><span style="color: #000000; background-color: #ffffff;"> : ARRAY &lt; data_type &gt;</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">map_type</span><br /><span style="color: #000000; background-color: #ffffff;"> : MAP &lt; primitive_type, data_type &gt;</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">struct_type</span><br /><span style="color: #000000; background-color: #ffffff;"> : STRUCT &lt; col_name : data_type [COMMENT col_comment], ...&gt;</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">union_type</span><br /><span style="color: #000000; background-color: #ffffff;"> : UNIONTYPE &lt; data_type, data_type, ... &gt; -- (Note: Available in Hive 0.7.0 and later)</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">row_format</span><br /><span style="color: #000000; background-color: #ffffff;"> : DELIMITED [FIELDS TERMINATED BY char [ESCAPED BY char]] [COLLECTION ITEMS TERMINATED BY char]</span><br /><span style="color: #000000; background-color: #ffffff;"> [MAP KEYS TERMINATED BY char] [LINES TERMINATED BY char]</span><br /><span style="color: #000000; background-color: #ffffff;"> [NULL DEFINED AS char] -- (Note: Available in Hive 0.13 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | SERDE serde_name [WITH SERDEPROPERTIES (property_name=property_value, property_name=property_value, ...)]</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">file_format:</span><br /><span style="color: #000000; background-color: #ffffff;"> : SEQUENCEFILE</span><br /><span style="color: #000000; background-color: #ffffff;"> | TEXTFILE -- (Default, depending on hive.default.fileformat configuration)</span><br /><span style="color: #000000; background-color: #ffffff;"> | RCFILE -- (Note: Available in Hive 0.6.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | ORC -- (Note: Available in Hive 0.11.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | AVRO -- (Note: Available in Hive 0.14.0 and later)</span><br /><span style="color: #000000; background-color: #ffffff;"> | INPUTFORMAT input_format_classname OUTPUTFORMAT output_format_classname</span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Ejemplo:</span><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p style="margin-left: 30px;">CREATE EXTERNAL TABLE IF NOT EXISTS stocks (<br />exchange STRING,<br />symbol STRING,<br />ymd STRING,<br />price_open FLOAT,<br />price_high FLOAT,<br />price_low FLOAT,<br />price_close FLOAT,<br />volume INT,<br />price_adj_close FLOAT)<br />ROW FORMAT DELIMITED FIELDS TERMINATED BY ','<br />LOCATION '/data/stocks';</p>
+<p style="margin-left: 60px;"> </p>
+<p style="margin-left: 30px;">CREATE EXTERNAL TABLE IF NOT EXISTS mydb.employees3<br />LIKE mydb.employees<br />LOCATION '/path/to/data';</p>
+<p><span style="color: #000000; background-color: #ffffff;"><strong>Drop Table</strong></span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis:</span></p>
+<p style="margin-left: 30px;"><span style="color: #000000; background-color: #ffffff;">DROP TABLE [IF EXISTS] table_name;</span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Características: </span></p>
+<ul>
+<li><span style="color: #000000; background-color: #ffffff;">Elimina todos los metadatos y datos de la tabla del mismo modo que si se hubiera ejecutado el commando <strong>hdfs dfs -rm</strong>. La información es enviada a la carpeta .Trash/Current si el directorio Trash está configurado para poder recuerar los datos perdidos recreando la tabla en el mismo sistema y después moviendo los datos manualmente empleando Hadoop. Los metadatos se pierden por completo. </span></li>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">Cuando se elimina una tabla externa, los datos de la tabla no son borrados del sistema de archivos. </span></li>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">Cuando se elimina una tabla referenciadas por vistas, no se muestra ningún mensaje</span></li>
+</ul>
+<p><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">Ejemplo: </span></p>
+<ul>
+<li><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">Drop table stocks;</span></li>
+</ul>
+<p><span style="color: #000000; background-color: #ffffff;"><strong><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva;">Truncate Table</span></strong></span></p>
+<p><span style="font-size: small; line-height: 1.5; font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">Sintaxis: Elimina todas las filas de una tabla o de una partición.  El usuario puede indicar la eliminación de múltiples particiones a la vez omitiendo el parámetro partition_spec</span></p>
+<p style="margin-left: 30px;"><span style="color: #000000; background-color: #ffffff;">TRUNCATE TABLE table_name [PARTITION partition_spec];</span><br /><span style="color: #000000; background-color: #ffffff;">partition_spec:</span><br /><span style="color: #000000; background-color: #ffffff;"> : (partition_column = partition_col_value, partition_column = partition_col_value, ...)</span><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p><span style="color: #000000; background-color: #ffffff;"><strong>Rename Table</strong></span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis: permite cambiar el nombre de una tabla por otro distinto moviendo la ubicación de las tablas en HDFS. </span></p>
+<p><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name RENAME TO new_table_name;</span></p>
+<p><strong><span style="color: #000000; background-color: #ffffff;">Alter Table Properties</span></strong></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis: permite añadir metadatos a las tablas. Algunas propiedades como último usuario que ha realizado modificación y fecha de última modificación son propiedades que se gestionan automáticamente por Hive. </span></p>
+<p><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name SET TBLPROPERTIES table_properties;</span><br /> <br /><span style="color: #000000; background-color: #ffffff;">table_properties:</span><br /><span style="color: #000000; background-color: #ffffff;"> : (property_name = property_value, property_name = property_value, ... )</span></p>
+<p><strong><span style="color: #000000; background-color: #ffffff;">Alter Table Comment</span></strong></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis: permite cambiar el comentario de una propiedad de TBLPROPERTIES</span></p>
+<p><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name SET TBLPROPERTIES ('comment' = new_comment);</span></p>
+<p><strong>Añadir propiedades de Serizalización/ Deserialización (SerDe) </strong><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p>Hive usa una interfaz SerDe para gestionar la entrada/salida. La interfaz gestiona tanto la serialización como la deserialización y también interpreta los resultados de serializar como campos individuales en el proceso. </p>
+<p>SerDe permite leer datos de una tabla, escribirlos en HDFS en cualquier formato. Para ello, se deben definir sus propiedades mediante el siguiente comando, que permite cambiar la información SerDe de una tabla o añadir los propios metadatos definidos por el usuario sobre el objeto SerDe. Las propiedades SerDe se envían al objeto SerDe de la tabla cuando se inicializa en Hive para serializar y desserializar datos. Los usuarios pueden almacenar cualquier información requerida por su objeto SerDe.  <span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis: </span></p>
+<p style="margin-left: 30px;"><em><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name SET SERDE serde_class_name [WITH SERDEPROPERTIES serde_properties];</span></em><br /><em><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name SET SERDEPROPERTIES serde_properties;</span></em><br /><span style="color: #000000; background-color: #ffffff;">serde_properties:</span><br /><span style="color: #000000; background-color: #ffffff;"> : (property_name = property_value, property_name = property_value, ... )</span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Ejemplo</span></p>
+<p><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name SET SERDEPROPERTIES ('field.delim' = ',');</span></p>
+<p><strong><span style="color: #000000; background-color: #ffffff;">Alter Table Storage Properties</span></strong></p>
+<p><span style="color: #000000; background-color: #ffffff;">Estos comandos permiten modificar las propiedades físicas de almacenamiento de la tabla. Estos comandos sólo modificarán los metadatos de Hive, y no reorganizarán o reformatearán los datos existentes. </span></p>
+<p><span style="color: #000000; background-color: #ffffff;">Sintaxis: </span></p>
+<p style="margin-left: 30px;"><em><span style="color: #000000; background-color: #ffffff;">ALTER TABLE table_name CLUSTERED BY (col_name, col_name, ...) [SORTED BY (col_name, ...)]</span></em><br /><em><span style="color: #000000; background-color: #ffffff;"> INTO num_buckets BUCKETS;</span></em></p>
+<h3 id="LanguageManualDDL-AlterPartition"><span>Alter Column</span></h3>
+<p>Definición: mediante el siguiente comando se puede cambiar el nombre de una columna, su tipo de datos, comentario, posición o varios de los elementos anteriores. Es importante tener en cuenta que las columnas de las tablas en Hive son case sensitive. Sólo modificará los metadatos de Hive y no modificará los datos. <span style="font-size: 0.75em; line-height: 1.5;"><br /></span></p>
+<p>Sintaxis: </p>
+<div class="line number1 index0 alt2">
+<p>ALTER TABLE table_name [PARTITION partition_spec] CHANGE [COLUMN] col_old_name col_new_name column_type<br /> [COMMENT col_comment] [FIRST|AFTER column_name] [CASCADE|RESTRICT];</p>
+<p>Ejemplo:</p>
+<p style="margin-left: 30px;"><em>CREATE TABLE test_change (a int, b int, c int);</em><br /><em>// First change column a's name to a1.</em><br /><em>ALTER TABLE test_change CHANGE a a1 INT;</em><br /><em>// Next change column a1's name to a2, its data type to string, and put it after column b.</em><br /><em>ALTER TABLE test_change CHANGE a1 a2 STRING AFTER b;</em><br /><em>// The new table's structure is: b int, a2 string, c int.</em><br /><em>// Then change column c's name to c1, and put it as the first column.</em><br /><em>ALTER TABLE test_change CHANGE c c1 INT FIRST;</em><br /><em>// The new table's structure is: c1 int, b int, a2 string.</em></p>
+</div>
+<h4 id="LanguageManualDDL-Add/ReplaceColumns">Add/Replace Columns</h4>
+<p>Definición: permite añadir nuevas columnas al final de las existentes y antes de las columnas particionadas. </p>
+<p>Sintaxis: </p>
+<p style="margin-left: 30px;"><em>ALTER TABLE table_name [PARTITION partition_spec]</em><br /><em> ADD|REPLACE COLUMNS (col_name data_type [COMMENT col_comment], ...)</em><br /><em> [CASCADE|RESTRICT]</em><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+<p>Ejemplo:</p>
+<p>ALTER TABLE test_change REPLACE COLUMNS (a int, b int); cambiará la columna 'c' del esquema test_change.</p>
+<p><span style="font-size: 0.75em; line-height: 1.5;"> </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="bases_de_datos.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="partitioned_tables.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

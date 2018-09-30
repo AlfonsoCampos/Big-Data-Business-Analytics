@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Grunt Shell </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li id="active"><a href="grunt_shell.html" class="active daddy">Grunt Shell</a>
+   <ul>
+      <li><a href="pigbootup.html" class="no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="instalacin.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="pigbootup.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Grunt Shell</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id67">
+<div class="iDevice emphasis0">
+<div id="ta67_1" class="block iDevice_content">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><a href="https://wiki.apache.org/pig/Grunt">Grunt</a> es el shell de comandos de Pig.</span> El acceso al shell se realiza escribiendo</span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;"> </span><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;"><strong>pig</strong> <strong>-x local</strong> si lo se arranca en modo local o sólo <strong>pig</strong> si el caso de un cluster, como resultado muestra el prompt </span><strong><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">grunt&gt;. </span></strong><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15;">Para salir hay que escribir quit o ejecutar Ctrl + D</span></p>
+<p> <span id="docs-internal-guid-59b8b72b-860f-0881-3c97-934d883c1110"><span><img src="https://lh3.googleusercontent.com/AshjbjMPqBSfaOsD5-tqFMjsmR0SoqDxc8TusgE043afyYoMQYzVunz-Sw_pE7GoT754wGGa9zxRcoFnTcDwS_woJIJdd39RKnlWkwcZ8my5g2cKjXbufcJy0tQfKgfFWA" height="296px;" width="624px;" /></span></span></p>
+<p style="text-align: justify;"><span style="font-family: trebuchet ms,geneva; font-size: small;">Grunt incluye dos tipos de comandos: comandos de acceso al sistema de archivos DFS y comandos propios de Pig. A continuación se describen esos comandos, pero antes veremos un fichero de arranque que es muy útil para cargar algunas instrucciones por defecto. </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="instalacin.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="pigbootup.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

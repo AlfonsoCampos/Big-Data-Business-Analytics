@@ -1,0 +1,8 @@
+Ejercicio 6b) La query con la lista los "MusicRecording" es:
+PREFIX ns1: <http://schema.org/>
+PREFIX ns2: <http://www.w3.org/1999/xhtml/vocab#>
+PREFIX ns3: <fb:>
+PREFIX ns4: <http://www.w3.org/ns/rdfa#>
+PREFIX og: <http://ogp.me/ns#>
+SELECT ?s ?nombre
+WHERE { ?s ?nombre ns1:MusicRecording }

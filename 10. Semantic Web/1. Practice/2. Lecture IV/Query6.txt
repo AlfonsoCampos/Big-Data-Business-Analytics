@@ -1,0 +1,5 @@
+SELECT ?s ?p ?o
+FROM <http://example.org/film/g1/>
+WHERE {
+ ?s ?p ?o .
+}

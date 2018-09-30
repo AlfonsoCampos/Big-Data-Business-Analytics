@@ -1,0 +1,18 @@
+Git
+git log --one line -n 10 --decorate
+git tag --> muestra etiquetas cerradas
+git diff --> cambios antes del commit
+git show --> te marca diferencia en el log
+git alias --> mirar sintaxis exacta xo sirve xa craer aliases
+
+git config --global credential.helper cache --timeout=36000 --> xa guardar cache de password del repo y no tener q meterlo mil veces
+git branch rama --> otra rama
+git mergetool --> lo de la izq local, lo de la derecha remoto, lo del centro como quedaria!
+git checkout -- ours -- README.md
+
+git pull es fetch + merge del tiri...!!
+
+fork se copia el repo en su rollo...
+Boton verde envia pull request 
+
+Imgen con ramas y tal no esta mal como ejemplo cara al curro, altough a little bit complicated...

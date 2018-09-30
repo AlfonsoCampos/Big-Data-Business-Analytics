@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>.pigbootup </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">PIG</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="instalacin.html" class="no-ch">Instalación</a></li>
+   <li class="current-page-parent"><a href="grunt_shell.html" class="current-page-parent daddy">Grunt Shell</a>
+   <ul>
+      <li id="active"><a href="pigbootup.html" class="active no-ch">.pigbootup</a></li>
+      <li><a href="acceso_a_hdfs.html" class="no-ch">Acceso a HDFS</a></li>
+      <li><a href="otros_comandos.html" class="no-ch">Otros comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="log4j.html" class="no-ch">log4j</a></li>
+   <li><a href="introduccin_a_pig_latin.html" class="daddy">Introducción a Pig Latin</a>
+   <ul class="other-section">
+      <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+      <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+      <li><a href="operadores_relacionales.html" class="daddy">Operadores relacionales</a>
+      <ul class="other-section">
+         <li><a href="cross.html" class="no-ch">CROSS</a></li>
+         <li><a href="distinct.html" class="no-ch">DISTINCT</a></li>
+         <li><a href="filter.html" class="no-ch">FILTER</a></li>
+         <li><a href="foreach.html" class="no-ch">FOREACH</a></li>
+         <li><a href="group.html" class="no-ch">GROUP</a></li>
+         <li><a href="join.html" class="no-ch">JOIN</a></li>
+         <li><a href="limit.html" class="no-ch">LIMIT</a></li>
+         <li><a href="load.html" class="no-ch">LOAD</a></li>
+         <li><a href="order_by.html" class="no-ch">ORDER BY</a></li>
+         <li><a href="sample.html" class="no-ch">SAMPLE</a></li>
+         <li><a href="split.html" class="no-ch">SPLIT</a></li>
+         <li><a href="store.html" class="no-ch">STORE</a></li>
+         <li><a href="stream.html" class="no-ch">STREAM</a></li>
+         <li><a href="union.html" class="no-ch">UNION</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="udf_user_defined_functions.html" class="daddy">UDF (user defined functions)</a>
+   <ul class="other-section">
+      <li><a href="ejemplo_de_udf.html" class="no-ch">Ejemplo de UDF</a></li>
+   </ul>
+   </li>
+   <li><a href="pig_latin_avanzado.html" class="no-ch">Pig Latin Avanzado</a></li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="grunt_shell.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="acceso_a_hdfs.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">.pigbootup</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id172">
+<div class="iDevice emphasis0">
+<div id="ta172_1" class="block iDevice_content">
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Como se ha visto anteriormente, nada más arrancar pig aparecen algunos mensajes de información. El más importante es el mensaje asociado al fichero <em>pigbootup</em>. Este fichero se emplea para indicar aquellos comandos o sentencias que se deben arrancar una vez se arranque PIG. Se va a emplear para registrar las librerías necesarias para eliminar el resto de mensajes de error. </span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">La ubicación del fichero .pigbootup es configurable a través de la propiedad <span style="font-family: courier new,courier;" class="skimlinks-unlinked">pig.load.default.statements</span>. Se puede añadir en el fichero <span style="font-family: courier new,courier;">pig.properties</span> una ruta en la que se quiera ubicar este fichero. </span></p>
+<p><span style="font-family: courier new,courier;"><em><span style="font-size: small;">$ sudo nano /home/bigdata/pig/.pigbootup<span style="line-height: 1.5;"> </span></span></em></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;" id="docs-internal-guid-59b8b72b-8593-d906-2984-8a8af9cfdda0"><img src="https://lh3.googleusercontent.com/8cU5wLwOdpaiFvnlbO5t9ygrYmdmc2c51Er9ufYqX81RtuDz4s25y3VNgVJkkEcqvT7U-liZItpumyL-aZP1qmO2y1qrdQ1_mwznfR2z_JIAdrF12PDSwkoHO3Ksjb494A" height="20px;" width="619px;" /></span></p>
+<p><em><span style="font-family: courier new,courier; font-size: small;">REGISTER '/home/bigdata/mapreduce/wc.jar';</span></em><br /><em><span style="font-family: courier new,courier; font-size: small;">DEFINE MY_UDF com.myudfs.UPPER();</span></em><br /><em><span style="font-family: courier new,courier; font-size: small;">SET default_parallel 10;</span></em></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;"> <span id="docs-internal-guid-59b8b72b-8589-9a72-402c-b16861224ce2"><img src="https://lh4.googleusercontent.com/hYlIMQhKKgItUjsvAGPDp0D93Qc3gcmHKisMMvo-xQKy2PPalETSXt8FDEItzv1x781MEkAnHJuthmo9wwef8qGNoWB6v22iS3H1JyZs-ZQ6wDEWKv7JA744can7q_t0DA" height="134px;" width="445px;" /></span></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;"> Para modificar el fichero de propiedades:</span></p>
+<p><span style="font-size: small;"><em><span style="font-family: courier new,courier;">$ cd pig</span></em></span><br /><span style="font-size: small;"><em><span style="font-family: courier new,courier;">$ sudo nano conf/pig.properties</span></em></span></p>
+<p><span style="font-size: small;"><em><span style="font-family: courier new,courier;"></span></em></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;" id="docs-internal-guid-59b8b72b-8611-be13-0d5b-0533ea210c23"><img src="https://lh3.googleusercontent.com/3XaFgRYxauy5se7HfwwicecbaweSbcPAC1MlKq7faN-7luxqnyoh_9EsdGzLPtbVL28MxJ-qdBUZ8UzxxV14lOaYCOXai7MS0vmTXPkGBZgVVauG_oiI30BfP-6xG59--w" height="37px;" width="504px;" /></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;"> </span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;" id="docs-internal-guid-59b8b72b-8612-7ae6-f239-5e87be85b07e"><span style="line-height: 1.5;"> </span><img src="https://lh5.googleusercontent.com/4nO5K04SioNadwrIZz7aGWoRVRjhUzVWNHaI5QhlsVJGfwIz__vnlOuPvneypIB1Mb0KIytqn9KD_T21sGu6OnwDoL6CyKrwS1MUGKpPu_2PrXcpOxCzNEDDPTaUL04lww" height="115px;" width="624px;" /></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Tras realizar estos cambios ya se puede arrancar pig desde el root, tal y como se muestra en la siguiente figura:<br /></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;"> <span id="docs-internal-guid-59b8b72b-8613-9a26-208c-f691f9ad037d"><img src="https://lh5.googleusercontent.com/ucnKjotwdh2ZgVDAgz63fyn7f3MHmM_pHpo450N-IEVY2KPmyNIS4qTQ248Nr7bRn-eGLL595Q-I6UnFv1bdnoLweitEqtpMfdvqF0trubtFDIwtaT9-ye7foibBO9rkPQ" height="393px;" width="624px;" /></span></span></p>
+<p><span style="font-family: trebuchet ms,geneva; font-size: small;">Como se observa en el log de la figura anterior, se ha arrancado pig sin errores y además ha ejecutado todos los comandos incluidos en el script de arranque. El resto de los mensajes que aparecen se deben a que PIG está usando unos comandos que en la nueva versión de Hadoop están obsoletos. Se podría ocultar modificando el log4j, pero no es necesario para su correcto funcionamiento. </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="grunt_shell.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="acceso_a_hdfs.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Partitioned Tables </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Hive</a></li>
+   <li><a href="caractersticas.html" class="no-ch">Características</a></li>
+   <li><a href="instalacin.html" class="daddy">Instalación</a>
+   <ul class="other-section">
+      <li><a href="comprobar_instalacin.html" class="no-ch">Comprobar instalación</a></li>
+   </ul>
+   </li>
+   <li><a href="tipos_de_datos.html" class="no-ch">Tipos de datos</a></li>
+   <li><a href="operadores.html" class="no-ch">Operadores</a></li>
+   <li><a href="otros_operadores.html" class="no-ch">Otros operadores</a></li>
+   <li class="current-page-parent"><a href="estructuras_de_datos.html" class="current-page-parent daddy">Estructuras de datos</a>
+   <ul>
+      <li><a href="bases_de_datos.html" class="no-ch">Bases de datos</a></li>
+      <li><a href="tablas.html" class="no-ch">Tablas</a></li>
+      <li id="active"><a href="partitioned_tables.html" class="active no-ch">Partitioned Tables</a></li>
+      <li><a href="external_tables_and_partitioned_tables.html" class="no-ch">External Tables and Partitioned Tables</a></li>
+      <li><a href="bucket.html" class="no-ch">Bucket</a></li>
+      <li><a href="vistas.html" class="no-ch">Vistas</a></li>
+      <li><a href="indices.html" class="no-ch">Indices</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_word_count.html" class="no-ch">Ejemplo: word count</a></li>
+   <li><a href="ejercicio_1_tipos_de_datos_simples.html" class="no-ch">Ejercicio 1: tipos de datos simples</a></li>
+   <li><a href="ejemplo_estructuras_complejas.html" class="no-ch">Ejemplo: estructuras complejas</a></li>
+   <li><a href="ejercicio_2_tipos_de_datos_complejos.html" class="no-ch">Ejercicio 2: tipos de datos complejos</a></li>
+   <li><a href="otros_comandos_ddl_data_definition_language.html" class="no-ch">Otros comandos DDL (Data Definition Language)</a></li>
+   <li><a href="operaciones_dmldata_manipulation_language.html" class="daddy">Operaciones DML(Data Manipulation Language)</a>
+   <ul class="other-section">
+      <li><a href="load.html" class="no-ch">Load</a></li>
+      <li><a href="insert.html" class="no-ch">Insert</a></li>
+      <li><a href="update.html" class="no-ch">Update</a></li>
+      <li><a href="delete.html" class="no-ch">Delete</a></li>
+      <li><a href="exportimport.html" class="no-ch">Export/Import</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo_crear_una_tabla_en_hive_y_cargar_un_origen_de_datos.html" class="no-ch">EJEMPLO: Crear una tabla en Hive y cargar un origen de datos</a></li>
+   <li><a href="almacenamiento_de_datos.html" class="daddy">Almacenamiento de datos</a>
+   <ul class="other-section">
+      <li><a href="almacenamiento_en_ficheros.html" class="no-ch">Almacenamiento en ficheros</a></li>
+      <li><a href="almacenamiento_en_registros.html" class="no-ch">Almacenamiento en registros</a></li>
+      <li><a href="conversin_del_tipo_de_almacenamiento.html" class="no-ch">Conversión del tipo de almacenamiento</a></li>
+      <li><a href="compresin.html" class="no-ch">Compresión</a></li>
+   </ul>
+   </li>
+   <li><a href="introduccin_a_sqoop.html" class="daddy">Introducción a Sqoop</a>
+   <ul class="other-section">
+      <li><a href="import_creacin_de_conexin.html" class="no-ch">Import: creación de conexión</a></li>
+      <li><a href="import_definicin_de_datos_a_migrar.html" class="no-ch">Import: definición de datos a migrar</a></li>
+      <li><a href="import_cargar_datos_en_hive_y_hbase.html" class="no-ch">Import: cargar datos en Hive y Hbase</a></li>
+      <li><a href="importalltables.html" class="no-ch">Import-all-tables</a></li>
+      <li><a href="export.html" class="no-ch">Export</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="tablas.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="external_tables_and_partitioned_tables.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Partitioned Tables</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id108">
+<div class="iDevice emphasis0">
+<div id="ta108_1" class="block iDevice_content">
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva;"><strong>CREATE PARTITIONED TABLE</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva;">Las tablas particionadas se pueden crear empleando la cl&aacute;usula PARTITIONED BY y cambian el modo en el que Hive estructura los datos f&iacute;sicamente. Una tabla puede tener una o m&aacute;s columnas particionadas y un directorio de datos se crear&aacute; por cada combinaci&oacute;n de tablas particionadas. Adem&aacute;s, las tablas o particiones pueden ser incluidas en cubos (buckets) mediante la cl&aacute;usula CLUSTERED BY sobre columnas, y los datos se pueden ordenar empleando cubos con la instrucci&oacute;n SORT BY sobre las columnas. Esto permite mejorar el rendimiento sobre algunos tipos de queries.<span style="font-size: 0.75em; line-height: 1.5;">&nbsp;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;">Si creamos una tabla dentro de una base de datos llamada my.db con una tabla llamada empleados tendr&iacute;amos algo similar a lo siguiente:&nbsp;</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;">hdfs://master_server/user/bigdata/warehouse/my.db/empleados</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva;"><span style="font-size: small; color: #000000; background-color: #ffffff;">Sobre esta estructura de directorios, Hive puede crear subdirectorios para gestionar las tablas particionadas. Por ejemplo:&nbsp;</span><span style="font-size: small; line-height: 1.15;">&nbsp;</span></span></p>
+<p id="docs-internal-guid-fdb9c7db-5337-6d1c-9785-5db513d54b89" style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">CREATE TABLE empleados (</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">nombre STRING,</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">salario</span><span style="line-height: 1.15;">&nbsp;FLOAT,</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">subordinados ARRAY&lt;STRING&gt;,</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">deducciones MAP&lt;STRING, FLOAT&gt;,</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">direccion STRUCT&lt;calle:STRING, ciudad:STRING, provincia:STRING, cod_postal:INT&gt;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">)</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">PARTITIONED BY (comunidad STRING, provincia STRING);</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;">Como resultado tendremos la siguiente estructura de directorios: &nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><span style="line-height: 1.15;">...</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">.../empleados/comunidad=Andalucia/provincia=Almeria</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">.../empleados/comunidad=Andalucia/provincia=Cadiz</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">...</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">.../empleados/comunidad=Galicia/provincia=Lugo</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">.../empleados/comunidad=Galicia/provincia=Orense</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">...</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Estos son los nombres reales de directorios que crear&aacute;. Las provincias contendr&aacute;n cero o m&aacute;s ficheros con los datos de los empleados de dicha provincia.&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Dadas estas tablas particionadas, se pueden ejecutar consultas sobre ellas:</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;"><span style="line-height: 1.5;">&nbsp;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">SELECT * FROM empleados</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">WHERE comunidad = 'Andalucia' AND provincia = 'Sevilla';</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; color: #000000; background-color: #ffffff;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Adem&aacute;s podemos emplear otro tipo de instrucciones para consultar la informaci&oacute;n de las particiones, como por ejemplo</span></p>
+<p style="text-align: justify;"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.15; color: #000000; background-color: #ffffff;">SHOW PARTITIONS empleados;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">SHOW PARTITIONS employees PARTITION(comunidad='Andalucia');</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Si al crear una tabla particionada se recibe el siguiente mensaje de error: "FAILED: Error in semantic analysis: Column repetead in partitioning columns", significa que est&aacute;s intentando introducir una columna particionada en los propios datos de la tabla con el mismo nombre de una columna que ya existe. Sin embargo, la partici&oacute;n crea una pseudocolumna sobre la que puedes hacer consultas, a diferencia de la otra columna sobre la que los usuarios no deber&iacute;an realizar queries al no estar optimizada para buscar.&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Ejemplo:&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Supongamos una tabla con los siguientes campos:&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">id int,&nbsp;</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">fecha date,&nbsp;</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">nombre varchar</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-size: small; font-family: 'trebuchet ms', geneva; color: #000000; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">Y queremos crear una partici&oacute;n sobre el campo fecha. La definici&oacute;n de Hive ser&iacute;a la siguiente:&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">create table nombre_tabla (</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">&nbsp;id int,&nbsp;</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">&nbsp;fecha_no_consultable string,&nbsp;</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">&nbsp;nombre string</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; font-weight: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: #ffffff;">)partitioned by (fecha string)</span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; margin-left: 30px; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;"><em><span style="font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">&nbsp;</span></span></em></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">De este modo ahora los usuarios podr&aacute;n realizar consultas del estilo "where fecha =''" pero la segunda columna reemplazar&aacute; los valores originales.&nbsp;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">Adem&aacute;s, en la creaci&oacute;n de una tabla o de una tabla particionada, se pueden indicar otra serie de par&aacute;metros, como son comentarios o el formato de almacenamiento (por defecto el delimitador es Ctrl+A y el delimitador de l&iacute;nea es una nueva l&iacute;nea).&nbsp;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">CREATE TABLE paginas_vistas (</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">fecha_visita INT,&nbsp;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">id_user BIGINT,&nbsp;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">url_visitada STRING,</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">ip STRING COMMENT 'ip del usuario'</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">) COMMENT 'Esta tabla almacena las paginas vistas'</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">PARTITIONED BY (fecha STRING, comunidad STRING)</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">STORED AS SEQUENCEFILE;</span></span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva;">&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; color: #000000; background-color: #ffffff;"><span style="line-height: 1.5;">Por defecto los datos se almacenar&aacute;n en &lt;hive.metastor.warehouse.dir&gt;/paginas_vistas. Se puede especificar una ruta distinta modificando el fichero hive-site.xml</span></span><span style="line-height: 1.15; font-size: 0.75em;">&nbsp;</span></p>
+<h3 id="LanguageManualDDL-AlterPartition">Alter Partition<span style="line-height: 1.15; text-align: justify; font-size: 0.75em; font-weight: normal;">&nbsp;</span></h3>
+<p>Sintaxis:</p>
+<div class="line number1 index0 alt2"><code class="java plain">ALTER TABLE table_name ADD [IF NOT EXISTS] PARTITION partition_spec&nbsp;</code></div>
+<div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">[LOCATION&nbsp;</code><code class="java string">'location1'</code><code class="java plain">] partition_spec [LOCATION&nbsp;</code><code class="java string">'location2'</code><code class="java plain">] ...;</code></div>
+<div class="line number3 index2 alt2">&nbsp;<span>partition_spec:</span></div>
+<div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">: (partition_column = partition_col_value, partition_column = partition_col_value, ...)</code></div>
+<p>Se puede a&ntilde;adir una partici&oacute;n a la tabla mediante el comando ALTER TABLE ADD PARTITION. Los valores de la partici&oacute;n se debe indicar entre comillas s&oacute;lo si son cadenas. La localizaci&oacute;n de la partici&oacute;n debe ser un directorio en el cu&aacute;l se encuentren los ficheros. Esta instrucci&oacute;n modifica los metadatos de la tabla, pero no los datos cargados. Si los datos no existen en la localizaci&oacute;n de la partici&oacute;n, entonces las queries no devolver&aacute;n resultados.&nbsp;<span style="font-size: 0.75em; line-height: 1.5;">&nbsp;</span><span style="line-height: 1.15; text-align: justify; font-size: 0.75em;">&nbsp;</span></p>
+<p>Desde la versi&oacute;n 0.8 se pueden crear m&uacute;ltiples particiones con una &uacute;nica sentencia como se indica en el siguiente ejemplo:</p>
+<p>ALTER TABLE page_view ADD PARTITION (dt='2014-12-30', comunidad='andalucia') location '/path/to/andalucia/part20141230'<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PARTITION (dt='2014-12-31', comunidad='andalucia') location '/path/to/andalucia/part20141231';<span style="font-size: 0.75em; line-height: 1.15; text-align: justify;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-RenamePartition">Rename Partition</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span>Definici&oacute;n: permite cambiar el nombre de una partici&oacute;n.&nbsp;</span><span>&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis: &nbsp;<span>ALTER TABLE table_name PARTITION partition_spec RENAME TO PARTITION partition_spec;</span></p>
+<h4 id="LanguageManualDDL-ExchangePartition">Exchange Partition</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;Sintaxis:&nbsp;<span>ALTER TABLE table_name_1 EXCHANGE PARTITION (partition_spec) WITH TABLE table_name_2;</span></p>
+<p>&nbsp;Definici&oacute;n: permite mover los datos de una partici&oacute;n de una tabla a otra tabla que tenga el mismo esquema pero que no tenga ya creada una partici&oacute;n.&nbsp;<span style="line-height: 1.15; text-align: justify; font-size: 0.75em;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-RecoverPartitions(MSCKREPAIRTABLE)">Recover Partitions (MSCK REPAIR TABLE)</h4>
+<p>Hive almacena el listado de particiones de cada tabla en sus metadatos. Sin embargo, si las nuevas particiones son creadas directamente en HDFS (similar a usar el comando hdfs dfs -put) no las reconocer&aacute; a no ser que se emplee el comando ALTER table ADD PARTITION para cada una de las particiones.&nbsp;</p>
+<p>Otra opci&oacute;n es emplear este comando.&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;<span>MSCK REPAIR TABLE table_name;</span></p>
+<p>que a&ntilde;adir&aacute; los metadatos a las particiones que carezcan de metadatos.&nbsp;</p>
+<h4 id="LanguageManualDDL-DropPartitions">Drop Partitions</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><span>Definici&oacute;n: se emplea para eliminar los datos y los metadatos de esa partici&oacute;n. Para las tablas que est&aacute;n protegidas con el comando NO_DROP CASCADE, se puede emplear el comando IGNORE PROTECTION para poder efectuar el borrado.&nbsp;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis:&nbsp;<span>ALTER TABLE table_name DROP [IF EXISTS] PARTITION partition_spec, PARTITION partition_spec,... IGNORE PROTECTION;</span><span style="font-size: 0.75em; line-height: 1.5; text-align: left;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-(Un)ArchivePartition">(Un)Archive Partition</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Definici&oacute;n: la funcionalidad de archivo permite mover archivos de particiones dentro de la estructura Hadoop Archive (HAR).&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis:&nbsp;</p>
+<p>ALTER TABLE table_name ARCHIVE PARTITION partition_spec;<br />ALTER TABLE table_name UNARCHIVE PARTITION partition_spec;<span style="line-height: 1.15; text-align: justify; font-size: 0.75em;">&nbsp;</span><span style="line-height: 1.15; font-size: 0.75em;">&nbsp;</span><span style="line-height: 1.15; text-align: justify; font-size: 0.75em;">&nbsp;</span><span style="line-height: 1.15; font-size: 0.75em;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-AlterTable/PartitionFileFormat">Alter Table/Partition File Format</h4>
+<p>Definici&oacute;n: esta sentencia permite cambiar el formato de ficheros de tablas o de particiones.&nbsp;</p>
+<p>Sintaxis:&nbsp;<span>ALTER TABLE table_name [PARTITION partition_spec] SET FILEFORMAT file_format;</span><span style="line-height: 1.15; text-align: justify; font-size: 0.75em;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-AlterTable/PartitionLocation">Alter Table/Partition Location</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Definici&oacute;n: permite crear una nueva ubicaci&oacute;n para una tabla o partici&oacute;n</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis:&nbsp;ALTER TABLE table_name [PARTITION partition_spec] SET LOCATION "new location";<span style="line-height: 1.15; font-size: 0.75em;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-AlterTable/PartitionTouch">Alter Table/Partition Touch</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Definici&oacute;n: el comando Touch lee los metadatos y los escribe otra vez. &nbsp;Se emplea para evitar problemas de cuelgues, ya que mediante este comando se puede registrar una marca del punto en el que una tabla o una partici&oacute;n ha sido modificada por un proceso que no ha terminado correctamente.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis: &nbsp;<span>ALTER TABLE table_name TOUCH [PARTITION partition_spec];</span><span style="font-size: 0.75em; line-height: 1.15;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-AlterTable/PartitionProtections">Alter Table/Partition Protections</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Definici&oacute;n: Las protecciones sobre datos se pueden realizar a nivel de tabla o de partici&oacute;n. Activando la opci&oacute;n NO_DROP se evita que una tabla sea eliminada. Habilitando la opci&oacute;n OFFLINE se evita que una tabla o partici&oacute;n pueda ser consultada mientras sus metadatos siguen siendo accesibles.&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis:&nbsp;</p>
+<p>ALTER TABLE table_name [PARTITION partition_spec] ENABLE|DISABLE NO_DROP [CASCADE];<br />ALTER TABLE table_name [PARTITION partition_spec] ENABLE|DISABLE OFFLINE;</p>
+<h4 id="LanguageManualDDL-AlterTable/PartitionCompact">Alter Table/Partition Compact</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Definici&oacute;n: en general no es necesario solicitar compactaci&oacute;n en la ejecuci&oacute;n de transacciones Hive ya que el propio sistema detecta su necesidad y los inicializa. Sin embargo, si est&aacute; desactivada la compataci&oacute;n de una tabla y quieres compactarla se puede realizar con este comando.&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">&nbsp;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Sintaxis: &nbsp;</p>
+<p>ALTER TABLE table_name [PARTITION (partition_key = 'partition_value' [, ...])]<br /> COMPACT 'compaction_type';<span style="line-height: 1.15; text-align: justify; font-size: 0.75em;">&nbsp;</span></p>
+<h4 id="LanguageManualDDL-AlterTable/PartitionConcatenate">Alter Table/Partition Concatenate</h4>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr">Definici&oacute;n: &nbsp;Si la tabla o partici&oacute;n contiene muchos archivos RC o archivos ORC peque&ntilde;os, entonces este comando los mezclar&aacute; en archivos m&aacute;s grandes.&nbsp;</p>
+<p>Sintaxis: &nbsp;<span>ALTER TABLE table_name [PARTITION (partition_key = 'partition_value' [, ...])] CONCATENATE;</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="tablas.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="external_tables_and_partitioned_tables.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

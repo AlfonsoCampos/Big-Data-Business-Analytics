@@ -1,0 +1,49 @@
+1) Estadistica Descriptiva
+· Procesa, Resume
+· Es lo 1o que deberiamos de hacer con los datos
+· Muestra
+
+- Estadistico de resumen, idea de conjuntos a, b, A^B
+
+CUANTITATIVOS:
+- Valor central: Media, Mediana(valor que esta en el centro y es de la variable) o percentil 50, Moda
+- Valor dispersión: Desviacion tipica, Varianza, recorrido (y recorrido intercuartílico)
+
+· Cuando das la media, das el error en terminos de la desviacion tipica (dispersion) xa entender si son buenos o no los valores
+· Desviacion mejor que varianza (la varianza no lleva la raiz cuadrada!)ME + IIC (intervlo intercuartilico) o RI (rango intercuartilico) 
+    --> estadistico de dispersion
+· Orden del percentil dice el % de datos que deja x debajo
+· Rango intercuantilico = Q3 -Q1
+
+· La moda no se suele usar con variables cuantitivas continuas
+· Se usa con cuantitativas discretas o cualitativas --> Ejemplo numero de hijos 2.3 WTF
+· Aqui no sabes nada de dispersión
+
+· Datos cualitativos: se cuantifican con distribucion de frecuencias (% porcentajes)
+· Graficos, los carga al diablo (barras xa discretas, histograma para continuas agrupadas)
+
+· Contraste de hipotesis te compara que 2 cosas se asemejan o no. Puede ser que se cumple que es normal o covarianza 0. P valor te determina grado de aceptacion.
+
+· leptocurtica(pico), mesocurtica, platocurtica (plana)
+
+Inferencia:
+    - Error tipo I o alfa: error que se comete cuando rechazamos la hipotesis nula cuando esta es verdadera --> grado de significacion
+    - Error tipo II o beta: error que se comete cuando aceptamos la hipotesis nu la cuando esta es falsa --> potencia estadistica
+    
+    - t-student, 1o deberiamso hacer pruebba de homogeneidad de varianzas... Compararas vairanzas, miras p valor y decides cual de los 2 t-student usar...
+    - ANOVA es generalizacion de t-student
+    
+    - Correlacion Pearson, una variable tiene q ser normal, no puede tener valores atipicos y solo vale si hay asociacion lineal (polinomica) --> Parametricos
+    - Correlacion Spearman corrije estas cosas
+
+2) Estadstica predictiva
+· Estima, Predice
+· Población
+
+- Intervalo de confianza
+
+3) Contraste Hipótesis
+· Compara, Decide
+· Conocimiento
+
+4) Modelos

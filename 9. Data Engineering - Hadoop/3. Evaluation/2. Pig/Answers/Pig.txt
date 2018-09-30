@@ -1,0 +1,83 @@
+ENTREGA 2) PIG
+
+nano ~/hadoop/ejemplosPig/discos.txt
+----
+
+~/hadoop/sbin/start-dfs.sh
+~/hadoop/sbin/start-yarn.sh
+~/hadoop/sbin/mr-jobhistory-daemon.sh start historyserver
+----
+
+hdfs dfs -put ~/hadoop/ejemplosPig/discos.txt /user/bigdata
+----
+
+hdfs dfs -ls /user/bigdata
+-rw-r--r--   1 bigdata supergroup        437 2015-07-19 19:49 /user/bigdata/discos.txt
+----
+
+pig
+grunt> cat /user/bigdata/discos.txt
+1967, The Piper at the Gates of Dawn,131,6 
+1968, A Saucerful of Secrets,999,9 
+1969, Music from the Film More,153,9 
+1969, Ummagumma,74,5 
+1970, Atom Heart Mother,55,1 
+1972, Obscured by Clouds, 46,6 
+1973, The Dark Side of the Moon, 1,1 
+1975, Wish you Were Here, 1,1 
+1977, Animals, 3,2 
+1979, The Wall, 1,3 
+1983, The Final Cut, 6,1 
+1987, A Momentary Lapse of Reason,3,3 
+1994, The Division Bell, 1,1 
+2014, The Endless River, 3, 1
+----
+
+grunt> discos = LOAD '/user/bigdata/discos.txt' using PigStorage (',') AS (year:chararray, title:chararray, USAranking:int, UKranking:int);
+----
+
+grunt> topless = filter discos by(USAranking > 10 and UKranking > 10);
+Resultado: 0 (no hay ningun disco que no haya estado en algun top 10 en la seleccion).
+----
+
+grunt> discos_group = group discos all;
+grunt> ranking = foreach discos_group generate MAX(discos.USAranking), MAX(discos.UKranking), MIN(discos.USAranking), MIN(discos.UKranking);
+Resultado: (999,9,1,1) (Que significa; MIN USA: 999, MIN UK: 9, MAX USA: 1, MAX UK: 1; entendiendo MIN como el maximo numero, peor posicion en el ranking y MAX como el menor numero, mejor posicion en el ranking).
+----
+
+Realizando los pasos que indicas en la ayuda https://docs.google.com/document/d/1pQvXUZ_HEPbL_uMMDIbV-2pHNvgIQ7XFLyxW1wB7BAc/edit y tras compilar una UDF para el Maximo y otra similar para el Minimo:
+
+- Cargamos de nuevo los datos como double
+grunt> data = LOAD '/user/bigdata/discos.txt' using PigStorage (',') AS (anio:int, title:chararray, eeuu:double, uk:double);
+
+- Maximo USA
+grunt> USAdata = foreach data generate uk;
+grunt> USAgroup = group USAdata all;
+grunt> USAmax = foreach USAgroup generate com.master.Maximo (USAdata);
+Resultado: 999.0
+
+- Maximo UK
+grunt> UKdata = foreach data generate uk;
+grunt> UKgroup = group UKdata all;
+grunt> register /home/bigdata/ejemplosPig/udfs/Maximo.jar
+grunt> UKmax = foreach UKgroup generate com.master.Maximo (UKdata);
+Resultado: 9.0
+
+- Minimo UK
+grunt> register /home/bigdata/ejemplosPig/udfs/Minimo.jar
+grunt> UKmin = foreach UKgroup generate com.master.Minimo (UKdata);
+Resultado: 1.0
+
+- Minimo USA
+grunt> USAmin = foreach USAgroup generate com.master.Minimo (USAdata);
+Resultado: 1.0
+----
+
+grunt> a = foreach discos generate year;
+Con este comando creamos la variable a y la inicializamos con cada una de las filas de discos quedandonos solo con el campo del año.
+
+grunt> b = distinct a;
+Con este comando creamos la variable b a partir de a eliminando las filas duplicadas.
+
+grunt> dump b;
+Con este comando ejecutamos el procesamiento y mostramos el valor de la variable por pantalla (en este caso los años de cada disco sin duplicados).

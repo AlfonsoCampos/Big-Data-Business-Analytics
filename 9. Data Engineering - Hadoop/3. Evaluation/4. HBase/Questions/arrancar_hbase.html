@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Arrancar HBASE </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.0.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú"}</script>
+<script type="text/javascript" src="common.js"></script>
+</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">HBase</a></li>
+   <li><a href="introduccin_a_hbase.html" class="no-ch">Introducción a HBase</a></li>
+   <li><a href="terminologa_del_modelo_de_datos_de_hbase.html" class="no-ch">Terminología del modelo de datos de HBase</a></li>
+   <li class="current-page-parent"><a href="instalacin.html" class="current-page-parent daddy">Instalación</a>
+   <ul>
+      <li><a href="descarga.html" class="no-ch">Descarga</a></li>
+      <li><a href="configuracin_de_ficheros.html" class="no-ch">Configuración de ficheros</a></li>
+      <li id="active"><a href="arrancar_hbase.html" class="active no-ch">Arrancar HBASE</a></li>
+      <li><a href="arrancar_shell_de_comandos.html" class="no-ch">Arrancar Shell de comandos</a></li>
+   </ul>
+   </li>
+   <li><a href="estructura_de_directorios.html" class="no-ch">Estructura de directorios</a></li>
+   <li><a href="modos_de_funcionamiento.html" class="no-ch">Modos de funcionamiento</a></li>
+   <li><a href="comandos_disponibles_en_hbase_shell.html" class="daddy">Comandos Disponibles en HBase Shell</a>
+   <ul class="other-section">
+      <li><a href="comandos_generales.html" class="no-ch">Comandos generales</a></li>
+      <li><a href="comandos_ddl_definicin_de_datos.html" class="no-ch">Comandos DDL (definición de datos)</a></li>
+      <li><a href="comandos_de_manipulacin_de_datos_crud.html" class="no-ch">Comandos de manipulación de datos CRUD.</a></li>
+      <li><a href="comandos_avanzados.html" class="no-ch">Comandos avanzados</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+   <li><a href="integracin_de_hbase_con_pig.html" class="no-ch">Integración de HBase con PIG</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="configuracin_de_ficheros.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="arrancar_shell_de_comandos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Arrancar HBASE</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id218">
+<div class="iDevice emphasis0">
+<div id="ta218_85" class="block iDevice_content">
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Para poder arrancar Hbase hay que ejecutar el siguiente comando<br /></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>$ cd ..</em></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"><em>$ bin/start-hbase.sh</em></span></p>
+<p dir="ltr"><span id="docs-internal-guid-dd5e2e58-c5cc-42e7-d4ab-243bb652a709" style="font-family: 'trebuchet ms', geneva; font-size: small;"> <img src="https://lh4.googleusercontent.com/syrSToj52CcjKA6y4RWVHisYtkZ-KIahjK38sjA5HXPy0HOIArSgB9_U0CT2deGIMVeBtKZ4Naxwlrl0rYKoPwL2IGzoYNaZ5qQ7hCn0I455RmsxkO4J21Ol6hA87WvH_w" width="624px;" height="83px;" /></span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;">Cómo resultado nos generará un log de errores en el que podremos consultar la información de los procesos que se han ejecutado. </span></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">Tras arrancarlo comprobaremos con el comando jps que el proceso está corriendo.</span></p>
+<p dir="ltr"><em><span style="font-family: 'trebuchet ms', geneva; font-size: small; line-height: 1.5;">$ jps</span></em></p>
+<p dir="ltr"><span style="font-family: 'trebuchet ms', geneva; font-size: small;"> <img src="https://lh3.googleusercontent.com/8WQXx_ikbhPLY0aeocu4bXcYlQngrCro-SNbZ-VxS8wQ2SiWpSOmdSSmqLYUVuw8jiEnOioQf4F3E7kus4I0e5EFIHKis9tPFMFIA16bODKpqUkKTxMlwRhrBu4pQxyGAQ" width="295px;" height="78px;" /></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="configuracin_de_ficheros.html" class="prev"><span>&laquo; </span>Anterior</a> | <a href="arrancar_shell_de_comandos.html" class="next"> Siguiente<span> &raquo;</span></a>
+</div>
+</div>
+</div>
+</body></html>

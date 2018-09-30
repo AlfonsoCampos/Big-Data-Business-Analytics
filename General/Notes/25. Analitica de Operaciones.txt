@@ -1,0 +1,4 @@
+Hacer y presentar IPythonsç
+> Hay ejercicios en el IPython!
+
+- Duracion vs Servicio

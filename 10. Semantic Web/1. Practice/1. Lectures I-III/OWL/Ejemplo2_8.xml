@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns="http://curso2015.campusciff/ontologies/sesion2/example2#"
+	xml:base="http://curso2015.campusciff/ontologies/sesion2/example2">
+  
+	<owl:Ontology rdf:about=""/>
+ 
+	<owl:Class rdf:ID="Animal"/>
+	
+	<owl:Class rdf:ID="Persona">
+	  <rdfs:subClassOf rdf:resource="#Animal" />
+	</owl:Class>
+	
+	<Persona rdf:about="http://curso2015.campusciff/ontologies/sesion2/example2#Juan"/>
+	
+</rdf:RDF>
